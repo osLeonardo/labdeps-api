@@ -10,6 +10,8 @@ import { NavComponent } from './components/template/nav/nav.component'
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { HttpClientModule } from '@angular/common/http';
+import { CnpjCnepComponent } from './components/consultas/cnpj-cnep/cnpj-cnep.component';
 
 
 
@@ -18,14 +20,16 @@ import { MatListModule } from '@angular/material/list';
   declarations: [
     AppComponent,
     HeaderComponent,
-    NavComponent
+    NavComponent,
+    CnpjCnepComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    HttpClientModule
 
   ],
   providers: [],
