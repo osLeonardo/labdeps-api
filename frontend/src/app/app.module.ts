@@ -12,7 +12,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CpfRemuneracaoComponent } from './components/consultas/cpf-remuneracao/cpf-remuneracao.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SearchComponent } from './components/template/search/search.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -22,8 +22,7 @@ import { SearchComponent } from './components/template/search/search.component';
     AppComponent,
     HeaderComponent,
     NavComponent,
-    CpfRemuneracaoComponent,
-    SearchComponent
+    CpfRemuneracaoComponent
   ],
   imports: [
     BrowserModule,
@@ -31,8 +30,8 @@ import { SearchComponent } from './components/template/search/search.component';
     MatToolbarModule,
     MatListModule,
     MatSidenavModule,
-    HttpClientModule
-
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

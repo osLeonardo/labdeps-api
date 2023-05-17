@@ -1,7 +1,7 @@
 <mat-sidenav-container>
     <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
         <mat-nav-list>
-            <a mat-list-item href="./search.component.html">
+            <a mat-list-item>
                 <i class="material-icons">
                     search
                 </i>
@@ -9,4 +9,7 @@
             </a>
         </mat-nav-list>
     </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
 </mat-sidenav-container>
