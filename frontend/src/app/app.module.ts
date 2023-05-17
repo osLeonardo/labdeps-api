@@ -11,7 +11,7 @@ import { NavComponent } from './components/template/nav/nav.component'
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,7 +25,8 @@ import { MatListModule } from '@angular/material/list';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    HttpClientModule
 
   ],
   providers: [],
