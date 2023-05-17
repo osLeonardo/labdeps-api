@@ -13,7 +13,8 @@ import { MatListModule } from '@angular/material/list';
 import { CpfRemuneracaoComponent } from './components/consultas/cpf-remuneracao/cpf-remuneracao.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -31,7 +32,9 @@ import { AppRoutingModule } from './app-routing.module';
     MatListModule,
     MatSidenavModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatTableModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
