@@ -25,15 +25,24 @@ table {
   }
 
   .teste{
-    padding-left: 100px;
+    padding-left: 3rem;
   }
 
   .div2{
-
-    width: 100%;
-    
+    width: 100%;  
   }
 
   .card{
     margin: 10px;
+    
+  }
+
+  .tabela2{
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 3rem;
+  }
+
+  ng-container{
+    border: none;
   }

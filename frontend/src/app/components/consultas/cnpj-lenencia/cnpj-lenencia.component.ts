@@ -1,9 +1,13 @@
 
+
+
 import { ConsultasService } from "./../consultas.service";
 import { Component, OnInit } from "@angular/core";
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Sancoes } from "../model/sancoes.Model";
 import { LenienciaByCnpj } from "../model/lenienciaByCnpj.Model";
+
+
 
 @Component({
   selector: "app-cnpj-lenencia",
@@ -22,12 +26,13 @@ import { LenienciaByCnpj } from "../model/lenienciaByCnpj.Model";
 export class CnpjLenenciaComponent implements OnInit {
 
   dataSource = element_data;
-  columnsToDisplay =  [ 'id','orgaoResponsavel','situacaoAcordo', 'dataFimAcordo', 'dataInicioAcordo', 'quantidade'  ];
+  columnsToDisplay =  [ 'orgaoResponsavel','situacaoAcordo', 'dataFimAcordo', 'dataInicioAcordo', 'quantidade'  ];
   columnsToDisplayWithExpand = [...this.columnsToDisplay, 'expand'];
-  expandedElement: Sancoes | null;
 
-  dataSource2 = sancoes;
-  columnsDisplay = ['nomeFantasia', 'nomeInformadoOrgaoResponsavel','razaoSocial', 'cnpj', 'cnpjFormatado']
+  expandedElement: LenienciaByCnpj | null;
+
+  dataSource2: LenienciaByCnpj[]
+  columnsDisplay = ['cnpjFormatado', 'nomeFantasia', 'nomeInformadoOrgaoResponsavel','razaoSocial', ]
   
 
   leniencia: LenienciaByCnpj[]
@@ -50,20 +55,42 @@ const element_data: LenienciaByCnpj[] = [
     dataFimAcordo: '14/02/2003',
     dataInicioAcordo: '14/02/2005',
     id: 1,
-    orgaoResponsavel: 'joao',
-    quantidade: 20,
+    orgaoResponsavel: 'Deps',
+    quantidade: 15,
     sancoes: [
-
+      {
+        cnpj: '06947283000160',
+        cnpjFormatado: '06.947.283/0001-60',
+        nomeFantasia: 'google',
+        nomeInformadoOrgaoResponsavel: 'google',
+        razaoSocial: 'divertir'
+      },
+      {
+        cnpj: '07031983000172',
+        cnpjFormatado: '07.031.983/0001-72',
+        nomeFantasia: 'Deps',
+        nomeInformadoOrgaoResponsavel: 'Deps',
+        razaoSocial: 'ganhar um emprego'
+      }
     ],
-    situacaoAcordo: 'fudido'
+    situacaoAcordo: 'importancia'
   },
+
+
   {
     dataFimAcordo: '14/02/2005',
     dataInicioAcordo: '14/02/2005',
     id: 2,
-    orgaoResponsavel: 'jhulia',
+    orgaoResponsavel: 'google',
     quantidade: 20,
     sancoes: [
+      {
+        cnpj: '06947283000160',
+        cnpjFormatado: '06.947.283/0001-60',
+        nomeFantasia: 'beto',
+        nomeInformadoOrgaoResponsavel: 'tbm n sei',
+        razaoSocial: 'divertir'
+      },
 
     ],
     situacaoAcordo: 'desesperada'
@@ -71,21 +98,6 @@ const element_data: LenienciaByCnpj[] = [
 
 ]
 
-const sancoes: Sancoes[] = [
-  {
-    cnpj: '52468426146',
-    cnpjFormatado: '52468426146',
-    nomeFantasia: 'beto',
-    nomeInformadoOrgaoResponsavel: 'tbm n sei',
-    razaoSocial: 'divertir'
-  },
-  {
-    cnpj: '454821486248',
-    cnpjFormatado: '454821486248',
-    nomeFantasia: 'disnei',
-    nomeInformadoOrgaoResponsavel: 'disney',
-    razaoSocial: 'perder dinheiro'
-  }
-]
+
 
 

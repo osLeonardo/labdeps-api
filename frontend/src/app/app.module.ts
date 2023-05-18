@@ -18,6 +18,7 @@ import {MatCardModule} from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatExpansionModule } from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
+
 import {MatButtonModule} from '@angular/material/button'
 
 
@@ -43,7 +44,7 @@ import {MatButtonModule} from '@angular/material/button'
     MatTableModule,
     MatExpansionModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
