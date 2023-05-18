@@ -1,12 +1,26 @@
-<mat-sidenav-container>
+<mat-sidenav-container authosize> 
     <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
         <mat-nav-list>
+            <button mat-icon-button (click)="(expandir = expandir === element?null : element); $event.stopPropagation()">
+                <mat-icon *ngIf="expandir !== element">keyboard_arrow_down</mat-icon>
+                <mat-icon *ngIf="expandir === element">keyboard_arrow_up</mat-icon>
+              </button>
             <a mat-list-item>
                 <i class="material-icons">
                     search
                 </i>
-                Consultas
+                <p *ngIf="expandir">Consultas</p>
             </a>
         </mat-nav-list>
     </mat-sidenav>
+    <mat-sidenav-content>
+        <app-cpfnis></app-cpfnis>
+    </mat-sidenav-content>
 </mat-sidenav-container>
+
+<!--
+    <button (click)="expandir = !expandir" mat-raised-button>
+        <mat-icon *ngIf="expandedElement !== element">keyboard_arrow_down</mat-icon>
+        <mat-icon *ngIf="expandedElement === element">keyboard_arrow_up</mat-icon>
+        </button>
+-->

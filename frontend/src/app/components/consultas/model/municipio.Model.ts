@@ -6,5 +6,5 @@ export interface municipio {
     nomeIBGE: string
     nomeRegiao: string
     pais: string
-    uf: uf[]
+    uf: uf
   }

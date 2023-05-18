@@ -3,10 +3,9 @@ import { titular } from "./titular.Model"
 
 export interface bolsaFamilia {
     dataMesCompetencia: string
-    dataMesReferencia: string
     id?: number
-    municipio: municipio[]
+    municipio: municipio
     quantidadeDependentes: number
-    titularBolsaFamilia: titular[]
+    titularBolsaFamilia: titular
     valor: number
   }

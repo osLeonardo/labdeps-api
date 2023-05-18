@@ -19,6 +19,7 @@ export class ConsultasService {
     const UrlBF = `${this.baseUrl}bolsaFamilia/${dataCompetencia}/${dataCompetencia}/${codigo}/${this.pagina}`;
     return this.http.get<bolsaFamilia[]>(UrlBF)
   }
+  
   GetBpcByCpf(codigo: string){
 
   }

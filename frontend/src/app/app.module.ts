@@ -12,13 +12,22 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
 import { HttpClientModule } from '@angular/common/http';
-
+import { BolsaFamiliaComponent } from './components/consultas/bolsa-familia/bolsa-familia.component';
+import { PetiComponent } from './components/consultas/peti/peti.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import { CPFNISComponent } from './components/consultas/cpfnis/cpfnis.component';
+import { MatButtonModule } from '@angular/material/button';
+import { NgIf } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    NavComponent
+    NavComponent,
+    PetiComponent,
+    BolsaFamiliaComponent,
+    CPFNISComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +35,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatListModule,
     MatSidenavModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    MatTableModule,
+    MatButtonModule,
+    NgIf,
 
   ],
   providers: [],
