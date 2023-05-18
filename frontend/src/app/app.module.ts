@@ -11,6 +11,16 @@ import { NavComponent } from './components/template/nav/nav.component'
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
+import { CnpjCepimComponent } from './components/consultas/cnpj-cepim/cnpj-cepim.component';
+import { CnpjLenenciaComponent } from './components/consultas/cnpj-lenencia/cnpj-lenencia.component';
+import {HttpClientModule} from '@angular/common/http';
+import {MatCardModule} from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import { MatExpansionModule } from '@angular/material/expansion';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button'
+
+
 
 
 
@@ -18,15 +28,22 @@ import { MatListModule } from '@angular/material/list';
   declarations: [
     AppComponent,
     HeaderComponent,
-    NavComponent
+    NavComponent,
+    CnpjCepimComponent,
+    CnpjLenenciaComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatListModule,
-    MatSidenavModule
-
+    MatSidenavModule,
+    HttpClientModule,
+    MatCardModule,
+    MatTableModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
