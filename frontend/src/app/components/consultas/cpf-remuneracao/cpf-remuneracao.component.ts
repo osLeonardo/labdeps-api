@@ -23,10 +23,16 @@ export class CpfRemuneracaoComponent implements OnInit {
   constructor(private CpfRemuneracao: ConsultasService) { }
 
   remuneracao: Remuneracao[];
-  dataSource = ELEMENT_DATA;
-  columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
+  dataSource = element_data;
+  columnsToDisplay = ['mesAno', 'remuneracaoBasicaBruta', 'gratificacaoNatalina', 'ferias', 'outrasRemuneracoesEventuais', 'fundoSaude'];
   columnsToDisplayWithExpand = [...this.columnsToDisplay, 'expand'];
-  expandedElement: CpfRemuneracaoComponent | null;
+  expandedElement: RemuneracoesDto | null;
+  columnsToDisplayExpanded = [
+    'abateRemuneracaoBasicaBruta',// 'abateGratificacaoNatalina', 'verbasIndenizatorias', 'verbasIndenizatoriasCivil', 'valorTotalRemuneracaoAposDeducoes',
+    // 'pensaoMilitar', 'previdenciaOficial', 'impostoRetidoNaFonte', 'taxaOcupacaoImovelFuncional', 'outrasDeducoesObrigatorias',
+    // 'verbasIndenizatoriasMilitar', 'valorTotalHonorariosAdvocaticios', 'valorTotalJetons', 'valorTotalRemuneracaoDolarAposDeducoes',
+    // 'verbasIndenizatoriasDolar', 'verbasIndenizatoriasReferentesPDV', 'observacoes', 'skMesReferencia',
+  ];
    
   ngOnInit(): void {
       const codigo = "";
@@ -38,7 +44,7 @@ export class CpfRemuneracaoComponent implements OnInit {
   }
 }
 
-const ELEMENT_DATA: RemuneracoesDto[] = [
+const element_data: RemuneracoesDto[] = [
   {
     abateGratificacaoNatalina: "3600.00",
     abateGratificacaoNatalinaDolar: "",
@@ -64,8 +70,8 @@ const ELEMENT_DATA: RemuneracoesDto[] = [
       mesReferencia: "09",
       valor: 160
     }],
-    mesAno: "09",
-    mesAnoPorExtenso: "Setembro",
+    mesAno: "09/2020",
+    mesAnoPorExtenso: "Setembro de Dois Mil e Vinte",
     observacoes: ["string"],
     outrasDeducoesObrigatorias: "20.00",
     outrasDeducoesObrigatoriasDolar: "",
