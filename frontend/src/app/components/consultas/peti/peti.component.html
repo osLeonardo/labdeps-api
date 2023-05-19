@@ -1,0 +1,50 @@
+<mat-card class="peti mat-elevation-z3">
+    <mat-card-title class="title">PETI</mat-card-title>
+        <div >
+            <table class="table" mat-table [dataSource]="PetiList">
+
+                <ng-container matColumnDef="nome">
+                <th mat-header-cell *matHeaderCellDef> Nome </th>
+                <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+                </ng-container> 
+                 
+                <ng-container matColumnDef="dataMesReferencia">
+                <th mat-header-cell *matHeaderCellDef> Data Mês De Referência </th>
+                <td mat-cell *matCellDef="let element"> {{element.dataMesReferencia}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="dataDisponibilizacaoRecurso">
+                <th mat-header-cell *matHeaderCellDef> Data de Disponibilização do Recurso </th>
+                <td mat-cell *matCellDef="let element"> {{element.dataDisponibilizacaoRecurso}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="situacao">
+                <th mat-header-cell *matHeaderCellDef> Situação </th>
+                <td mat-cell *matCellDef="let element"> {{element.situacao}} </td>
+                </ng-container>
+            
+                <ng-container matColumnDef="nomeIBGE">
+                <th mat-header-cell *matHeaderCellDef> Município </th>
+                <td mat-cell *matCellDef="let element"> {{element.nomeIBGE}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="sigla">
+                <th mat-header-cell *matHeaderCellDef> Estado </th>
+                <td mat-cell *matCellDef="let element"> {{element.sigla}} </td>
+                </ng-container>  
+
+                <ng-container matColumnDef="cpfFormatado">
+                <th mat-header-cell *matHeaderCellDef> CPF </th>
+                <td mat-cell *matCellDef="let element"> {{element.cpfFormatado}} </td>
+                </ng-container> 
+
+                <ng-container matColumnDef="nis">
+                <th mat-header-cell *matHeaderCellDef> NIS </th>
+                <td mat-cell *matCellDef="let element"> {{element.nis}} </td>
+                </ng-container> 
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+</mat-card>
