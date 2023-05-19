@@ -1,0 +1,12 @@
+mat-card{
+    margin: 10px;
+}
+
+mat-card-header{
+    font-size: large;
+    font-style: oblique;
+    font-weight: bolder;
+    padding-bottom: 15px;
+    background-color: #ff6f0f;
+    color: #013766;
+}

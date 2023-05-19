@@ -1,0 +1,55 @@
+<mat-card>
+    <mat-card-header>BPC</mat-card-header>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z3">
+        <ng-container matColumnDef="cpf">
+            <th mat-header-cell *matHeaderCellDef> CPF </th>
+            <td mat-cell *matCellDef="let element"> {{element.cpf}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nome">
+            <th mat-header-cell *matHeaderCellDef> Nome </th>
+            <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nis">
+            <th mat-header-cell *matHeaderCellDef> Nis </th>
+            <td mat-cell *matCellDef="let element"> {{element.nis}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cpf_rep">
+            <th mat-header-cell *matHeaderCellDef> Representante CPF </th>
+            <td mat-cell *matCellDef="let element"> {{element.cpf_rep}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nome_rep">
+            <th mat-header-cell *matHeaderCellDef> Representante Nome </th>
+            <td mat-cell *matCellDef="let element"> {{element.nome_rep}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nis_rep">
+            <th mat-header-cell *matHeaderCellDef> Representante Nis </th>
+            <td mat-cell *matCellDef="let element"> {{element.nis_rep}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="pais">
+            <th mat-header-cell *matHeaderCellDef> País </th>
+            <td mat-cell *matCellDef="let element"> {{element.pais}} </td>
+        </ng-container>
+        <br><br>
+        <ng-container matColumnDef="uf_nome">
+            <th mat-header-cell *matHeaderCellDef> UF </th>
+            <td mat-cell *matCellDef="let element"> {{element.uf}} </td>
+        </ng-container>
+
+        <!-- <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>Dados Representante</mat-expansion-panel-header>
+                <table></table>
+            </mat-expansion-panel>
+        </mat-accordion> -->
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</mat-card>
+  

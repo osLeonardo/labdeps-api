@@ -10,22 +10,27 @@ import { NavComponent } from './components/template/nav/nav.component'
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-
-
-
+import { MatTableModule } from '@angular/material/table'; 
+import { CpfBpcComponent } from './components/consultas/cpf-bpc/cpf-bpc.component';
+import { CpfPepsComponent } from './components/consultas/cpf-peps/cpf-peps.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    NavComponent
+    NavComponent,
+    CpfBpcComponent,
+    CpfPepsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatTableModule,
+    MatCardModule
 
   ],
   providers: [],
