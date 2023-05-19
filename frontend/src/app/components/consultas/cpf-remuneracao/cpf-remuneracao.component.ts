@@ -41,14 +41,26 @@ export class CpfRemuneracaoComponent implements OnInit {
     'verbasIndenizatoriasMilitar',
     'valorTotalHonorariosAdvocaticios',
     'verbasIndenizatoriasReferentesPDV',
+  ];
+  observacao = [
     'observacoes',
-  ]
+  ];
   columnHonorariosAdvocaticios = [
-    'mensagemMesReferencia',
     'mesReferencia',
     'valor',
     'valorFormatado',
-  ]
+  ];
+  jetons = [
+    'descricao',
+    'mesReferencia',
+    'valor',
+  ];
+  rubricas = [
+    'codigo',
+    'descricao',
+    'skMesReferencia',
+    'valor',
+  ];
    
   ngOnInit(): void {
       const codigo = "";
@@ -88,7 +100,7 @@ const element_data: RemuneracoesDto[] = [
     }],
     mesAno: "09/2020",
     mesAnoPorExtenso: "Setembro de Dois Mil e Vinte",
-    observacoes: ["string"],
+    observacoes: ["    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."],
     outrasDeducoesObrigatorias: "20.00",
     outrasDeducoesObrigatoriasDolar: "",
     outrasRemuneracoesEventuais: "180.00",
