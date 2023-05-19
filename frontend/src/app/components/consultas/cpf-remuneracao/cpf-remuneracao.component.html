@@ -2,85 +2,230 @@
   <mat-card-header>
       <mat-card-title>Consulta Remuneração</mat-card-title>
   </mat-card-header>
-  <mat-card-actions>
+  <mat-card-content>
       <table mat-table [dataSource]="dataSource" multiTemplateDataRows >
 
         <ng-container matColumnDef="mesAno">
           <th mat-header-cell *matHeaderCellDef>Mês Referência</th>
           <td mat-cell *matCellDef="let element"> {{element.mesAno}} </td>
         </ng-container>  
+
         <ng-container matColumnDef="remuneracaoBasicaBruta">
             <th mat-header-cell *matHeaderCellDef>Remuneração Bruta</th>
           <td mat-cell *matCellDef="let element">R$ {{element.remuneracaoBasicaBruta}} </td>
         </ng-container>
+
         <ng-container matColumnDef="gratificacaoNatalina">
           <th mat-header-cell *matHeaderCellDef>Gratificação Natalina</th>
           <td mat-cell *matCellDef="let element">R$ {{element.gratificacaoNatalina}} </td>
         </ng-container>
+        
         <ng-container matColumnDef="ferias">
           <th mat-header-cell *matHeaderCellDef>Férias</th>
           <td mat-cell *matCellDef="let element">R$ {{element.ferias}} </td>
         </ng-container>
+        
         <ng-container matColumnDef="outrasRemuneracoesEventuais">
           <th mat-header-cell *matHeaderCellDef>Outras Remunerações</th>
           <td mat-cell *matCellDef="let element">R$ {{element.outrasRemuneracoesEventuais}} </td>
         </ng-container>
+
         <ng-container matColumnDef="fundoSaude">
           <th mat-header-cell *matHeaderCellDef>Fundo Saude</th>
           <td mat-cell *matCellDef="let element">R$ {{element.fundoSaude}} </td>
         </ng-container>
-      
-      
-           <ng-container matColumnDef="expand">
-              <th mat-header-cell *matHeaderCellDef aria-label="row actions">&nbsp;</th>
-              <td mat-cell *matCellDef="let element">
-                  <button mat-icon-button aria-label="expand row" (click)="
-                expandedElement = expandedElement === element ? null : element;
-                $event.stopPropagation()
-              ">
-                      <mat-icon *ngIf="expandedElement !== element">keyboard_arrow_down</mat-icon>
-                      <mat-icon *ngIf="expandedElement === element">keyboard_arrow_up</mat-icon>
-                  </button>
-              </td>
-          </ng-container>
-      
-          
-      
-          <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+
+        <ng-container matColumnDef="expand">
+          <th mat-header-cell *matHeaderCellDef aria-label="row actions">&nbsp;</th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button aria-label="expand row" (click)="
+              expandedElement = expandedElement === element ? null : element;
+              $event.stopPropagation()
+            ">
+              <mat-icon *ngIf="expandedElement !== element">keyboard_arrow_down</mat-icon>
+              <mat-icon *ngIf="expandedElement === element">keyboard_arrow_up</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+            
+        <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
         <ng-container matColumnDef="expandedDetail">
           <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplayWithExpand.length">
             <div class="example-element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
               <div class="div2">
+
+                <!--  PRIMEIRA COLUNA  -->
                 <mat-card>
-                  <mat-card-actions>
-                    <table mat-table class="tabela2" [dataSource]="dataSource">
-                      <ng-container matColumnDef="abateRemuneracaoBasicaBruta">
-                        <th mat-header-cell *matHeaderCellDef>Mês Referência</th>
-                        <td mat-cell *matCellDef="let element"> {{element.abateRemuneracaoBasicaBruta}} </td>
-                      </ng-container>  
+                  <mat-card-header>
+                    <mat-card-title>Mais Informações</mat-card-title>
+                  </mat-card-header>
+                  <table mat-table class="tabela2" [dataSource]="dataSource">
+                    <ng-container matColumnDef="impostoRetidoNaFonte">
+                      <th mat-header-cell *matHeaderCellDef>Imposto Retido</th>
+                      <td mat-cell *matCellDef="let element"> {{element.impostoRetidoNaFonte}} </td>
+                    </ng-container>  
+
+                    <ng-container matColumnDef="taxaOcupacaoImovelFuncional">
+                      <th mat-header-cell *matHeaderCellDef>Taxa Ocupação Imóvel</th>
+                      <td mat-cell *matCellDef="let element"> {{element.taxaOcupacaoImovelFuncional}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="outrasDeducoesObrigatorias">
+                      <th mat-header-cell *matHeaderCellDef>Outras Deduções</th>
+                      <td mat-cell *matCellDef="let element"> {{element.outrasDeducoesObrigatorias}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="valorTotalRemuneracaoAposDeducoes">
+                      <th mat-header-cell *matHeaderCellDef>Remuneração pós Deduções</th>
+                      <td mat-cell *matCellDef="let element"> {{element.valorTotalRemuneracaoAposDeducoes}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="pensaoMilitar">
+                      <th mat-header-cell *matHeaderCellDef>Pensão Militar</th>
+                      <td mat-cell *matCellDef="let element"> {{element.pensaoMilitar}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="previdenciaOficial">
+                      <th mat-header-cell *matHeaderCellDef>Previdencia Oficial</th>
+                      <td mat-cell *matCellDef="let element"> {{element.previdenciaOficial}} </td>
+                    </ng-container>
                       
-                      <ng-container
-                        [matColumnDef]="element"
-                        *ngFor="let column of element"
-                        [sticky]="column == 1"
-                      >
-                        <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
-                        <ng-container *ngIf="column == 1">
-                          <th mat-cell *matCellDef="let element">
-                            {{ element[column] }}
-                          </th></ng-container
-                        >
-                        <ng-container *ngIf="column != 1">
-                          <td mat-cell *matCellDef="let element">
-                            {{ element[column] }}
-                          </td></ng-container
-                        >
-                      </ng-container>
-                      
-                      <tr mat-header-row *matHeaderRowDef="columnsToDisplayExpanded"></tr>
-                      <tr mat-row *matRowDef="let row; columns: columnsToDisplayExpanded;"></tr>
-                    </table>
-                  </mat-card-actions>
+                    <tr mat-header-row *matHeaderRowDef="columnsToDisplayExpanded"></tr>
+                    <tr mat-row *matRowDef="let row; columns: columnsToDisplayExpanded;"></tr>
+                  </table>
+                  
+                  <br>
+                  <!--  SEGUNDA COLUNA  -->
+                  <table mat-table class="tabela2" [dataSource]="dataSource">
+                    <ng-container matColumnDef="verbasIndenizatorias">
+                      <th mat-header-cell *matHeaderCellDef>Verbas Indenizadoras</th>
+                      <td mat-cell *matCellDef="let element"> {{element.verbasIndenizatorias}} </td>
+                    </ng-container>  
+
+                    <ng-container matColumnDef="verbasIndenizatoriasCivil">
+                      <th mat-header-cell *matHeaderCellDef>Verbas Indenizatorias Civil</th>
+                      <td mat-cell *matCellDef="let element"> {{element.verbasIndenizatoriasCivil}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="verbasIndenizatoriasMilitar">
+                      <th mat-header-cell *matHeaderCellDef>Verbas Indenizatorias Militar</th>
+                      <td mat-cell *matCellDef="let element"> {{element.verbasIndenizatoriasMilitar}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="verbasIndenizatoriasReferentesPDV">
+                      <th mat-header-cell *matHeaderCellDef>Verbas Indenizatorias PDV</th>
+                      <td mat-cell *matCellDef="let element"> {{element.verbasIndenizatoriasReferentesPDV}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="valorTotalHonorariosAdvocaticios">
+                      <th mat-header-cell *matHeaderCellDef>Total Honorários</th>
+                      <td mat-cell *matCellDef="let element"> {{element.valorTotalHonorariosAdvocaticios}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="observacoes">
+                      <th mat-header-cell *matHeaderCellDef>Observações</th>
+                      <td mat-cell *matCellDef="let element"> {{element.observacoes}} </td>
+                    </ng-container>
+                        
+                    <tr mat-header-row *matHeaderRowDef="columnTable2"></tr>
+                    <tr mat-row *matRowDef="let row; columns: columnTable2;"></tr>
+                  </table>
+                </mat-card>
+
+                <br>
+                <!--  HONORARIOS ADVOCATIVOS  -->
+                <mat-card>
+                  <mat-card-header>
+                    <mat-card-title>Honorários Advocaticios</mat-card-title>
+                  </mat-card-header>
+                  <table mat-table class="tabela2" [dataSource]="dataSource">
+                    <ng-container matColumnDef="mensagemMesReferencia">
+                      <th mat-header-cell *matHeaderCellDef>Verbas Indenizatorias Militar</th>
+                      <td mat-cell *matCellDef="let honorariosAdvocaticios"> {{honorariosAdvocaticios.mensagemMesReferencia}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="mesReferencia">
+                      <th mat-header-cell *matHeaderCellDef>Verbas Indenizatorias PDV</th>
+                      <td mat-cell *matCellDef="let honorariosAdvocaticios"> {{honorariosAdvocaticios.mesReferencia}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="valor">
+                      <th mat-header-cell *matHeaderCellDef>Total Honorários</th>
+                      <td mat-cell *matCellDef="let honorariosAdvocaticios"> {{honorariosAdvocaticios.valor}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="valorFormatado">
+                      <th mat-header-cell *matHeaderCellDef>Observações</th>
+                      <td mat-cell *matCellDef="let honorariosAdvocaticios"> {{honorariosAdvocaticios.valorFormatado}} </td>
+                    </ng-container>
+                        
+                    <tr mat-header-row *matHeaderRowDef="columnHonorariosAdvocaticios"></tr>
+                    <tr mat-row *matRowDef="let row; columns: columnHonorariosAdvocaticios;"></tr>
+                  </table>
+                </mat-card>
+
+                <br>
+                <!--  JETONS  -->
+                <mat-card>
+                  <mat-card-header>
+                    <mat-card-title>Jetons</mat-card-title>
+                  </mat-card-header>
+                  <table mat-table class="tabela2" [dataSource]="dataSource">
+                    <ng-container matColumnDef="mensagemMesReferencia">
+                      <th mat-header-cell *matHeaderCellDef>Verbas Indenizatorias Militar</th>
+                      <td mat-cell *matCellDef="let honorariosAdvocaticios"> {{honorariosAdvocaticios.mensagemMesReferencia}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="mesReferencia">
+                      <th mat-header-cell *matHeaderCellDef>Verbas Indenizatorias PDV</th>
+                      <td mat-cell *matCellDef="let honorariosAdvocaticios"> {{honorariosAdvocaticios.mesReferencia}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="valor">
+                      <th mat-header-cell *matHeaderCellDef>Total Honorários</th>
+                      <td mat-cell *matCellDef="let honorariosAdvocaticios"> {{honorariosAdvocaticios.valor}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="valorFormatado">
+                      <th mat-header-cell *matHeaderCellDef>Observações</th>
+                      <td mat-cell *matCellDef="let honorariosAdvocaticios"> {{honorariosAdvocaticios.valorFormatado}} </td>
+                    </ng-container>
+                        
+                    <tr mat-header-row *matHeaderRowDef="columnHonorariosAdvocaticios"></tr>
+                    <tr mat-row *matRowDef="let row; columns: columnHonorariosAdvocaticios;"></tr>
+                  </table>
+                </mat-card>
+
+                <br>
+                <!--  RUBRICAS  -->
+                <mat-card>
+                  <mat-card-header>
+                    <mat-card-title>Rúbricas</mat-card-title>
+                  </mat-card-header>
+                  <table mat-table class="tabela2" [dataSource]="dataSource">
+                    <ng-container matColumnDef="mensagemMesReferencia">
+                      <th mat-header-cell *matHeaderCellDef>Verbas Indenizatorias Militar</th>
+                      <td mat-cell *matCellDef="let honorariosAdvocaticios"> {{honorariosAdvocaticios.mensagemMesReferencia}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="mesReferencia">
+                      <th mat-header-cell *matHeaderCellDef>Verbas Indenizatorias PDV</th>
+                      <td mat-cell *matCellDef="let honorariosAdvocaticios"> {{honorariosAdvocaticios.mesReferencia}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="valor">
+                      <th mat-header-cell *matHeaderCellDef>Total Honorários</th>
+                      <td mat-cell *matCellDef="let honorariosAdvocaticios"> {{honorariosAdvocaticios.valor}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="valorFormatado">
+                      <th mat-header-cell *matHeaderCellDef>Observações</th>
+                      <td mat-cell *matCellDef="let honorariosAdvocaticios"> {{honorariosAdvocaticios.valorFormatado}} </td>
+                    </ng-container>
+                        
+                    <tr mat-header-row *matHeaderRowDef="columnHonorariosAdvocaticios"></tr>
+                    <tr mat-row *matRowDef="let row; columns: columnHonorariosAdvocaticios;"></tr>
+                  </table>
                 </mat-card>
               </div>
             </div>
@@ -93,5 +238,5 @@
           (click)="expandedElement = expandedElement === element ? null : element"></tr>
         <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
       </table>
-    </mat-card-actions>
+    </mat-card-content>
   </mat-card>

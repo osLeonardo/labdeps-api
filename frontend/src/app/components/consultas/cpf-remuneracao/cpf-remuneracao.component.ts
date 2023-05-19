@@ -28,11 +28,27 @@ export class CpfRemuneracaoComponent implements OnInit {
   columnsToDisplayWithExpand = [...this.columnsToDisplay, 'expand'];
   expandedElement: RemuneracoesDto | null;
   columnsToDisplayExpanded = [
-    'abateRemuneracaoBasicaBruta',// 'abateGratificacaoNatalina', 'verbasIndenizatorias', 'verbasIndenizatoriasCivil', 'valorTotalRemuneracaoAposDeducoes',
-    // 'pensaoMilitar', 'previdenciaOficial', 'impostoRetidoNaFonte', 'taxaOcupacaoImovelFuncional', 'outrasDeducoesObrigatorias',
-    // 'verbasIndenizatoriasMilitar', 'valorTotalHonorariosAdvocaticios', 'valorTotalJetons', 'valorTotalRemuneracaoDolarAposDeducoes',
-    // 'verbasIndenizatoriasDolar', 'verbasIndenizatoriasReferentesPDV', 'observacoes', 'skMesReferencia',
+    'impostoRetidoNaFonte',
+    'taxaOcupacaoImovelFuncional',
+    'outrasDeducoesObrigatorias',
+    'valorTotalRemuneracaoAposDeducoes',
+    'pensaoMilitar',
+    'previdenciaOficial',
   ];
+  columnTable2 = [
+    'verbasIndenizatorias',
+    'verbasIndenizatoriasCivil',
+    'verbasIndenizatoriasMilitar',
+    'valorTotalHonorariosAdvocaticios',
+    'verbasIndenizatoriasReferentesPDV',
+    'observacoes',
+  ]
+  columnHonorariosAdvocaticios = [
+    'mensagemMesReferencia',
+    'mesReferencia',
+    'valor',
+    'valorFormatado',
+  ]
    
   ngOnInit(): void {
       const codigo = "";
@@ -89,7 +105,7 @@ const element_data: RemuneracoesDto[] = [
         descricao: "Rubrica com Valor?",
         skMesReferencia: "09",
         valor: 8000,
-        valorDolar: 1.50
+        valorDolar: 0,
       }],
     skMesReferencia: "90",
     taxaOcupacaoImovelFuncional: "1.5",
@@ -97,11 +113,11 @@ const element_data: RemuneracoesDto[] = [
     valorTotalHonorariosAdvocaticios: "800.00",
     valorTotalJetons: "200.00",
     valorTotalRemuneracaoAposDeducoes: "10.00",
-    valorTotalRemuneracaoDolarAposDeducoes: "30.00",
+    valorTotalRemuneracaoDolarAposDeducoes: "",
     verbasIndenizatorias: "900.00",
     verbasIndenizatoriasCivil: "850.00",
     verbasIndenizatoriasCivilDolar: "",
-    verbasIndenizatoriasDolar: "110.00",
+    verbasIndenizatoriasDolar: "",
     verbasIndenizatoriasMilitar: "96.00",
     verbasIndenizatoriasMilitarDolar: "",
     verbasIndenizatoriasReferentesPDV: "11111111.11",
