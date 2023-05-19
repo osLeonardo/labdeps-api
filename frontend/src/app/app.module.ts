@@ -12,7 +12,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
 import { CnpjCnepComponent } from './components/consultas/cnpj-cnep/cnpj-cnep.component';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -29,7 +32,11 @@ import { CnpjCnepComponent } from './components/consultas/cnpj-cnep/cnpj-cnep.co
     MatToolbarModule,
     MatListModule,
     MatSidenavModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule
 
   ],
   providers: [],
