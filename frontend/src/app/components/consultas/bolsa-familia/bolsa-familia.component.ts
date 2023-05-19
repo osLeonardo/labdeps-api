@@ -10,7 +10,7 @@ import { bolsaFamilia } from '../model/bolsaFamilia.Model';
 //coisas sobre a tabela
 export class BolsaFamiliaComponent {
   BolsaFamiliaList = bolsafamiliaResult;
-  displayedColumns = ['nome', 'cpfFormatado', 'nis', 'valor', 'dataMesCompetencia', 'nomeIBGE', 'sigla'];
+  displayedColumns = ['nome', 'cpfFormatado', 'nis', 'quantidadeDependentes', 'valor', 'dataMesCompetencia', 'nomeIBGE', 'sigla'];
 }
 
 const bolsafamiliaResult: bolsaFamilia[] = 

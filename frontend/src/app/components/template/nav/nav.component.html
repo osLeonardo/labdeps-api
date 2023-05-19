@@ -1,15 +1,22 @@
-<mat-sidenav-container authosize> 
+<mat-sidenav-container authosize class="container"> 
     <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
         <mat-nav-list>
-            <button mat-icon-button (click)="(expandir = expandir === element?null : element); $event.stopPropagation()">
-                <mat-icon *ngIf="expandir !== element">keyboard_arrow_down</mat-icon>
-                <mat-icon *ngIf="expandir === element">keyboard_arrow_up</mat-icon>
-              </button>
+            <div class="logo">
+                <img src="assets/img/logo-deps.svg" alt="logo">
+                <span class="Logoexpandida">
+                    <img src="assets/img/logo-deps-completo.svg" alt="logo">
+                </span>
+            </div>
+            <button (click)="expandir = !expandir" mat-raised-button id="rotate-botao" class="button">
+                >
+            </button>
             <a mat-list-item>
                 <i class="material-icons">
                     search
                 </i>
-                <p *ngIf="expandir">Consultas</p>
+                <p *ngIf="expandir"> 
+                    Consultas
+                </p>
             </a>
         </mat-nav-list>
     </mat-sidenav>
@@ -17,10 +24,3 @@
         <app-cpfnis></app-cpfnis>
     </mat-sidenav-content>
 </mat-sidenav-container>
-
-<!--
-    <button (click)="expandir = !expandir" mat-raised-button>
-        <mat-icon *ngIf="expandedElement !== element">keyboard_arrow_down</mat-icon>
-        <mat-icon *ngIf="expandedElement === element">keyboard_arrow_up</mat-icon>
-        </button>
--->

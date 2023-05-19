@@ -15,4 +15,11 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 })
 export class NavComponent {
   expandir = false;
+
+}
+
+
+function rodaBotao() {
+  const button = document.getElementById("rotate-button") as HTMLButtonElement;
+  button.classList.toggle("rotated");
 }
