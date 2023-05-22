@@ -27,7 +27,7 @@ export class CpfRemuneracaoComponent implements OnInit {
   columnsToDisplay = ['mesAno', 'remuneracaoBasicaBruta', 'gratificacaoNatalina', 'ferias', 'outrasRemuneracoesEventuais', 'fundoSaude'];
   columnsToDisplayWithExpand = [...this.columnsToDisplay, 'expand'];
   expandedElement: RemuneracoesDto | null;
-  columnsToDisplayExpanded = [
+  columnTable1 = [
     'impostoRetidoNaFonte',
     'taxaOcupacaoImovelFuncional',
     'outrasDeducoesObrigatorias',
@@ -45,10 +45,9 @@ export class CpfRemuneracaoComponent implements OnInit {
   observacao = [
     'observacoes',
   ];
-  columnHonorariosAdvocaticios = [
+  honorarios = [
     'mesReferencia',
     'valor',
-    'valorFormatado',
   ];
   jetons = [
     'descricao',
@@ -87,7 +86,7 @@ const element_data: RemuneracoesDto[] = [
     gratificacaoNatalinaDolar: "",
     honorariosAdvocaticios: [{
       mensagemMesReferencia: "Setembro",
-      mesReferencia: "09",
+      mesReferencia: "09/2020",
       valor: 250,
       valorFormatado: "250.00"
     }],
@@ -95,7 +94,7 @@ const element_data: RemuneracoesDto[] = [
     impostoRetidoNaFonteDolar: "",
     jetons: [{
       descricao: "O Que é um Jeton?",
-      mesReferencia: "09",
+      mesReferencia: "09/2020",
       valor: 160
     }],
     mesAno: "09/2020",
@@ -115,7 +114,7 @@ const element_data: RemuneracoesDto[] = [
     rubricas: [{
         codigo: "9999",
         descricao: "Rubrica com Valor?",
-        skMesReferencia: "09",
+        skMesReferencia: "09/2020",
         valor: 8000,
         valorDolar: 0,
       }],
