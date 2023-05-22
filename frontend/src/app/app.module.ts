@@ -18,7 +18,6 @@ import { MatTableModule } from '@angular/material/table';
 import { CPFNISComponent } from './components/consultas/cpfnis/cpfnis.component';
 import { MatButtonModule } from '@angular/material/button';
 import { NgIf } from '@angular/common';
-import { CnpjnisComponent } from './components/consultas/cnpjnis/cnpjnis.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +28,6 @@ import { CnpjnisComponent } from './components/consultas/cnpjnis/cnpjnis.compone
     PetiComponent,
     BolsaFamiliaComponent,
     CPFNISComponent,
-    CnpjnisComponent,
   ],
   imports: [
     BrowserModule,
