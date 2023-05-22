@@ -18,15 +18,24 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 
-
-
+import { HttpClientModule } from '@angular/common/http';
+import { BolsaFamiliaComponent } from './components/consultas/bolsa-familia/bolsa-familia.component';
+import { PetiComponent } from './components/consultas/peti/peti.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import { CPFNISComponent } from './components/consultas/cpfnis/cpfnis.component';
+import { MatButtonModule } from '@angular/material/button';
+import { NgIf } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavComponent,
-    CpfRemuneracaoComponent
+    CpfRemuneracaoComponent,
+    PetiComponent,
+    BolsaFamiliaComponent,
+    CPFNISComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +48,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatTableModule,
     MatIconModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    NgIf,
   ],
   providers: [],
   bootstrap: [AppComponent]
