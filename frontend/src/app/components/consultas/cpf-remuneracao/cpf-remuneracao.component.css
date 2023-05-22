@@ -50,16 +50,25 @@ table {
     width: 100%;
   }
 
+  .expanded{
+    background-color: whitesmoke;
+    padding: 20px 2%;
+  }
+
+  .observacao {
+    padding: 1%;
+  }
+
   .inline {
     display: flex;
   }
   
   .honorarios {
-    width: 39%;
-    margin: 0 1% 0 0;
+    width: 40%;
+    margin: 0 0.5% 0 0;
   }
 
   .jetons {
-    width: 59%;
-    margin: 0 0 0 1%;
+    width: 60%;
+    margin: 0 0 0 0.5%;
   }
