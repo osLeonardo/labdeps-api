@@ -14,6 +14,8 @@ import { MatTableModule } from '@angular/material/table';
 import { CpfBpcComponent } from './components/consultas/cpf-bpc/cpf-bpc.component';
 import { CpfPepsComponent } from './components/consultas/cpf-peps/cpf-peps.component';
 import { MatCardModule } from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { MatCardModule } from '@angular/material/card';
     MatListModule,
     MatSidenavModule,
     MatTableModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule,
+    MatButtonModule
 
   ],
   providers: [],

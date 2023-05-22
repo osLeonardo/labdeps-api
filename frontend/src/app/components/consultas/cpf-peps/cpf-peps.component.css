@@ -2,6 +2,10 @@ mat-card{
     margin: 10px;
 }
 
+.card-extra{
+    margin-top: 55px;
+}
+
 mat-card-header{
     font-size: large;
     font-style: oblique;
@@ -9,4 +13,21 @@ mat-card-header{
     padding-bottom: 15px;
     background-color: #ff6f0f;
     color: #013766;
+}
+
+.extra-information{
+    font-size: large;
+    font-style: oblique;
+    font-weight: bolder;
+    padding-bottom: 15px;
+    background-color: #013766;
+    color: #ff6f0f;
+}
+
+.td1{
+    font-weight: bold;
+}
+
+.table-extra{
+    padding-top: 15px
 }

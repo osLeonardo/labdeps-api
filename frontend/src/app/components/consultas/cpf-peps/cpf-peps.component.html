@@ -1,6 +1,6 @@
 <mat-card>
-    <mat-card-header>PEPS</mat-card-header>
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z3">
+    <mat-card-header class="table">PEPS</mat-card-header>
+    <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z3">
     
         <ng-container matColumnDef="cpf">
         <th mat-header-cell *matHeaderCellDef> CPF </th>
@@ -32,7 +32,54 @@
         <td mat-cell *matCellDef="let element"> {{element.fim_exercicio}} </td>
         </ng-container>
 
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <ng-container matColumnDef="expand">
+            <th mat-header-cell *matHeaderCellDef aria-label="row actions">&nbsp;</th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-icon-button aria-label="expand row" (click)="(expandedElement = expandedElement === element ? null : element); $event.stopPropagation()">
+                <mat-icon *ngIf="expandedElement !== element">keyboard_arrow_down</mat-icon>
+                <mat-icon *ngIf="expandedElement === element">keyboard_arrow_up</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+
+        <ng-container matColumnDef="expandedDetail">
+            <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplayWithExpand.length">
+              <div class="example-element-detail"
+                   [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+                
+                <mat-card class="card-extra">
+                    <mat-card-header class="extra-information">Informações extras</mat-card-header>
+                    <mat-card-content>
+                        <table class="table-extra">
+                            <tr>
+                                <td class="td1">Código do Órgão: </td>
+                                <td>{{element.cod_orgao}}</td>
+                            </tr>
+                            <tr>
+                                <td class="td1">Sigla Função: </td>
+                                <td>{{element.sigla_funcao}}</td>
+                            </tr>
+                            <tr>
+                                <td class="td1">Código Função: </td>
+                                <td>{{element.cod_funcao}}</td>
+                            </tr>
+                            <tr>
+                                <td class="td1">Fim carência: </td>
+                                <td>{{element.fim_carencia}}</td>
+                            </tr>
+                        </table>
+                    </mat-card-content>
+                </mat-card>
+                </div>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplayWithExpand"></tr>
+          <tr mat-row *matRowDef="let element; columns: columnsToDisplayWithExpand;"
+              class="example-element-row"
+              [class.example-expanded-row]="expandedElement === element"
+              (click)="expandedElement = expandedElement === element ? null : element">
+          </tr>
+          <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
     </table>
 </mat-card>
