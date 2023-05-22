@@ -10,6 +10,13 @@ import { NavComponent } from './components/template/nav/nav.component'
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { CpfRemuneracaoComponent } from './components/consultas/cpf-remuneracao/cpf-remuneracao.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 import { HttpClientModule } from '@angular/common/http';
 import { BolsaFamiliaComponent } from './components/consultas/bolsa-familia/bolsa-familia.component';
@@ -25,6 +32,7 @@ import { NgIf } from '@angular/common';
     AppComponent,
     HeaderComponent,
     NavComponent,
+    CpfRemuneracaoComponent,
     PetiComponent,
     BolsaFamiliaComponent,
     CPFNISComponent,
@@ -36,11 +44,12 @@ import { NgIf } from '@angular/common';
     MatListModule,
     MatSidenavModule,
     HttpClientModule,
-    MatCardModule,
+    AppRoutingModule,
     MatTableModule,
+    MatIconModule,
+    MatCardModule,
     MatButtonModule,
     NgIf,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

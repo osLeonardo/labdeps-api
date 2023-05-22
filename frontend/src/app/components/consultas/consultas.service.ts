@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
+import { Remuneracao } from './models/remuneracao.model';
 import { HttpClient } from '@angular/common/http';
 import { bolsaFamilia } from './model/bolsaFamilia.Model';
-import { Observable } from 'rxjs';
 import { peti } from './model/peti.Model';
 
 @Injectable({
@@ -31,8 +32,9 @@ export class ConsultasService {
   GetPepByCpf(codigo: string){
 
   }
-  GetRemuneracaoByCpf(codigo: string, dataCompetencia: number){
-    
+  GetRemuneracaoByCpf(codigo: string, dataCompetencia: number): Observable<Remuneracao[]> {
+    const url = `${this.baseUrl}/Remuneracao/${codigo}/${dataCompetencia}/${this.pagina}`;  
+    return this.http.get<Remuneracao[]>(url)
   }
   GetCepimByCnpj(codigo: string){
     
