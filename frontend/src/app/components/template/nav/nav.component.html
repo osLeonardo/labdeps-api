@@ -1,81 +1,24 @@
-<mat-sidenav-container>
-
-    <mat-sidenav
-      class="sidenav"
-      mode="side"
-      opened
-      fixedInViewport="true"
-      fixedTopGap="64"
-    >
-        <img src="assets/img/logo-deps-completo-colorido.png" class="logo">
-      <mat-nav-list>
-        <mat-list-item>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    account_circle
+<mat-sidenav-container authosize class="container"> 
+    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
+        <mat-nav-list>
+            <div class="logo">
+                <img src="assets/img/logo-deps.svg" alt="logo">
+                <span class="Logoexpandida">
+                    <img src="assets/img/logo-deps-completo.svg" alt="logo">
+                </span>
+            </div>
+            <button (click)="expandir = !expandir" mat-raised-button id="rotate-botao" class="button">
+                >
+            </button>
+            <a mat-list-item>
+                <i class="material-icons">
+                    search
                 </i>
-                    Labs Unesc 
-                    <br>
+                <p *ngIf="expandir"> 
+                    Consultas
+                </p>
             </a>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    dashboard
-                </i>
-                    DASHBOARD
-                    <br>
-            </a>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    analytics
-                </i>
-                    POLÍTICA DE CRÉDITO
-                    <br>
-            </a>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    search 
-                </i>
-                    CONSULTAS
-                    <br>
-            </a>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    article 
-                </i>
-                    MINHAS FATURAS
-                    <br>
-            </a>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    account_balance
-                </i>
-                    MINHA CONTA CORRENTE
-                    <br>
-            </a>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    comment
-                </i>
-                    MENSAGENS
-                    <br>
-            </a>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    settings
-                </i>
-                    ADMINISTRAÇÃO
-                    <br>
-            </a>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    help
-                </i>
-                    AJUDA
-                    <br>
-            </a>
-        </mat-list-item>
-      </mat-nav-list>
-
+        </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
         <app-cpfnis></app-cpfnis>
