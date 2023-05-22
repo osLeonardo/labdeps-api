@@ -16,6 +16,19 @@ import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { CpfCnepComponent } from './components/consultas/cpf-cnep/cpf-cnep.component';
+import { HomeComponent } from './views/home/home.component';
+import { ConsultasComponent } from './views/consultas/consultas.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { DialogConsultasComponent } from './views/consultas/dialog-consultas/dialog-consultas.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { FormsModule } from '@angular/forms';
+import { CnpjConsultaComponent } from './views/cnpj-consulta/cnpj-consulta.component';
+import { CpfConsultaComponent } from './views/cpf-consulta/cpf-consulta.component'
 
 
 
@@ -24,7 +37,13 @@ import { MatCardModule } from '@angular/material/card';
     AppComponent,
     HeaderComponent,
     NavComponent,
-    CnpjCnepComponent
+    CnpjCnepComponent,
+    CpfCnepComponent,
+    HomeComponent,
+    ConsultasComponent,
+    DialogConsultasComponent,
+    CnpjConsultaComponent,
+    CpfConsultaComponent
   ],
   imports: [
     BrowserModule,
@@ -36,8 +55,14 @@ import { MatCardModule } from '@angular/material/card';
     MatTableModule,
     MatIconModule,
     MatButtonModule,
-    MatCardModule
-
+    MatCardModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
