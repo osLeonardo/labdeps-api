@@ -67,7 +67,7 @@ const cepim: CepimByCnpj[] = [
       orgaoMaximo: {
         codigo: "01",
         nome: "joao",
-        sigla: "JO",
+        sigla: "Jao",
       },
       sigla: "BR",
     },
