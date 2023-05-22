@@ -24,3 +24,8 @@ table {
   display: flex;
   flex-wrap: wrap;
 }
+
+.card {
+    display: inline;
+    padding: 0px;
+}

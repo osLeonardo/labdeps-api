@@ -69,7 +69,7 @@
 
                         <div class="card-secundarios">
 
-                            <mat-card>
+                            <mat-card class="card">
                                 <mat-card-header>
                                     <mat-card-title>Convenio: </mat-card-title>
                                 </mat-card-header>
@@ -94,7 +94,34 @@
                                 </mat-card-actions>
                             </mat-card>
 
-                            <mat-card>
+                            
+
+                            <mat-card class="card">
+                                <mat-card-header>
+                                    <mat-card-title>orgaoMaximo: </mat-card-title>
+                                </mat-card-header>
+                                <mat-card-actions>
+
+                                    <table>
+                                        <tr>
+                                            <td>codigo:</td>
+                                            <td>{{element.orgaoSuperior.orgaoMaximo.codigo}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>nome:</td>
+                                            <td>{{element.orgaoSuperior.orgaoMaximo.nome}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>sigla:</td>
+                                            <td>{{element.orgaoSuperior.orgaoMaximo.sigla}}</td>
+                                        </tr>
+
+                                    </table>
+
+                                </mat-card-actions>
+                            </mat-card>
+
+                            <mat-card class="card">
                                 <mat-card-header>
                                     <mat-card-title>orgaoSuperior: </mat-card-title>
                                 </mat-card-header>
@@ -126,31 +153,6 @@
 
 
 
-
-                                    </table>
-
-                                </mat-card-actions>
-                            </mat-card>
-
-                            <mat-card>
-                                <mat-card-header>
-                                    <mat-card-title>orgaoMaximo: </mat-card-title>
-                                </mat-card-header>
-                                <mat-card-actions>
-
-                                    <table>
-                                        <tr>
-                                            <td>codigo:</td>
-                                            <td>{{element.orgaoSuperior.orgaoMaximo.codigo}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>nome:</td>
-                                            <td>{{element.orgaoSuperior.orgaoMaximo.nome}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>sigla:</td>
-                                            <td>{{element.orgaoSuperior.orgaoMaximo.sigla}}</td>
-                                        </tr>
 
                                     </table>
 
