@@ -1,48 +1,30 @@
-
 table {
-    width: 100%;
-  }
-  
-  tr.example-detail-row {
-    height: 0;
-  }
-  
-  tr.example-element-row:not(.example-expanded-row):hover {
-    background: whitesmoke;
-  }
-  
-  tr.example-element-row:not(.example-expanded-row):active {
-    background: #efefef;
-  }
-  
-  .example-element-row td {
-    border-bottom-width: 0;
-  }
-  
-  .example-element-detail {
-    overflow: hidden;
-    display: flex;
-  }
+  width: 100%;
+}
 
-  .teste{
-    padding-left: 3rem;
-  }
+tr.example-detail-row {
+  height: 0;
+}
 
-  .div2{
-    width: 100%;  
-  }
+.example-element-row td {
+  border-bottom-width: 0;
+}
 
-  .card{
-    margin: 10px;
-    
-  }
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
 
-  .tabela2{
-    padding: 0px;
-    margin: 0px;
-    margin-bottom: 3rem;
-  }
+.sancoes {
+  width: 100%;
+}
 
-  ng-container{
-    border: none;
-  }
+.card-principal {
+  margin: 10px;
+}
+
+.tabela-sancoes {
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 3rem;
+}

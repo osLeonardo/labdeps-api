@@ -4,7 +4,7 @@
 import { ConsultasService } from "./../consultas.service";
 import { Component, OnInit } from "@angular/core";
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Sancoes } from "../model/sancoes.Model";
+
 import { LenienciaByCnpj } from "../model/lenienciaByCnpj.Model";
 
 
@@ -25,11 +25,13 @@ import { LenienciaByCnpj } from "../model/lenienciaByCnpj.Model";
 
 export class CnpjLenenciaComponent implements OnInit {
 
+  
+
   dataSource = element_data;
   columnsToDisplay =  [ 'orgaoResponsavel','situacaoAcordo', 'dataFimAcordo', 'dataInicioAcordo', 'quantidade'  ];
   columnsToDisplayWithExpand = [...this.columnsToDisplay, 'expand'];
 
-  expandedElement: LenienciaByCnpj | null;
+  expandedElement:null
 
   dataSource2: LenienciaByCnpj[]
   columnsDisplay = ['cnpjFormatado', 'nomeFantasia', 'nomeInformadoOrgaoResponsavel','razaoSocial', ]
@@ -75,8 +77,6 @@ const element_data: LenienciaByCnpj[] = [
     ],
     situacaoAcordo: 'importancia'
   },
-
-
   {
     dataFimAcordo: '14/02/2005',
     dataInicioAcordo: '14/02/2005',

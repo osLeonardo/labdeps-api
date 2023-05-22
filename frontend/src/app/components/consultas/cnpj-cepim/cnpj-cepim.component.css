@@ -1,3 +1,26 @@
-p{
-    margin-left: 150px;   
+p {
+  margin-left: 150px;
+}
+
+.card-principal {
+  margin: 10px;
+}
+
+table {
+  width: 100%;
+}
+
+.card-secundarios {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-secundarios mat-card{
+  
+  margin: 10px;
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
 }
