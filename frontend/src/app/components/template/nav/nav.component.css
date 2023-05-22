@@ -1,13 +1,11 @@
 .sidenav{
     background-color: #242c54;
-    width: 15rem; 
+    
+}
+#rotate-botao{
+    transition: transform 0.3s ease;
+}
+.rotated{
+    transform: rotate(180deg);
 }
 
-.logo{
-    margin: 1rem;
-    margin-left: 1.9rem;
-}
-
-.rotas{
-    color: white;
-}
