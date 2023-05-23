@@ -7,6 +7,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavComponent } from './components/template/nav/nav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { CnpjCepimComponent } from './components/consultas/cnpj-cepim/cnpj-cepim.component';
+import { CnpjLenenciaComponent } from './components/consultas/cnpj-lenencia/cnpj-lenencia.component';
 import { CpfBpcComponent } from './components/consultas/cpf-bpc/cpf-bpc.component';
 import { CpfPepsComponent } from './components/consultas/cpf-peps/cpf-peps.component';
 import { CpfRemuneracaoComponent } from './components/consultas/cpf-remuneracao/cpf-remuneracao.component';
@@ -28,6 +30,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     AppComponent,
     HeaderComponent,
     NavComponent,
+    CnpjCepimComponent,
+    CnpjLenenciaComponent,
     CpfBpcComponent,
     CpfPepsComponent,
     CpfRemuneracaoComponent,
