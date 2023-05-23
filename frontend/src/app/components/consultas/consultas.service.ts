@@ -1,4 +1,14 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { LenienciaByCnpj } from './model/lenienciaByCnpj.Model';
+import { CepimByCnpj } from './model/cepimByCnpj.Model';
+import { bpc } from './models/bpc.Model';
+import { pep } from './models/pep.Model';
+import { Observable } from 'rxjs/internal/Observable';
+import { Remuneracao } from './models/remuneracao.model';
+import { HttpClient } from '@angular/common/http';
+import { bolsaFamilia } from './model/bolsaFamilia.Model';
+import { peti } from './model/peti.Model';
 
 @Injectable({
   providedIn: 'root'
@@ -8,33 +18,38 @@ export class ConsultasService {
   baseUrl = "http://localhost:57679/api/v1/"; //Rodar o backend na opção 'PortalTransparenciaDeps'
   pagina = 1; //valor constante para página
 
-  constructor() { }
-
+  constructor(private http: HttpClient) { }
   
-  GetBolsaFamiliaByCpf(dataCompetencia: number, codigo: string){
-    //Na url de requisição atribuir a 'dataReferencia' como igual a 'dataCompetencia'
-    //Exemplo: bolsaFamilia/{dataCompetencia}/{dataCompetencia}/{codigo}/{pagina} 
+  GetBolsaFamiliaByCpf(dataCompetencia: number, codigo: string): Observable<bolsaFamilia[]> {
+    const UrlBF = `${this.baseUrl}bolsaFamilia/${dataCompetencia}/${dataCompetencia}/${codigo}/${this.pagina}`;
+    return this.http.get<bolsaFamilia[]>(UrlBF)
+  }
+  GetBpcByCpf(codigo: string): Observable<bpc[]>{
+    const urlBpc = `${this.baseUrl}Bpc/${codigo}/${this.pagina}`;
+    return this.http.get<bpc[]>(urlBpc)
+  }
+  GetPetiByCpf(codigo: string): Observable<peti[]> {
+    const UrlPeti = `${this.baseUrl}peti/${codigo}/${this.pagina}`;
+    return this.http.get<peti[]>(UrlPeti)
 
   }
-  GetBpcByCpf(codigo: string){
-
+  GetPepByCpf(codigo: string): Observable<pep[]>{
+    const urlPep = `${this.baseUrl}Pep/${codigo}/${this.pagina}`;
+    return this.http.get<pep[]>(urlPep)
   }
-  GetPetiByCpf(codigo: string){
-
+  GetRemuneracaoByCpf(codigo: string, dataCompetencia: number): Observable<Remuneracao[]> {
+    const url = `${this.baseUrl}/Remuneracao/${codigo}/${dataCompetencia}/${this.pagina}`;  
+    return this.http.get<Remuneracao[]>(url)
   }
-  GetPepByCpf(codigo: string){
-
-  }
-  GetRemuneracaoByCpf(codigo: string, dataCompetencia: number){
-    
-  }
-  GetCepimByCnpj(codigo: string){
-    
+  GetCepimByCnpj(codigo: string): Observable<CepimByCnpj[]>{
+    var url = `${this.baseUrl}Cepim/${codigo}/${this.pagina}`
+    return this.http.get<CepimByCnpj[]>(url)
   }
   GetCnepByCnpj(codigo: string){
     
   }
-  GetLenienciaByCnpj(codigo: string){
-    
+  GetLenienciaByCnpj(codigo: string): Observable<LenienciaByCnpj[]>{
+  var url = `${this.baseUrl}Leniencia/${codigo}/${this.pagina}`
+  return this.http.get<LenienciaByCnpj[]>(url)
   }  
 }

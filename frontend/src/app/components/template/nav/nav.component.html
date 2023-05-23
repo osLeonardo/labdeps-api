@@ -1,12 +1,21 @@
 <mat-sidenav-container>
-    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
-        <mat-nav-list>
-            <a mat-list-item>
-                <i class="material-icons">
-                    search
-                </i>
-                Consultas
-            </a>
-        </mat-nav-list>
+
+    <mat-sidenav
+      class="sidenav"
+      mode="side"
+      opened
+      fixedInViewport="true"
+      fixedTopGap="64"
+    >
+      <mat-nav-list>
+        <a mat-list-item>
+          <i class="material-icons"> search </i>
+          Consultas
+        </a>
+      </mat-nav-list>
     </mat-sidenav>
+    <mat-sidenav-content>
+        <app-cpfnis></app-cpfnis>
+        <app-cnpjnis></app-cnpjnis>
+    </mat-sidenav-content>
 </mat-sidenav-container>
