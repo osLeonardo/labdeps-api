@@ -1,0 +1,20 @@
+.sidenav{
+    background-color: #242c54;
+    width: 17rem; 
+}
+
+.logo{
+    margin: 1rem;
+    margin-left: 1.9rem;
+}
+
+.rotas{
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
+
+.descricao{
+    padding: 1rem;
+}

@@ -1,13 +1,80 @@
-<mat-sidenav-container>
-    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
-        <mat-nav-list>
-            <a mat-list-item routerLink="/consulta">
-                <i class="material-icons">
-                    search
+<mat-sidenav-container class="container">
+    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true">
+        <img src="assets/img/logo-deps-completo-colorido.png" class="logo">
+      <mat-nav-list>
+        <mat-list-item>
+            <a class="rotas" routerLink="/">
+                <i class="material-icons"> 
+                    account_circle
                 </i>
-                Consultas
+                <span class="descricao">Labs Unesc</span> 
             </a>
-        </mat-nav-list>
+        </mat-list-item>
+        <mat-list-item>
+            <a class="rotas" routerLink="/">
+                <i class="material-icons"> 
+                    dashboard
+                </i>
+                <span class="descricao">DASHBOARD</span>
+            </a>
+        </mat-list-item>
+        <mat-list-item>
+            <a class="rotas" routerLink="/">
+                <i class="material-icons"> 
+                    analytics
+                </i>
+                <span class="descricao">POLÍTICA DE CRÉDITO</span>
+            </a>
+        </mat-list-item>
+        <mat-list-item>
+            <a class="rotas" routerLink="/">
+                <i class="material-icons"> 
+                    search 
+                </i>
+                <span class="descricao">CONSULTAS</span>
+            </a>
+        </mat-list-item>
+        <mat-list-item>
+            <a class="rotas" routerLink="/">
+                <i class="material-icons"> 
+                    article 
+                </i>
+                <span class="descricao">MINHAS FATURAS</span>
+            </a>
+        </mat-list-item>
+        <mat-list-item>
+            <a class="rotas" routerLink="/">
+                <i class="material-icons"> 
+                    account_balance
+                </i>
+                <span class="descricao">MINHA CONTA CORRENTE</span>
+            </a>
+        </mat-list-item>
+        <mat-list-item>
+            <a class="rotas" routerLink="/">
+                <i class="material-icons"> 
+                    comment
+                </i>
+                <span class="descricao">MENSAGENS</span>
+            </a>
+        </mat-list-item>
+        <mat-list-item>
+            <a class="rotas" routerLink="/">
+                <i class="material-icons"> 
+                    settings
+                </i>
+                <span class="descricao">ADMINISTRAÇÃO</span>
+            </a>
+        </mat-list-item>
+        <mat-list-item>
+            <a class="rotas" routerLink="/">
+                <i class="material-icons"> 
+                    help
+                </i>
+                <span class="descricao">AJUDA</span>
+            </a>
+        </mat-list-item>
+      </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content class="content">
         <router-outlet></router-outlet>
