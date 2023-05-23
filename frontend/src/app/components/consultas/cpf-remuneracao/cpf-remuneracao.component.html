@@ -3,7 +3,7 @@
     <mat-card-title>Consulta Remuneração</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <table mat-table [dataSource]="dataSource" multiTemplateDataRows>
+    <table mat-table [dataSource]="remuneracao" multiTemplateDataRows>
       <ng-container matColumnDef="mesAno">
         <th mat-header-cell *matHeaderCellDef>Mês Referência</th>
         <td mat-cell *matCellDef="let element">{{ element.mesAno }}</td>
@@ -82,7 +82,7 @@
                 <mat-card-header>
                   <mat-card-title>Mais Informações</mat-card-title>
                 </mat-card-header>
-                <table mat-table class="tabela2" [dataSource]="dataSource">
+                <table mat-table class="tabela2" [dataSource]="remuneracao">
                   <ng-container matColumnDef="impostoRetidoNaFonte">
                     <th mat-header-cell *matHeaderCellDef>Imposto Retido</th>
                     <td mat-cell *matCellDef="let element">
@@ -139,7 +139,7 @@
 
                 <br />
                 <!--  SEGUNDA COLUNA  -->
-                <table mat-table class="tabela2" [dataSource]="dataSource">
+                <table mat-table class="tabela2" [dataSource]="remuneracao">
                   <ng-container matColumnDef="verbasIndenizatorias">
                     <th mat-header-cell *matHeaderCellDef>
                       Verbas Indenizadoras
@@ -191,7 +191,7 @@
 
                 <br />
 
-                <table mat-table class="tabela2" [dataSource]="dataSource">
+                <table mat-table class="tabela2" [dataSource]="remuneracao">
                   <ng-container matColumnDef="observacoes">
                     <th mat-header-cell *matHeaderCellDef>Observações</th>
                     <td class="observacao" mat-cell *matCellDef="let element">
