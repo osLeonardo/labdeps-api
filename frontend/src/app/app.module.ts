@@ -7,6 +7,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavComponent } from './components/template/nav/nav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { CpfBpcComponent } from './components/consultas/cpf-bpc/cpf-bpc.component';
+import { CpfPepsComponent } from './components/consultas/cpf-peps/cpf-peps.component';
 import { CpfRemuneracaoComponent } from './components/consultas/cpf-remuneracao/cpf-remuneracao.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MatIconModule } from '@angular/material/icon';
@@ -25,6 +27,8 @@ import { CnpjnisComponent } from './components/consultas/cnpjnis/cnpjnis.compone
     AppComponent,
     HeaderComponent,
     NavComponent,
+    CpfBpcComponent,
+    CpfPepsComponent
     CpfRemuneracaoComponent,
     PetiComponent,
     BolsaFamiliaComponent,
@@ -36,7 +40,7 @@ import { CnpjnisComponent } from './components/consultas/cnpjnis/cnpjnis.compone
     BrowserAnimationsModule,
     MatToolbarModule,
     MatListModule,
-    MatSidenavModule,
+    MatSidenavModule
     HttpClientModule,
     AppRoutingModule,
     MatTableModule,

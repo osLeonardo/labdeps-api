@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { bpc } from './models/bpc.Model';
+import { pep } from './models/pep.Model';
 import { Observable } from 'rxjs/internal/Observable';
 import { Remuneracao } from './models/remuneracao.model';
 import { HttpClient } from '@angular/common/http';
@@ -14,23 +16,23 @@ export class ConsultasService {
   pagina = 1; //valor constante para página
 
   constructor(private http: HttpClient) { }
-
   
   GetBolsaFamiliaByCpf(dataCompetencia: number, codigo: string): Observable<bolsaFamilia[]> {
     const UrlBF = `${this.baseUrl}bolsaFamilia/${dataCompetencia}/${dataCompetencia}/${codigo}/${this.pagina}`;
     return this.http.get<bolsaFamilia[]>(UrlBF)
   }
-  
-  GetBpcByCpf(codigo: string){
-
+  GetBpcByCpf(codigo: string): Observable<bpc[]>{
+    const urlBpc = `${this.baseUrl}Bpc/${codigo}/${this.pagina}`;
+    return this.http.get<bpc[]>(urlBpc)
   }
   GetPetiByCpf(codigo: string): Observable<peti[]> {
     const UrlPeti = `${this.baseUrl}peti/${codigo}/${this.pagina}`;
     return this.http.get<peti[]>(UrlPeti)
 
   }
-  GetPepByCpf(codigo: string){
-
+  GetPepByCpf(codigo: string): Observable<pep[]>{
+    const urlPep = `${this.baseUrl}Pep/${codigo}/${this.pagina}`;
+    return this.http.get<pep[]>(urlPep)
   }
   GetRemuneracaoByCpf(codigo: string, dataCompetencia: number): Observable<Remuneracao[]> {
     const url = `${this.baseUrl}/Remuneracao/${codigo}/${dataCompetencia}/${this.pagina}`;  
