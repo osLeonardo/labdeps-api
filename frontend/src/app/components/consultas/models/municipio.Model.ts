@@ -1,5 +1,6 @@
 import { uf } from "./uf.Model"
 
+
 export interface municipio {
     codigoIBGE: string
     codigoRegiao: string
