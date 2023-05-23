@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { peti } from '../model/peti.Model';
+import { peti } from '../models/peti.Model';
 
 @Component({
   selector: 'app-peti',

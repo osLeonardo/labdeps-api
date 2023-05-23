@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { bolsaFamilia } from '../model/bolsaFamilia.Model';
+import { bolsaFamilia } from '../models/bolsaFamilia.Model';
 
 @Component({
   selector: 'app-bolsa-familia',
