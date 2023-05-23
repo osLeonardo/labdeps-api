@@ -1,6 +1,6 @@
 .sidenav{
     background-color: #242c54;
-    width: 15rem; 
+    width: 17rem; 
 }
 
 .logo{
@@ -10,4 +10,11 @@
 
 .rotas{
     color: white;
+    display: flex;
+    align-items: center;
+
+}
+
+.descricao{
+    padding: 1rem;
 }
