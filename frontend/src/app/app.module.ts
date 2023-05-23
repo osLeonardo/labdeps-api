@@ -7,6 +7,20 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavComponent } from './components/template/nav/nav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { CnpjCnepComponent } from './components/consultas/cnpj-cnep/cnpj-cnep.component';
+import { CpfCnepComponent } from './components/consultas/cpf-cnep/cpf-cnep.component';
+import { HomeComponent } from './views/home/home.component';
+import { ConsultasComponent } from './views/consultas/consultas.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { DialogConsultasComponent } from './views/consultas/dialog-consultas/dialog-consultas.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { FormsModule } from '@angular/forms';
+import { CnpjConsultaComponent } from './views/cnpj-consulta/cnpj-consulta.component';
+import { CpfConsultaComponent } from './views/cpf-consulta/cpf-consulta.component';
 import { CnpjCepimComponent } from './components/consultas/cnpj-cepim/cnpj-cepim.component';
 import { CnpjLenenciaComponent } from './components/consultas/cnpj-lenencia/cnpj-lenencia.component';
 import { CpfBpcComponent } from './components/consultas/cpf-bpc/cpf-bpc.component';
@@ -30,6 +44,13 @@ import { MatExpansionModule } from '@angular/material/expansion';
     AppComponent,
     HeaderComponent,
     NavComponent,
+    CnpjCnepComponent,
+    CpfCnepComponent,
+    HomeComponent,
+    ConsultasComponent,
+    DialogConsultasComponent,
+    CnpjConsultaComponent,
+    CpfConsultaComponent,
     CnpjCepimComponent,
     CnpjLenenciaComponent,
     CpfBpcComponent,
@@ -42,11 +63,19 @@ import { MatExpansionModule } from '@angular/material/expansion';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatListModule,
     MatSidenavModule,
     HttpClientModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    FormsModule,
     AppRoutingModule,
     MatTableModule,
     MatIconModule,

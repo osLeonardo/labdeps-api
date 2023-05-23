@@ -1,11 +1,3 @@
-.sidenav{
-    background-color: #242c54;
-    
+mat-sidenav-container{
+    height: 100%;
 }
-#rotate-botao{
-    transition: transform 0.3s ease;
-}
-.rotated{
-    transform: rotate(180deg);
-}
-

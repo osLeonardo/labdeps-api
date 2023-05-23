@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Cnep } from './models/cnep.model';
 import { LenienciaByCnpj } from './model/lenienciaByCnpj.Model';
 import { CepimByCnpj } from './model/cepimByCnpj.Model';
 import { bpc } from './models/bpc.Model';
 import { pep } from './models/pep.Model';
 import { Observable } from 'rxjs/internal/Observable';
 import { Remuneracao } from './models/remuneracao.model';
-import { HttpClient } from '@angular/common/http';
 import { bolsaFamilia } from './model/bolsaFamilia.Model';
 import { peti } from './model/peti.Model';
 
@@ -45,8 +45,9 @@ export class ConsultasService {
     var url = `${this.baseUrl}Cepim/${codigo}/${this.pagina}`
     return this.http.get<CepimByCnpj[]>(url)
   }
-  GetCnepByCnpj(codigo: string){
-    
+  GetCnepByCnpj(codigo: string): Observable<Cnep[]>{
+    const url = `${this.baseUrl}Cnep/${codigo}/${this.pagina}`;
+    return this.http.get<Cnep[]>(url);
   }
   GetLenienciaByCnpj(codigo: string): Observable<LenienciaByCnpj[]>{
   var url = `${this.baseUrl}Leniencia/${codigo}/${this.pagina}`
