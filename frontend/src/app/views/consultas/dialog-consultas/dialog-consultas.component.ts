@@ -18,14 +18,16 @@ export class DialogConsultasComponent {
   constructor(public dialogRef: MatDialogRef<DialogConsultasComponent>, private router: Router) {}
 
     Buscar(): void{
+      const dataRef = `${this.dataReferencia.getFullYear().toString()}${(this.dataReferencia.getMonth() + 1).toString().padStart(2, '0')}`;
+      console.log(dataRef);
       if(this.consulta === 'cpf')
       {
-        this.router.navigate([`consulta/cpf/${this.codigo}`]);
+        this.router.navigate([`consulta/cpf/${this.codigo}/${dataRef}/${this.intervalo}`]);
       }
       else if(this.consulta === 'cnpj')
       {
-        this.router.navigate([`consulta/cnpj/${this.codigo}`]);
+        this.router.navigate([`consulta/cnpj/${this.codigo}/${dataRef}/${this.intervalo}`]);
       }
-      
+      this.dialogRef.close();      
     }
 }

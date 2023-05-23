@@ -28,7 +28,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import { CnpjConsultaComponent } from './views/cnpj-consulta/cnpj-consulta.component';
-import { CpfConsultaComponent } from './views/cpf-consulta/cpf-consulta.component'
+import { CpfConsultaComponent } from './views/cpf-consulta/cpf-consulta.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -47,6 +48,7 @@ import { CpfConsultaComponent } from './views/cpf-consulta/cpf-consulta.componen
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatListModule,

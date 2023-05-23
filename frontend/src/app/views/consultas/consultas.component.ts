@@ -9,18 +9,13 @@ import { DialogConsultasComponent } from './dialog-consultas/dialog-consultas.co
 })
 export class ConsultasComponent {
 
-  name: string;
-
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(DialogConsultasComponent, {
-      data: {name: this.name},
-    });
+    const dialogRef = this.dialog.open(DialogConsultasComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe(() => {
       console.log('The dialog was closed');
-      this.name = result;
     });
   }
 }
