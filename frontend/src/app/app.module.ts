@@ -33,10 +33,8 @@ import { BolsaFamiliaComponent } from './components/consultas/bolsa-familia/bols
 import { PetiComponent } from './components/consultas/peti/peti.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
-import { CPFNISComponent } from './components/consultas/cpfnis/cpfnis.component';
 import { MatButtonModule } from '@angular/material/button';
 import { NgIf } from '@angular/common';
-import { CnpjnisComponent } from './components/consultas/cnpjnis/cnpjnis.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
@@ -58,8 +56,6 @@ import { MatExpansionModule } from '@angular/material/expansion';
     CpfRemuneracaoComponent,
     PetiComponent,
     BolsaFamiliaComponent,
-    CPFNISComponent,
-    CnpjnisComponent,
   ],
   imports: [
     BrowserModule,
