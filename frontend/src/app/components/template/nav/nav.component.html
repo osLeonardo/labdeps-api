@@ -7,77 +7,17 @@
       fixedInViewport="true"
       fixedTopGap="64"
     >
-        <img src="assets/img/logo-deps-completo-colorido.png" alt="Logo" class="logo">
       <mat-nav-list>
-        <mat-list-item>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    account_circle
-                </i>
-                    Labs Unesc 
-                    <br>
-            </a>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    dashboard
-                </i>
-                    DASHBOARD
-                    <br>
-            </a>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    analytics
-                </i>
-                    POLÍTICA DE CRÉDITO
-                    <br>
-            </a>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    search 
-                </i>
-                    CONSULTAS
-                    <br>
-            </a>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    article 
-                </i>
-                    MINHAS FATURAS
-                    <br>
-            </a>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    account_balance
-                </i>
-                    MINHA CONTA CORRENTE
-                    <br>
-            </a>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    comment
-                </i>
-                    MENSAGENS
-                    <br>
-            </a>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    settings
-                </i>
-                    ADMINISTRAÇÃO
-                    <br>
-            </a>
-            <a class="rotas" routerLink="/">
-                <i class="material-icons"> 
-                    help
-                </i>
-                    AJUDA
-                    <br>
-            </a>
-        </mat-list-item>
+        <a mat-list-item>
+          <i class="material-icons"> search </i>
+          Consultas
+        </a>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
+
         <app-cpfnis></app-cpfnis>
         <app-cnpjnis></app-cnpjnis>
+        
     </mat-sidenav-content>
 </mat-sidenav-container>

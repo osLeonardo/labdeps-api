@@ -21,6 +21,7 @@ import { CPFNISComponent } from './components/consultas/cpfnis/cpfnis.component'
 import { MatButtonModule } from '@angular/material/button';
 import { NgIf } from '@angular/common';
 import { CnpjnisComponent } from './components/consultas/cnpjnis/cnpjnis.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { CnpjnisComponent } from './components/consultas/cnpjnis/cnpjnis.compone
     HeaderComponent,
     NavComponent,
     CpfBpcComponent,
-    CpfPepsComponent
+    CpfPepsComponent,
     CpfRemuneracaoComponent,
     PetiComponent,
     BolsaFamiliaComponent,
@@ -40,7 +41,7 @@ import { CnpjnisComponent } from './components/consultas/cnpjnis/cnpjnis.compone
     BrowserAnimationsModule,
     MatToolbarModule,
     MatListModule,
-    MatSidenavModule
+    MatSidenavModule,
     HttpClientModule,
     AppRoutingModule,
     MatTableModule,
@@ -48,6 +49,7 @@ import { CnpjnisComponent } from './components/consultas/cnpjnis/cnpjnis.compone
     MatCardModule,
     MatButtonModule,
     NgIf,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
