@@ -1,14 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Cnep } from './models/cnep.model';
-import { LenienciaByCnpj } from './model/lenienciaByCnpj.Model';
-import { CepimByCnpj } from './model/cepimByCnpj.Model';
+import { LenienciaByCnpj } from './models/lenienciaByCnpj.Model';
+import { CepimByCnpj } from './models/cepimByCnpj.Model';
 import { bpc } from './models/bpc.Model';
 import { pep } from './models/pep.Model';
 import { Observable } from 'rxjs/internal/Observable';
 import { Remuneracao } from './models/remuneracao.model';
-import { bolsaFamilia } from './model/bolsaFamilia.Model';
-import { peti } from './model/peti.Model';
+import { bolsaFamilia } from './models/bolsaFamilia.Model';
+import { peti } from './models/peti.Model';
 
 @Injectable({
   providedIn: 'root'

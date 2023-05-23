@@ -1,6 +1,6 @@
 import { Convenio } from "./convenio.Model"
 import { OrgaoSuperior } from "./orgaoSuperior.Model"
-import { PessoaJuridica } from "./pessoaJuridica.Model"
+import { PessoaJuridica } from "../models/pessoaJuridica.model"
 
 
 export interface CepimByCnpj {
