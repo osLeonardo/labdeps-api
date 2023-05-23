@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { bpc } from './models/bpc.Model';
 import { pep } from './models/pep.Model';
+import { Observable } from 'rxjs/internal/Observable';
+import { Remuneracao } from './models/remuneracao.model';
+import { HttpClient } from '@angular/common/http';
+import { bolsaFamilia } from './model/bolsaFamilia.Model';
+import { peti } from './model/peti.Model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,24 +17,26 @@ export class ConsultasService {
 
   constructor(private http: HttpClient) { }
   
-  GetBolsaFamiliaByCpf(dataCompetencia: number, codigo: string){
-    //Na url de requisição atribuir a 'dataReferencia' como igual a 'dataCompetencia'
-    //Exemplo: bolsaFamilia/{dataCompetencia}/{dataCompetencia}/{codigo}/{pagina} 
-
+  GetBolsaFamiliaByCpf(dataCompetencia: number, codigo: string): Observable<bolsaFamilia[]> {
+    const UrlBF = `${this.baseUrl}bolsaFamilia/${dataCompetencia}/${dataCompetencia}/${codigo}/${this.pagina}`;
+    return this.http.get<bolsaFamilia[]>(UrlBF)
   }
   GetBpcByCpf(codigo: string): Observable<bpc[]>{
     const urlBpc = `${this.baseUrl}Bpc/${codigo}/${this.pagina}`;
     return this.http.get<bpc[]>(urlBpc)
   }
-  GetPetiByCpf(codigo: string){
+  GetPetiByCpf(codigo: string): Observable<peti[]> {
+    const UrlPeti = `${this.baseUrl}peti/${codigo}/${this.pagina}`;
+    return this.http.get<peti[]>(UrlPeti)
 
   }
   GetPepByCpf(codigo: string): Observable<pep[]>{
     const urlPep = `${this.baseUrl}Pep/${codigo}/${this.pagina}`;
     return this.http.get<pep[]>(urlPep)
   }
-  GetRemuneracaoByCpf(codigo: string, dataCompetencia: number){
-    
+  GetRemuneracaoByCpf(codigo: string, dataCompetencia: number): Observable<Remuneracao[]> {
+    const url = `${this.baseUrl}/Remuneracao/${codigo}/${dataCompetencia}/${this.pagina}`;  
+    return this.http.get<Remuneracao[]>(url)
   }
   GetCepimByCnpj(codigo: string){
     
