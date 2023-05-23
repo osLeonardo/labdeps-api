@@ -1,4 +1,4 @@
-import { CepimByCnpj } from './../model/cepimByCnpj.Model';
+import { CepimByCnpj } from '../models/cepimByCnpj.Model';
 import { Component, OnInit } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { ConsultasService } from '../consultas.service';
