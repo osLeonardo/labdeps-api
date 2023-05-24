@@ -1,6 +1,6 @@
 <mat-card>
     <mat-card-header class="table">PEPS</mat-card-header>
-    <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z3">
+    <table mat-table [dataSource]="Peps" multiTemplateDataRows class="mat-elevation-z3">
     
         <ng-container matColumnDef="cpf">
         <th mat-header-cell *matHeaderCellDef> CPF </th>
@@ -12,24 +12,24 @@
         <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
         </ng-container>
     
-        <ng-container matColumnDef="funcao">
+        <ng-container matColumnDef="descricao_funcao">
         <th mat-header-cell *matHeaderCellDef> Função </th>
-        <td mat-cell *matCellDef="let element"> {{element.funcao}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.descricao_funcao}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="orgao">
+        <ng-container matColumnDef="nome_orgao">
         <th mat-header-cell *matHeaderCellDef> Órgão </th>
-        <td mat-cell *matCellDef="let element"> {{element.orgao}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.nome_orgao}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="inicio_exercicio">
+        <ng-container matColumnDef="dt_inicio_exercicio">
         <th mat-header-cell *matHeaderCellDef> Início exercício </th>
-        <td mat-cell *matCellDef="let element"> {{element.inicio_exercicio}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.dt_inicio_exercicio}} </td>
         </ng-container>
    
-        <ng-container matColumnDef="fim_exercicio">
+        <ng-container matColumnDef="dt_fim_exercicio">
         <th mat-header-cell *matHeaderCellDef> Fim exercício </th>
-        <td mat-cell *matCellDef="let element"> {{element.fim_exercicio}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.dt_fim_exercicio}} </td>
         </ng-container>
 
         <ng-container matColumnDef="expand">
@@ -60,12 +60,12 @@
                                 <td>{{element.sigla_funcao}}</td>
                             </tr>
                             <tr>
-                                <td class="td1">Código Função: </td>
-                                <td>{{element.cod_funcao}}</td>
+                                <td class="td1">Nível Função: </td>
+                                <td>{{element.nivel_funcao}}</td>
                             </tr>
                             <tr>
                                 <td class="td1">Fim carência: </td>
-                                <td>{{element.fim_carencia}}</td>
+                                <td>{{element.dt_fim_carencia}}</td>
                             </tr>
                         </table>
                     </mat-card-content>
