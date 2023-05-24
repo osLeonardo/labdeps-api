@@ -16,6 +16,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
     ]),
   ]
 })
+
 export class CnpjCnepComponent implements OnInit{
 
   cnep: Cnep[];
@@ -24,9 +25,9 @@ export class CnpjCnepComponent implements OnInit{
 
   ngOnInit(): void {
     const codigo = `${this.route.snapshot.paramMap.get('codigo')}`;
-    console.log(codigo);
     this.consultasService.GetCnepByCnpj(codigo).subscribe(cnep => {
       this.cnep = cnep
+      console.log(cnep)
     })
   }
   columnsToDisplayWithExpand = [
