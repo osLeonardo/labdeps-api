@@ -42,6 +42,7 @@ export class CnpjLenenciaComponent implements OnInit {
   constructor(private ConsultasService: ConsultasService) {}
 
   ngOnInit(): void {
+    console.log(this.dataSource);
     const codigo = "06947283000160"; // mudar dps para a rota que vamos fazer
     this.ConsultasService.GetLenienciaByCnpj(codigo).subscribe((lenencia) => {
       this.leniencia = lenencia;

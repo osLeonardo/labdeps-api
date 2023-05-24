@@ -1,11 +1,11 @@
 <mat-card class="peti mat-elevation-z3">
     <mat-card-title class="title">PETI</mat-card-title>
         <div >
-            <table class="table" mat-table [dataSource]="PetiList">
+            <table class="table" mat-table [dataSource]="peti">
 
                 <ng-container matColumnDef="nome">
                 <th mat-header-cell *matHeaderCellDef> Nome </th>
-                <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.beneficiarioPeti.nome}} </td>
                 </ng-container> 
                  
                 <ng-container matColumnDef="dataMesReferencia">
@@ -25,22 +25,22 @@
             
                 <ng-container matColumnDef="nomeIBGE">
                 <th mat-header-cell *matHeaderCellDef> Município </th>
-                <td mat-cell *matCellDef="let element"> {{element.nomeIBGE}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.municipio.nomeIBGE}} </td>
                 </ng-container>
 
                 <ng-container matColumnDef="sigla">
                 <th mat-header-cell *matHeaderCellDef> Estado </th>
-                <td mat-cell *matCellDef="let element"> {{element.sigla}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.municipio.uf.nome}} </td>
                 </ng-container>  
 
                 <ng-container matColumnDef="cpfFormatado">
                 <th mat-header-cell *matHeaderCellDef> CPF </th>
-                <td mat-cell *matCellDef="let element"> {{element.cpfFormatado}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.titularBolsaFamilia.cpfFormatado}} </td>
                 </ng-container> 
 
                 <ng-container matColumnDef="nis">
                 <th mat-header-cell *matHeaderCellDef> NIS </th>
-                <td mat-cell *matCellDef="let element"> {{element.nis}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.titularBolsaFamilia.nis}} </td>
                 </ng-container> 
 
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

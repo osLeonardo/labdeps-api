@@ -20,8 +20,8 @@ export class ConsultasService {
 
   constructor(private http: HttpClient) { }
   
-  GetBolsaFamiliaByCpf(dataCompetencia: number, codigo: string): Observable<bolsaFamilia[]> {
-    const UrlBF = `${this.baseUrl}bolsaFamilia/${dataCompetencia}/${dataCompetencia}/${codigo}/${this.pagina}`;
+  GetBolsaFamiliaByCpf(data: number, codigo: string): Observable<bolsaFamilia[]> {
+    const UrlBF = `${this.baseUrl}bolsaFamilia/${data}/${data}/${codigo}/${this.pagina}`;
     return this.http.get<bolsaFamilia[]>(UrlBF)
   }
   GetBpcByCpf(codigo: string): Observable<bpc[]>{
