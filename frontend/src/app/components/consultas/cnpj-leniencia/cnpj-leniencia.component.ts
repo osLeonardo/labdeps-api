@@ -1,7 +1,7 @@
 
 
 
-import { ConsultasService } from "./../consultas.service";
+import { ConsultasService } from "../consultas.service";
 import { Component, OnInit } from "@angular/core";
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
@@ -11,9 +11,9 @@ import { ActivatedRoute } from "@angular/router";
 
 
 @Component({
-  selector: "app-cnpj-lenencia",
-  templateUrl: "./cnpj-lenencia.component.html",
-  styleUrls: ["./cnpj-lenencia.component.css"],
+  selector: "app-cnpj-leniencia",
+  templateUrl: "./cnpj-leniencia.component.html",
+  styleUrls: ["./cnpj-leniencia.component.css"],
   animations: [
     trigger('detailExpand', [
       state('collapsed', style({height: '0px', minHeight: '0'})),
@@ -24,19 +24,13 @@ import { ActivatedRoute } from "@angular/router";
 })
 
 
-export class CnpjLenenciaComponent implements OnInit {
+export class CnpjLenienciaComponent implements OnInit {
 
   leniencia: LenienciaByCnpj[]
 
   constructor(private ConsultasService: ConsultasService, private route: ActivatedRoute) {}
 
-  ngOnInit(): void {
-    const codigo: string = `${this.route.snapshot.paramMap.get('codigo')}`;
-    this.ConsultasService.GetLenienciaByCnpj(codigo).subscribe((lenencia) => {
-      this.leniencia = lenencia;
-      console.log(lenencia)
-    });
-  }
+
 
   columnsToDisplay =  [ 'orgaoResponsavel','situacaoAcordo', 'dataFimAcordo', 'dataInicioAcordo', 'quantidade'];
   
@@ -47,6 +41,13 @@ export class CnpjLenenciaComponent implements OnInit {
   dataSource2: LenienciaByCnpj[]
   columnsDisplay = ['cnpjFormatado', 'nomeFantasia', 'nomeInformadoOrgaoResponsavel','razaoSocial', ]
 
+  ngOnInit(): void {
+    const codigo: string = `${this.route.snapshot.paramMap.get('codigo')}`;
+    this.ConsultasService.GetLenienciaByCnpj(codigo).subscribe((lenencia) => {
+      this.leniencia = lenencia;
+      console.log(lenencia)
+    });
+  }
 }
 
 

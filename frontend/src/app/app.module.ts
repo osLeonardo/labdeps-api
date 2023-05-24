@@ -22,7 +22,7 @@ import { FormsModule } from '@angular/forms';
 import { CnpjConsultaComponent } from './views/cnpj-consulta/cnpj-consulta.component';
 import { CpfConsultaComponent } from './views/cpf-consulta/cpf-consulta.component';
 import { CnpjCepimComponent } from './components/consultas/cnpj-cepim/cnpj-cepim.component';
-import { CnpjLenenciaComponent } from './components/consultas/cnpj-lenencia/cnpj-lenencia.component';
+import { CnpjLenienciaComponent } from './components/consultas/cnpj-leniencia/cnpj-leniencia.component';
 import { CpfBpcComponent } from './components/consultas/cpf-bpc/cpf-bpc.component';
 import { CpfPepsComponent } from './components/consultas/cpf-peps/cpf-peps.component';
 import { CpfRemuneracaoComponent } from './components/consultas/cpf-remuneracao/cpf-remuneracao.component';
@@ -50,7 +50,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     CnpjConsultaComponent,
     CpfConsultaComponent,
     CnpjCepimComponent,
-    CnpjLenenciaComponent,
+    CnpjLenienciaComponent,
     CpfBpcComponent,
     CpfPepsComponent,
     CpfRemuneracaoComponent,
