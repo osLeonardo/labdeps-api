@@ -29,7 +29,7 @@ export class CpfRemuneracaoComponent implements OnInit {
     ) { }
 
     ngOnInit(): void {
-      const codigo: string = `${this.route.snapshot.paramMap.get('codigo')}`
+      const codigo = `${this.route.snapshot.paramMap.get('codigo')}`
     const dataRef = `${this.route.snapshot.paramMap.get('dataRef')}`
     const intervalo = parseInt(`${this.route.snapshot.paramMap.get('intervalo')}`)
     const ano = parseInt(dataRef.substring(0, 4));
@@ -47,7 +47,8 @@ export class CpfRemuneracaoComponent implements OnInit {
       });
     }
   }
-columnsToDisplay = [
+
+  columnsToDisplay = [
     'mesAno',
     'remuneracaoBasicaBruta',
     'gratificacaoNatalina',

@@ -13,9 +13,13 @@ export class DialogConsultasComponent {
   intervalo = '3';
   dataReferencia = new Date();
   codigo: string;
-
+  button = true;
 
   constructor(public dialogRef: MatDialogRef<DialogConsultasComponent>, private router: Router) {}
+
+  EnableButton(): void{
+    this.button = this.codigo ? false : true;
+  }
 
     Buscar(): void{
       const dataRef = `${this.dataReferencia.getFullYear().toString()}${(this.dataReferencia.getMonth() + 1).toString().padStart(2, '0')}`;
