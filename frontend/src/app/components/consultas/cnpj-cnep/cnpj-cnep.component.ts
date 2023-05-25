@@ -19,14 +19,14 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 
 export class CnpjCnepComponent implements OnInit{
 
-  cnep: Cnep[] = [];
+  cnep: Cnep[];
 
   constructor(private consultasService: ConsultasService, private route: ActivatedRoute){ }
 
   ngOnInit(): void {
     const codigo = `${this.route.snapshot.paramMap.get('codigo')}`;
     this.consultasService.GetCnepByCnpj(codigo).subscribe(cnep => {
-      this.cnep = cnep;
+      this.cnep = cnep
     })
   }
   columnsToDisplayWithExpand = [
@@ -35,7 +35,7 @@ export class CnpjCnepComponent implements OnInit{
     'orgaoSancionador.nome',
     'orgaoSancionador.siglaUf',
     'orgaoSancionador.poder',
-    'numeroProcesso',    
+    'numeroProcesso',
     'valorMulta',
     'expand'
   ];
@@ -45,7 +45,6 @@ export class CnpjCnepComponent implements OnInit{
     'codigo',
     'descricao'
   ];
-}
 
 //   var cnep: Cnep[] = [
 //   {
