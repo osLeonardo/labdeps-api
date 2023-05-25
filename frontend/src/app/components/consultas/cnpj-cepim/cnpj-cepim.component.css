@@ -1,5 +1,4 @@
-
-table {
+table{
   width: 100%;
 }
 
@@ -11,13 +10,12 @@ table {
   align-items: center;
 }
 
-.card-secundarios mat-card{
+.card-secundarios mat-card{  
     margin: 10px;
     width: 35%;
     display: flex;
     flex-wrap: wrap;
 }
-
 .card-secundarios tr{
     display: flex;
     justify-content: space-between;
@@ -25,5 +23,3 @@ table {
     margin: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.137);
 }
-
-
