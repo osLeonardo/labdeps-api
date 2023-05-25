@@ -1,0 +1,7 @@
+{
+  "PortalTransparenciaDeps.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\labdeps\\Documents\\Deps\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.Core",
+  "PortalTransparenciaDeps.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\labdeps\\Documents\\Deps\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.Infrastructure",
+  "PortalTransparenciaDeps.SharedKernel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\labdeps\\Documents\\Deps\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.SharedKernel",
+  "PortalTransparenciaDeps.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\labdeps\\Documents\\Deps\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.UnitTests",
+  "PortalTransparenciaDeps.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\labdeps\\Documents\\Deps\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.Web"
+}
