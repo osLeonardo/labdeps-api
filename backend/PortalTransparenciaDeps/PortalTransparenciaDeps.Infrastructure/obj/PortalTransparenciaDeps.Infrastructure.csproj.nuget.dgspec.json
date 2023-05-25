@@ -1,0 +1,295 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.Infrastructure\\PortalTransparenciaDeps.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.Core\\PortalTransparenciaDeps.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.Core\\PortalTransparenciaDeps.Core.csproj",
+        "projectName": "PortalTransparenciaDeps.Core",
+        "projectPath": "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.Core\\PortalTransparenciaDeps.Core.csproj",
+        "packagesPath": "C:\\Users\\labdeps\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\labdeps\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.SharedKernel\\PortalTransparenciaDeps.SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.SharedKernel\\PortalTransparenciaDeps.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Ardalis.GuardClauses": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Ardalis.Result": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Ardalis.Specification": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.Infrastructure\\PortalTransparenciaDeps.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.Infrastructure\\PortalTransparenciaDeps.Infrastructure.csproj",
+        "projectName": "PortalTransparenciaDeps.Infrastructure",
+        "projectPath": "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.Infrastructure\\PortalTransparenciaDeps.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\labdeps\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\labdeps\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.Core\\PortalTransparenciaDeps.Core.csproj": {
+                "projectPath": "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.Core\\PortalTransparenciaDeps.Core.csproj"
+              },
+              "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.SharedKernel\\PortalTransparenciaDeps.SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.SharedKernel\\PortalTransparenciaDeps.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Ardalis.EFCore.Extensions": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Ardalis.Specification.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.17.1, )"
+            },
+            "MongoDB.Driver.Core": {
+              "target": "Package",
+              "version": "[2.17.1, )"
+            },
+            "NETStandard.Library": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "NPOI": {
+              "target": "Package",
+              "version": "[2.5.6, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.SharedKernel\\PortalTransparenciaDeps.SharedKernel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.SharedKernel\\PortalTransparenciaDeps.SharedKernel.csproj",
+        "projectName": "PortalTransparenciaDeps.SharedKernel",
+        "projectPath": "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.SharedKernel\\PortalTransparenciaDeps.SharedKernel.csproj",
+        "packagesPath": "C:\\Users\\labdeps\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\labdeps\\Desktop\\PortalTransparenciaDeps\\PortalTransparenciaDeps\\PortalTransparenciaDeps.SharedKernel\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\labdeps\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Ardalis.Specification": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.17.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
