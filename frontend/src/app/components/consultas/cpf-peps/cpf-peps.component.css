@@ -4,20 +4,13 @@
 
 mat-card-header{
     font-size: large;
-    font-style: oblique;
-    font-weight: bolder;
     padding-bottom: 15px;
-    background-color: #ff6f0f;
-    color: #013766;
 }
 
 .extra-information{
     font-size: large;
-    font-style: oblique;
     font-weight: bolder;
     padding-bottom: 15px;
-    background-color: #013766;
-    color: #ff6f0f;
 }
 
 .td1{
@@ -26,4 +19,8 @@ mat-card-header{
 
 .table-extra{
     padding-top: 15px
+}
+
+.container-expanded{
+    background-color: whitesmoke;
 }

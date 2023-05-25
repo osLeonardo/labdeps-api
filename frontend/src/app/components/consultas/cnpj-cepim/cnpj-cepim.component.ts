@@ -27,7 +27,6 @@ export class CnpjCepimComponent implements OnInit {
     const codigo: string = `${this.route.snapshot.paramMap.get('codigo')}`;
      this.ConsultasService.GetCepimByCnpj(codigo).subscribe((cepim) => {
        this.cepim = cepim;
-       console.log(cepim)
      });
   }
 

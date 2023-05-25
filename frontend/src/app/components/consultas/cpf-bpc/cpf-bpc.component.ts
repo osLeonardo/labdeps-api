@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import { bpc } from '../models/bpc.Model';
+import { ConsultasService } from '../consultas.service';
+import { ActivatedRoute, Route } from '@angular/router';
 
 @Component({
   selector: 'app-cpf-bpc',
@@ -13,42 +16,23 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
     ]),
   ],
 })
-export class CpfBpcComponent {
+export class CpfBpcComponent implements OnInit {
 
-  dataSource = elementos
-  displayedColumns = ["id", "cpf", "nome", "nis", "pais", "uf_nome"]
+  Bpc: bpc[]
+
+  displayedColumns = ["id", "beneficiario.cpfFormatado", "beneficiario.nome", "beneficiario.nis", "municipio.pais", "municipio.uf.nome"]
+
+  constructor(private consultaService: ConsultasService, private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    const codigo: string = `${this.route.snapshot.paramMap.get('codigo')}`
+    this.consultaService.GetBpcByCpf(codigo).subscribe(bpc => {
+      this.Bpc = bpc
+    })
+  }
 	
   columnsToDisplayWithExpand = [...this.displayedColumns, 'expand'];
-  expandedElement:  classeTeste[];
+  expandedElement:  bpc[];
 
 }
 
-export interface classeTeste {
-  nome: string,
-  cpf: string,
-  nis: string,
-  nome_rep: string,
-  cpf_rep: string,
-  nis_rep: string,
-  pais: string,
-  uf_nome: string,
-  id: number,
-  dataMesCompetencia: string,
-  dataMesReferencia: string
-}
-
-const elementos: classeTeste[] = [
-  {
-      nome: "Bruno",
-      cpf: "514.325.652-68",
-      nis: "4562548",
-      nome_rep: "Jhulia",
-      cpf_rep: "852.963.741.65",
-      nis_rep: "4521489",
-      pais: "Brasil",
-      uf_nome: "Santa Catarina",
-      id: 1,
-      dataMesCompetencia: "06/2021",
-      dataMesReferencia: "07/2022"
- }
-]

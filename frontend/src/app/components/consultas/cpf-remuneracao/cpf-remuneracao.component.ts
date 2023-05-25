@@ -47,7 +47,8 @@ export class CpfRemuneracaoComponent implements OnInit {
       });
     }
   }
-columnsToDisplay = [
+
+  columnsToDisplay = [
     'mesAno',
     'remuneracaoBasicaBruta',
     'gratificacaoNatalina',

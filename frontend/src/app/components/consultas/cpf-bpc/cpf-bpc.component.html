@@ -1,34 +1,34 @@
-<mat-card>
-    <mat-card-header class="table">BPC</mat-card-header>
-    <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z3">
+<mat-card >
+    <mat-card-header class="table"><mat-card-title>BPC</mat-card-title></mat-card-header>
+    <table mat-table [dataSource]="Bpc" multiTemplateDataRows >
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef> ID </th>
             <td mat-cell *matCellDef="let element"> {{element.id}} </td>
         </ng-container>
         
-        <ng-container matColumnDef="cpf">
+        <ng-container matColumnDef="beneficiario.cpfFormatado">
             <th mat-header-cell *matHeaderCellDef> CPF </th>
-            <td mat-cell *matCellDef="let element"> {{element.cpf}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.beneficiario.cpfFormatado}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="nome">
+        <ng-container matColumnDef="beneficiario.nome">
             <th mat-header-cell *matHeaderCellDef> Nome </th>
-            <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.beneficiario.nome}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="nis">
+        <ng-container matColumnDef="beneficiario.nis">
             <th mat-header-cell *matHeaderCellDef> Nis </th>
-            <td mat-cell *matCellDef="let element"> {{element.nis}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.beneficiario.nis}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="pais">
+        <ng-container matColumnDef="municipio.pais">
             <th mat-header-cell *matHeaderCellDef> País </th>
-            <td mat-cell *matCellDef="let element"> {{element.pais}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.municipio.pais}} </td>
         </ng-container>
         
-        <ng-container matColumnDef="uf_nome">
+        <ng-container matColumnDef="municipio.uf.nome">
             <th mat-header-cell *matHeaderCellDef> UF </th>
-            <td mat-cell *matCellDef="let element"> {{element.uf_nome}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.municipio.uf.nome}} </td>
         </ng-container>
 
         <ng-container matColumnDef="expand">
@@ -53,15 +53,15 @@
                         <table class="table-representante">
                             <tr>
                                 <td class="td1">CPF: </td>
-                                <td>{{element.cpf_rep}}</td>
+                                <td>{{element.beneficiario.cpfRepresentanteLegalFormatado}}</td>
                             </tr>
                             <tr>
                                 <td class="td1">Nome: </td>
-                                <td>{{element.nome_rep}}</td>
+                                <td>{{element.beneficiario.nomeRepresentanteLegal}}</td>
                             </tr>
                             <tr>
                                 <td class="td1">NIS: </td>
-                                <td>{{element.nis_rep}}</td>
+                                <td>{{element.beneficiario.nisRepresentanteLegal}}</td>
                             </tr>
                         </table>
                     </mat-card-content>
