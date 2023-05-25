@@ -22,13 +22,10 @@ export class BolsaFamiliaComponent implements OnInit {
     const dataRef = `${this.route.snapshot.paramMap.get('dataRef')}`
     const intervalo = parseInt(`${this.route.snapshot.paramMap.get('intervalo')}`)
     const auxDate = parseInt(dataRef);
-    const ano = parseInt(dataRef.substr(0, 4));
-    const mes = parseInt(dataRef.substr(4,2)) - 1; //-1 pois janeiro é representado por 0
+    const ano = parseInt(dataRef.substring(0, 4));
+    const mes = parseInt(dataRef.substring(4,2)) - 1; //-1 pois janeiro é representado por 0
     let data = new Date(ano, mes);
-    // this.consultasService.GetBolsaFamiliaByCpf(auxDate, codigo).subscribe(bolsafamilia =>{
-    //       this.bolsaFamilia=bolsafamilia
-    //       console.log(this.bolsaFamilia);
-    //     });
+    console.log(data);
 
     for(let i=0; i<intervalo; i++){
       data.setMonth(data.getMonth()-1);
@@ -41,9 +38,6 @@ export class BolsaFamiliaComponent implements OnInit {
       });
       
     }
-    console.log('Teste:');
-    console.log(this.bolsaFamilia);
-    console.log('AAAAAAAAAAAAAAAAAAA');
   }
   
 

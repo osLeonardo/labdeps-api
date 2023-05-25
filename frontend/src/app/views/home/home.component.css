@@ -2,7 +2,7 @@ mat-card{
     margin: 1rem;
     display: flex;
     align-items: center;
-    border: 5rem
+    border: 5rem;
 }
 
 mat-card-subtitle{
