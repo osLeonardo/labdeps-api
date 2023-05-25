@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.container{
+width: 100%;
+} 
+
 .sidenav{
     background-color: #242c54;
     width: 17rem;

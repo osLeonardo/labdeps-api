@@ -22,15 +22,15 @@ import { FormsModule } from '@angular/forms';
 import { CnpjConsultaComponent } from './views/cnpj-consulta/cnpj-consulta.component';
 import { CpfConsultaComponent } from './views/cpf-consulta/cpf-consulta.component';
 import { CnpjCepimComponent } from './components/consultas/cnpj-cepim/cnpj-cepim.component';
-import { CnpjLenenciaComponent } from './components/consultas/cnpj-lenencia/cnpj-lenencia.component';
+import { CnpjLenienciaComponent } from './components/consultas/cnpj-leniencia/cnpj-leniencia.component';
 import { CpfBpcComponent } from './components/consultas/cpf-bpc/cpf-bpc.component';
 import { CpfPepsComponent } from './components/consultas/cpf-peps/cpf-peps.component';
 import { CpfRemuneracaoComponent } from './components/consultas/cpf-remuneracao/cpf-remuneracao.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import { BolsaFamiliaComponent } from './components/consultas/bolsa-familia/bolsa-familia.component';
-import { PetiComponent } from './components/consultas/peti/peti.component';
+import { BolsaFamiliaComponent } from './components/consultas/cpf-bolsa-familia/bolsa-familia.component';
+import { PetiComponent } from './components/consultas/cpf-peti/peti.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
@@ -50,7 +50,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     CnpjConsultaComponent,
     CpfConsultaComponent,
     CnpjCepimComponent,
-    CnpjLenenciaComponent,
+    CnpjLenienciaComponent,
     CpfBpcComponent,
     CpfPepsComponent,
     CpfRemuneracaoComponent,

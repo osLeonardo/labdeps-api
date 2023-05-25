@@ -1,9 +1,9 @@
-<mat-card class="card-principal" >
+<mat-card class="card-principal mat-elevation-z3" >
     <mat-card-header>
       <mat-card-title>Lenencia Por Cnpj: </mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <table mat-table [dataSource]="dataSource" multiTemplateDataRows >
+      <table mat-table [dataSource]="leniencia" multiTemplateDataRows >
         <ng-container matColumnDef="dataInicioAcordo">
           <th mat-header-cell *matHeaderCellDef> Inicio do Acordo </th>
           <td mat-cell *matCellDef="let element"> {{ element.dataInicioAcordo }} </td>

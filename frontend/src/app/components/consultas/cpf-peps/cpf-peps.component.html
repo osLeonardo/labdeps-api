@@ -1,6 +1,6 @@
-<mat-card>
+<mat-card class="mat-elevation-z3">
     <mat-card-header class="table">PEPS</mat-card-header>
-    <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z3">
+    <table mat-table [dataSource]="Peps" multiTemplateDataRows class="mat-elevation-z3">
     
         <ng-container matColumnDef="cpf">
         <th mat-header-cell *matHeaderCellDef> CPF </th>
@@ -12,24 +12,24 @@
         <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
         </ng-container>
     
-        <ng-container matColumnDef="funcao">
+        <ng-container matColumnDef="descricaoFuncao">
         <th mat-header-cell *matHeaderCellDef> Função </th>
-        <td mat-cell *matCellDef="let element"> {{element.funcao}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.descricaoFuncao}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="orgao">
+        <ng-container matColumnDef="nomeOrgao">
         <th mat-header-cell *matHeaderCellDef> Órgão </th>
-        <td mat-cell *matCellDef="let element"> {{element.orgao}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.nomeOrgao}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="inicio_exercicio">
+        <ng-container matColumnDef="dtInicioExercicio">
         <th mat-header-cell *matHeaderCellDef> Início exercício </th>
-        <td mat-cell *matCellDef="let element"> {{element.inicio_exercicio}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.dtInicioExercicio}} </td>
         </ng-container>
    
-        <ng-container matColumnDef="fim_exercicio">
+        <ng-container matColumnDef="dtFimExercicio">
         <th mat-header-cell *matHeaderCellDef> Fim exercício </th>
-        <td mat-cell *matCellDef="let element"> {{element.fim_exercicio}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.dtFimExercicio}} </td>
         </ng-container>
 
         <ng-container matColumnDef="expand">
@@ -43,7 +43,7 @@
           </ng-container>
 
         <ng-container matColumnDef="expandedDetail">
-            <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplayWithExpand.length">
+            <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplayWithExpand.length" class="container-expanded">
               <div class="example-element-detail"
                    [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
                 
@@ -53,19 +53,19 @@
                         <table class="table-extra">
                             <tr>
                                 <td class="td1">Código do Órgão: </td>
-                                <td>{{element.cod_orgao}}</td>
+                                <td>{{element.codOrgao}}</td>
                             </tr>
                             <tr>
                                 <td class="td1">Sigla Função: </td>
-                                <td>{{element.sigla_funcao}}</td>
+                                <td>{{element.siglaFuncao}}</td>
                             </tr>
                             <tr>
-                                <td class="td1">Código Função: </td>
-                                <td>{{element.cod_funcao}}</td>
+                                <td class="td1">Nível Função: </td>
+                                <td>{{element.nivelFuncao}}</td>
                             </tr>
                             <tr>
                                 <td class="td1">Fim carência: </td>
-                                <td>{{element.fim_carencia}}</td>
+                                <td>{{element.dtFimCarencia}}</td>
                             </tr>
                         </table>
                     </mat-card-content>

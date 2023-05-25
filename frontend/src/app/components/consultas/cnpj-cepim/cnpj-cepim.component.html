@@ -1,9 +1,9 @@
-<mat-card class="card-principal">
+<mat-card class="card-principal mat-elevation-z3">
     <mat-card-header>
         <mat-card-title>Cepim Por Cnpj: </mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        <table mat-table [dataSource]="dataSource" multiTemplateDataRows>
+        <table mat-table [dataSource]="cepim" multiTemplateDataRows>
 
             <ng-container matColumnDef="pessoaJuridica.nome">
                 <th mat-header-cell *matHeaderCellDef>Nome</th>
@@ -28,6 +28,11 @@
             <ng-container matColumnDef="pessoaJuridica.numeroInscricaoSocial">
                 <th mat-header-cell *matHeaderCellDef>Inscrição Estadual</th>
                 <td mat-cell *matCellDef="let element"> {{ element.pessoaJuridica.numeroInscricaoSocial }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="pessoaJuridica.razaoSocialReceita">
+                <th mat-header-cell *matHeaderCellDef> Razao Social </th>
+                <td mat-cell *matCellDef="let element"> {{ element.pessoaJuridica.razaoSocialReceita }} </td>
             </ng-container>
 
             <ng-container matColumnDef="pessoaJuridica.tipo">
