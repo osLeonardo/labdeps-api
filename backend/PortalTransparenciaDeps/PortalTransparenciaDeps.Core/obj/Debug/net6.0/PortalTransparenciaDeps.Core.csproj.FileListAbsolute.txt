@@ -1,0 +1,15 @@
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.Core\bin\Debug\net6.0\PortalTransparenciaDeps.Core.deps.json
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.Core\bin\Debug\net6.0\PortalTransparenciaDeps.Core.dll
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.Core\bin\Debug\net6.0\PortalTransparenciaDeps.Core.pdb
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.Core\bin\Debug\net6.0\PortalTransparenciaDeps.SharedKernel.dll
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.Core\bin\Debug\net6.0\PortalTransparenciaDeps.SharedKernel.pdb
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.Core\obj\Debug\net6.0\PortalTransparenciaDeps.Core.csproj.AssemblyReference.cache
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.Core\obj\Debug\net6.0\PortalTransparenciaDeps.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.Core\obj\Debug\net6.0\PortalTransparenciaDeps.Core.AssemblyInfoInputs.cache
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.Core\obj\Debug\net6.0\PortalTransparenciaDeps.Core.AssemblyInfo.cs
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.Core\obj\Debug\net6.0\PortalTransparenciaDeps.Core.csproj.CoreCompileInputs.cache
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.Core\obj\Debug\net6.0\PortalTransparenciaDeps.Core.csproj.CopyComplete
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.Core\obj\Debug\net6.0\PortalTransparenciaDeps.Core.dll
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.Core\obj\Debug\net6.0\refint\PortalTransparenciaDeps.Core.dll
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.Core\obj\Debug\net6.0\PortalTransparenciaDeps.Core.pdb
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.Core\obj\Debug\net6.0\ref\PortalTransparenciaDeps.Core.dll
