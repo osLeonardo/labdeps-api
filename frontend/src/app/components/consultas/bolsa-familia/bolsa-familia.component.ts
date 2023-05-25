@@ -37,8 +37,8 @@ export class BolsaFamiliaComponent {
     const dataRef = `${this.route.snapshot.paramMap.get('dataRef')}`
     const intervalo = parseInt(`${this.route.snapshot.paramMap.get('intervalo')}`)
     const auxDate = parseInt(dataRef);
-    const ano = parseInt(dataRef.substr(0, 4));
-    const mes = parseInt(dataRef.substr(4,2)) - 1;
+    const ano = parseInt(dataRef.substring(0, 4));
+    const mes = parseInt(dataRef.substring(4,6)) - 1;
     let data = new Date(ano, mes);
 
     for(let i=0; i<intervalo; i++){
