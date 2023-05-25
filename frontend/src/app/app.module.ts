@@ -72,7 +72,6 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
-    AppRoutingModule,
     MatTableModule,
     MatIconModule,
     MatCardModule,
