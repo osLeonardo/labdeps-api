@@ -1,6 +1,5 @@
 mat-card-header{
     font-size: large;
-    font-weight: bolder;
     padding-bottom: 15px;
 }
 
@@ -24,9 +23,6 @@ mat-card-header{
     padding-top: 15px;
 }
 
-.td1{
-    font-weight: bold;
-}
 .card-extra{
     margin-top: 55px;
 }

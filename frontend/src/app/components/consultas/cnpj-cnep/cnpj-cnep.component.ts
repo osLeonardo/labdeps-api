@@ -19,7 +19,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 
 export class CnpjCnepComponent implements OnInit{
 
-  cnep: Cnep[];
+  cnep: Cnep[] = [];
 
   constructor(private consultasService: ConsultasService, private route: ActivatedRoute){ }
 

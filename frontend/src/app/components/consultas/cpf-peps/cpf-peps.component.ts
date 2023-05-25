@@ -28,7 +28,6 @@ export class CpfPepsComponent implements OnInit {
     const codigo: string = `${this.route.snapshot.paramMap.get('codigo')}`
     this.consultaService.GetPepByCpf(codigo).subscribe(Peps => {
       this.Peps = Peps
-      console.log(this.Peps)
     })
   }
 

@@ -1,9 +1,29 @@
-<app-header></app-header>
 <main>
-    <app-bolsa-familia></app-bolsa-familia>
-    <app-peti></app-peti>
-    <app-cpf-remuneracao></app-cpf-remuneracao>
-    <app-cpf-bpc></app-cpf-bpc>
-    <app-cpf-peps></app-cpf-peps>
-    <app-cpf-cnep></app-cpf-cnep>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Benefícios</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <app-bolsa-familia></app-bolsa-familia>
+            <app-cpf-bpc></app-cpf-bpc>
+            <app-peti></app-peti>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Poder Executivo Federal</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <app-cpf-peps></app-cpf-peps>
+            <app-cpf-remuneracao></app-cpf-remuneracao>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Sanções</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <app-cpf-cnep></app-cpf-cnep>
+        </mat-card-content>
+    </mat-card>
 </main>
