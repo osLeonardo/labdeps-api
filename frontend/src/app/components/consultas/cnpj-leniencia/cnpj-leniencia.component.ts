@@ -45,7 +45,6 @@ export class CnpjLenienciaComponent implements OnInit {
     const codigo: string = `${this.route.snapshot.paramMap.get('codigo')}`;
     this.ConsultasService.GetLenienciaByCnpj(codigo).subscribe((lenencia) => {
       this.leniencia = lenencia;
-      console.log(lenencia)
     });
   }
 }

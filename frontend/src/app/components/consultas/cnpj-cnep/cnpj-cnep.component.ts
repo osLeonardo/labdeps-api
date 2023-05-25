@@ -26,8 +26,7 @@ export class CnpjCnepComponent implements OnInit{
   ngOnInit(): void {
     const codigo = `${this.route.snapshot.paramMap.get('codigo')}`;
     this.consultasService.GetCnepByCnpj(codigo).subscribe(cnep => {
-      this.cnep = cnep
-      console.log(cnep)
+      this.cnep = cnep;
     })
   }
   columnsToDisplayWithExpand = [
