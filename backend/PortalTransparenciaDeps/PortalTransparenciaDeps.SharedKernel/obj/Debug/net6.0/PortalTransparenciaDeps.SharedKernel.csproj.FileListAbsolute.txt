@@ -1,0 +1,12 @@
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.SharedKernel\bin\Debug\net6.0\PortalTransparenciaDeps.SharedKernel.deps.json
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.SharedKernel\bin\Debug\net6.0\PortalTransparenciaDeps.SharedKernel.dll
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.SharedKernel\bin\Debug\net6.0\PortalTransparenciaDeps.SharedKernel.pdb
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.SharedKernel\obj\Debug\net6.0\PortalTransparenciaDeps.SharedKernel.csproj.AssemblyReference.cache
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.SharedKernel\obj\Debug\net6.0\PortalTransparenciaDeps.SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.SharedKernel\obj\Debug\net6.0\PortalTransparenciaDeps.SharedKernel.AssemblyInfoInputs.cache
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.SharedKernel\obj\Debug\net6.0\PortalTransparenciaDeps.SharedKernel.AssemblyInfo.cs
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.SharedKernel\obj\Debug\net6.0\PortalTransparenciaDeps.SharedKernel.csproj.CoreCompileInputs.cache
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.SharedKernel\obj\Debug\net6.0\PortalTransparenciaDeps.SharedKernel.dll
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.SharedKernel\obj\Debug\net6.0\refint\PortalTransparenciaDeps.SharedKernel.dll
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.SharedKernel\obj\Debug\net6.0\PortalTransparenciaDeps.SharedKernel.pdb
+C:\Users\labdeps\Documents\Deps\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.SharedKernel\obj\Debug\net6.0\ref\PortalTransparenciaDeps.SharedKernel.dll
