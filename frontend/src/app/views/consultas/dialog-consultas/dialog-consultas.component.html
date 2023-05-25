@@ -26,10 +26,10 @@
         <mat-form-field>
             <mat-label *ngIf="consulta === 'cpf'">CPF</mat-label>
             <mat-label *ngIf="consulta === 'cnpj'">CNPJ</mat-label>
-            <input matInput [(ngModel)]='codigo' required>
+            <input matInput [(ngModel)]='codigo' (input)="EnableButton()" required>
             <mat-hint>Somente números</mat-hint>
         </mat-form-field>
     </main>
-    <button mat-raised-button color="primary" (click)="Buscar()">Buscar</button>
+    <button mat-raised-button color="primary" [disabled]="button" (click)="Buscar()">Buscar</button>
 </div>
 

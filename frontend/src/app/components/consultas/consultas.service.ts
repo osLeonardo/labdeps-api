@@ -38,7 +38,7 @@ export class ConsultasService {
     return this.http.get<pep[]>(urlPep)
   }
   GetRemuneracaoByCpf(codigo: string, dataCompetencia: number): Observable<Remuneracao[]> {
-    const url = `${this.baseUrl}/Remuneracao/${codigo}/${dataCompetencia}/${this.pagina}`;  
+    const url = `${this.baseUrl}Remuneracao/${codigo}/${dataCompetencia}/${this.pagina}`;  
     return this.http.get<Remuneracao[]>(url)
   }
   GetCepimByCnpj(codigo: string): Observable<CepimByCnpj[]>{
