@@ -33,15 +33,11 @@ export class CpfRemuneracaoComponent implements OnInit {
     const dataRef = `${this.route.snapshot.paramMap.get('dataRef')}`
     const intervalo = parseInt(`${this.route.snapshot.paramMap.get('intervalo')}`)
     const ano = parseInt(dataRef.substring(0, 4));
-    console.log(ano);
-    console.log(dataRef);
     const mes = parseInt(dataRef.substring(4, 6)) -1;
-    console.log(mes);
     let data = new Date(ano, mes);
 
     for(let i=0; i<intervalo; i++){
       data.setMonth(data.getMonth()-1);
-      console.log(data);
       let dataCompetencia = parseInt(`${data.getFullYear().toString()}${(data.getMonth() + 1).toString().padStart(2, '0')}`);
       this.consultasService.GetRemuneracaoByCpf(codigo, dataCompetencia).subscribe(remuneracao =>{
         for (let element of remuneracao) {
@@ -49,8 +45,6 @@ export class CpfRemuneracaoComponent implements OnInit {
         }
 
       });
-      console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
-      console.log(this.remuneracao);
     }
   }
 
