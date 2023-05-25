@@ -20,7 +20,7 @@ export class CpfPepsComponent implements OnInit {
 
   Peps: pep[]
 
-  displayedColumns = ["cpf", "nome", "descricao_funcao", "nome_orgao", "dt_inicio_exercicio", "dt_fim_exercicio"]
+  displayedColumns = ["cpf", "nome", "descricaoFuncao", "nomeOrgao", "dtInicioExercicio", "dtFimExercicio"]
 
   constructor(private consultaService: ConsultasService, private route: ActivatedRoute) {}
 

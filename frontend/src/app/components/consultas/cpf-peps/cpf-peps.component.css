@@ -21,3 +21,7 @@ mat-card-header{
 .table-extra{
     padding-top: 15px
 }
+
+.container-expanded{
+    background-color: whitesmoke;
+}
