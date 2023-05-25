@@ -23,7 +23,7 @@ export class BolsaFamiliaComponent implements OnInit {
     const intervalo = parseInt(`${this.route.snapshot.paramMap.get('intervalo')}`)
     const auxDate = parseInt(dataRef);
     const ano = parseInt(dataRef.substring(0, 4));
-    const mes = parseInt(dataRef.substring(4,2)) - 1; //-1 pois janeiro é representado por 0
+    const mes = parseInt(dataRef.substring(4,6)) - 1; //-1 pois janeiro é representado por 0
     let data = new Date(ano, mes);
     console.log(data);
 
