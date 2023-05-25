@@ -45,7 +45,7 @@ export class CnpjCnepComponent implements OnInit{
     'codigo',
     'descricao'
   ];
-
+}
 //   var cnep: Cnep[] = [
 //   {
 //     abrangenciaDefinidaDecisaoJudicial : "Abrangência",
