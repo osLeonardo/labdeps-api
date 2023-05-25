@@ -1,7 +1,7 @@
 import { FonteSancao } from "./fonteSancao.model";
 import { Fundamentacao } from "./fundamentacao.model";
 import { OrgaoSancionador } from "./orgaoSancionador.model";
-import { PessoaJuridica } from "./pessoaJuridica.model";
+import { PessoaJuridica } from "./pessoaJuridica.Model";
 import { Sancionado } from "./sancionado.model";
 import { TipoSancao } from "./tipoSancao.model";
 

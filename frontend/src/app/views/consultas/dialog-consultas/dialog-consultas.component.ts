@@ -25,7 +25,7 @@ export class DialogConsultasComponent {
   Buscar(): void{
 
     const dataRef = `${this.dataReferencia.getFullYear().toString()}${(this.dataReferencia.getMonth() + 1).toString().padStart(2, '0')}`;
-
+    this.dialogRef.close();
     if(this.codigo != null){
       if(this.consulta === 'cpf')
       {
@@ -35,7 +35,7 @@ export class DialogConsultasComponent {
       {
         this.router.navigate([`consulta/cnpj/${this.codigo}/${dataRef}/${this.intervalo}`]);
       }
-      this.dialogRef.close(); 
+       
     } 
   }
 }

@@ -25,7 +25,6 @@ export class BolsaFamiliaComponent implements OnInit {
     const ano = parseInt(dataRef.substring(0, 4));
     const mes = parseInt(dataRef.substring(4,6)) - 1; //-1 pois janeiro é representado por 0
     let data = new Date(ano, mes);
-    console.log(data);
 
     for(let i=0; i<intervalo; i++){
       data.setMonth(data.getMonth()-1);
@@ -33,7 +32,6 @@ export class BolsaFamiliaComponent implements OnInit {
       this.consultasService.GetBolsaFamiliaByCpf(dataCompetencia, codigo).subscribe(bolsafamilia =>{
         for(let element of bolsafamilia){
           this.bolsaFamilia = [...this.bolsaFamilia, element]
-          console.log(this.bolsaFamilia);
         }
       });
       

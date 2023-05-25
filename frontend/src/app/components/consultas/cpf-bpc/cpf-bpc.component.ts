@@ -28,7 +28,6 @@ export class CpfBpcComponent implements OnInit {
     const codigo: string = `${this.route.snapshot.paramMap.get('codigo')}`
     this.consultaService.GetBpcByCpf(codigo).subscribe(bpc => {
       this.Bpc = bpc
-      console.log(bpc)
     })
   }
 	

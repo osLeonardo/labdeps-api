@@ -25,3 +25,7 @@ app-cpf-peps{
 app-cpf-cnep{
     margin: 1rem;
 }
+
+mat-card {
+    margin: 2rem 0;
+}

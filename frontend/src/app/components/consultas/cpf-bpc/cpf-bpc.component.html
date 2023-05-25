@@ -1,6 +1,6 @@
-<mat-card class="mat-elevation-z3">
-    <mat-card-header class="table">BPC</mat-card-header>
-    <table mat-table [dataSource]="Bpc" multiTemplateDataRows class="mat-elevation-z3">
+<mat-card >
+    <mat-card-header class="table"><mat-card-title>BPC</mat-card-title></mat-card-header>
+    <table mat-table [dataSource]="Bpc" multiTemplateDataRows >
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef> ID </th>
             <td mat-cell *matCellDef="let element"> {{element.id}} </td>
