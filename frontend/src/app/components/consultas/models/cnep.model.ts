@@ -1,15 +1,15 @@
-import { FonteSancao } from "./fonteSancao.model";
-import { Fundamentacao } from "./fundamentacao.model";
-import { OrgaoSancionador } from "./orgaoSancionador.model";
-import { PessoaJuridica } from "./pessoaJuridica.model";
-import { Sancionado } from "./sancionado.model";
-import { TipoSancao } from "./tipoSancao.model";
+import { TipoSancao } from './tipoSancao.Model';
+import { FonteSancao } from "./fonteSancao.Model";
+import { Fundamentacao } from "./fundamentacao.Model";
+import { OrgaoSancionador } from "./orgaoSancionador.Model";
+import { PessoaJuridica } from "./pessoaJuridica.Model";
+import { Sancionado } from "./sancionado.Model";
 
 export interface Cnep{
         abrangenciaDefinidaDecisaoJudicial : string;
         dataFimSancao: string;
         dataInicioSancao: string;
-        dataOrigemInformacao: string;
+       dataOrigemInformacao: string;
         dataPublicacaoSancao: string
         dataReferencia: string;
         dataTransitadoJulgado: string
