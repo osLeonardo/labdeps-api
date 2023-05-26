@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogConsultasComponent } from './dialog-consultas/dialog-consultas.component';
+import { HeaderService } from 'src/app/components/template/header/header.service';
 
 @Component({
   selector: 'app-consultas',
@@ -9,7 +10,13 @@ import { DialogConsultasComponent } from './dialog-consultas/dialog-consultas.co
 })
 export class ConsultasComponent {
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private headerService: HeaderService) {
+    headerService.headerData = {
+      title: 'Consultas',
+      icon: ' search ',
+      routeUrl: '/consulta',
+    }
+  }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogConsultasComponent);
