@@ -34,8 +34,19 @@ width: 100%;
     font-size: 0.9rem;
     font-family: 'Roboto', sans-serif; 
     color: white;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     text-align: center;
+    margin-bottom: 1rem;
+
+}
+
+div{
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+mat-nav-list{
+    margin-bottom: 6rem;
 }
