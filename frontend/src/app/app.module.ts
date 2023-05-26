@@ -36,6 +36,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { NgIf } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { CpfCepimComponent } from './components/consultas/cpf-cepim/cpf-cepim.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     CpfRemuneracaoComponent,
     PetiComponent,
     BolsaFamiliaComponent,
+    CpfCepimComponent,
   ],
   imports: [
     BrowserModule,
