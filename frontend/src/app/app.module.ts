@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -36,6 +36,14 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { NgIf } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { CpfCepimComponent} from './components/consultas/cpf-cepim/cpf-cepim.component'
+import { NgxMaskModule } from 'ngx-mask';
+import localePt from '@angular/common/locales/pt'
+import { registerLocaleData } from '@angular/common';
+
+
+registerLocaleData(localePt)
+ 
 
 @NgModule({
   declarations: [
@@ -56,6 +64,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     CpfRemuneracaoComponent,
     PetiComponent,
     BolsaFamiliaComponent,
+    CpfCepimComponent
   ],
   imports: [
     BrowserModule,
@@ -79,8 +88,14 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatButtonModule,
     NgIf,
     MatExpansionModule,
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters: false
+    })
   ],
-  providers: [],
+  providers: [{
+    provide: LOCALE_ID,
+    useValue: 'pt-BR',
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
