@@ -1,6 +1,6 @@
 <mat-card class="card-principal">
     <mat-card-header>
-        <mat-card-title>Cepim</mat-card-title>
+        <mat-card-title>CEPIM </mat-card-title>
     </mat-card-header>
     <mat-card-content>
         <table mat-table [dataSource]="cepim" multiTemplateDataRows>
@@ -10,25 +10,14 @@
                 <td mat-cell *matCellDef="let element"> {{ element.pessoaJuridica.nome }} </td>
             </ng-container>
 
-            <ng-container matColumnDef="pessoaJuridica.nomeFantasiaReceita">
-                <th mat-header-cell *matHeaderCellDef> Nome Fantasia </th>
-                <td mat-cell *matCellDef="let element"> {{ element.pessoaJuridica.nomeFantasiaReceita }} </td>
+ 
+
+            <ng-container matColumnDef="pessoaJuridica.cpfFormatado">
+                <th mat-header-cell *matHeaderCellDef> CPF </th>
+                <td mat-cell *matCellDef="let element"> {{ element.pessoaJuridica.cpfFormatado }} </td>
             </ng-container>
 
-            <ng-container matColumnDef="pessoaJuridica.cnpjFormatado">
-                <th mat-header-cell *matHeaderCellDef> CNPJ </th>
-                <td mat-cell *matCellDef="let element"> {{ element.pessoaJuridica.cnpjFormatado }} </td>
-            </ng-container>
 
-            <ng-container matColumnDef="pessoaJuridica.numeroInscricaoSocial">
-                <th mat-header-cell *matHeaderCellDef> Inscricao Estadual </th>
-                <td mat-cell *matCellDef="let element"> {{ element.pessoaJuridica.numeroInscricaoSocial }} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="pessoaJuridica.razaoSocialReceita">
-                <th mat-header-cell *matHeaderCellDef> Razao Social </th>
-                <td mat-cell *matCellDef="let element"> {{ element.pessoaJuridica.razaoSocialReceita }} </td>
-            </ng-container>
 
             <ng-container matColumnDef="pessoaJuridica.tipo">
                 <th mat-header-cell *matHeaderCellDef> Tipo </th>
@@ -44,9 +33,6 @@
                 <th mat-header-cell *matHeaderCellDef> Data Referencia </th>
                 <td mat-cell *matCellDef="let element"> {{ element.dataReferencia }} </td>
             </ng-container>
-
-
-
 
             <ng-container matColumnDef="expand">
                 <th mat-header-cell *matHeaderCellDef aria-label="row actions">&nbsp;</th>
@@ -159,50 +145,7 @@
                                 </mat-card-actions>
                             </mat-card>
 
-                            <!-- <mat-card>
-                                <mat-card-header>
-                                    <mat-card-title>pessoaJuridica: </mat-card-title>
-                                </mat-card-header>
-                                <mat-card-actions>
-
-                                    <table>
-                                        <tr>
-                                            <td>cnpjFormatado:</td>
-                                            <td>{{element.pessoaJuridica.cnpjFormatado}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>cpfFormatado:</td>
-                                            <td>{{element.pessoaJuridica.cpfFormatado}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>id:</td>
-                                            <td>{{element.pessoaJuridica.id}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>nome:</td>
-                                            <td>{{element.pessoaJuridica.nome}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>nomeFantasiaReceita:</td>
-                                            <td>{{element.pessoaJuridica.nomeFantasiaReceita}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>numeroInscricaoSocial:</td>
-                                            <td>{{element.pessoaJuridica.numeroInscricaoSocial}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>razaoSocialReceita:</td>
-                                            <td>{{element.pessoaJuridica.razaoSocialReceita}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>tipo:</td>
-                                            <td>{{element.pessoaJuridica.tipo}}</td>
-                                        </tr>
-
-                                    </table>
-
-                                </mat-card-actions>
-                            </mat-card> -->
+                            
 
                         </div>
                     </div>

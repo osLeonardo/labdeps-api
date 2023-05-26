@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Cnep } from './models/cnep.model';
+import { Cnep } from './models/cnep.Model';
 import { LenienciaByCnpj } from './models/lenienciaByCnpj.Model';
 import { CepimByCnpj } from './models/cepimByCnpj.Model';
 import { bpc } from './models/bpc.Model';
 import { pep } from './models/pep.Model';
 import { Observable } from 'rxjs/internal/Observable';
-import { Remuneracao } from './models/remuneracao.model';
+import { Remuneracao } from './models/remuneracao.Model';
 import { bolsaFamilia } from './models/bolsaFamilia.Model';
 import { peti } from './models/peti.Model';
 

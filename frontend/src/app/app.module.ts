@@ -29,13 +29,14 @@ import { CpfRemuneracaoComponent } from './components/consultas/cpf-remuneracao/
 import { AppRoutingModule } from './app-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import { BolsaFamiliaComponent } from './components/consultas/bolsa-familia/bolsa-familia.component';
-import { PetiComponent } from './components/consultas/peti/peti.component';
+import { BolsaFamiliaComponent } from './components/consultas/cpf-bolsa-familia/bolsa-familia.component';
+import { PetiComponent } from './components/consultas/cpf-peti/peti.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { NgIf } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { CpfCepimComponent } from './components/consultas/cpf-cepim/cpf-cepim.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     CpfRemuneracaoComponent,
     PetiComponent,
     BolsaFamiliaComponent,
+    CpfCepimComponent,
   ],
   imports: [
     BrowserModule,
