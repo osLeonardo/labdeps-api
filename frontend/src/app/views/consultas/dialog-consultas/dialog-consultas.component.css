@@ -1,6 +1,31 @@
 div{
-    margin: 2rem;
+    margin: 1.5rem 2rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
+}
+mat-hint{
+    color: #b50e0e
+}
+.meses{
+    width: 15.5rem;
+}
+mat-form-field mat-option{
+    color: white;
+}
+.buttons{
+    display: inline-block;
+}
+#deps{
+    background-color: #242c54;
+    color: #fff;
+    margin-left: .6rem;
+}
+#deps:disabled{
+    background-color: #EBEBE4;
+    color: #5a5a5a;
+}
+#deps:hover {
+    background-color: #171c36;
+    color: #e6e6e6;
 }
