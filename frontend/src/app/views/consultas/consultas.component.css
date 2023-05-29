@@ -1,6 +1,10 @@
 #deps {
-    background-color: #242c54;
+    background-color: #252d56;
     color: #fff;
+}
+#deps:hover {
+    background-color: #171c36;
+    color: #e6e6e6;
 }
 button{
     margin:1rem;
