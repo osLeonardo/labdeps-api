@@ -25,3 +25,7 @@ mat-form-field mat-option{
     background-color: #EBEBE4;
     color: #5a5a5a;
 }
+#deps:hover {
+    background-color: #171c36;
+    color: #e6e6e6;
+}
