@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { bolsaFamilia } from '../models/bolsaFamilia.Model';
 import { ConsultasService } from '../consultas.service';
