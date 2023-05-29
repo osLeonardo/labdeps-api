@@ -26,7 +26,11 @@ export class CpfPepsComponent implements OnInit {
 
   ngOnInit(): void {
     const codigo: string = `${this.route.snapshot.paramMap.get('codigo')}`
+    const codigoFormatado = `${codigo.substring(0,3)}.${codigo.substring(3,6)}.${codigo.substring(6,9)}-${codigo.substring(9)}`
     this.consultaService.GetPepByCpf(codigo).subscribe(Peps => {
+      for(let element of Peps){
+        element.cpf = codigoFormatado;
+      }
       this.Peps = Peps;
     })
   }

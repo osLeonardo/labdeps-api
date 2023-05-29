@@ -1,7 +1,7 @@
 import { Cnep } from '../models/cnep.Model';
 import { Component, OnInit } from '@angular/core';
 import { ConsultasService } from '../consultas.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
