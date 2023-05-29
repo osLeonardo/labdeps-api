@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-dialog-consultas',
@@ -38,5 +39,8 @@ export class DialogConsultasComponent {
         this.router.navigate([`consulta/cnpj/${this.codigo}/${dataRef}/${this.intervalo}`]);
       }
            console.log(this.codigo)
+    }
+    Cancelar(): void{
+      this.dialogRef.close();
     }
 }
