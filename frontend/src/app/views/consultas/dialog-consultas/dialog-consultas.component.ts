@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
@@ -15,18 +15,30 @@ export class DialogConsultasComponent {
   codigo: string;
   button = true;
 
-  constructor(public dialogRef: MatDialogRef<DialogConsultasComponent>, private router: Router) {}
+  constructor(public dialogRef: MatDialogRef<DialogConsultasComponent>, private router: Router) {}  
 
   EnableButton(): void{
     this.button = this.codigo ? false : true;
   }
 
+  @HostListener('document:keydown.enter',['$event'])
+  handleKeyPress(event: KeyboardEvent){
+    this.performSearch();
+  }
+
+  performSearch(){
+    const searchTerm = this.codigo;
+
+    this.Buscar();
+
+    console.log("Realizando a pesquisa: ", searchTerm);
+  }
+
     Buscar(): void{
 
-      
       const dataRef = `${this.dataReferencia.getFullYear().toString()}${(this.dataReferencia.getMonth() + 1).toString().padStart(2, '0')}`;
       this.dialogRef.close(); 
-      
+     
       if(this.consulta === 'cpf')
       {
         this.codigo = `${this.codigo.substring(0, 3)}${this.codigo.substring(4, 7)}${this.codigo.substring(8, 11)}${this.codigo.substring(12, 14)}`
@@ -37,6 +49,6 @@ export class DialogConsultasComponent {
         this.codigo = `${this.codigo.substring(0, 2)}${this.codigo.substring(3, 6)}${this.codigo.substring(7, 10)}${this.codigo.substring(11, 15)}${this.codigo.substring(16, 18)}`
         this.router.navigate([`consulta/cnpj/${this.codigo}/${dataRef}/${this.intervalo}`]);
       }
-           console.log(this.codigo)
+          console.log(this.codigo)
     }
 }

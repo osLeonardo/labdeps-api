@@ -26,8 +26,8 @@
         <mat-form-field>
             <mat-label *ngIf="consulta === 'cpf'">CPF</mat-label>
             <mat-label *ngIf="consulta === 'cnpj'">CNPJ</mat-label>
-            <input *ngIf="consulta === 'cpf'" matInput [(ngModel)]='codigo' mask="000.000.000-00" (input)="EnableButton()" required >
-            <input *ngIf="consulta === 'cnpj'" matInput [(ngModel)]='codigo' mask="00.000.000/0000-00" (input)="EnableButton()" required >
+            <input *ngIf="consulta === 'cpf'" matInput (keyup.enter)="performSearch()" [(ngModel)]='codigo' mask="000.000.000-00" (input)="EnableButton()" (submit)="Buscar()" required>
+            <input *ngIf="consulta === 'cnpj'" matInput (keyup.enter)="performSearch()" [(ngModel)]='codigo' mask="00.000.000/0000-00" (input)="EnableButton()" (submit)="Buscar()" required>
             <mat-hint>Somente números</mat-hint>
         </mat-form-field>
     </main>
