@@ -13,14 +13,6 @@
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
-        <mat-form-field>
-            <mat-label>Pesquisar pelos útlimos:</mat-label>
-            <mat-select [(ngModel)]='intervalo' required>
-              <mat-option value="3">3 meses</mat-option>
-              <mat-option value="6">6 meses</mat-option>
-              <mat-option value="12">12 meses</mat-option>
-            </mat-select>
-        </mat-form-field>
     </header>
     <main>
         <mat-form-field>
@@ -30,7 +22,18 @@
             <input *ngIf="consulta === 'cnpj'" matInput [(ngModel)]='codigo' mask="00.000.000/0000-00" (input)="EnableButton()" required >
             <mat-hint>Somente números</mat-hint>
         </mat-form-field>
+        <mat-form-field class="meses">
+            <mat-label>Pesquisar pelos útlimos:</mat-label>
+            <mat-select [(ngModel)]='intervalo' required>
+              <mat-option value="3">3 meses</mat-option>
+              <mat-option value="6">6 meses</mat-option>
+              <mat-option value="12">12 meses</mat-option>
+            </mat-select>
+        </mat-form-field>
     </main>
-    <button mat-raised-button color="primary" [disabled]="button" (click)="Buscar()">Buscar</button>
+    <div class="buttons">        
+        <button mat-raised-button (click)="Cancelar()">Cancelar</button>
+        <button mat-raised-button [disabled]="button" id="deps" (click)="Buscar()">Buscar</button>
+    </div>
 </div>
 
