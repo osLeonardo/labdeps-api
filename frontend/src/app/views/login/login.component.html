@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Faça seu Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form>
+            <mat-form-field>
+                <mat-label>Login</mat-label>
+                <input matInput placeholder="anasilva">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Senha</mat-label>
+                <input type="password" matInput placeholder="Um23Senha!">
+            </mat-form-field>
+        </form>
+        <button mat-raised-button id="deps">
+            <span class="descricao">ENTRAR</span>
+        </button>
+        <button mat-raised-button id="register" class="rotas" routerLink="/registro">
+            <span>REGISTRAR-SE</span>
+        </button>
+    </mat-card-content>
+</mat-card>
