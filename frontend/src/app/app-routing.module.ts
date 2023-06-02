@@ -4,6 +4,8 @@ import { CpfConsultaComponent } from './views/cpf-consulta/cpf-consulta.componen
 import { CnpjConsultaComponent } from './views/cnpj-consulta/cnpj-consulta.component';
 import { HomeComponent } from './views/home/home.component';
 import { ConsultasComponent } from './views/consultas/consultas.component';
+import { LoginComponent } from './views/login/login.component';
+import { RegistroComponent } from './views/registro/registro.component';
 
 const routes: Routes = [ 
   {
@@ -21,7 +23,15 @@ const routes: Routes = [
   {
     path: "consulta/cnpj/:codigo/:dataRef/:intervalo",
     component: CnpjConsultaComponent
-  }
+  },
+  {
+    path: "login",
+    component: LoginComponent
+  },
+  {
+    path: "registro",
+    component: RegistroComponent
+  },
 ];
 
 @NgModule({
