@@ -1,4 +1,5 @@
 ﻿using Ardalis.GuardClauses;
+using PortalTransparenciaDeps.Core.Entities.LoginAggregate;
 using PortalTransparenciaDeps.Core.Entities.PerfilMetricaAggregate;
 using PortalTransparenciaDeps.SharedKernel;
 using PortalTransparenciaDeps.SharedKernel.Interfaces;
@@ -13,6 +14,7 @@ namespace PortalTransparenciaDeps.Core.Entities.PerfilAggregate
         public int Ordem { get; private set; }
 
         public virtual ICollection<PerfilMetrica> PerfilMetricas { get; private set; }
+        public virtual ICollection<UserLogin> Logins { get; private set; }
 
         protected Perfil() { }
 
