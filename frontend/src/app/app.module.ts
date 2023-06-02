@@ -40,6 +40,8 @@ import { CpfCepimComponent} from './components/consultas/cpf-cepim/cpf-cepim.com
 import { NgxMaskModule } from 'ngx-mask';
 import localePt from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common';
+import { LoginComponent } from './views/login/login.component';
+import { RegistroComponent } from './views/registro/registro.component';
 
 registerLocaleData(localePt)
 
@@ -62,7 +64,9 @@ registerLocaleData(localePt)
     CpfRemuneracaoComponent,
     PetiComponent,
     BolsaFamiliaComponent,
-    CpfCepimComponent
+    CpfCepimComponent,
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
