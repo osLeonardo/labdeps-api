@@ -40,8 +40,7 @@ import { CpfCepimComponent} from './components/consultas/cpf-cepim/cpf-cepim.com
 import { NgxMaskModule } from 'ngx-mask';
 import localePt from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common';
-import { LoginComponent } from './views/login/login.component';
-import { RegistroComponent } from './views/registro/registro.component';
+import { AuthModule } from '@auth0/auth0-angular';
 
 registerLocaleData(localePt)
 
@@ -65,8 +64,6 @@ registerLocaleData(localePt)
     PetiComponent,
     BolsaFamiliaComponent,
     CpfCepimComponent,
-    LoginComponent,
-    RegistroComponent
   ],
   imports: [
     BrowserModule,
@@ -92,7 +89,14 @@ registerLocaleData(localePt)
     MatExpansionModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false
-    })
+    }),
+    AuthModule.forRoot({
+      domain: 'dev-x4njfpbmvtl8xns4.us.auth0.com',
+      clientId: 'sUgl0ywtSNlIRgf2CiyUioDtOFivcF03',
+      authorizationParams: {
+        redirect_uri: window.location.origin
+      }
+    }),
   ],
   providers: [{
     provide: LOCALE_ID,
