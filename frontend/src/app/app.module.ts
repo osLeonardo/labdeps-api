@@ -41,6 +41,11 @@ import { NgxMaskModule } from 'ngx-mask';
 import localePt from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common';
 import { AuthModule } from '@auth0/auth0-angular';
+import { UsuarioCreateComponent } from './components/administracao/usuario-create/usuario-create.component'
+import { UsuarioReadComponent } from './components/administracao/usuario-read/usuario-read.component'
+import { UsuarioUpdateComponent } from './components/administracao/usuario-update/usuario-update.component'
+import { CrudAdministracaoComponent } from './views/crud-administracao/crud-administracao.component';
+
 
 registerLocaleData(localePt)
 
@@ -64,6 +69,10 @@ registerLocaleData(localePt)
     PetiComponent,
     BolsaFamiliaComponent,
     CpfCepimComponent,
+    UsuarioCreateComponent,
+    UsuarioReadComponent,
+    UsuarioUpdateComponent,
+    CrudAdministracaoComponent,
   ],
   imports: [
     BrowserModule,
