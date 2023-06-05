@@ -6,6 +6,7 @@ import { HomeComponent } from './views/home/home.component';
 import { ConsultasComponent } from './views/consultas/consultas.component';
 import { CrudAdministracaoComponent } from './views/crud-administracao/crud-administracao.component';
 import { UsuarioCreateComponent } from './components/administracao/usuario-create/usuario-create.component';
+import { LoginComponent } from './views/login/login.component';
 
 const routes: Routes = [ 
   {
@@ -32,6 +33,9 @@ const routes: Routes = [
     path: "administracao/cadastrar",
     component: UsuarioCreateComponent
   }
+    path: "login",
+    component: LoginComponent
+  },
 ];
 
 @NgModule({
