@@ -41,6 +41,7 @@ import { NgxMaskModule } from 'ngx-mask';
 import localePt from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common';
 import { AuthModule } from '@auth0/auth0-angular';
+import { LoginComponent } from './views/login/login.component';
 
 registerLocaleData(localePt)
 
@@ -64,6 +65,7 @@ registerLocaleData(localePt)
     PetiComponent,
     BolsaFamiliaComponent,
     CpfCepimComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
