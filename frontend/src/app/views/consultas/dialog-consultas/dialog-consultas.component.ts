@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './dialog-consultas.component.html',
   styleUrls: ['./dialog-consultas.component.css']
 })
+
 export class DialogConsultasComponent {
 
   consulta = 'cpf';
@@ -30,7 +31,9 @@ export class DialogConsultasComponent {
   performSearch(){
     const searchTerm = this.codigo;
 
-    this.Buscar();
+    if(!this.button){
+      this.Buscar();
+    }
 
     console.log("Realizando a pesquisa: ", searchTerm);
   }
