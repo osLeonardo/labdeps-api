@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-crud-administracao',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class CrudAdministracaoComponent {
 
+  constructor(private router: Router) {}
+
+  navegarParaCadastrarUsuario(): void {
+
+    
+
+  }
 }
