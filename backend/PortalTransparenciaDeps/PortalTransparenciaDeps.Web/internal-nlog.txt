@@ -275,10 +275,3 @@
 2023-06-02 16:28:28.6057 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
    at NLog.Mongo.MongoTarget.InitializeTarget()
    at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
-2023-06-05 14:21:20.4175 Info Message Template Auto Format enabled
-2023-06-05 14:21:20.4361 Info Loading assembly: NLog.Mongo
-2023-06-05 14:21:20.6606 Info Adding target MongoTarget(Name=logfile)
-2023-06-05 14:21:20.7398 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
-2023-06-05 14:21:20.8132 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
-   at NLog.Mongo.MongoTarget.InitializeTarget()
-   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
