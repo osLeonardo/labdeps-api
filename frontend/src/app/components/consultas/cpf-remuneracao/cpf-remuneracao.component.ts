@@ -1,6 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { Remuneracao, RemuneracoesDto } from '../models/remuneracao.Model';
+import { Remuneracao, RemuneracoesDto } from '../models/remuneracao.model';
 import { ConsultasService } from '../consultas.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 

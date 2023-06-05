@@ -1,0 +1,34 @@
+<mat-card>
+    <mat-card-title Novo Usuario></mat-card-title>
+    <form>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Login do usuário</mat-label>
+            <input matInput placeholder="Deps" name="name">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Password do usuário</mat-label>
+            <input matInput placeholder="#eutotriste!" name="price">
+          </mat-form-field>
+          
+          <mat-form-field>
+            <mat-label>Perfil do usuário</mat-label>
+            <mat-select>
+              <mat-option value="adm">adm</mat-option>
+              <mat-option value="assitente">assitente</mat-option>
+              <mat-option value="gerente">gerente</mat-option>
+            </mat-select>
+            </mat-form-field>
+
+    </form>
+
+    <button  mat-raised-button color="primary" (click)="CadastrarUsuario()" >
+        Salvar
+     </button>
+     
+      <button  mat-raised-button (click)="cancelar()" >
+         Cancelar
+      </button> 
+     
+</mat-card>
