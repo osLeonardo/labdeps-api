@@ -6,6 +6,8 @@ import { HomeComponent } from './views/home/home.component';
 import { ConsultasComponent } from './views/consultas/consultas.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegistroComponent } from './views/registro/registro.component';
+import { CrudAdministracaoComponent } from './views/crud-administracao/crud-administracao.component';
+import { UsuarioCreateComponent } from './components/administracao/usuario-create/usuario-create.component';
 
 const routes: Routes = [ 
   {
@@ -32,6 +34,14 @@ const routes: Routes = [
     path: "registro",
     component: RegistroComponent
   },
+  {
+    path: "administracao",
+    component: CrudAdministracaoComponent
+  },
+  {
+    path: "administracao/cadastrar",
+    component: UsuarioCreateComponent
+  }
 ];
 
 @NgModule({

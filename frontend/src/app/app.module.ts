@@ -42,6 +42,10 @@ import localePt from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common';
 import { LoginComponent } from './views/login/login.component';
 import { RegistroComponent } from './views/registro/registro.component';
+import {UsuarioCreateComponent} from './components/administracao/usuario-create/usuario-create.component'
+import {UsuarioReadComponent} from './components/administracao/usuario-read/usuario-read.component'
+import {UsuarioUpdateComponent} from './components/administracao/usuario-update/usuario-update.component'
+import { CrudAdministracaoComponent } from './views/crud-administracao/crud-administracao.component';
 
 registerLocaleData(localePt)
 
@@ -66,7 +70,11 @@ registerLocaleData(localePt)
     BolsaFamiliaComponent,
     CpfCepimComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    UsuarioCreateComponent,
+    UsuarioReadComponent,
+    UsuarioUpdateComponent,
+    CrudAdministracaoComponent
   ],
   imports: [
     BrowserModule,
