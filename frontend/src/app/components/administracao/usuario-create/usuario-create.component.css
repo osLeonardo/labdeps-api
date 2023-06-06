@@ -2,6 +2,8 @@ mat-card {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1px;
+    border: none;
   }
   mat-form-field {
     display: flex;
@@ -9,7 +11,7 @@ mat-card {
     width: 30vw;
   }
   form {
-    margin-top: 2vw;
+    margin-top: 1vw;
   }
   mat-card-header {
     margin-top: 1vw;
@@ -26,22 +28,9 @@ mat-card {
   #deps {
     background-color: #252d56;
     color: #fff;
-    padding: 25px;
+    padding: 15px;
     font-size: medium;
   }
-  #deps:hover {
-    background-color: #171c36;
-    color: #e6e6e6;
-  }
-  #login {
-    background-color: #fff;
-    color: #252d56;
-    margin-top: 1vw;
-    padding: 25px;
-    font-size: medium;
-    border: 1px solid #252d56;
-  }
-  #login:hover {
-    background-color: #171c36;
-    color: #e6e6e6;
-  }
+
+
+

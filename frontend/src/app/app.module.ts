@@ -40,8 +40,12 @@ import { CpfCepimComponent} from './components/consultas/cpf-cepim/cpf-cepim.com
 import { NgxMaskModule } from 'ngx-mask';
 import localePt from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common';
+import { AuthModule } from '@auth0/auth0-angular';
+import { UsuarioCreateComponent } from './components/administracao/usuario-create/usuario-create.component'
+import { UsuarioReadComponent } from './components/administracao/usuario-read/usuario-read.component'
+import { UsuarioUpdateComponent } from './components/administracao/usuario-update/usuario-update.component'
+import { CrudAdministracaoComponent } from './views/crud-administracao/crud-administracao.component';
 import { LoginComponent } from './views/login/login.component';
-import { RegistroComponent } from './views/registro/registro.component';
 
 registerLocaleData(localePt)
 
@@ -65,8 +69,11 @@ registerLocaleData(localePt)
     PetiComponent,
     BolsaFamiliaComponent,
     CpfCepimComponent,
+    UsuarioCreateComponent,
+    UsuarioReadComponent,
+    UsuarioUpdateComponent,
+    CrudAdministracaoComponent,
     LoginComponent,
-    RegistroComponent
   ],
   imports: [
     BrowserModule,
@@ -92,7 +99,14 @@ registerLocaleData(localePt)
     MatExpansionModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false
-    })
+    }),
+    AuthModule.forRoot({
+      domain: 'dev-x4njfpbmvtl8xns4.us.auth0.com',
+      clientId: 'sUgl0ywtSNlIRgf2CiyUioDtOFivcF03',
+      authorizationParams: {
+        redirect_uri: window.location.origin
+      }
+    }),
   ],
   providers: [{
     provide: LOCALE_ID,

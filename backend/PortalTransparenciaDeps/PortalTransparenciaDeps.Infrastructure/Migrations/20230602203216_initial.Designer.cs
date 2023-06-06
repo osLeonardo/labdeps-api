@@ -12,8 +12,8 @@ using PortalTransparenciaDeps.Infrastructure.Data;
 namespace PortalTransparenciaDeps.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230602184214_addHistorico")]
-    partial class addHistorico
+    [Migration("20230602203216_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
