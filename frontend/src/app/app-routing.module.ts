@@ -4,8 +4,9 @@ import { CpfConsultaComponent } from './views/cpf-consulta/cpf-consulta.componen
 import { CnpjConsultaComponent } from './views/cnpj-consulta/cnpj-consulta.component';
 import { HomeComponent } from './views/home/home.component';
 import { ConsultasComponent } from './views/consultas/consultas.component';
+import { CrudAdministracaoComponent } from './views/crud-administracao/crud-administracao.component';
+import { UsuarioCreateComponent } from './components/administracao/usuario-create/usuario-create.component';
 import { LoginComponent } from './views/login/login.component';
-import { RegistroComponent } from './views/registro/registro.component';
 
 const routes: Routes = [ 
   {
@@ -25,12 +26,15 @@ const routes: Routes = [
     component: CnpjConsultaComponent
   },
   {
-    path: "login",
-    component: LoginComponent
+    path: "administracao",
+    component: CrudAdministracaoComponent
   },
   {
-    path: "registro",
-    component: RegistroComponent
+    path: "administracao/cadastrar",
+    component: UsuarioCreateComponent
+  }
+    path: "login",
+    component: LoginComponent
   },
 ];
 
