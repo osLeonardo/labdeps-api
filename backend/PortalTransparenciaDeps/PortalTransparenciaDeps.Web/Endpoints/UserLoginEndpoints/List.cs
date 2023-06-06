@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using PortalTransparenciaDeps.Core.Entities.LoginAggregate;
+using PortalTransparenciaDeps.Core.Entities.LoginAggregate.Specifications;
 using PortalTransparenciaDeps.SharedKernel.Interfaces;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Collections.Generic;
@@ -33,7 +34,8 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
         ]
         public override async Task<ActionResult<List<ListUserResponse>>> HandleAsync(CancellationToken cancellationToken = default)
         {
-            var users = await _repository.ListAsync(cancellationToken);
+            var spec = new UserLoginOrderSpec();
+            var users = await _repository.ListAsync(spec, cancellationToken);
             if (users == null) 
             { 
                 return NoContent(); 

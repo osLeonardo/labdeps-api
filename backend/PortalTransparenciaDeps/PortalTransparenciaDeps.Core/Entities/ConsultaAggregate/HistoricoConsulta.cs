@@ -12,13 +12,13 @@ namespace PortalTransparenciaDeps.Core.Entities.ConsultaAggregate
 {
     public class HistoricoConsulta : BaseEntity<int>, IAggregateRoot
     {
-        public virtual UserLogin User { get; set; } //usuário que realizou a consulta
         public int UserId { get; set; }
         public DateOnly DataConsulta { get; set; } //data de realização da consulta
         public string TipoConsulta { get; set; } //cpf ou cnpj
         public string Codigo { get; set; } //valor do cpf ou cnpj
         public DateOnly DataReferencia { get; set; } //dataRef informada na dialog box
         public string Intervalo { get; set; } //3, 6 ou 12 meses
+        public virtual UserLogin User { get; set; } //usuário que realizou a consulta
 
         private HistoricoConsulta(UserLogin user, DateOnly dataConsulta, string tipoConsulta, string codigo, DateOnly dataReferencia, string intervalo)
         {
