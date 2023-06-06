@@ -12,8 +12,8 @@ using PortalTransparenciaDeps.Infrastructure.Data;
 namespace PortalTransparenciaDeps.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230601161520_initial")]
-    partial class initial
+    [Migration("20230602205248_PortalTransparenciaDeps_migration")]
+    partial class PortalTransparenciaDeps_migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,6 +23,50 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
+
+            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.ConsultaAggregate.HistoricoConsulta", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Codigo")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("codigo");
+
+                    b.Property<DateOnly>("DataConsulta")
+                        .HasColumnType("date")
+                        .HasColumnName("data_consulta");
+
+                    b.Property<DateOnly>("DataReferencia")
+                        .HasColumnType("date")
+                        .HasColumnName("data_referencia");
+
+                    b.Property<string>("Intervalo")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("intervalo");
+
+                    b.Property<string>("TipoConsulta")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("tipo_consulta");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer")
+                        .HasColumnName("user_id");
+
+                    b.HasKey("Id")
+                        .HasName("pk_historico_consultas");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("historico_consulta");
+                });
 
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.LoginAggregate.UserLogin", b =>
                 {
@@ -210,6 +254,18 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                     b.ToTable("perfil_metrica");
                 });
 
+            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.ConsultaAggregate.HistoricoConsulta", b =>
+                {
+                    b.HasOne("PortalTransparenciaDeps.Core.Entities.LoginAggregate.UserLogin", "User")
+                        .WithMany("Users")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired()
+                        .HasConstraintName("fk_historico_consultas_user_logins_user_id");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.LoginAggregate.UserLogin", b =>
                 {
                     b.HasOne("PortalTransparenciaDeps.Core.Entities.PerfilAggregate.Perfil", "Perfil")
@@ -253,6 +309,11 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                         .HasConstraintName("fk_perfis_metricas_perfil_perfil_id");
 
                     b.Navigation("Perfil");
+                });
+
+            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.LoginAggregate.UserLogin", b =>
+                {
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.PerfilAggregate.Perfil", b =>
