@@ -1,7 +1,7 @@
 ﻿using Ardalis.ApiEndpoints;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using PortalTransparenciaDeps.Web.ExternalInterfaces;
+using PortalTransparenciaDeps.Core.Interfaces;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Net;
 using System.Threading;

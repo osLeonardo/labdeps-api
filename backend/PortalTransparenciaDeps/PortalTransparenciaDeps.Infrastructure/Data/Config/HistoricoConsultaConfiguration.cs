@@ -16,8 +16,6 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Config
         {
             builder.Property(p => p.Id)
                 .IsRequired();
-            builder.Property(p => p.UserId)
-                .IsRequired();
             builder.Property(p => p.DataConsulta)
                 .IsRequired();
             builder.Property(p => p.TipoConsulta)
@@ -27,6 +25,8 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Config
             builder.Property(p => p.DataReferencia)
                 .IsRequired();
             builder.Property(p => p.Intervalo)
+                .IsRequired();
+            builder.Property(p => p.UserId)
                 .IsRequired();
             builder.HasOne(p => p.User)
                 .WithMany(m => m.Users)

@@ -34,5 +34,22 @@ namespace PortalTransparenciaDeps.Core.Services
 
             return userLogin;            
         }
+
+        public async Task<UserLogin> UpdateUser(int id, string username, string password, PerfilUsuario perfilUsuario)
+        {
+            Guard.Against.NullOrEmpty(username, nameof(username));
+            Guard.Against.NullOrEmpty(password, nameof(password));
+            Guard.Against.Null(perfilUsuario, nameof(perfilUsuario));
+
+            UserLogin user = await _repository.GetByIdAsync(id);
+
+            user.Login = username;
+            user.Password = password;
+            user.PerfilUsuario = perfilUsuario;
+
+            await _repository.UpdateAsync(user);
+
+            return user;
+        }
     }
 }
