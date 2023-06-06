@@ -13,8 +13,8 @@ import { Router } from '@angular/router';
 export class UsuarioCreateComponent {
 
   usuario: CreateUsuarios = {
-    login: 'bruno',
-    password: '123',
+    login: 'string',
+    password: 'string',
     perfilUsuario: 0,
     perfil: {
       id: 0

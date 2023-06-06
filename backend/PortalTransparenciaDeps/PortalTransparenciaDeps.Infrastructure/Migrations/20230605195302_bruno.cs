@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace PortalTransparenciaDeps.Infrastructure.Migrations
 {
-    public partial class PortalTransparenciaDeps_migration : Migration
+    public partial class bruno : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -42,6 +42,7 @@ const routes: Routes = [
     path: "administracao/cadastrar",
     component: UsuarioCreateComponent
   }
+
 ];
 
 @NgModule({
