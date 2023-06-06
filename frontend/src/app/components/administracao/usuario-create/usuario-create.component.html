@@ -1,19 +1,15 @@
-<div class="corpo">
-  
+<div class="corpo">  
 <mat-card class="cardCreate">
     <mat-card-title Novo Usuario></mat-card-title>
     <form>
-
         <mat-form-field appearance="fill">
             <mat-label>Login do usuário</mat-label>
             <input matInput [(ngModel)]="usuario.login" placeholder="Deps" name="login">
           </mat-form-field>
-
           <mat-form-field appearance="fill">
             <mat-label>Password do usuário</mat-label>
             <input matInput [(ngModel)]="usuario.password" placeholder="#eutotriste!" name="Password">
           </mat-form-field>
-          
           <mat-form-field>
             <mat-label>Perfil do usuário</mat-label>
             <mat-select [(ngModel)]="usuario.perfilUsuario" name="perfilUsuario">
@@ -22,14 +18,11 @@
               <mat-option value="3">gerente</mat-option>
             </mat-select>
           </mat-form-field>
-
           <mat-form-field appearance="fill">
               <mat-label>Id do perfil</mat-label>
               <input matInput [(ngModel)]="usuario.perfil.id" placeholder="1!" name="idPerfil">
           </mat-form-field>
-
     </form>
-
     <div class="buttons">
       <button  mat-raised-button color="primary" id="deps" (click)="CadastrarUsuario()" >
         Salvar
@@ -38,11 +31,6 @@
       <button  mat-raised-button (click)="cancelar()" >
          Cancelar
       </button> 
-
     </div>
-
-     
 </mat-card>
-
-
 </div>

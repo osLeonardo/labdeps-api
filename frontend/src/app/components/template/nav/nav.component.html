@@ -3,76 +3,94 @@
             <div>
                         <a routerLink="/"><img src="../../../../assets/img/logo-deps-completo-colorido.png" alt="Logo" class="logo"></a>
                 <mat-nav-list>
-                    <mat-list-item class="user">
-                        <a class="rotas" routerLink="/">
-                            <i class="material-icons"> 
-                                account_circle
-                            </i>
-                            <span class="descricao">LABS UNESC</span> 
-                        </a>
-                    </mat-list-item>
+                    <div *ngIf="auth.isAuthenticated$ | async;">
+                        <mat-list-item class="user">
+                            <a class="rotas" routerLink="/">
+                                <i class="material-icons"> 
+                                    account_circle
+                                </i>
+                                <span class="descricao">LABS UNESC</span> 
+                            </a>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <a class="rotas" routerLink="/">
+                                <i class="material-icons"> 
+                                    dashboard
+                                </i>
+                                <span class="descricao">DASHBOARD</span>
+                            </a>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <a class="rotas" routerLink="/">
+                                <i class="material-icons"> 
+                                    analytics
+                                </i>
+                                <span class="descricao">POLÍTICA DE CRÉDITO</span>
+                            </a>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <a class="rotas" routerLink="/consulta">
+                                <i class="material-icons"> 
+                                    search 
+                                </i>
+                                <span class="descricao">CONSULTAS</span>
+                            </a>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <a class="rotas" routerLink="/">
+                                <i class="material-icons"> 
+                                    article 
+                                </i>
+                                <span class="descricao">MINHAS FATURAS</span>
+                            </a>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <a class="rotas" routerLink="/">
+                                <i class="material-icons"> 
+                                    account_balance
+                                </i>
+                                <span class="descricao">MINHA CONTA CORRENTE</span>
+                            </a>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <a class="rotas" routerLink="/">
+                                <i class="material-icons"> 
+                                    comment
+                                </i>
+                                <span class="descricao">MENSAGENS</span>
+                            </a>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <a class="rotas" routerLink="/">
+                                <i class="material-icons"> 
+                                    settings
+                                </i>
+                                <span class="descricao">ADMINISTRAÇÃO</span>
+                            </a>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <a class="rotas" routerLink="/">
+                                <i class="material-icons"> 
+                                    help
+                                </i>
+                                <span class="descricao">AJUDA</span>
+                            </a>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <a (click)="auth.logout()" class="rotas">
+                                <i class="material-icons"> 
+                                    logout
+                                </i>
+                                <span class="descricao">SAIR</span> 
+                            </a>
+                        </mat-list-item>
+                    </div>
                     <mat-list-item>
-                        <a class="rotas" routerLink="/">
+                        <a (click)="auth.loginWithRedirect()" class="rotas">
                             <i class="material-icons"> 
-                                dashboard
+                                login
                             </i>
-                            <span class="descricao">DASHBOARD</span>
-                        </a>
-                    </mat-list-item>
-                    <mat-list-item>
-                        <a class="rotas" routerLink="/">
-                            <i class="material-icons"> 
-                                analytics
-                            </i>
-                            <span class="descricao">POLÍTICA DE CRÉDITO</span>
-                        </a>
-                    </mat-list-item>
-                    <mat-list-item>
-                        <a class="rotas" routerLink="/consulta">
-                            <i class="material-icons"> 
-                                search 
-                            </i>
-                            <span class="descricao">CONSULTAS</span>
-                        </a>
-                    </mat-list-item>
-                    <mat-list-item>
-                        <a class="rotas" routerLink="/">
-                            <i class="material-icons"> 
-                                article 
-                            </i>
-                            <span class="descricao">MINHAS FATURAS</span>
-                        </a>
-                    </mat-list-item>
-                    <mat-list-item>
-                        <a class="rotas" routerLink="/">
-                            <i class="material-icons"> 
-                                account_balance
-                            </i>
-                            <span class="descricao">MINHA CONTA CORRENTE</span>
-                        </a>
-                    </mat-list-item>
-                    <mat-list-item>
-                        <a class="rotas" routerLink="/">
-                            <i class="material-icons"> 
-                                comment
-                            </i>
-                            <span class="descricao">MENSAGENS</span>
-                        </a>
-                    </mat-list-item>
-                    <mat-list-item>
-                        <a class="rotas" routerLink="/administracao">
-                            <i class="material-icons"> 
-                                settings
-                            </i>
-                            <span class="descricao">ADMINISTRAÇÃO</span>
-                        </a>
-                    </mat-list-item>
-                    <mat-list-item>
-                        <a class="rotas" routerLink="/">
-                            <i class="material-icons"> 
-                                help
-                            </i>
-                            <span class="descricao">AJUDA</span>
+                            <span class="descricao">ENTRAR</span> 
                         </a>
                     </mat-list-item>
                 </mat-nav-list>

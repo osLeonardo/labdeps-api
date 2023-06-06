@@ -16,11 +16,11 @@
   margin-left: 1.9rem;
 }
 
-.rotas {
-  color: white;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+.rotas{
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .descricao {

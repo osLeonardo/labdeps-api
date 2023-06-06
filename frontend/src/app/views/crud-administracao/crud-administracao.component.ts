@@ -13,6 +13,5 @@ export class CrudAdministracaoComponent {
   navegarParaCadastrarUsuario(): void {
 
     this.router.navigate(['/administracao/cadastrar'])
-
   }
 }

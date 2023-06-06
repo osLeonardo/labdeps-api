@@ -15,6 +15,7 @@ export class UsuarioCreateComponent {
   usuario: CreateUsuarios = {
     login: 'string',
     password: 'string',
+
     perfilUsuario: 0,
     perfil: {
       id: 0

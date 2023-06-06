@@ -13,9 +13,9 @@ export class AdministracaoService {
   constructor(private http: HttpClient) { }
 
   Cadastrar(usuario: CreateUsuarios): Observable<CreateUsuarios>{
+    
     const urlCadastar = `${this.baseUrl}userLogin`
   
     return this.http.post<CreateUsuarios>(urlCadastar, usuario)
   }
-
 }
