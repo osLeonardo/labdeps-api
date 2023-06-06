@@ -35,7 +35,6 @@ namespace PortalTransparenciaDeps.SharedKernel.Endpoints.PerfilEndpoints
         public override async Task<ActionResult<GetPerfilByIdResponse>> HandleAsync([FromRoute] GetPerfilByIdRequest request, CancellationToken cancellationToken = default)
         {
             var entity = await _repository.GetByIdAsync(request.PerfilId, cancellationToken);
-            Console.WriteLine("oi2");
             if (entity == null) return NotFound();
 
             return Ok(new GetPerfilByIdResponse

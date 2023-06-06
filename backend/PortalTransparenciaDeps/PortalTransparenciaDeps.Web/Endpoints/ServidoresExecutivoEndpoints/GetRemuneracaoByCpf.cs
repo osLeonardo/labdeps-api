@@ -1,11 +1,11 @@
 ﻿using Ardalis.ApiEndpoints;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using PortalTransparenciaDeps.Web.ExternalInterfaces;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Net;
 using System.Threading.Tasks;
 using System.Threading;
+using PortalTransparenciaDeps.Core.Interfaces;
 
 namespace PortalTransparenciaDeps.Web.Endpoints.ServidoresExecutivoEndpoints
 {

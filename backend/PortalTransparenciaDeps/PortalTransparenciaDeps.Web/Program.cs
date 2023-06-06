@@ -19,8 +19,6 @@ using PortalTransparenciaDeps.Infrastructure;
 using PortalTransparenciaDeps.Infrastructure.Data;
 using PortalTransparenciaDeps.SharedKernel.Configuration;
 using PortalTransparenciaDeps.SharedKernel.Middleware;
-using PortalTransparenciaDeps.Web.ExternalInterfaces;
-using PortalTransparenciaDeps.Web.Rest;
 using System;
 using System.Collections.Generic;
 
