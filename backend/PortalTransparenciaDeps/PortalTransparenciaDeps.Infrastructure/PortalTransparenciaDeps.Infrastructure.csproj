@@ -37,5 +37,9 @@
     <ProjectReference Include="..\PortalTransparenciaDeps.SharedKernel\PortalTransparenciaDeps.SharedKernel.csproj" />
   </ItemGroup>
   
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+  
   
 </Project>

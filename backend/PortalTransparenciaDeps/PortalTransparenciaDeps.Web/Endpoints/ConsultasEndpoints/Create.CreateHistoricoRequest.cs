@@ -7,6 +7,7 @@ namespace PortalTransparenciaDeps.Web.Endpoints.ConsultasEndpoints
     public class CreateHistoricoRequest
     {
         public const string Route = "historico";
+
         [Required]
         public UserLogin User { get; set; }
 

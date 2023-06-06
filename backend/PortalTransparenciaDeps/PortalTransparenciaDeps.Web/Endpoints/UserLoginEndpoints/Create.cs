@@ -26,9 +26,9 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
 
         [HttpPost(CreateUserLoginRequest.Route)]
         [SwaggerOperation(
-            Summary = "Criar histórico",
-            Description = "Cria um novo histórico de consulta",
-            Tags = new[] { "ConsultasEndpoints" })
+            Summary = "Criar novo usuário",
+            Description = "Cria um novo login de usuário",
+            Tags = new[] { "UserLoginEndpoints" })
         ]
         public override async Task<ActionResult<CreateUserLoginResponse>> HandleAsync(CreateUserLoginRequest request, CancellationToken cancellationToken = default)
         {
