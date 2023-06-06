@@ -19,6 +19,7 @@
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
+    "express": "^4.18.2",
     "moment": "^2.29.4",
     "ngx-mask": "^13.1.15",
     "rxjs": "~7.8.0",
@@ -26,7 +27,7 @@
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^16.0.1",
+    "@angular-devkit/build-angular": "^15.2.8",
     "@angular/cli": "~16.0.1",
     "@angular/compiler-cli": "^16.0.0",
     "typescript": "~5.0.2"
