@@ -46,6 +46,11 @@ import { UsuarioReadComponent } from './components/administracao/usuario-read/us
 import { UsuarioUpdateComponent } from './components/administracao/usuario-update/usuario-update.component'
 import { CrudAdministracaoComponent } from './views/crud-administracao/crud-administracao.component';
 import { LoginComponent } from './views/login/login.component';
+import { RegistroComponent } from './views/registro/registro.component';
+import {UsuarioCreateComponent} from './components/administracao/usuario-create/usuario-create.component'
+import {UsuarioReadComponent} from './components/administracao/usuario-read/usuario-read.component'
+import {UsuarioUpdateComponent} from './components/administracao/usuario-update/usuario-update.component'
+import { CrudAdministracaoComponent } from './views/crud-administracao/crud-administracao.component';
 
 registerLocaleData(localePt)
 
@@ -74,6 +79,11 @@ registerLocaleData(localePt)
     UsuarioUpdateComponent,
     CrudAdministracaoComponent,
     LoginComponent,
+    RegistroComponent,
+    UsuarioCreateComponent,
+    UsuarioReadComponent,
+    UsuarioUpdateComponent,
+    CrudAdministracaoComponent,
   ],
   imports: [
     BrowserModule,

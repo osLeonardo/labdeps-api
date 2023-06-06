@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CreateUsuarios } from '../models/create-usuarios.Model';
 
 @Component({
   selector: 'app-usuario-read',
@@ -8,21 +9,17 @@ import { Component } from '@angular/core';
 export class UsuarioReadComponent {
 
   usuario = uusuarios;
-  displayedColumns = ["nome", "dataNascimento", "senha", "opcoes"]
+  displayedColumns = ["login", "password", "perfilUsuario", "perfil.id", "opcoes"]
 
 }
 
-export interface usuario{
-    nome: string;
-    dataNascimento: string;
-    senha: string;
-} 
-
-const uusuarios:  usuario[] = [
-  {
-    nome: "bruno",
-    dataNascimento: "14/02/2002",
-    senha: "senha"
+const uusuarios:  CreateUsuarios[] = [
+{
+  login: "string",
+  password: "string",
+  perfilUsuario: 0,
+  perfil: {
+    id: 0
   }
+}
 ]
-  
