@@ -40,6 +40,9 @@ export class DialogConsultasComponent {
 
     Buscar(): void{
 
+    
+      console.log(this.dataReferencia);
+      
       const dataRef = `${this.dataReferencia.getFullYear().toString()}${(this.dataReferencia.getMonth() + 1).toString().padStart(2, '0')}`;
       this.dialogRef.close(); 
      
