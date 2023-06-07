@@ -27,11 +27,8 @@ export class LoginComponent {
     }
 
   verifyCredentials(username: string, password: string) {
-    this.loginService.PostLoginVerification(username, password).subscribe(
-      () => {
-        console.log("User is logged in");        
-        this.router.navigate(['']);
-      }
-    )
+    this.loginService.PostLoginVerification(username, password)
+    console.log("User is logged in");        
+    this.router.navigate(['']);
   }
 }
