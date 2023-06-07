@@ -6,14 +6,26 @@
         <form>
             <mat-form-field>
                 <mat-label>Login</mat-label>
-                <input matInput placeholder="anasilva">
+                <input
+                    matInput
+                    [(ngModel)]="username"
+                    required
+                    [ngModelOptions]="{standalone: true}"
+                >
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Senha</mat-label>
-                <input type="password" matInput placeholder="Um23Senha!">
+                <input 
+                    type="password"
+                    matInput
+                    (keydown.enter)="verifyCredentials(username, password)"
+                    [(ngModel)]="password"
+                    required
+                    [ngModelOptions]="{standalone: true}"
+                >
             </mat-form-field>
         </form>
-        <button mat-raised-button id="deps">
+        <button mat-raised-button id="deps" (click)="verifyCredentials(username, password)">
             <span class="descricao">ENTRAR</span>
         </button>
     </mat-card-content>
