@@ -38,10 +38,7 @@ import { NgIf } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CpfCepimComponent} from './components/consultas/cpf-cepim/cpf-cepim.component'
 import { NgxMaskModule } from 'ngx-mask';
-import localePt from '@angular/common/locales/pt'
-import { registerLocaleData } from '@angular/common';
 
-registerLocaleData(localePt)
 
 @NgModule({
   declarations: [
