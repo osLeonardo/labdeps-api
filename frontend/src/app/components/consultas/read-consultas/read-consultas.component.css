@@ -1,0 +1,11 @@
+mat-card{
+    padding: 1rem;
+}
+
+mat-card-header{
+    margin-bottom: 1.5rem;
+}
+
+table{
+    width: 100%;
+}

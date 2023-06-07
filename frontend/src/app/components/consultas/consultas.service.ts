@@ -6,9 +6,10 @@ import { CepimByCnpj } from './models/cepimByCnpj.Model';
 import { bpc } from './models/bpc.Model';
 import { pep } from './models/pep.Model';
 import { Observable } from 'rxjs/internal/Observable';
-import { Remuneracao } from './models/remuneracao.model';
+import { Remuneracao } from './models/remuneracao.Model';
 import { bolsaFamilia } from './models/bolsaFamilia.Model';
 import { peti } from './models/peti.Model';
+import { Historico } from './models/historico.Model';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,10 @@ export class ConsultasService {
   pagina = 1; //valor constante para página
 
   constructor(private http: HttpClient) { }
+  GetListHistorico(): Observable<Historico[]>{
+    const url = `${this.baseUrl}historico`;
+    return this.http.get<Historico[]>(url);
+  }
   
   GetBolsaFamiliaByCpf(dataCompetencia: number, codigo: string): Observable<bolsaFamilia[]> {
     const UrlBF = `${this.baseUrl}bolsaFamilia/${dataCompetencia}/${dataCompetencia}/${codigo}/${this.pagina}`;
