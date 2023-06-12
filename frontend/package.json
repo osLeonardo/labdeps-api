@@ -19,7 +19,6 @@
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
-    "@auth0/auth0-angular": "^2.1.0",
     "moment": "^2.29.4",
     "ngx-mask": "^13.1.15",
     "pg": "^8.11.0",

@@ -15,6 +15,7 @@ mat-form-field mat-option{
 }
 .buttons{
     display: inline-block;
+    transition: 0.3s;
 }
 #deps{
     background-color: #242c54;

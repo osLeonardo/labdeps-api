@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { AuthService } from '@auth0/auth0-angular';
 import { DOCUMENT } from '@angular/common';
+import { AuthService } from 'src/app/views/login/login.service';
 
 @Component({
   selector: 'app-nav',
@@ -18,6 +18,10 @@ import { DOCUMENT } from '@angular/common';
 export class NavComponent {
   expandir = false;
   constructor(@Inject(DOCUMENT) public document: Document, public auth: AuthService) {}
+
+  sair(){
+    this.auth.logout();
+  }
 }
 
 

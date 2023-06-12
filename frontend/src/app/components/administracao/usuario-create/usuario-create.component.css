@@ -30,7 +30,12 @@ mat-card {
     color: #fff;
     padding: 15px;
     font-size: medium;
+    transition: 0.3s;
   }
+  #deps:hover {
+    background-color: #171c36;
+    color: #e6e6e6;
+}
 
 
 
