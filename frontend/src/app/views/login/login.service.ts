@@ -9,9 +9,15 @@ import { tap } from "rxjs/operators";
 })
 export class AuthService {
   private apiUrl = 'http://localhost:57679/api/v1/userLogin';
-  private token: string;
+  token: string;
+  login: string;
 
   constructor(private http: HttpClient, private router: Router) { }
+
+  setLogin(login: string): void {
+    this.login = login;
+    localStorage.setItem('login', login);
+  }
 
   setToken(token: string): void {
     this.token = token;
@@ -37,6 +43,10 @@ export class AuthService {
     return this.http.post<any>(url, body).pipe(
       tap(data => {
         this.setAuthenticated(data.authenticated);
+        if (data.authenticated) {
+          const login = data.login;
+          localStorage.setItem('login', login);
+        }
       })
     );
   }

@@ -1,4 +1,5 @@
 import { HeaderService } from './../../components/template/header/header.service';
+import { AuthService } from '../login/login.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,12 +9,19 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  constructor(private headerService: HeaderService) {
+  login: string;
+
+  constructor(private headerService: HeaderService, private authService: AuthService) {
+
     headerService.headerData = {
       title: 'Início',
       icon: 'home',
       routeUrl: '',
-    }
+    } 
   }
 
+  ngOnInit(): void {
+    const storedLogin = localStorage.getItem('login');
+    this.login = storedLogin !== null ? storedLogin : '';
+  }
 }

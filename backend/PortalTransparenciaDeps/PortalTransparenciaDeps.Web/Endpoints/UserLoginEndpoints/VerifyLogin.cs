@@ -1,6 +1,7 @@
 ﻿using Ardalis.ApiEndpoints;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PortalTransparenciaDeps.Core.Entities.PerfilAggregate;
 using PortalTransparenciaDeps.Core.Entities.LoginAggregate;
 using PortalTransparenciaDeps.Core.Entities.LoginAggregate.Specifications;
 using PortalTransparenciaDeps.SharedKernel.Interfaces;
@@ -36,12 +37,12 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
 
         [HttpPost(VerificationRequest.Route)]
         [SwaggerOperation(
-            Summary = "Retorna verificação do login e token",
+            Summary = "Verifica o login e retorna, usuário, id e token",
             Description = "Faz a verificação das credenciais do usuário para login",
             Tags = new[] { "UserLoginEndpoints" })
         ]
 
-        public override async Task<ActionResult<VerificationResponse>> HandleAsync(VerificationRequest request, CancellationToken cancellationToken = default)
+        public override async Task<ActionResult<VerificationResponse>> HandleAsync([FromRoute]VerificationRequest request, CancellationToken cancellationToken = default)
         {
             var spec = new UserLoginOrderSpec();
             var users = await _repository.ListAsync(spec, cancellationToken);
@@ -51,22 +52,27 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
                 return NoContent();
             }
 
-            if (users.Any(users => users.Login == request.Login && users.Password == request.Password))
+            var user = users.FirstOrDefault(u => u.Login == request.Login && u.Password == request.Password && u.IdPerfil > 0);
+
+            if (users.Any(users => users.Login == request.Login && users.Password == request.Password && users.IdPerfil > 0))
             {
                 string token = GenerateToken();
+                var perfil = await _repository.GetByIdAsync<Perfil>(user.IdPerfil);
 
                 return Ok(new VerificationResponse
                 {
-                    Login = request.Login,
-                    Token = token
+                    Perfil = perfil.Nome,
+                    Token = token,
+                    Id = user.Id,
                 });
             }
             else
             {
                 return BadRequest(new VerificationResponse
                 {
-                    Login = null,
+                    Perfil = null,
                     Token = null,
+                    Id = -1
                 });
             }
         }

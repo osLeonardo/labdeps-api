@@ -5,7 +5,8 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
 {
     public class VerificationResponse
     {
-        public string Login { get; set; }
+        public string Perfil { get; set; }
         public string Token { get; internal set; }
+        public int Id { get; set; }
     }
 }

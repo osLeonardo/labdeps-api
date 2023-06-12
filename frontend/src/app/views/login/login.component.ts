@@ -25,6 +25,7 @@ export class LoginComponent {
       (response) => {
         if (response.login && response.token) {
           this.authService.setToken(response.token);
+          this.authService.setLogin(response.login);
           this.router.navigate(['']);
         } else {
           this.errorMessage = 'Invalid username or password. Please try again.';
@@ -42,7 +43,6 @@ export class LoginComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      // You can perform additional actions after the dialog is closed if needed.
     });
   }
 }
