@@ -58,7 +58,6 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
                 return Ok(new VerificationResponse
                 {
                     Login = request.Login,
-                    IsVerified = true,
                     Token = token
                 });
             }
@@ -67,7 +66,6 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
                 return BadRequest(new VerificationResponse
                 {
                     Login = null,
-                    IsVerified = false,
                     Token = null,
                 });
             }
