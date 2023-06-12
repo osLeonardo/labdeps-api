@@ -5,7 +5,7 @@ import { CnpjConsultaComponent } from './views/cnpj-consulta/cnpj-consulta.compo
 import { HomeComponent } from './views/home/home.component';
 import { ConsultasComponent } from './views/consultas/consultas.component';
 
-const routes: Routes = [ 
+export const routes: Routes = [ 
   {
     path: "",
     component: HomeComponent
