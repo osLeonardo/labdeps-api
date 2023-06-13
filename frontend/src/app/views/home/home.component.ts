@@ -15,11 +15,12 @@ export class HomeComponent implements OnInit {
   nome: string;
 
   constructor(private loginService: AuthService, private headerService: HeaderService, private http: HttpClient) {
+
     headerService.headerData = {
       title: 'Início',
       icon: 'home',
       routeUrl: '',
-    }
+    } 
   }
 
   async ngOnInit(): Promise<void> {
