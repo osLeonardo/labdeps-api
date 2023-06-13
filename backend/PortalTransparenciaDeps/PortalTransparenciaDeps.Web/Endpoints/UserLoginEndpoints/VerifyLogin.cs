@@ -51,21 +51,24 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
                 return NoContent();
             }
 
+            var user = users.FirstOrDefault(u => u.Login == request.Login && u.Password == request.Password);
             if (users.Any(users => users.Login == request.Login && users.Password == request.Password))
             {
                 string token = GenerateToken();
 
                 return Ok(new VerificationResponse
                 {
-                    Login = request.Login,
-                    Token = token
+                    Id = user.Id,
+                    IdPerfil = user.IdPerfil,
+                    Token = token,
                 });
             }
             else
             {
                 return BadRequest(new VerificationResponse
                 {
-                    Login = null,
+                    Id = -1,
+                    IdPerfil = -1,
                     Token = null,
                 });
             }

@@ -2495,3 +2495,260 @@
    at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
    at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)
+2023-06-13 14:16:18.0539 Info Message Template Auto Format enabled
+2023-06-13 14:16:18.0739 Info Loading assembly: NLog.Mongo
+2023-06-13 14:16:18.2408 Info Adding target MongoTarget(Name=logfile)
+2023-06-13 14:16:18.3033 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Documents\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-13 14:16:21.7280 Error Error when writing to MongoDB MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+2023-06-13 14:16:21.7280 Error MongoTarget(Name=logfile): Exception in Write Exception: MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)
+2023-06-13 14:19:15.8760 Error Error when writing to MongoDB MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+2023-06-13 14:19:15.8824 Error MongoTarget(Name=logfile): Exception in Write Exception: MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)
+2023-06-13 14:19:18.4028 Error Error when writing to MongoDB MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+2023-06-13 14:19:18.4028 Error MongoTarget(Name=logfile): Exception in Write Exception: MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)
+2023-06-13 14:19:19.0476 Error Error when writing to MongoDB MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+2023-06-13 14:19:19.0476 Error MongoTarget(Name=logfile): Exception in Write Exception: MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)
+2023-06-13 14:19:20.8576 Error Error when writing to MongoDB MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+2023-06-13 14:19:20.8576 Error MongoTarget(Name=logfile): Exception in Write Exception: MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)
+2023-06-13 14:19:22.3938 Error Error when writing to MongoDB MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+2023-06-13 14:19:22.3938 Error MongoTarget(Name=logfile): Exception in Write Exception: MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)
+2023-06-13 14:19:24.2784 Error Error when writing to MongoDB MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+2023-06-13 14:19:24.2784 Error MongoTarget(Name=logfile): Exception in Write Exception: MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)
+2023-06-13 14:19:27.8104 Error Error when writing to MongoDB MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+2023-06-13 14:19:27.8104 Error MongoTarget(Name=logfile): Exception in Write Exception: MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)
+2023-06-13 14:19:34.0084 Info Message Template Auto Format enabled
+2023-06-13 14:19:34.0084 Info Loading assembly: NLog.Mongo
+2023-06-13 14:19:34.1004 Info Adding target MongoTarget(Name=logfile)
+2023-06-13 14:19:34.1363 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Documents\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-13 14:19:36.8833 Error Error when writing to MongoDB MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+2023-06-13 14:19:36.8833 Error MongoTarget(Name=logfile): Exception in Write Exception: MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)
+2023-06-13 15:41:06.5456 Info Message Template Auto Format enabled
+2023-06-13 15:41:06.5543 Info Loading assembly: NLog.Mongo
+2023-06-13 15:41:06.7249 Info Adding target MongoTarget(Name=logfile)
+2023-06-13 15:41:06.7710 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Documents\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-13 15:41:13.2389 Error Error when writing to MongoDB MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+2023-06-13 15:41:13.2420 Error MongoTarget(Name=logfile): Exception in Write Exception: MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)
+2023-06-13 15:41:19.5079 Info Message Template Auto Format enabled
+2023-06-13 15:41:19.5079 Info Loading assembly: NLog.Mongo
+2023-06-13 15:41:19.6119 Info Adding target MongoTarget(Name=logfile)
+2023-06-13 15:41:19.7097 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Documents\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-13 15:41:22.4543 Error Error when writing to MongoDB MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+2023-06-13 15:41:22.4543 Error MongoTarget(Name=logfile): Exception in Write Exception: MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)
+2023-06-13 15:41:44.8317 Info Message Template Auto Format enabled
+2023-06-13 15:41:44.8430 Info Loading assembly: NLog.Mongo
+2023-06-13 15:41:44.9844 Info Adding target MongoTarget(Name=logfile)
+2023-06-13 15:41:45.0299 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Documents\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-13 15:41:47.6476 Error Error when writing to MongoDB MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+2023-06-13 15:41:47.6476 Error MongoTarget(Name=logfile): Exception in Write Exception: MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)
+2023-06-13 15:43:29.6136 Info Message Template Auto Format enabled
+2023-06-13 15:43:29.6136 Info Loading assembly: NLog.Mongo
+2023-06-13 15:43:29.7726 Info Adding target MongoTarget(Name=logfile)
+2023-06-13 15:43:29.8208 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Documents\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-13 15:43:32.7644 Error Error when writing to MongoDB MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+2023-06-13 15:43:32.7672 Error MongoTarget(Name=logfile): Exception in Write Exception: MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)
+2023-06-13 15:50:22.1914 Info Message Template Auto Format enabled
+2023-06-13 15:50:22.1991 Info Loading assembly: NLog.Mongo
+2023-06-13 15:50:22.2900 Info Adding target MongoTarget(Name=logfile)
+2023-06-13 15:50:22.3244 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Documents\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-13 15:50:25.0786 Error Error when writing to MongoDB MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+2023-06-13 15:50:25.0786 Error MongoTarget(Name=logfile): Exception in Write Exception: MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)
+2023-06-13 17:51:17.1138 Info Message Template Auto Format enabled
+2023-06-13 17:51:17.1221 Info Loading assembly: NLog.Mongo
+2023-06-13 17:51:17.2875 Info Adding target MongoTarget(Name=logfile)
+2023-06-13 17:51:17.3416 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Documents\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-13 17:51:23.2826 Error Error when writing to MongoDB MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+2023-06-13 17:51:23.2826 Error MongoTarget(Name=logfile): Exception in Write Exception: MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
+   at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
+   at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
+   at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)
