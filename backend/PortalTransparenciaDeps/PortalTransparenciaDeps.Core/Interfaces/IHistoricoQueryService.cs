@@ -10,5 +10,6 @@ namespace PortalTransparenciaDeps.Core.Interfaces
     public interface IHistoricoQueryService
     {
         List<HistoricoDto> ListHistorico();
+        HistoricoDto GetHistorico(int id);
     }
 }
