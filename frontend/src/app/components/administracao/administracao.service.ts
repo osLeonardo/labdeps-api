@@ -16,4 +16,20 @@ export class AdministracaoService {
     const urlCadastar = `${this.baseUrl}userLogin`
     return this.http.post<CreateUsuarios>(urlCadastar, usuario)
   }
+
+  read(): Observable<CreateUsuarios[]>{
+    const urlRead = `${this.baseUrl}userLogin`
+    return this.http.get<CreateUsuarios[]>(urlRead)
+  }
+
+  readById(id: number): Observable<CreateUsuarios> {
+    const url = `${this.baseUrl}userLogin/${id}`
+    return this.http.get<CreateUsuarios>(url)
+  }
+
+  atualizar(usuario: CreateUsuarios): Observable<CreateUsuarios>{
+    const urlAtualizar = `${this.baseUrl}userLogin`
+    console.log(usuario)
+    return this.http.put<CreateUsuarios>(urlAtualizar, usuario)
+  }
 }
