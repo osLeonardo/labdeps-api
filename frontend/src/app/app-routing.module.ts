@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CpfConsultaComponent } from './views/cpf-consulta/cpf-consulta.component';
 import { CnpjConsultaComponent } from './views/cnpj-consulta/cnpj-consulta.component';
-import { HomeComponent } from './views/home/home.component';
 import { ConsultasComponent } from './views/consultas/consultas.component';
+import HomeComponent from './views/home/home.component';
 
 export const routes: Routes = [ 
   {
-    path: "",
+    path: "", 
+    //loadComponent: () => import('./views/home/home.component'),
     component: HomeComponent
   },
   {

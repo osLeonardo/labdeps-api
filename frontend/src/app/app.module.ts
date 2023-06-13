@@ -9,7 +9,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CnpjCnepComponent } from './components/consultas/cnpj-cnep/cnpj-cnep.component';
 import { CpfCnepComponent } from './components/consultas/cpf-cnep/cpf-cnep.component';
-import { HomeComponent } from './views/home/home.component';
 import { ConsultasComponent } from './views/consultas/consultas.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -38,6 +37,8 @@ import { NgIf } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CpfCepimComponent} from './components/consultas/cpf-cepim/cpf-cepim.component'
 import { NgxMaskModule } from 'ngx-mask';
+import HomeComponent from './views/home/home.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -76,16 +77,16 @@ import { NgxMaskModule } from 'ngx-mask';
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
-    AppRoutingModule,
     MatTableModule,
     MatIconModule,
     MatCardModule,
     MatButtonModule,
     NgIf,
     MatExpansionModule,
+    RouterModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false
-    })
+    }),
   ],
   providers: [{
     provide: LOCALE_ID,
