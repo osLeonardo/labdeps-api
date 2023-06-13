@@ -1,7 +1,11 @@
 mat-card {
     display: flex;
-    justify-content: center;
     align-items: center;
+    height: 100%;
+    padding: 5% 0 0 0;
+    background: #252d56;
+    background: linear-gradient(180deg, #252d56 50%, #14182d 100%); 
+    border-radius: 0px;
   }
   mat-form-field {
     display: flex;
@@ -15,7 +19,9 @@ mat-card {
     margin-top: 1vw;
   }
   mat-card-title {
-    font-size: x-large;
+    padding: 5% 0;
+    font-size: xx-large;
+    color: #fff;
   }
   
   button {
@@ -24,12 +30,13 @@ mat-card {
     width: 30vw;
   }
   #deps {
-    background-color: #252d56;
+    background-color: #ff4a33;
     color: #fff;
     padding: 25px;
     font-size: medium;
+    transition: 0.3s;
   }
   #deps:hover {
-    background-color: #171c36;
+    background-color: #c33826;
     color: #e6e6e6;
   }
