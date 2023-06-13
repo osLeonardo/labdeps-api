@@ -1,4 +1,5 @@
 ﻿using Ardalis.Specification;
+using PortalTransparenciaDeps.Core.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PortalTransparenciaDeps.Core.Entities.ConsultaAggregate.Specifications
 {
-    public class HistoricoOrderSpec : Specification<HistoricoConsulta>
+    public class HistoricoOrderSpec : Specification<HistoricoDto>
     {
         public HistoricoOrderSpec() 
         {
