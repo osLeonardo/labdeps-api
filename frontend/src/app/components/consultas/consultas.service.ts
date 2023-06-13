@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/internal/Observable';
 import { Remuneracao } from './models/remuneracao.Model';
 import { bolsaFamilia } from './models/bolsaFamilia.Model';
 import { peti } from './models/peti.Model';
-import { Historico } from './models/historico.Model';
+import { Historico, HistoricoRequest } from './models/historico.Model';
 
 @Injectable({
   providedIn: 'root'
@@ -20,11 +20,31 @@ export class ConsultasService {
   pagina = 1; //valor constante para página
 
   constructor(private http: HttpClient) { }
+
+  CreateHistorico(consulta: string, codigo: string, dataReferencia: Date, intervalo: string): Observable<Historico>{
+    const body: HistoricoRequest = {
+      user:{
+        id: 1 //Revisar para pegar usuário do login
+      },
+      dataConsulta: new Date(),
+      tipoConsulta: consulta,
+      codigo: codigo,
+      dataReferencia: dataReferencia,
+      intervalo: intervalo
+    }
+    const url = `${this.baseUrl}historico`;
+    return this.http.post<Historico>(url,body);
+  }
   GetListHistorico(): Observable<Historico[]>{
     const url = `${this.baseUrl}historico`;
     return this.http.get<Historico[]>(url);
   }
-  
+  GetHistoricoById(id: number): Observable<Historico>{
+    const url = `${this.baseUrl}historico/${id}`;
+    return this.http.get<Historico>(url);
+  }
+
+
   GetBolsaFamiliaByCpf(dataCompetencia: number, codigo: string): Observable<bolsaFamilia[]> {
     const UrlBF = `${this.baseUrl}bolsaFamilia/${dataCompetencia}/${dataCompetencia}/${codigo}/${this.pagina}`;
     return this.http.get<bolsaFamilia[]>(UrlBF)
