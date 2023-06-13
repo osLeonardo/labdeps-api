@@ -2579,4 +2579,8 @@
    at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
    at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
    at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent)2023-06-13 17:09:54.9106 Info Message Template Auto Format enabled
+2023-06-13 17:09:54.9106 Info Loading assembly: NLog.Mongo
+2023-06-13 17:09:55.0881 Info Adding target MongoTarget(Name=logfile)
+2023-06-13 17:09:55.1220 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Documents\Deps\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-13 17:09:58.8444 Info Connecting to MongoDB collection geral in database logs
