@@ -14,9 +14,15 @@
         <mat-form-field>
           <mat-label>Perfil do usuário</mat-label>
           <mat-select [(ngModel)]="usuario.perfilUsuario" name="perfilUsuario">
-            <mat-option value="1">adm</mat-option>
-            <mat-option value="2">assitente</mat-option>
-            <mat-option value="3">gerente</mat-option>
+            <mat-option value="0">Automacao</mat-option>
+            <mat-option value="1">Administrador do portal</mat-option>
+            <mat-option value="2">Administrador do parceiro</mat-option>
+            <mat-option value="3">Usuário gestor</mat-option>
+            <mat-option value="4">Usuário</mat-option>
+            <mat-option value="5">Gerente comercial</mat-option>
+            <mat-option value="6">Comercial</mat-option>
+            <mat-option value="7">Suporte e implantação</mat-option>
+            <mat-option value="8">Financeiro</mat-option>
           </mat-select>
         </mat-form-field>
         

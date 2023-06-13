@@ -15,9 +15,9 @@ export class UsuarioUpdateComponent implements OnInit {
   // o erro é que para fazer o update, é preciso ter um userName, n um login, tem q ser arrumado no backend para funcionar
   usuario: CreateUsuarios = {
     id: 0,
-    login: 'bruno',
-    password: '123',
-    perfilUsuario: 1,
+    login: '',
+    password: '',
+    perfilUsuario: 0,
     perfil: {
       id: 0
     }
