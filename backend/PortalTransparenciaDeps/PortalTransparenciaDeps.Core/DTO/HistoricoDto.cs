@@ -1,9 +1,12 @@
-﻿using PortalTransparenciaDeps.Core.Entities.LoginAggregate;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace PortalTransparenciaDeps.Web.Endpoints.ConsultasEndpoints
+namespace PortalTransparenciaDeps.Core.DTO
 {
-    public class ListHistoricoResponse
+    public class HistoricoDto
     {
         public int Id { get; set; }
         public string Nome { get; set; }
