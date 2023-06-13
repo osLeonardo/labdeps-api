@@ -4,6 +4,7 @@ mat-card {
     align-items: center;
     margin: 1px;
     border: none;
+    padding: 2% 0;
   }
   mat-form-field {
     display: flex;
@@ -24,7 +25,20 @@ mat-card {
     display: flex;
     flex-direction: column;
     width: 30vw;
+    margin: 2% 0;
   }
+  #cancelar {
+    background-color: #fff;
+    color: #252d56;
+    padding: 15px;
+    font-size: medium;
+    transition: 0.3s;
+  }
+  #cancelar:hover {
+    background-color: #fff;
+    color: #252d56;
+  }
+
   #deps {
     background-color: #252d56;
     color: #fff;
@@ -35,7 +49,7 @@ mat-card {
   #deps:hover {
     background-color: #171c36;
     color: #e6e6e6;
-}
+  }
 
 
 

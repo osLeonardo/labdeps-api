@@ -4,12 +4,12 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 @Component({
   selector: 'app-login-dialog',
   template: `
-    <h2 mat-dialog-title>Error</h2>
+    <h2 mat-dialog-title>Erro</h2>
     <mat-dialog-content>
       <p>{{ errorMessage }}</p>
     </mat-dialog-content>
     <mat-dialog-actions>
-      <button mat-button [mat-dialog-close]="'close'">Close</button>
+      <button mat-button [mat-dialog-close]="'close'">FECHAR</button>
     </mat-dialog-actions>
   `,
 })
