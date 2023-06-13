@@ -41,13 +41,13 @@ import { CpfCepimComponent} from './components/consultas/cpf-cepim/cpf-cepim.com
 import { NgxMaskModule } from 'ngx-mask';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
-import { AuthModule } from '@auth0/auth0-angular';
 import { UsuarioCreateComponent } from './components/administracao/usuario-create/usuario-create.component'
 import { UsuarioReadComponent } from './components/administracao/usuario-read/usuario-read.component'
 import { UsuarioUpdateComponent } from './components/administracao/usuario-update/usuario-update.component'
 import { CrudAdministracaoComponent } from './views/crud-administracao/crud-administracao.component';
 import { LoginComponent } from './views/login/login.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { LoginDialogComponent } from './views/login/dialog-login.component';
 
 registerLocaleData(localePt)
 
@@ -77,6 +77,7 @@ registerLocaleData(localePt)
     CrudAdministracaoComponent,
     LoginComponent,
     ReadConsultasComponent,
+    LoginDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -103,13 +104,6 @@ registerLocaleData(localePt)
     MatPaginatorModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false
-    }),
-    AuthModule.forRoot({
-      domain: 'dev-x4njfpbmvtl8xns4.us.auth0.com',
-      clientId: 'sUgl0ywtSNlIRgf2CiyUioDtOFivcF03',
-      authorizationParams: {
-        redirect_uri: window.location.origin
-      }
     }),
   ],
   providers: [{
