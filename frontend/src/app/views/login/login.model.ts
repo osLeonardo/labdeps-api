@@ -1,4 +1,10 @@
 export interface verifyLogin {
-    Login: string,
-    Token: string,
+    id: number,
+    idPerfil: number,
+    token: string,
+}
+
+export interface VerifyRequest{
+    login: string,
+    password: string
 }
