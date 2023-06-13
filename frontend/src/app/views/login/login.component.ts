@@ -22,27 +22,25 @@ export class LoginComponent {
 
   login(): void {
     this.authService.verifyLogin(this.username, this.password).subscribe(
-      (response) => {
-        if (response.login && response.token) {
+      response => {
+        if (response.idPerfil) {
+          this.authService.setAuthenticated;
           this.authService.setToken(response.token);
+          this.authService.setUserId(response.id);
+          this.authService.setIdPerfil(response.idPerfil);
           this.router.navigate(['']);
-        } else {
-          this.errorMessage = 'Invalid username or password. Please try again.';
-          this.openDialog();
         }
-      }
+      }, error => {
+        this.errorMessage = 'Usuário ou Senha Inválidos. Tente Novamente!';
+        this.openDialog();
+      } 
     );
   }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(LoginDialogComponent, {
-      width: '250px',
+      width: '300px',
       data: { errorMessage: this.errorMessage }
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      // You can perform additional actions after the dialog is closed if needed.
     });
   }
 }
