@@ -1,12 +1,12 @@
-﻿using PortalTransparenciaDeps.Core.Entities.LoginAggregate;
-using System;
+﻿using System;
 
 namespace PortalTransparenciaDeps.Web.Endpoints.ConsultasEndpoints
 {
-    public class CreateHistoricoResponse
+    public class GetHistoricoResponse
     {
-        public int UserId { get; set; }
-        public DateTime DataConsulta { get; set; } 
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public DateTime DataConsulta { get; set; }
         public string TipoConsulta { get; set; }
         public string Codigo { get; set; }
         public DateTime DataReferencia { get; set; }

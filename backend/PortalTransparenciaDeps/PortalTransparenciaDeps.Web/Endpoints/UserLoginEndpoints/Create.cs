@@ -41,6 +41,7 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
             
             return Ok(new CreateUserLoginResponse
             {
+                Id = userLogin.Id,
                 Login = userLogin.Login,
                 Password = userLogin.Password,
                 PerfilUsuario = userLogin.PerfilUsuario,

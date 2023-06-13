@@ -1,4 +1,5 @@
 export interface CreateUsuarios {
+    id: number
     login: string
     password: string
     perfilUsuario: number
