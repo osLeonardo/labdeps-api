@@ -37,12 +37,12 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
 
         [HttpPost(VerificationRequest.Route)]
         [SwaggerOperation(
-            Summary = "Verifica credenciais e retorna id, id do perfil e token",
-            Description = "Faz a verificação das credenciais do usuário tentando realizar login",
+            Summary = "Verifica o login e retorna, usuário, id e token",
+            Description = "Faz a verificação das credenciais do usuário para login",
             Tags = new[] { "UserLoginEndpoints" })
         ]
 
-        public override async Task<ActionResult<VerificationResponse>> HandleAsync([FromRoute]VerificationRequest request, CancellationToken cancellationToken = default)
+        public override async Task<ActionResult<VerificationResponse>> HandleAsync(VerificationRequest request, CancellationToken cancellationToken = default)
         {
             var spec = new UserLoginOrderSpec();
             var users = await _repository.ListAsync(spec, cancellationToken);
