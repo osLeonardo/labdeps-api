@@ -11,7 +11,7 @@ namespace PortalTransparenciaDeps.Core.Interfaces
 {
     public interface IUserLoginService
     {
-        Task<UserLogin> CreateUser(string username, string password, PerfilUsuario perfilUsuario, Perfil perfil);
-        Task<UserLogin> UpdateUser(int id, string username, string password, PerfilUsuario perfilUsuario);
+        Task<UserLogin> CreateUser(string login, string password, PerfilUsuario perfilUsuario, Perfil perfil);
+        Task<UserLogin> UpdateUser(int id, string login, string password, PerfilUsuario perfilUsuario);
     }
 }

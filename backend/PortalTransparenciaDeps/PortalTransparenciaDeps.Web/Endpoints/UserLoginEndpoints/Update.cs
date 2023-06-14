@@ -31,14 +31,14 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
         ]
         public override async Task<ActionResult<UpdateUserResponse>> HandleAsync(UpdateUserRequest request, CancellationToken cancellationToken = default)
         {
-            var user = await _userLoginService.UpdateUser(request.Id, request.UserName, request.Password, request.PerfilUsuario);
+            var user = await _userLoginService.UpdateUser(request.Id, request.Login, request.Password, request.PerfilUsuario);
             if (user == null) 
             {
                 return BadRequest();
             }
             return Ok(new UpdateUserResponse
             {
-                UserName = request.UserName,
+                Login = request.Login,
                 Password = request.Password,
                 PerfilUsuario = request.PerfilUsuario
             });
