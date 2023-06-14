@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { Observable } from "rxjs";
-import { PerfilResponse } from "src/app/components/administracao/models/create-usuarios.Model";
+import { CreateUsuarios, PerfilResponse } from "src/app/components/administracao/models/create-usuarios.Model";
 import { VerifyRequest, verifyLogin } from "./login.model";
 
 @Injectable({
@@ -29,6 +29,22 @@ export class AuthService {
         (perfil) => {
           const nome = perfil.nome;
           resolve(nome);
+        },
+        (error) => {
+          reject(error);
+        }
+      );
+    });
+  }
+
+  getPerfilUsuario(): Promise<number> {
+    const url = `${this.apiUrl}/userLogin/${this.userId}`;
+  
+    return new Promise<number>((resolve, reject) => {
+      this.http.get<CreateUsuarios>(url).subscribe(
+        (PerfilUsuario) => {
+          const perfil = PerfilUsuario.perfilUsuario;
+          resolve(perfil);
         },
         (error) => {
           reject(error);
