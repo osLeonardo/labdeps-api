@@ -23,9 +23,3 @@ export class NavComponent {
     this.auth.logout();
   }
 }
-
-
-function rodaBotao() {
-  const button = document.getElementById("rotate-button") as HTMLButtonElement;
-  button.classList.toggle("rotated");
-}
