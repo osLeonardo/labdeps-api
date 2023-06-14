@@ -2,6 +2,7 @@
 #alterarUsuario {
     background-color: #252d56;
     color: #fff;
+    transition: 0.3s;
 }
 #alterarUsuario:hover {
     background-color: #171c36;
