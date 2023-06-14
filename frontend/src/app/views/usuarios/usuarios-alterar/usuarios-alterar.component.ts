@@ -39,7 +39,7 @@ export class UsuariosAlterarComponent implements OnInit{
   usuarioService: UsuariosService;
 
   ngOnInit(): void {
-    const perfil = 5;
+    const perfil = 1;
     this.usuarioService.GetById(perfil).subscribe(Usuarios => {
       this.usuario = Usuarios;
       console.log('Dados do usuário (página alteração):', Usuarios)
@@ -48,7 +48,7 @@ export class UsuariosAlterarComponent implements OnInit{
 
   Cancelar(): void{
     console.log('Alteração cancelada.');
-    this.router.navigate(['/usuarios/5']);
+    this.router.navigate(['/usuarios/1']);
   }
 
   Confirmar(): void{
@@ -56,11 +56,11 @@ export class UsuariosAlterarComponent implements OnInit{
     if (this.usuario != null)
     {
       this.usuariosService.Update(this.usuario).subscribe(Usuarios => {
-        this.router.navigate(['/usuarios/5']);
+        this.router.navigate(['/usuarios/1']);
       })
   
       console.log('Alterações confirmadas com sucesso!', this.usuario);
-      this.router.navigate(['/usuarios/5']);
+      this.router.navigate(['/usuarios/1']);
     }
     else
     {

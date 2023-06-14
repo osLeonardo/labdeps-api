@@ -19,7 +19,7 @@ export class UsuariosDadosComponent implements OnInit{
 
   ngOnInit(): void {
     // const perfil = parseInt(`${this.route.snapshot.paramMap.get('perfil')}`);
-    const perfil = 5;
+    const perfil = 1;
     this.usuarioService.GetById(perfil).subscribe(Usuarios => {
       this.usuario = [Usuarios];
       console.log('Dados do usuário (página dados):', Usuarios)

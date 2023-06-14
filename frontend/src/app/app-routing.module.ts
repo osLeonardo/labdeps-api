@@ -40,20 +40,16 @@ const routes: Routes = [
     path: "login",
     component: LoginComponent
   },
-  // {
-  //   path: "usuarios/:perfil",
-  //   component: UsuariosComponent
-  // },
   {
-    path: "usuarios/5",
+    path: "usuarios/1",
     component: UsuariosComponent
   },
   {
-    path: "usuarios/5/usuariosAlterar",
+    path: "usuarios/1/usuariosAlterar",
     component: UsuariosAlterarComponent
   },
   {
-    path: "usuarios/5/usuariosAlteracao",
+    path: "usuarios/1/usuariosAlteracao",
     component: UsuariosAlteracaoComponent
   }
 ];

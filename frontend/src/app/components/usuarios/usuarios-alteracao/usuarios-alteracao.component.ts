@@ -10,6 +10,7 @@ import { UsuariosService } from '../usuarios.service';
   templateUrl: './usuarios-alteracao.component.html',
   styleUrls: ['./usuarios-alteracao.component.css']
 })
+
 export class UsuariosAlteracaoComponent implements OnInit {
   
   usuario: Usuario;
@@ -17,7 +18,7 @@ export class UsuariosAlteracaoComponent implements OnInit {
   constructor(private usuarioService: UsuariosService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const perfil = 5;
+    const perfil = 1;
     this.usuarioService.GetById(perfil).subscribe(Usuarios => {
       this.usuario = Usuarios;
       console.log('Dados do usuário (página alteração):', Usuarios)

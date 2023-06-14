@@ -13,7 +13,7 @@ export class UsuariosComponent {
     headerService.headerData = {
       title: 'Usuário',
       icon: ' account_circle ',
-      routeUrl: '/usuarios/5',
+      routeUrl: '/usuarios/1',
       
     }
   }
@@ -21,6 +21,6 @@ export class UsuariosComponent {
   button: true;
 
   Alterar(): void{
-    this.router.navigate(['usuarios/5/usuariosAlterar'])
+    this.router.navigate(['usuarios/1/usuariosAlterar'])
   }
 }
