@@ -10,6 +10,7 @@ import { Remuneracao } from './models/remuneracao.Model';
 import { bolsaFamilia } from './models/bolsaFamilia.Model';
 import { peti } from './models/peti.Model';
 import { Historico, HistoricoRequest } from './models/historico.Model';
+import { AuthService } from 'src/app/views/login/login.service';
 
 @Injectable({
   providedIn: 'root'
@@ -19,12 +20,12 @@ export class ConsultasService {
   baseUrl = "http://localhost:57679/api/v1/"; //Rodar o backend na opção 'PortalTransparenciaDeps'
   pagina = 1; //valor constante para página
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private authService: AuthService) { }
 
   CreateHistorico(consulta: string, codigo: string, dataReferencia: Date, intervalo: string): Observable<Historico>{
     const body: HistoricoRequest = {
       user:{
-        id: 1 //Revisar para pegar usuário do login
+        id: this.authService.getUserId()
       },
       dataConsulta: new Date(),
       tipoConsulta: consulta,
