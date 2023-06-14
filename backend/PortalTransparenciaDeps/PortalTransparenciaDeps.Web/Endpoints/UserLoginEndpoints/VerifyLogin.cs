@@ -52,43 +52,26 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
                 return NoContent();
             }
 
-<<<<<<< HEAD
             var user = users.FirstOrDefault(u => u.Login == request.Login && u.Password == request.Password);
             if (users.Any(users => users.Login == request.Login && users.Password == request.Password))
-=======
-            var user = users.FirstOrDefault(u => u.Login == request.Login && u.Password == request.Password && u.IdPerfil > 0);
-
-            if (users.Any(users => users.Login == request.Login && users.Password == request.Password && users.IdPerfil > 0))
->>>>>>> b378fcf79b8179074fff20c60ddd439988ecda6e
             {
                 string token = GenerateToken();
                 var perfil = await _repository.GetByIdAsync<Perfil>(user.IdPerfil);
 
                 return Ok(new VerificationResponse
                 {
-<<<<<<< HEAD
                     Id = user.Id,
                     IdPerfil = user.IdPerfil,
                     Token = token,
-=======
-                    Perfil = perfil.Nome,
-                    Token = token,
-                    Id = user.Id,
->>>>>>> b378fcf79b8179074fff20c60ddd439988ecda6e
                 });
             }
             else
             {
                 return BadRequest(new VerificationResponse
                 {
-<<<<<<< HEAD
                     Id = -1,
                     IdPerfil = -1,
-=======
-                    Perfil = null,
->>>>>>> b378fcf79b8179074fff20c60ddd439988ecda6e
                     Token = null,
-                    Id = -1
                 });
             }
         }
