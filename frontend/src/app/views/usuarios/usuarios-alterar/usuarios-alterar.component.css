@@ -1,0 +1,29 @@
+/*Botão Confirmar*/
+#confirmarAlteracoes {
+    background-color: #252d56;
+    color: #fff;
+}
+
+#confirmarAlteracoes:hover {
+    background-color: #171c36;
+    color: #e6e6e6;
+}
+
+button{
+    margin: 1rem;
+}
+
+.descricaoConfirmar{
+    padding: 0.6rem;
+}
+/******/
+
+/*Botão Cancelar*/
+button{
+    margin: 1rem;
+}
+
+.descricaoCancelar{
+    padding: 0.6rem;
+}
+/******/

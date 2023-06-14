@@ -1,0 +1,28 @@
+/*Mat card*/
+mat-card{
+    margin: 1rem;
+}
+
+mat-card-header{
+    font-size: 20px;
+    font-weight: 555;
+    padding-bottom: 15px;
+}
+    /*Inputs*/
+    .inputLogin{
+        width: 400px;
+    }
+
+    .inputSenha{
+        width: 400px;
+    }
+
+    .inputID{
+        width: 400px;
+    }
+
+    .inputUsuario{
+        width: 400px;
+    }
+    /******/
+/******/

@@ -1,3 +1,4 @@
+import { UsuariosService } from './components/usuarios/usuarios.service';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -46,6 +47,10 @@ import { UsuarioReadComponent } from './components/administracao/usuario-read/us
 import { UsuarioUpdateComponent } from './components/administracao/usuario-update/usuario-update.component'
 import { CrudAdministracaoComponent } from './views/crud-administracao/crud-administracao.component';
 import { LoginComponent } from './views/login/login.component';
+import { UsuariosComponent } from './views/usuarios/usuarios.component';
+import { UsuariosAlteracaoComponent } from './components/usuarios/usuarios-alteracao/usuarios-alteracao.component';
+import { UsuariosAlterarComponent } from './views/usuarios/usuarios-alterar/usuarios-alterar.component';
+import { UsuariosDadosComponent } from './components/usuarios/usuarios-dados/usuarios-dados.component';
 
 registerLocaleData(localePt)
 
@@ -74,6 +79,10 @@ registerLocaleData(localePt)
     UsuarioUpdateComponent,
     CrudAdministracaoComponent,
     LoginComponent,
+    UsuariosComponent,
+    UsuariosAlteracaoComponent,
+    UsuariosAlterarComponent,
+    UsuariosDadosComponent,
   ],
   imports: [
     BrowserModule,
