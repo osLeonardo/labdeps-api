@@ -37,8 +37,8 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
 
         [HttpPost(VerificationRequest.Route)]
         [SwaggerOperation(
-            Summary = "Verifica o login e retorna, usuário, id e token",
-            Description = "Faz a verificação das credenciais do usuário para login",
+            Summary = "Verifica credenciais e retorna id, id do perfil e token",
+            Description = "Faz a verificação das credenciais do usuário tentando realizar login",
             Tags = new[] { "UserLoginEndpoints" })
         ]
 
@@ -56,7 +56,6 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
             if (users.Any(users => users.Login == request.Login && users.Password == request.Password))
             {
                 string token = GenerateToken();
-                var perfil = await _repository.GetByIdAsync<Perfil>(user.IdPerfil);
 
                 return Ok(new VerificationResponse
                 {
