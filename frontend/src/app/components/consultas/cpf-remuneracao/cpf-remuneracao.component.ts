@@ -1,6 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { Remuneracao, RemuneracoesDto } from '../models/remuneracao.model';
+import { Remuneracao, RemuneracoesDto } from '../models/remuneracao.Model';
 import { ConsultasService } from '../consultas.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
@@ -30,11 +30,11 @@ export class CpfRemuneracaoComponent implements OnInit {
 
     ngOnInit(): void {
       const codigo = `${this.route.snapshot.paramMap.get('codigo')}`
-    const dataRef = `${this.route.snapshot.paramMap.get('dataRef')}`
-    const intervalo = parseInt(`${this.route.snapshot.paramMap.get('intervalo')}`)
-    const ano = parseInt(dataRef.substring(0, 4));
-    const mes = parseInt(dataRef.substring(4, 6)) -1;
-    let data = new Date(ano, mes);
+      const dataRef = `${this.route.snapshot.paramMap.get('dataRef')}`
+      const intervalo = parseInt(`${this.route.snapshot.paramMap.get('intervalo')}`)
+      const ano = parseInt(dataRef.substring(0, 4));
+      const mes = parseInt(dataRef.substring(4, 6)) -1;
+      let data = new Date(ano, mes);
 
     for(let i=0; i<intervalo; i++){
       data.setMonth(data.getMonth()-1);

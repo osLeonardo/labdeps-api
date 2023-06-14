@@ -2,16 +2,17 @@ import { Observable } from 'rxjs/internal/Observable';
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Perfil, Usuario } from './models/usuarios.model';
+import { AuthService } from 'src/app/views/login/login.service';
 
 @Injectable({ providedIn: 'root' })
 
 export class UsuariosService {
     baseUrl = "http://localhost:57679/api/v1";
 
-    constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient, private service: AuthService) { }
 
-    GetById(perfil: number): Observable<Usuario>{
-        const urlUserGet = `${this.baseUrl}/userLogin/${perfil}`;
+    GetById(): Observable<Usuario>{
+        const urlUserGet = `${this.baseUrl}/userLogin/${this.service.getUserId()}`;
         return this.http.get<Usuario>(urlUserGet);
     }
 
