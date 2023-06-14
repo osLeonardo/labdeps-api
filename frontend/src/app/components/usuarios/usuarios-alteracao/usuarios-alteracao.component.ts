@@ -18,7 +18,7 @@ export class UsuariosAlteracaoComponent implements OnInit {
 
   ngOnInit(): void {
     const perfil = 5;
-    this.usuarioService.GetById(perfil).subscribe(Usuarios => {
+    this.usuarioService.GetById().subscribe(Usuarios => {
       this.usuario = Usuarios;
       console.log('Dados do usuário (página alteração):', Usuarios)
     })

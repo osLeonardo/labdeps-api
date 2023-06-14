@@ -3107,4 +3107,8 @@
 2023-06-14 13:11:22.6810 Info Loading assembly: NLog.Mongo
 2023-06-14 13:11:22.8994 Info Adding target MongoTarget(Name=logfile)
 2023-06-14 13:11:22.9408 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
-2023-06-14 13:11:27.2182 Info Connecting to MongoDB collection geral in database logs
+2023-06-14 13:11:27.2182 Info Connecting to MongoDB collection geral in database logs2023-06-14 14:53:22.0796 Info Message Template Auto Format enabled
+2023-06-14 14:53:22.1062 Info Loading assembly: NLog.Mongo
+2023-06-14 14:53:22.2339 Info Adding target MongoTarget(Name=logfile)
+2023-06-14 14:53:22.3207 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-14 14:53:25.7299 Info Connecting to MongoDB collection geral in database logs

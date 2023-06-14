@@ -2,6 +2,7 @@
 #confirmarAlteracoes {
     background-color: #252d56;
     color: #fff;
+    transition: 0.3s;
 }
 
 #confirmarAlteracoes:hover {
@@ -21,6 +22,7 @@ button{
 /*Botão Cancelar*/
 button{
     margin: 1rem;
+    transition: 0.3s;
 }
 
 .descricaoCancelar{
