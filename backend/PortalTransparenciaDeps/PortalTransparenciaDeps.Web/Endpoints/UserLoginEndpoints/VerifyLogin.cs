@@ -42,7 +42,7 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
             Tags = new[] { "UserLoginEndpoints" })
         ]
 
-        public override async Task<ActionResult<VerificationResponse>> HandleAsync([FromRoute]VerificationRequest request, CancellationToken cancellationToken = default)
+        public override async Task<ActionResult<VerificationResponse>> HandleAsync(VerificationRequest request, CancellationToken cancellationToken = default)
         {
             var spec = new UserLoginOrderSpec();
             var users = await _repository.ListAsync(spec, cancellationToken);
