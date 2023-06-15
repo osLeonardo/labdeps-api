@@ -40,11 +40,7 @@ export class AuthService {
 
   setUserPerfil(userPerfil: number): void {
     this.userPerfil = userPerfil;
-    sessionStorage.setItem('userPerfil', JSON.stringify(userPerfil));
-    console.log(this.userPerfil);
-    console.log(userPerfil);
-    console.log(sessionStorage.getItem('userPerfil'));
-    
+    sessionStorage.setItem('userPerfil', JSON.stringify(userPerfil));    
   }
 
   getUserPerfil(): number {
