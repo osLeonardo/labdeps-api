@@ -1,0 +1,44 @@
+<mat-card>
+    <mat-card-header>Alterações</mat-card-header>
+    <mat-card-content>
+        <mat-form-field appearance="fill" class="inputLogin">
+            <mat-label>Login</mat-label>
+            <input matInput required [(ngModel)]="usuario.login" placeholder="Login" name="login">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="inputSenha">
+            <mat-label>Senha</mat-label>
+            <input matInput required [(ngModel)]="usuario.password" placeholder="Senha" name="password">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="inputID">
+            <mat-label>ID</mat-label>
+            <input matInput disabled [(ngModel)]="usuario.id" placeholder="ID" name="id">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="inputUsuario">
+            <mat-label>Perfil</mat-label>
+            <input matInput disabled [(ngModel)]="usuario.perfilUsuario" placeholder="Perfil" name="perfilUsuario">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="inputUsuario">
+            <mat-label>ID Perfil</mat-label>
+            <input matInput disabled [(ngModel)]="usuario.idPerfil" placeholder="Id Perfil" name="idPerfil">
+        </mat-form-field>        
+    </mat-card-content>
+</mat-card>
+
+<button mat-raised-button id="cancelar" (click)="Cancelar()">
+    <i class="material-icons">
+        highlight_off 
+    </i>
+    <span class="descricaoCancelar">Cancelar</span>
+</button>
+<button mat-raised-button id="confirmarAlteracoes" (click)="Confirmar()">
+    <i class="material-icons">
+        check_circle_outline
+    </i>
+    <span class="descricaoConfirmar">Confirmar Alterações</span>
+</button>
+
+

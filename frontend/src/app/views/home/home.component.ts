@@ -1,8 +1,9 @@
+import { Perfil } from './../../components/administracao/models/create-usuarios.Model';
 import { Observable } from 'rxjs';
 import { HttpClient } from "@angular/common/http";
 import { HeaderService } from './../../components/template/header/header.service';
 import { Component, OnInit } from '@angular/core';
-import { Perfil, PerfilResponse } from 'src/app/components/administracao/models/create-usuarios.Model';
+import { PerfilResponse } from 'src/app/components/administracao/models/create-usuarios.Model';
 import { AuthService } from '../login/login.service';
 
 @Component({
@@ -13,6 +14,7 @@ import { AuthService } from '../login/login.service';
 export class HomeComponent implements OnInit {
   private apiUrl = 'http://localhost:57679/api/v1';
   nome: string;
+  perfil: number;
 
   constructor(private loginService: AuthService, private headerService: HeaderService, private http: HttpClient) {
 
@@ -25,5 +27,6 @@ export class HomeComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.nome = await this.loginService.getNomePerfil();
+    this.perfil = await this.loginService.getPerfilUsuario();
   }
 }
