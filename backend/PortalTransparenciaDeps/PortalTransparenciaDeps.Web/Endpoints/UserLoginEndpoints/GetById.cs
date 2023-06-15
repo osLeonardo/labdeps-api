@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using PortalTransparenciaDeps.Core.Entities.LoginAggregate;
+using PortalTransparenciaDeps.Core.Interfaces;
 using PortalTransparenciaDeps.SharedKernel.Interfaces;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Threading;
@@ -13,15 +14,15 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}")]
     [AllowAnonymous]
-    public class GetById : EndpointBaseAsync
+    public class GetById : EndpointBaseSync
         .WithRequest<GetUserRequest>
         .WithActionResult<GetUserResponse>
     {
-        private readonly IRepository<UserLogin> _repository;
+        private readonly IUserQueryService _userQuery;
 
-        public GetById(IRepository<UserLogin> repository)
+        public GetById(IUserQueryService userQuery)
         {
-            _repository = repository;            
+            _userQuery = userQuery;            
         }
 
         [HttpGet(GetUserRequest.Route)]
@@ -30,11 +31,11 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
             Description = "Retorna um login de usuário pesquisado por Id",
             Tags = new[] { "UserLoginEndpoints" })
         ]
-        public override async Task<ActionResult<GetUserResponse>> HandleAsync([FromRoute]GetUserRequest request, CancellationToken cancellationToken = default)
+        public override ActionResult<GetUserResponse> Handle([FromRoute]GetUserRequest request)
         {
             if (request.Id == null) { return BadRequest(); }
 
-            UserLogin user = await _repository.GetByIdAsync(request.Id);
+            var user = _userQuery.GetUser(request.Id);
             
             if (user == null) { return NoContent(); }
 
@@ -45,6 +46,8 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
                 Password = user.Password,
                 PerfilUsuario = user.PerfilUsuario,
                 IdPerfil = user.IdPerfil,
+                Nome = user.Nome,
+                Ativo = user.Ativo,
             });
         }
     }
