@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Perfil, Usuario } from './models/usuarios.model';
 import { AuthService } from 'src/app/views/login/login.service';
+import { UsuariosAlteracaoComponent } from './usuarios-alteracao/usuarios-alteracao.component';
 
 @Injectable({ providedIn: 'root' })
 

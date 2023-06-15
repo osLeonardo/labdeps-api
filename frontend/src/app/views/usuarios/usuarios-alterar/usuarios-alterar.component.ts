@@ -13,58 +13,55 @@ import { UsuariosComponent } from '../usuarios.component';
   templateUrl: './usuarios-alterar.component.html',
   styleUrls: ['./usuarios-alterar.component.css']
 })
-export class UsuariosAlterarComponent implements OnInit{
+export class UsuariosAlterarComponent{
   
-  usuario: Usuario = {
-    id: 0,
-    login: '',
-    password: '',
-    idPerfil: 0,
-    perfilUsuario: {
-      id: 0,
-    },
-  };
+  // usuario: Usuario;
 
-  route : Router;
+  // route : Router;
 
-  constructor(public dialog: MatDialog, private headerService: HeaderService, private router: Router,
-              private usuariosService: UsuariosService) {
-    headerService.headerData = {
-      title: 'Usuário',
-      icon: ' account_circle ',
-      routeUrl: '/usuariosAlterar',
-    }
-  }
+  // constructor(
+  //   public dialog: MatDialog,
+  //   private headerService: HeaderService,
+  //   private router: Router,
+  //   private usuariosService: UsuariosService,
+  //   ) {
+  //     headerService.headerData = {
+  //       title: 'Usuário',
+  //       icon: ' account_circle ',
+  //       routeUrl: '/usuariosAlterar',
+  //     }
+  // }
 
-  usuarioService: UsuariosService;
+  // usuarioService: UsuariosService;
 
-  ngOnInit(): void {
-    const perfil = 1;
-    this.usuarioService.GetById().subscribe(Usuarios => {
-      this.usuario = Usuarios;
-      console.log('Dados do usuário (página alteração):', Usuarios)
-    })  
-  }
+  // ngOnInit(): void {
+  //   const perfil = 1;
+  //   this.usuarioService.GetById().subscribe(Usuarios => {
+  //     this.usuario = Usuarios;
+  //     console.log('Dados do usuário (página alteração):', Usuarios)
+  //   })  
+  // }
 
-  Cancelar(): void{
-    console.log('Alteração cancelada.');
-    this.router.navigate(['/usuarios/1']);
-  }
+  // Cancelar(): void{
+  //   console.log('Alteração cancelada.');
+  //   this.router.navigate(['/usuarios/:id']);
+  // }
 
-  Confirmar(): void{
-    //Update
-    if (this.usuario != null)
-    {
-      this.usuariosService.Update(this.usuario).subscribe(Usuarios => {
-        this.router.navigate(['/usuarios/1']);
-      })
-  
-      console.log('Alterações confirmadas com sucesso!', this.usuario);
-      this.router.navigate(['/usuarios/1']);
-    }
-    else
-    {
-      console.log('Alteração vazia');
-    }
-  }
+  // Confirmar(): void{
+  //   //Update
+  //   console.log(this.usuario.id);
+  //   console.log(this.usuario.login);
+  //   if (this.usuario != null)
+  //   {
+  //     this.usuariosService.Update(this.usuario).subscribe(Usuarios => {
+  //       this.usuario = Usuarios;
+  //       this.router.navigate([`/usuarios/${this.usuario.id}`]);
+  //     })  
+  //     console.log('Alterações confirmadas com sucesso!', this.usuario.login);
+  //   }
+  //   else
+  //   {
+  //     console.log('Alteração vazia');
+  //   }
+  // }
 }

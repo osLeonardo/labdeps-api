@@ -46,15 +46,15 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: "usuarios/1",
+    path: "usuarios/:id",
     component: UsuariosComponent
   },
   {
-    path: "usuarios/1/usuariosAlterar",
+    path: "usuarios/:id/usuariosAlterar",
     component: UsuariosAlterarComponent
   },
   {
-    path: "usuarios/1/usuariosAlteracao",
+    path: "usuarios/:id/usuariosAlteracao",
     component: UsuariosAlteracaoComponent
   }
 ];
