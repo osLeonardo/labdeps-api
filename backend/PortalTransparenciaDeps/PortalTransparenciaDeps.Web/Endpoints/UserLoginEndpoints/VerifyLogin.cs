@@ -62,6 +62,7 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
                     Id = user.Id,
                     IdPerfil = user.IdPerfil,
                     Token = token,
+                    PerfilUsuario = user.PerfilUsuario,
                 });
             }
             else
@@ -71,6 +72,7 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
                     Id = -1,
                     IdPerfil = -1,
                     Token = null,
+                    PerfilUsuario = default,
                 });
             }
         }
