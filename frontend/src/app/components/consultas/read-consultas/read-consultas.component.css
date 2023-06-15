@@ -1,0 +1,20 @@
+mat-card{
+    padding: 1rem;
+}
+
+mat-card-header{
+    margin-bottom: 1.5rem;
+}
+
+table{
+    width: 100%;
+}
+
+a{
+    cursor: pointer;
+    color: #252d56;
+    transition: 0.3s;
+}
+a :hover{
+    color: #171c36;
+}

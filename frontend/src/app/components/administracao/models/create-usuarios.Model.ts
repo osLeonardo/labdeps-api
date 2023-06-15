@@ -10,3 +10,9 @@ export interface CreateUsuarios {
     id: number
   }
 
+  export interface PerfilResponse {
+    id: number
+    nome: string
+    ativo: boolean
+    ordem: number
+  }

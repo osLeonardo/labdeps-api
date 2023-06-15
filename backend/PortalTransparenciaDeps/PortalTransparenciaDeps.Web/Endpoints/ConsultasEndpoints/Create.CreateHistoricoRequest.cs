@@ -9,10 +9,10 @@ namespace PortalTransparenciaDeps.Web.Endpoints.ConsultasEndpoints
         public const string Route = "historico";
 
         [Required]
-        public UserLogin User { get; set; }
+        public virtual UserLogin User { get; set; }
 
         [Required]
-        public DateOnly DataConsulta { get; set; }
+        public DateTime DataConsulta { get; set; }
 
         [Required]
         public string TipoConsulta { get; set; }
@@ -21,7 +21,7 @@ namespace PortalTransparenciaDeps.Web.Endpoints.ConsultasEndpoints
         public string Codigo { get; set; }
 
         [Required]
-        public DateOnly DataReferencia { get; set; }
+        public DateTime DataReferencia { get; set; }
 
         [Required]
         public string Intervalo { get; set; }

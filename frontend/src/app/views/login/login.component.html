@@ -1,20 +1,32 @@
 <mat-card>
-    <mat-card-header>
-        <mat-card-title>Faça seu Login</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-        <form>
-            <mat-form-field>
-                <mat-label>Login</mat-label>
-                <input matInput placeholder="anasilva">
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Senha</mat-label>
-                <input type="password" matInput placeholder="Um23Senha!">
-            </mat-form-field>
-        </form>
-        <button mat-raised-button id="deps">
-            <span class="descricao">ENTRAR</span>
-        </button>
-    </mat-card-content>
+  <img src="../../../../assets/img/logo-deps-completo-colorido.png" alt="Logo" class="logo">
+  <mat-card-header>
+    <mat-card-title>Faça seu Login</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form (submit)="login()">
+      <mat-form-field>
+        <mat-label>Login</mat-label>
+        <input
+          matInput
+          required
+          [(ngModel)]='username'
+          name="username"
+          (keyup.enter)="login()">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Senha</mat-label>
+        <input
+        matInput
+        required
+        type="password"
+        [(ngModel)]='password'
+        name="password"
+        (keyup.enter)="login()">
+      </mat-form-field>
+      <button id="deps" mat-raised-button type="submit">
+        <span (click)="login()" class="descricao">ENTRAR</span>
+      </button>
+    </form>
+  </mat-card-content>
 </mat-card>

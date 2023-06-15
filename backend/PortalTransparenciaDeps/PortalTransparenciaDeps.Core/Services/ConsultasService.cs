@@ -18,7 +18,7 @@ namespace PortalTransparenciaDeps.Core.Services
         {
             _repository = repository;
         }
-        public async Task<HistoricoConsulta> CreateHistorico(UserLogin user, DateOnly dataConsulta, string tipoConsulta, string codigo, DateOnly dataReferencia, string intervalo)
+        public async Task<HistoricoConsulta> CreateHistorico(UserLogin user, DateTime dataConsulta, string tipoConsulta, string codigo, DateTime dataReferencia, string intervalo)
         {
             Guard.Against.NegativeOrZero(user.Id, nameof(user.Id));
             Guard.Against.Null(dataConsulta, nameof(dataConsulta));

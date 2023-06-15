@@ -20,14 +20,14 @@ namespace PortalTransparenciaDeps.Core.Services
             _repository = repository;
         }
 
-        public async Task<UserLogin> CreateUser(string username, string password, PerfilUsuario perfilUsuario, Perfil perfil)
+        public async Task<UserLogin> CreateUser(string login, string password, PerfilUsuario perfilUsuario, Perfil perfil)
         {
-            Guard.Against.NullOrEmpty(username, nameof(username));
+            Guard.Against.NullOrEmpty(login, nameof(login));
             Guard.Against.NullOrEmpty(password, nameof(password));
             Guard.Against.Null(perfilUsuario, nameof(perfilUsuario));
             Guard.Against.NegativeOrZero(perfil.Id, nameof(perfil.Id));
 
-            UserLogin userLogin = UserLogin.Factory.NewUser(username, password, perfilUsuario, perfil);
+            UserLogin userLogin = UserLogin.Factory.NewUser(login, password, perfilUsuario, perfil);
 
 
             await _repository.AddAsync(userLogin);
@@ -35,15 +35,15 @@ namespace PortalTransparenciaDeps.Core.Services
             return userLogin;            
         }
 
-        public async Task<UserLogin> UpdateUser(int id, string username, string password, PerfilUsuario perfilUsuario)
+        public async Task<UserLogin> UpdateUser(int id, string login, string password, PerfilUsuario perfilUsuario)
         {
-            Guard.Against.NullOrEmpty(username, nameof(username));
+            Guard.Against.NullOrEmpty(login, nameof(login));
             Guard.Against.NullOrEmpty(password, nameof(password));
             Guard.Against.Null(perfilUsuario, nameof(perfilUsuario));
 
             UserLogin user = await _repository.GetByIdAsync(id);
 
-            user.Login = username;
+            user.Login = login;
             user.Password = password;
             user.PerfilUsuario = perfilUsuario;
 

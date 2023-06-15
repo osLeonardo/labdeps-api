@@ -1,4 +1,5 @@
 ﻿using Ardalis.Specification;
+using System.Threading.Tasks;
 
 namespace PortalTransparenciaDeps.SharedKernel.Interfaces
 {

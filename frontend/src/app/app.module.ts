@@ -1,3 +1,4 @@
+import { ReadConsultasComponent } from './components/consultas/read-consultas/read-consultas.component';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -36,16 +37,17 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { NgIf } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { CpfCepimComponent} from './components/consultas/cpf-cepim/cpf-cepim.component'
+import { CpfCepimComponent} from './components/consultas/cpf-cepim/cpf-cepim.component';
 import { NgxMaskModule } from 'ngx-mask';
-import localePt from '@angular/common/locales/pt'
+import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
-import { AuthModule } from '@auth0/auth0-angular';
 import { UsuarioCreateComponent } from './components/administracao/usuario-create/usuario-create.component'
 import { UsuarioReadComponent } from './components/administracao/usuario-read/usuario-read.component'
 import { UsuarioUpdateComponent } from './components/administracao/usuario-update/usuario-update.component'
 import { CrudAdministracaoComponent } from './views/crud-administracao/crud-administracao.component';
 import { LoginComponent } from './views/login/login.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { LoginDialogComponent } from './views/login/dialog-login.component';
 
 registerLocaleData(localePt)
 
@@ -74,6 +76,8 @@ registerLocaleData(localePt)
     UsuarioUpdateComponent,
     CrudAdministracaoComponent,
     LoginComponent,
+    ReadConsultasComponent,
+    LoginDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -97,15 +101,9 @@ registerLocaleData(localePt)
     MatButtonModule,
     NgIf,
     MatExpansionModule,
+    MatPaginatorModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false
-    }),
-    AuthModule.forRoot({
-      domain: 'dev-x4njfpbmvtl8xns4.us.auth0.com',
-      clientId: 'sUgl0ywtSNlIRgf2CiyUioDtOFivcF03',
-      authorizationParams: {
-        redirect_uri: window.location.origin
-      }
     }),
   ],
   providers: [{

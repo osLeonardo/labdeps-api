@@ -1,7 +1,9 @@
 import { Component, Inject } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { AuthService } from '@auth0/auth0-angular';
 import { DOCUMENT } from '@angular/common';
+import { AuthService } from 'src/app/views/login/login.service';
+import { UsuarioCreateComponent } from '../../administracao/usuario-create/usuario-create.component';
+import { UsuarioReadComponent } from '../../administracao/usuario-read/usuario-read.component';
 
 @Component({
   selector: 'app-nav',
@@ -16,12 +18,14 @@ import { DOCUMENT } from '@angular/common';
   ],
 })
 export class NavComponent {
-  expandir = false;
-  constructor(@Inject(DOCUMENT) public document: Document, public auth: AuthService) {}
-}
 
+  constructor(
+    @Inject(DOCUMENT)
+    public document: Document,
+    public auth: AuthService,
+    ) {}
 
-function rodaBotao() {
-  const button = document.getElementById("rotate-button") as HTMLButtonElement;
-  button.classList.toggle("rotated");
+  sair(){
+    this.auth.logout();
+  }
 }

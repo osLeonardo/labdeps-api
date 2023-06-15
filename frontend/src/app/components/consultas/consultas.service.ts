@@ -6,9 +6,11 @@ import { CepimByCnpj } from './models/cepimByCnpj.Model';
 import { bpc } from './models/bpc.Model';
 import { pep } from './models/pep.Model';
 import { Observable } from 'rxjs/internal/Observable';
-import { Remuneracao } from './models/remuneracao.model';
+import { Remuneracao } from './models/remuneracao.Model';
 import { bolsaFamilia } from './models/bolsaFamilia.Model';
 import { peti } from './models/peti.Model';
+import { Historico, HistoricoRequest } from './models/historico.Model';
+import { AuthService } from 'src/app/views/login/login.service';
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +20,32 @@ export class ConsultasService {
   baseUrl = "http://localhost:57679/api/v1/"; //Rodar o backend na opção 'PortalTransparenciaDeps'
   pagina = 1; //valor constante para página
 
-  constructor(private http: HttpClient) { }
-  
+  constructor(private http: HttpClient, private authService: AuthService) { }
+
+  CreateHistorico(consulta: string, codigo: string, dataReferencia: Date, intervalo: string): Observable<Historico>{
+    const body: HistoricoRequest = {
+      user:{
+        id: this.authService.getUserId()
+      },
+      dataConsulta: new Date(),
+      tipoConsulta: consulta,
+      codigo: codigo,
+      dataReferencia: dataReferencia,
+      intervalo: intervalo
+    }
+    const url = `${this.baseUrl}historico`;
+    return this.http.post<Historico>(url,body);
+  }
+  GetListHistorico(): Observable<Historico[]>{
+    const url = `${this.baseUrl}historico`;
+    return this.http.get<Historico[]>(url);
+  }
+  GetHistoricoById(id: number): Observable<Historico>{
+    const url = `${this.baseUrl}historico/${id}`;
+    return this.http.get<Historico>(url);
+  }
+
+
   GetBolsaFamiliaByCpf(dataCompetencia: number, codigo: string): Observable<bolsaFamilia[]> {
     const UrlBF = `${this.baseUrl}bolsaFamilia/${dataCompetencia}/${dataCompetencia}/${codigo}/${this.pagina}`;
     return this.http.get<bolsaFamilia[]>(UrlBF)

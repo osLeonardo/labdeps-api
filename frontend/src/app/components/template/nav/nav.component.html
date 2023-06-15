@@ -3,14 +3,6 @@
             <div>
                         <a routerLink="/"><img src="../../../../assets/img/logo-deps-completo-colorido.png" alt="Logo" class="logo"></a>
                 <mat-nav-list>
-                    <mat-list-item>
-                        <a class="rotas" routerLink="/login">
-                            <i class="material-icons"> 
-                                login
-                            </i>
-                            <span class="descricao">ENTRAR</span> 
-                        </a>
-                    </mat-list-item>
                     <mat-list-item class="user">
                         <a class="rotas" routerLink="/">
                             <i class="material-icons"> 
@@ -67,7 +59,7 @@
                             <span class="descricao">MENSAGENS</span>
                         </a>
                     </mat-list-item>
-                    <mat-list-item>
+                    <mat-list-item *ngIf="auth.getUserPerfil() == 1">
                         <a class="rotas" routerLink="/administracao">
                             <i class="material-icons"> 
                                 settings
@@ -84,7 +76,7 @@
                         </a>
                     </mat-list-item>
                     <mat-list-item>
-                        <a (click)="auth.logout()" class="rotas">
+                        <a class="rotas" (click)="sair()" >
                             <i class="material-icons"> 
                                 logout
                             </i>
