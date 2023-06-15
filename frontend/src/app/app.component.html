@@ -1,2 +1,7 @@
-
-<app-nav></app-nav>
+<ng-container *ngIf="isAuthenticated; else loginTemplate">
+    <app-nav></app-nav>
+  </ng-container>
+  
+  <ng-template #loginTemplate>
+    <app-login></app-login>
+  </ng-template>

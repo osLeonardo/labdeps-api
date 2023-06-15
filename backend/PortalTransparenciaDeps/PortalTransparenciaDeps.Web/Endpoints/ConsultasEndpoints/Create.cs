@@ -22,11 +22,12 @@ namespace PortalTransparenciaDeps.Web.Endpoints.ConsultasEndpoints
         {
             _consultas = consultas;
         }
+
         [HttpPost(CreateHistoricoRequest.Route)]
         [SwaggerOperation(
-        Summary = "Criar novo usuário",
-            Description = "Cria um novo login de usuário",
-            Tags = new[] { "UserLoginEndpoints" })
+            Summary = "Criar histórico",
+            Description = "Cria um novo histórico de consulta",
+            Tags = new[] { "ConsultasEndpoints" })
         ]
         public override async Task<ActionResult<CreateHistoricoResponse>> HandleAsync(CreateHistoricoRequest request, CancellationToken cancellationToken = default)
         {

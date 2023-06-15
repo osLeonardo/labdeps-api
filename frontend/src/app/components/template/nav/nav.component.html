@@ -59,7 +59,7 @@
                             <span class="descricao">MENSAGENS</span>
                         </a>
                     </mat-list-item>
-                    <mat-list-item>
+                    <mat-list-item *ngIf="auth.getUserPerfil() == 1">
                         <a class="rotas" routerLink="/administracao">
                             <i class="material-icons"> 
                                 settings
@@ -73,6 +73,14 @@
                                 help
                             </i>
                             <span class="descricao">AJUDA</span>
+                        </a>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <a class="rotas" (click)="sair()" >
+                            <i class="material-icons"> 
+                                logout
+                            </i>
+                            <span class="descricao">SAIR</span> 
                         </a>
                     </mat-list-item>
                 </mat-nav-list>

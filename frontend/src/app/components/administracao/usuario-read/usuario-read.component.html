@@ -1,48 +1,41 @@
 <mat-card class="card_usuario">
     <mat-card-content>
-
         <div class="">
-
             <table mat-table [dataSource]="usuario">
-          
-              <ng-container matColumnDef="nome">
-                <th mat-header-cell *matHeaderCellDef>Nome</th>
-                <td mat-cell *matCellDef="let row">{{row.nome}}</td>
+
+              <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef>id</th>
+                <td mat-cell *matCellDef="let row">{{row.id}}</td>
+              </ng-container> 
+              <ng-container matColumnDef="login">
+                <th mat-header-cell *matHeaderCellDef>User</th>
+                <td mat-cell *matCellDef="let row">{{row.login}}</td>
+              </ng-container>          
+              <ng-container matColumnDef="password">
+                <th mat-header-cell *matHeaderCellDef>Password</th>
+                <td mat-cell *matCellDef="let row">{{row.password}}</td>
+              </ng-container>             
+              <ng-container matColumnDef="perfilUsuario">
+                <th mat-header-cell *matHeaderCellDef>nivel do usuario</th>
+                <td mat-cell *matCellDef="let row">{{ getPerfilUsuarioString(row.perfilUsuario) }}</td>
               </ng-container>
-          
-              
-              <ng-container matColumnDef="dataNascimento">
-                <th mat-header-cell *matHeaderCellDef>Data de dataNascimento</th>
-                <td mat-cell *matCellDef="let row">{{row.dataNascimento}}</td>
+              <ng-container matColumnDef="idPerfil">
+                <th mat-header-cell *matHeaderCellDef>id do perfil</th>
+                <td mat-cell *matCellDef="let row">{{row.idPerfil}}</td>
               </ng-container>
-          
-             
-              <ng-container matColumnDef="senha">
-                <th mat-header-cell *matHeaderCellDef>senha</th>
-                <td mat-cell *matCellDef="let row">{{row.senha}}</td>
-              </ng-container>
-        
-              
               <ng-container matColumnDef="opcoes">
-                <th mat-header-cell *matHeaderCellDef>ações</th>
+                <th mat-header-cell *matHeaderCellDef>opcoes</th>
                 <td mat-cell *matCellDef="let row">
-        
-                    <a routerLink="/">
+                    <a routerLink="/administracao/atualizarUsuario/{{ row.id }}">
                         <i class="material-icons" id="deps">
                             edit
                         </i>
                     </a>
-        
                 </td>
               </ng-container>
-          
               <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
               <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
-          
           </div>
     </mat-card-content>
-    
 </mat-card>
-
-

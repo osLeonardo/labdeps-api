@@ -10,6 +10,6 @@ namespace PortalTransparenciaDeps.Core.Interfaces
 {
     public interface IConsultas
     {
-        Task<HistoricoConsulta> CreateHistorico(UserLogin user, DateOnly dataConsulta, string tipoConsulta, string codigo, DateOnly dataReferencia, string intervalo);
+        Task<HistoricoConsulta> CreateHistorico(UserLogin user, DateTime dataConsulta, string tipoConsulta, string codigo, DateTime dataReferencia, string intervalo);
     }
 }
