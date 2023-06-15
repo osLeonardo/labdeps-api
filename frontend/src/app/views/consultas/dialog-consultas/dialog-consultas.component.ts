@@ -1,3 +1,4 @@
+import { ConsultasService } from './../../../components/consultas/consultas.service';
 import { Component, HostListener } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
@@ -8,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './dialog-consultas.component.html',
   styleUrls: ['./dialog-consultas.component.css']
 })
+
 export class DialogConsultasComponent {
 
   consulta = 'cpf';
@@ -16,7 +18,7 @@ export class DialogConsultasComponent {
   codigo: string;
   button = true;
 
-  constructor(public dialogRef: MatDialogRef<DialogConsultasComponent>, private router: Router) {}  
+  constructor(public dialogRef: MatDialogRef<DialogConsultasComponent>, private router: Router, private consultasService: ConsultasService) {}  
 
   EnableButton(): void{
     this.button = this.codigo ? false : true;
@@ -30,15 +32,20 @@ export class DialogConsultasComponent {
   performSearch(){
     const searchTerm = this.codigo;
 
-    this.Buscar();
+    if(!this.button){
+      this.Buscar();
+    }
 
     console.log("Realizando a pesquisa: ", searchTerm);
   }
 
     Buscar(): void{
-
+      this.consultasService.CreateHistorico(this.consulta, this.codigo, this.dataReferencia, this.intervalo).subscribe(historico =>{
+        console.log(historico);
+      });
+      
       const dataRef = `${this.dataReferencia.getFullYear().toString()}${(this.dataReferencia.getMonth() + 1).toString().padStart(2, '0')}`;
-      this.dialogRef.close(); 
+      this.dialogRef.close();
      
       if(this.consulta === 'cpf')
       {
@@ -50,7 +57,8 @@ export class DialogConsultasComponent {
         this.codigo = `${this.codigo.substring(0, 2)}${this.codigo.substring(3, 6)}${this.codigo.substring(7, 10)}${this.codigo.substring(11, 15)}${this.codigo.substring(16, 18)}`
         this.router.navigate([`consulta/cnpj/${this.codigo}/${dataRef}/${this.intervalo}`]);
       }
-          console.log(this.codigo)
+      
+      console.log(this.codigo)
     }
     Cancelar(): void{
       this.dialogRef.close();

@@ -22,6 +22,89 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.ConsultaAggregate.HistoricoConsulta", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Codigo")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("codigo");
+
+                    b.Property<DateOnly>("DataConsulta")
+                        .HasColumnType("date")
+                        .HasColumnName("data_consulta");
+
+                    b.Property<DateOnly>("DataReferencia")
+                        .HasColumnType("date")
+                        .HasColumnName("data_referencia");
+
+                    b.Property<string>("Intervalo")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("intervalo");
+
+                    b.Property<string>("TipoConsulta")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("tipo_consulta");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer")
+                        .HasColumnName("user_id");
+
+                    b.HasKey("Id")
+                        .HasName("pk_historico_consultas");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("historico_consulta", (string)null);
+                });
+
+            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.LoginAggregate.UserLogin", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    
+                    b.Property<int>("IdPerfil")
+                        .HasColumnType("integer")
+                        .HasColumnName("id_perfil");
+
+                    b.Property<string>("Login")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("character varying(40)")
+                        .HasColumnName("login");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("character varying(40)")
+                        .HasColumnName("password");
+
+                    b.Property<int>("PerfilUsuario")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(4)
+                        .HasColumnName("perfil_usuario");
+
+                    b.HasKey("Id")
+                        .HasName("pk_user_logins");
+
+                    b.HasIndex("IdPerfil");
+
+                    b.ToTable("user_login", (string)null);
+                });
+
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.PerfilAggregate.Perfil", b =>
                 {
                     b.Property<int>("Id")
@@ -50,50 +133,7 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                     b.HasKey("Id")
                         .HasName("pk_perfis");
 
-                    b.ToTable("perfil");
-                });
-
-            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.PerfilConsultas.PerfilConsultas", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasColumnName("id");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Codigo")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("codigo");
-
-                    b.Property<DateOnly>("DataConsulta")
-                        .HasColumnType("date")
-                        .HasColumnName("data_consulta");
-
-                    b.Property<DateOnly>("DataReferencia")
-                        .HasColumnType("date")
-                        .HasColumnName("data_referencia");
-
-                    b.Property<string>("Intervalo")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("intervalo");
-
-                    b.Property<string>("NomeUsuario")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("nome_usuario");
-
-                    b.Property<string>("TipoConsulta")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("tipo_consulta");
-
-                    b.HasKey("Id")
-                        .HasName("pk_perfil_consultas");
-
-                    b.ToTable("perfil_consultas");
+                    b.ToTable("perfil", (string)null);
                 });
 
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.PerfilMetricaAggregate.AgrupadorParametrizacao", b =>
@@ -110,8 +150,8 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
 
                     b.HasKey("Id")
                         .HasName("pk_agrupadores_parametrizacao");
-
-                    b.ToTable("agrupador_parametrizacao");
+                        
+                    b.ToTable("agrupador_parametrizacao", (string)null);
                 });
 
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.PerfilMetricaAggregate.ParametrizacaoMetrica", b =>
@@ -165,7 +205,7 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
 
                     b.HasIndex("PerfilMetricaId");
 
-                    b.ToTable("parametrizacao_metrica");
+                    b.ToTable("parametrizacao_metrica", (string)null);
                 });
 
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.PerfilMetricaAggregate.PerfilMetrica", b =>
@@ -209,7 +249,31 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                     b.HasIndex("MetricaId", "PerfilId")
                         .IsUnique();
 
-                    b.ToTable("perfil_metrica");
+                    b.ToTable("perfil_metrica", (string)null);
+                });
+
+            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.ConsultaAggregate.HistoricoConsulta", b =>
+                {
+                    b.HasOne("PortalTransparenciaDeps.Core.Entities.LoginAggregate.UserLogin", "User")
+                        .WithMany("Users")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired()
+                        .HasConstraintName("fk_historico_consultas_user_logins_user_id");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.LoginAggregate.UserLogin", b =>
+                {
+                    b.HasOne("PortalTransparenciaDeps.Core.Entities.PerfilAggregate.Perfil", "Perfil")
+                        .WithMany("Logins")
+                        .HasForeignKey("IdPerfil")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired()
+                        .HasConstraintName("fk_user_logins_perfis_id_perfil");
+
+                    b.Navigation("Perfil");
                 });
 
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.PerfilMetricaAggregate.ParametrizacaoMetrica", b =>
@@ -245,8 +309,15 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                     b.Navigation("Perfil");
                 });
 
+            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.LoginAggregate.UserLogin", b =>
+                {
+                    b.Navigation("Users");
+                });
+
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.PerfilAggregate.Perfil", b =>
                 {
+                    b.Navigation("Logins");
+
                     b.Navigation("PerfilMetricas");
                 });
 

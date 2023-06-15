@@ -1,6 +1,8 @@
 ﻿using Ardalis.EFCore.Extensions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using PortalTransparenciaDeps.Core.Entities.ConsultaAggregate;
+using PortalTransparenciaDeps.Core.Entities.LoginAggregate;
 using PortalTransparenciaDeps.Core.Entities.PerfilAggregate;
 using PortalTransparenciaDeps.Core.Entities.PerfilMetricaAggregate;
 using PortalTransparenciaDeps.SharedKernel;
@@ -28,6 +30,8 @@ namespace PortalTransparenciaDeps.Infrastructure.Data
         public DbSet<ParametrizacaoMetrica> ParametrizacaoMetricas => Set<ParametrizacaoMetrica>();
         public DbSet<AgrupadorParametrizacao> AgrupadoresParametrizacao => Set<AgrupadorParametrizacao>();
         public DbSet<PerfilMetrica> PerfisMetricas => Set<PerfilMetrica>();
+        public DbSet<UserLogin> UserLogins => Set<UserLogin>();
+        public DbSet<HistoricoConsulta> HistoricoConsultas => Set<HistoricoConsulta>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

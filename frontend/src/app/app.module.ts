@@ -1,3 +1,4 @@
+import { ReadConsultasComponent } from './components/consultas/read-consultas/read-consultas.component';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -35,11 +36,19 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { NgIf } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { CpfCepimComponent} from './components/consultas/cpf-cepim/cpf-cepim.component'
+import { CpfCepimComponent} from './components/consultas/cpf-cepim/cpf-cepim.component';
 import { NgxMaskModule } from 'ngx-mask';
-import HomeComponent from './views/home/home.component';
+import { HomeComponent } from './views/home/home.component';
 import { RouterModule } from '@angular/router';
-
+import { localePt } from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+import { UsuarioCreateComponent } from './components/administracao/usuario-create/usuario-create.component'
+import { UsuarioReadComponent } from './components/administracao/usuario-read/usuario-read.component'
+import { UsuarioUpdateComponent } from './components/administracao/usuario-update/usuario-update.component'
+import { CrudAdministracaoComponent } from './views/crud-administracao/crud-administracao.component';
+import { LoginComponent } from './views/login/login.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { LoginDialogComponent } from './views/login/dialog-login.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +69,14 @@ import { RouterModule } from '@angular/router';
     CpfRemuneracaoComponent,
     PetiComponent,
     BolsaFamiliaComponent,
-    CpfCepimComponent
+    CpfCepimComponent,
+    UsuarioCreateComponent,
+    UsuarioReadComponent,
+    UsuarioUpdateComponent,
+    CrudAdministracaoComponent,
+    LoginComponent,
+    ReadConsultasComponent,
+    LoginDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -84,6 +100,7 @@ import { RouterModule } from '@angular/router';
     NgIf,
     MatExpansionModule,
     RouterModule,
+    MatPaginatorModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false
     }),
