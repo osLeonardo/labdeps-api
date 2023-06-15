@@ -122,6 +122,7 @@ try
     builder.Services.AddSingleton<IUserLoginService, UserLoginService>();
     builder.Services.AddSingleton<IConsultas, ConsultasService>();
     builder.Services.AddSingleton<IHistoricoQueryService, HistoricoQueryService>();
+    builder.Services.AddSingleton<IUserQueryService, UserQueryService>();
 
     builder.Logging.ClearProviders();
     builder.Logging.AddConsole();

@@ -40,7 +40,7 @@ export class ReadConsultasComponent implements AfterViewInit, OnInit{
       }
       this.historico.data = historico;
       console.log(this.historico);
-    })    
+    })
   }
   
   ngAfterViewInit(): void {

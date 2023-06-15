@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using PortalTransparenciaDeps.Core.Entities.LoginAggregate;
 using PortalTransparenciaDeps.Core.Entities.LoginAggregate.Specifications;
+using PortalTransparenciaDeps.Core.Interfaces;
 using PortalTransparenciaDeps.SharedKernel.Interfaces;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Collections.Generic;
@@ -16,14 +17,15 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}")]
     [AllowAnonymous]
-    public class List : EndpointBaseAsync
+    public class List : EndpointBaseSync
         .WithoutRequest
         .WithActionResult<List<ListUserResponse>>
     {
-        private readonly IReadRepository<UserLogin> _repository;
-        public List(IReadRepository<UserLogin> repository)
+        private readonly IUserQueryService _userQuery;
+
+        public List(IUserQueryService userQuery)
         {
-            _repository = repository;
+            _userQuery = userQuery;
         }
 
         [HttpGet("userLogin")]
@@ -32,10 +34,9 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
             Description = "Retorna uma lista com todos os logins de usuário",
             Tags = new[] { "UserLoginEndpoints" })
         ]
-        public override async Task<ActionResult<List<ListUserResponse>>> HandleAsync(CancellationToken cancellationToken = default)
+        public override ActionResult<List<ListUserResponse>> Handle()
         {
-            var spec = new UserLoginOrderSpec();
-            var users = await _repository.ListAsync(spec, cancellationToken);
+            var users = _userQuery.ListUser();
             if (users == null) 
             { 
                 return NoContent(); 
@@ -47,6 +48,8 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
                 Password = x.Password,
                 PerfilUsuario = x.PerfilUsuario,
                 IdPerfil = x.IdPerfil,
+                Nome = x.Nome,
+                Ativo = x.Ativo,
             }).ToList());
         }
     }

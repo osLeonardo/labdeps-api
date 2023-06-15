@@ -22,7 +22,7 @@ export class UsuarioCreateComponent {
     }
   }
 
-  constructor(private AdministracaoService: AdministracaoService, private router: Router,) {}
+  constructor(private AdministracaoService: AdministracaoService, private router: Router) {}
 
   CadastrarUsuario(): void {
     this.AdministracaoService.Cadastrar(this.usuario).subscribe(() => {

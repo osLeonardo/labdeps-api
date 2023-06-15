@@ -13,6 +13,7 @@ export class AuthService {
   private token: string;
   private userId: number;
   private IdPerfil: number;
+  private userPerfil: number;
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -36,26 +37,22 @@ export class AuthService {
       );
     });
   }
-
-  getPerfilUsuario(): Promise<number> {
-    const url = `${this.apiUrl}/userLogin/${this.userId}`;
   
-    return new Promise<number>((resolve, reject) => {
-      this.http.get<CreateUsuarios>(url).subscribe(
-        (PerfilUsuario) => {
-          const perfil = PerfilUsuario.perfilUsuario;
-          resolve(perfil);
-        },
-        (error) => {
-          reject(error);
-        }
-      );
-    });
+  setUserPerfil(userPerfil: number): void {
+    this.userPerfil = userPerfil;
+    sessionStorage.setItem('userPerfil', JSON.stringify(userPerfil));
+    console.log(this.userPerfil);
+    console.log(userPerfil);
+    console.log(sessionStorage.getItem('userPerfil'));
+  }
+
+  getUserPerfil(): number {
+    return this.userPerfil;
   }
 
   setUserId(userId: number): void {
     this.userId = userId;
-    localStorage.setItem('token', JSON.stringify(userId));
+    localStorage.setItem('userId', JSON.stringify(userId));
   }
 
   getUserId(): number {

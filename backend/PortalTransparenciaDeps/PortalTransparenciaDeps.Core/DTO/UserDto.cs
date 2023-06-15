@@ -1,9 +1,14 @@
 ﻿using PortalTransparenciaDeps.Core.Entities.PerfilAggregate;
 using PortalTransparenciaDeps.Core.Enums;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
+namespace PortalTransparenciaDeps.Core.DTO
 {
-    public class GetUserResponse
+    public class UserDto
     {
         public int Id { get; set; }
         public string Login { get; set; }
