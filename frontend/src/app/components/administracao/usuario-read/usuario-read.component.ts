@@ -3,6 +3,7 @@ import { AdministracaoService } from './../administracao.service';
 import { Component, OnInit } from '@angular/core';
 import { CreateUsuarios } from '../models/create-usuarios.Model';
 import { HeaderService } from '../../template/header/header.service';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-usuario-read',
@@ -13,7 +14,7 @@ export class UsuarioReadComponent implements OnInit{
   
 
   usuario: CreateUsuarios[];
-  displayedColumns = ["id", "login", "password", "perfilUsuario", "idPerfil", "opcoes"]
+  displayedColumns = ["id", "login", "perfilUsuario", "idPerfil", "opcoes"]
 
   constructor(private headerService: HeaderService, private AdministracaoService: AdministracaoService) {
     headerService.headerData = {
@@ -25,6 +26,7 @@ export class UsuarioReadComponent implements OnInit{
 
   ngOnInit(): void {
     this.AdministracaoService.read().subscribe(usuarios => {
+      usuarios.sort((a, b) => a.id - b.id)
       this.usuario = usuarios
       console.log(this.usuario);
       
