@@ -4,7 +4,11 @@
     <mat-card-content>
       <form>
         <mat-form-field appearance="fill">
-          <mat-label>usuário</mat-label>
+          <mat-label>Nome do Usuário</mat-label>
+          <input matInput [(ngModel)]="perfil.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Login</mat-label>
           <input matInput [(ngModel)]="usuario.login" name="login">
         </mat-form-field>
         <mat-form-field appearance="fill">
@@ -25,32 +29,22 @@
             <mat-option value="8">Financeiro</mat-option>
           </mat-select>
         </mat-form-field>
-
-        <mat-form-field appearance="fill">
-          <mat-label>Login</mat-label>
-          <input matInput [(ngModel)]="perfil.nome" name="nome">
-        </mat-form-field>
-
         <mat-form-field>
           <mat-label>Ativo</mat-label>
           <mat-select [(ngModel)]="perfil.ativo" name="ativo">
             <mat-option value="true">true</mat-option>
             <mat-option value="false">false</mat-option>
-
           </mat-select>
-        </mat-form-field>
-        
+        </mat-form-field> 
       </form>
       <div class="buttons">
         <button mat-raised-button color="primary" id="deps" (click)="AtualizarUsuario()">
           Salvar
         </button>
-  
         <button mat-raised-button (click)="cancelar()">
           Cancelar
         </button>
       </div>
     </mat-card-content>
- 
   </mat-card>
 </div>
