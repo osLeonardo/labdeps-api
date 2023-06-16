@@ -4,12 +4,12 @@
     <mat-card-content>
       <form>
         <mat-form-field appearance="fill">
-          <mat-label>Login do usuário</mat-label>
-          <input matInput [(ngModel)]="usuario.login" placeholder="Deps" name="userName">
+          <mat-label>usuário</mat-label>
+          <input matInput [(ngModel)]="usuario.login" name="login">
         </mat-form-field>
         <mat-form-field appearance="fill">
-          <mat-label>Password do usuário</mat-label>
-          <input matInput [(ngModel)]="usuario.password" placeholder="#eutotriste!" name="Password">
+          <mat-label>Senha</mat-label>
+          <input matInput [(ngModel)]="usuario.password" name="password" type="password"> 
         </mat-form-field>
         <mat-form-field>
           <mat-label>Perfil do usuário</mat-label>
@@ -23,6 +23,20 @@
             <mat-option value="6">Comercial</mat-option>
             <mat-option value="7">Suporte e implantação</mat-option>
             <mat-option value="8">Financeiro</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Login</mat-label>
+          <input matInput [(ngModel)]="perfil.nome" name="nome">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Ativo</mat-label>
+          <mat-select [(ngModel)]="perfil.ativo" name="ativo">
+            <mat-option value="true">true</mat-option>
+            <mat-option value="false">false</mat-option>
+
           </mat-select>
         </mat-form-field>
         

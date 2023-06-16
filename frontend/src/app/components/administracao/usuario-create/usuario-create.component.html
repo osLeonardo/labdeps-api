@@ -2,14 +2,22 @@
 <mat-card class="cardCreate">
     <mat-card-title Novo Usuario></mat-card-title>
     <form>
-        <mat-form-field appearance="fill">
-            <mat-label>user do usuário</mat-label>
-            <input matInput [(ngModel)]="usuario.login" placeholder="Deps" name="login">
-          </mat-form-field>
+
           <mat-form-field appearance="fill">
-            <mat-label>Password do usuário</mat-label>
-            <input matInput [(ngModel)]="usuario.password" placeholder="#eutotriste!" name="Password">
+              <mat-label>Usuário</mat-label>
+              <input matInput [(ngModel)]="usuario.login" name="Usuário">
           </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Login</mat-label>
+            <input matInput [(ngModel)]="perfil.nome" name="login">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Senha</mat-label>
+            <input matInput [(ngModel)]="usuario.password" name="senha" type="password">
+          </mat-form-field>
+
           <mat-form-field>
             <mat-label>Perfil do usuário</mat-label>
             <mat-select [(ngModel)]="usuario.perfilUsuario" name="perfilUsuario">
@@ -24,10 +32,13 @@
               <mat-option value="8">Financeiro</mat-option>
             </mat-select>
           </mat-form-field>
+
+
           <mat-form-field appearance="fill">
-              <mat-label>Id do perfil</mat-label>
-              <input matInput [(ngModel)]="usuario.perfil.id" placeholder="1!" name="idPerfil">
+            <mat-label>Ordem</mat-label>
+            <input matInput [(ngModel)]="perfil.ordem" name="ordem">
           </mat-form-field>
+
     </form>
     <div class="buttons">
       <button  mat-raised-button color="primary" id="deps" (click)="CadastrarUsuario()" >

@@ -1,7 +1,7 @@
 
 import { AdministracaoService } from './../administracao.service';
 import { Component, OnInit } from '@angular/core';
-import { CreateUsuarios } from '../models/create-usuarios.Model';
+import { CreateUsuarios } from '../models/usuarios.Model';
 import { HeaderService } from '../../template/header/header.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class UsuarioReadComponent implements OnInit{
   
 
   usuario: CreateUsuarios[];
-  displayedColumns = ["id", "login", "password", "perfilUsuario", "idPerfil", "opcoes"]
+  displayedColumns = ["id", "login", "perfilUsuario", "perfil.nome","idPerfil", "ativo", "opcoes"]
 
   constructor(private headerService: HeaderService, private AdministracaoService: AdministracaoService) {
     headerService.headerData = {
