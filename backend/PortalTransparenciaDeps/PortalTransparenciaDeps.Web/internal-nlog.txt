@@ -268,9 +268,6 @@
 2023-05-29 13:12:29.4449 Info Loading assembly: NLog.Mongo
 2023-05-29 13:12:29.6245 Info Adding target MongoTarget(Name=logfile)
 2023-05-29 13:12:29.6784 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 2023-06-02 16:28:28.3866 Info Message Template Auto Format enabled
 2023-06-02 16:28:28.3866 Info Loading assembly: NLog.Mongo
 2023-06-02 16:28:28.5084 Info Adding target MongoTarget(Name=logfile)
@@ -278,11 +275,6 @@
 2023-06-02 16:28:28.6057 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
    at NLog.Mongo.MongoTarget.InitializeTarget()
    at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
-=======
-=======
->>>>>>> 1e31cdbd5ad3d8eb25c09b38b40893c19729b5ff
-=======
->>>>>>> 32f703114d8a5efa889c0e24492259baaa887c9c
 2023-05-31 17:46:52.3404 Info Message Template Auto Format enabled
 2023-05-31 17:46:52.3404 Info Loading assembly: NLog.Mongo
 2023-05-31 17:46:52.3763 Info Adding target MongoTarget(Name=logfile)
@@ -719,12 +711,6 @@
 2023-06-02 15:54:10.2364 Info Loading assembly: NLog.Mongo
 2023-06-02 15:54:10.3246 Info Adding target MongoTarget(Name=logfile)
 2023-06-02 15:54:10.3670 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Documents\Deps\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cd2f572e08fedb7ae872ff4217edf27f1b8109bc
-=======
-=======
->>>>>>> 32f703114d8a5efa889c0e24492259baaa887c9c
 2023-06-02 17:38:23.1711 Info Message Template Auto Format enabled
 2023-06-02 17:38:23.1789 Info Loading assembly: NLog.Mongo
 2023-06-02 17:38:23.3045 Info Adding target MongoTarget(Name=logfile)
@@ -834,9 +820,6 @@
 2023-06-05 13:13:09.6984 Info Loading assembly: NLog.Mongo
 2023-06-05 13:13:09.9748 Info Adding target MongoTarget(Name=logfile)
 2023-06-05 13:13:10.0359 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
-<<<<<<< HEAD
->>>>>>> 1e31cdbd5ad3d8eb25c09b38b40893c19729b5ff
-=======
 2023-06-05 16:40:19.6727 Info Message Template Auto Format enabled
 2023-06-05 16:40:19.6727 Info Loading assembly: NLog.Mongo
 2023-06-05 16:40:19.7661 Info Adding target MongoTarget(Name=logfile)
