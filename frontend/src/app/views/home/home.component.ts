@@ -14,13 +14,16 @@ export class HomeComponent implements OnInit {
   private apiUrl = 'http://localhost:57679/api/v1';
   nome: string;
 
-  constructor(private loginService: AuthService, private headerService: HeaderService, private http: HttpClient) {
-
-    headerService.headerData = {
-      title: 'Início',
-      icon: 'home',
-      routeUrl: '',
-    } 
+  constructor(
+    private loginService: AuthService,
+    private http: HttpClient,
+    private headerService: HeaderService,
+    ) {
+      headerService.headerData = {
+        title: 'Início',
+        icon: 'home',
+        routeUrl: '',
+      } 
   }
 
   async ngOnInit(): Promise<void> {

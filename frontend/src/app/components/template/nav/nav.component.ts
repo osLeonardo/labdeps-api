@@ -18,14 +18,19 @@ import { UsuarioReadComponent } from '../../administracao/usuario-read/usuario-r
   ],
 })
 export class NavComponent {
+  nome: string;
 
   constructor(
     @Inject(DOCUMENT)
     public document: Document,
-    public auth: AuthService,
+    public loginService: AuthService,
     ) {}
 
   sair(){
-    this.auth.logout();
+    this.loginService.logout();
+  }
+
+  async ngOnInit(): Promise<void> {
+    this.nome = await this.loginService.getNomePerfil();
   }
 }
