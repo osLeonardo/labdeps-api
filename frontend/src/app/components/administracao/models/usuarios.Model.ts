@@ -1,12 +1,13 @@
+
 export interface CreateUsuarios {
     id: number
     login: string
     password: string
     perfilUsuario: number
-    perfil: Perfil
+    perfil: idPerfil
   }
-  
-  export interface Perfil {
+
+  export interface idPerfil {
     id: number
   }
 
@@ -16,3 +17,4 @@ export interface CreateUsuarios {
     ativo: boolean
     ordem: number
   }
+
