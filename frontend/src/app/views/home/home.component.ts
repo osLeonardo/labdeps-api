@@ -2,7 +2,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from "@angular/common/http";
 import { HeaderService } from './../../components/template/header/header.service';
 import { Component, OnInit } from '@angular/core';
-import { Perfil, PerfilResponse } from 'src/app/components/administracao/models/create-usuarios.Model';
+import { PerfilResponse } from 'src/app/components/administracao/models/usuarios.Model';
 import { AuthService } from '../login/login.service';
 
 @Component({
