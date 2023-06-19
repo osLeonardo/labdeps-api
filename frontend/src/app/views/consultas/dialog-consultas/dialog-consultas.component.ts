@@ -19,126 +19,95 @@ export class DialogConsultasComponent {
 
   constructor(public dialogRef: MatDialogRef<DialogConsultasComponent>, private router: Router, private consultasService: ConsultasService) {}  
 
-  //cpf
-  CPFNum10(): boolean {
-    let cpf:string = `${this.codigo.substring(0, 3)}${this.codigo.substring(4, 7)}${this.codigo.substring(8, 11)}`;
-    let sum:number = 0;
+  CpfValidar(): boolean {
+    let cpfNum10:string = `${this.codigo.substring(0, 3)}${this.codigo.substring(4, 7)}${this.codigo.substring(8, 11)}`;
+    let somaNum10:number = 0;
     for(let i = 0; i<9; i++){
-        sum += (parseInt(cpf[i]) * (10-i));
+      somaNum10 += (parseInt(cpfNum10[i]) * (10-i));
     }
-    let resto:number = (sum * 10) % 11;
-    if(resto === 10){
-      resto = 0;
+    let restoNum10:number = (somaNum10 * 10) % 11;
+    if(restoNum10 === 10){
+      restoNum10 = 0;
     }
-    let Num12:number = resto;
-    if(Num12 === parseInt(this.codigo[12])){
-      return true;
-    }
-    else{
-      return false;
-    }
-  }
-  CPFNum11(): boolean{
-  let cpf:string = `${this.codigo.substring(0, 3)}${this.codigo.substring(4, 7)}${this.codigo.substring(8, 11)}${this.codigo.substring(12, 13)}`;
-    let sum:number = 0;
+    let character12:number = restoNum10;
+    let cpfNum11:string = `${this.codigo.substring(0, 3)}${this.codigo.substring(4, 7)}${this.codigo.substring(8, 11)}${this.codigo.substring(12, 13)}`;
+    let somaNum11:number = 0;
     for(let i = 0; i<10; i++){
-        sum += (parseInt(cpf[i]) * (11-i));
+      somaNum11 += (parseInt(cpfNum11[i]) * (11-i));
     }
-    let resto:number = (sum * 10) % 11
-    if(resto === 10){
-      resto = 0;
+    let restoNum11:number = (somaNum11 * 10) % 11
+    if(restoNum11 === 10){
+      restoNum11 = 0;
     }
-    let Num13 = resto
-    if(Num13 === parseInt(this.codigo[13])){
+    let character13 = restoNum11
+    if(character12 === parseInt(this.codigo[12]) && character13 === parseInt(this.codigo[13])){
       return true;
     }
     else{
       return false;
     }
 }
-  ValidarCPF(): boolean {
-    if(this.CPFNum10() && this.CPFNum11()){
-      return true;
-    }
-    return false;
-}
-//cnpj
-CNPJNum13(): boolean {
-  let cnpjParte1:string = `${this.codigo.substring(0, 2)}${this.codigo.substring(3, 5)}`;
-  let cnpjParte2:string = `${this.codigo[5]}${this.codigo.substring(7, 10)}${this.codigo.substring(11, 15)}`;
-  let sum1:number = 0;
-  let sum2:number = 0;
+CnpjValidar(): boolean {
+  let cnpjNum13_1:string = `${this.codigo.substring(0, 2)}${this.codigo.substring(3, 5)}`;
+  let cnpjNum13_2:string = `${this.codigo[5]}${this.codigo.substring(7, 10)}${this.codigo.substring(11, 15)}`;
+  let somaNum13_1:number = 0;
+  let somaNum13_2:number = 0;
   for(let i = 0; i<4; i++){
-    sum1 += (parseInt(cnpjParte1[i]) * (5-i));
+    somaNum13_1 += (parseInt(cnpjNum13_1[i]) * (5-i));
   }
   for(let i = 0; i<8; i++){
-    sum2 += (parseInt(cnpjParte2[i]) * (9-i));
+    somaNum13_2 += (parseInt(cnpjNum13_2[i]) * (9-i));
   }
-  let sum:number = sum1+sum2;
-  let resto:number = sum % 11;
-  if(resto<2){
-    resto = 0;
-  }
-  else{
-    resto = 11-resto;
-  }
-  let Num16 = resto;
-  if(Num16 === parseInt(this.codigo[16])){
-    return true;
+  let somaNum13:number = somaNum13_1+somaNum13_2;
+  let restoNum13:number = somaNum13 % 11;
+  if(restoNum13<2){
+    restoNum13 = 0;
   }
   else{
-    return false;
+    restoNum13 = 11-restoNum13;
   }
-}
-CNPJNum14(): boolean {
-  let cnpjParte1:string = `${this.codigo.substring(0, 2)}${this.codigo.substring(3, 6)}`;
-  let cnpjParte2:string = `${this.codigo[5]}${this.codigo.substring(7, 10)}${this.codigo.substring(11, 18)}`;
-  let sum1:number = 0;
-  let sum2:number = 0;
+  let character16 = restoNum13;
+  let cnpjNum14_1:string = `${this.codigo.substring(0, 2)}${this.codigo.substring(3, 6)}`;
+  let cnpjNum14_2:string = `${this.codigo[7]}${this.codigo.substring(8, 10)}${this.codigo.substring(11, 15)}${this.codigo.substring(16, 18)}`;
+  let somaNum14_1:number = 0;
+  let somaNum14_2:number = 0;
   for(let i = 0; i<5; i++){
-    sum1 += (parseInt(cnpjParte1[i]) * (6-i));
+    somaNum14_1 += (parseInt(cnpjNum14_1[i]) * (6-i));
+    console.log(cnpjNum14_1);
+    console.log(somaNum14_1);
   }
   for(let i =0; i<8; i++){
-    sum2 += (parseInt(cnpjParte2[i]) * (9-i));
+    somaNum14_2 += (parseInt(cnpjNum14_2[i]) * (9-i));
+    console.log(cnpjNum14_2);
+    console.log(somaNum14_2);
   }
-  let sum:number = sum1+sum2;
-  console.log(sum);
-  let resto:number = sum % 11;
-  console.log(resto);
-  console.log("a");
-  if(resto<2){
-    resto = 0;
-    console.log(resto);
+  let somaNum14:number = somaNum14_1+somaNum14_2;
+  console.log(somaNum14);
+  let restoNum14:number = somaNum14 % 11;
+  console.log(restoNum14);
+  if(restoNum14<2){
+    restoNum14 = 0;
+    console.log(restoNum14);
   }
   else{
-    resto = 11-resto;
-    console.log(resto);
+    restoNum14 = 11-restoNum14;
+    console.log(restoNum14);
   }
-  let Num16 = resto;
-  if(Num16 === parseInt(this.codigo[17])){
-    console.log("a");
+  let character17 = restoNum14;
+  if(character16 === parseInt(this.codigo[16]) && character17 === parseInt(this.codigo[17])){
     return true;
   }
   else{
-    console.log("b");
     return false;
   }
-}
-ValidarCNPJ(): boolean {
-  if(this.CNPJNum13() && this.CNPJNum14()){
-    console.log("a");
-    return true;
-  }
-  console.log("b");
-  return false;
 }
   EnableButton(): void{
     //this.button = this.codigo ? false : true;
     if(this.consulta === 'cpf'){
-      this.button = this.ValidarCPF() ? false : true;
+      this.button = this.CpfValidar() ? false : true;
     }
     else{
-      this.button = this.ValidarCNPJ() ? false : true;
+      this.button = this.CnpjValidar() ? false : true;
     }
   }
 
