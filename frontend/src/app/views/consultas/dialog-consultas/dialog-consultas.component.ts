@@ -75,25 +75,17 @@ export class DialogConsultasComponent {
     let somaNum14_2:number = 0;
     for(let i = 0; i<5; i++){
       somaNum14_1 += (parseInt(cnpjNum14_1[i]) * (6-i));
-      console.log(cnpjNum14_1);
-      console.log(somaNum14_1);
     }
     for(let i =0; i<8; i++){
       somaNum14_2 += (parseInt(cnpjNum14_2[i]) * (9-i));
-      console.log(cnpjNum14_2);
-      console.log(somaNum14_2);
     }
     let somaNum14:number = somaNum14_1+somaNum14_2;
-    console.log(somaNum14);
     let restoNum14:number = somaNum14 % 11;
-    console.log(restoNum14);
     if(restoNum14<2){
       restoNum14 = 0;
-      console.log(restoNum14);
     }
     else{
       restoNum14 = 11-restoNum14;
-      console.log(restoNum14);
     }
     let character17 = restoNum14;
     if(character16 === parseInt(this.codigo[16]) && character17 === parseInt(this.codigo[17])){

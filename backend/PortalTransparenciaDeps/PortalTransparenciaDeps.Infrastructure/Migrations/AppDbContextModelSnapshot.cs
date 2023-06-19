@@ -63,7 +63,7 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("historico_consulta", (string)null);
+                    b.ToTable("historico_consulta");
                 });
 
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.LoginAggregate.UserLogin", b =>
@@ -102,7 +102,7 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
 
                     b.HasIndex("IdPerfil");
 
-                    b.ToTable("user_login", (string)null);
+                    b.ToTable("user_login");
                 });
 
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.PerfilAggregate.Perfil", b =>
@@ -133,7 +133,7 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                     b.HasKey("Id")
                         .HasName("pk_perfis");
 
-                    b.ToTable("perfil", (string)null);
+                    b.ToTable("perfil");
                 });
 
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.PerfilMetricaAggregate.AgrupadorParametrizacao", b =>
@@ -151,7 +151,7 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                     b.HasKey("Id")
                         .HasName("pk_agrupadores_parametrizacao");
 
-                    b.ToTable("agrupador_parametrizacao", (string)null);
+                    b.ToTable("agrupador_parametrizacao");
                 });
 
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.PerfilMetricaAggregate.ParametrizacaoMetrica", b =>
@@ -205,7 +205,7 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
 
                     b.HasIndex("PerfilMetricaId");
 
-                    b.ToTable("parametrizacao_metrica", (string)null);
+                    b.ToTable("parametrizacao_metrica");
                 });
 
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.PerfilMetricaAggregate.PerfilMetrica", b =>
@@ -249,7 +249,7 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                     b.HasIndex("MetricaId", "PerfilId")
                         .IsUnique();
 
-                    b.ToTable("perfil_metrica", (string)null);
+                    b.ToTable("perfil_metrica");
                 });
 
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.ConsultaAggregate.HistoricoConsulta", b =>

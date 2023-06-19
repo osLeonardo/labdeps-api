@@ -28,10 +28,10 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Queries
                              {
                                  Id = hc.Id,
                                  Nome = p.Nome,
-                                 DataConsulta = hc.DataConsulta,
+                                 DataConsulta = new DateTime(hc.DataConsulta.Year, hc.DataConsulta.Month, hc.DataConsulta.Day),
                                  TipoConsulta = hc.TipoConsulta,
                                  Codigo = hc.Codigo,
-                                 DataReferencia = hc.DataReferencia,
+                                 DataReferencia = new DateTime(hc.DataReferencia.Year, hc.DataReferencia.Month, hc.DataReferencia.Day),
                                  Intervalo = hc.Intervalo,
                              }).AsNoTracking();
 
@@ -48,10 +48,10 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Queries
                          {
                              Id = hc.Id,
                              Nome = p.Nome,
-                             DataConsulta = hc.DataConsulta,
+                             DataConsulta = new DateTime(hc.DataConsulta.Year, hc.DataConsulta.Month, hc.DataConsulta.Day),
                              TipoConsulta = hc.TipoConsulta,
                              Codigo = hc.Codigo,
-                             DataReferencia = hc.DataReferencia,
+                             DataReferencia = new DateTime(hc.DataReferencia.Year, hc.DataReferencia.Month, hc.DataReferencia.Day),
                              Intervalo = hc.Intervalo,
                          }).AsNoTracking();
 
@@ -69,10 +69,10 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Queries
                          {
                              Id = hc.Id,
                              Nome = p.Nome,
-                             DataConsulta = hc.DataConsulta,
+                             DataConsulta = new DateTime(hc.DataConsulta.Year, hc.DataConsulta.Month, hc.DataConsulta.Day),
                              TipoConsulta = hc.TipoConsulta,
                              Codigo = hc.Codigo,
-                             DataReferencia = hc.DataReferencia,
+                             DataReferencia = new DateTime(hc.DataReferencia.Year, hc.DataReferencia.Month, hc.DataReferencia.Day),
                              Intervalo = hc.Intervalo,
                          }).First();
 

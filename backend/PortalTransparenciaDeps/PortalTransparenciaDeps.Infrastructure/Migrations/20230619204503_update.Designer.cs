@@ -12,8 +12,8 @@ using PortalTransparenciaDeps.Infrastructure.Data;
 namespace PortalTransparenciaDeps.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230602205248_PortalTransparenciaDeps_migration")]
-    partial class PortalTransparenciaDeps_migration
+    [Migration("20230619204503_update")]
+    partial class update
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
