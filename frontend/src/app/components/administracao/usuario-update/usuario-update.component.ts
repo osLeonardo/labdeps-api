@@ -44,6 +44,7 @@ export class UsuarioUpdateComponent implements OnInit {
     const idPerfilNumber = parseInt(idePerfil, 10)
 
     this.AdministracaoService.getByIdPerfil(idPerfilNumber).subscribe((perfil) => {
+    
     this.perfil = perfil
     this.AdministracaoService.readById(idNumber).subscribe((usuario) => {
       this.usuario = usuario
@@ -52,7 +53,6 @@ export class UsuarioUpdateComponent implements OnInit {
   }
   AtualizarUsuario(): void {
     this.AdministracaoService.atualizarPerfil(this.perfil).subscribe(() => {
-      
       this.AdministracaoService.atualizar(this.usuario).subscribe(() => {
         console.log(this.usuario);
         this.router.navigate(['/administracao'])
