@@ -1,3 +1,4 @@
+import { Perfil } from './../../components/administracao/models/create-usuarios.Model';
 import { Observable } from 'rxjs';
 import { HttpClient } from "@angular/common/http";
 import { HeaderService } from './../../components/template/header/header.service';
@@ -13,6 +14,7 @@ import { AuthService } from '../login/login.service';
 export class HomeComponent implements OnInit {
   private apiUrl = 'http://localhost:57679/api/v1';
   nome: string;
+  perfil: number;
 
   constructor(
     private loginService: AuthService,

@@ -37,8 +37,8 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
 
         [HttpPost(VerificationRequest.Route)]
         [SwaggerOperation(
-            Summary = "Verifica credenciais e retorna id, id do perfil e token",
-            Description = "Faz a verificação das credenciais do usuário tentando realizar login",
+            Summary = "Verifica o login e retorna, usuário, id e token",
+            Description = "Faz a verificação das credenciais do usuário para login",
             Tags = new[] { "UserLoginEndpoints" })
         ]
 

@@ -1,4 +1,5 @@
 import { ReadConsultasComponent } from './components/consultas/read-consultas/read-consultas.component';
+import { UsuariosService } from './components/usuarios/usuarios.service';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -48,6 +49,10 @@ import { CrudAdministracaoComponent } from './views/crud-administracao/crud-admi
 import { LoginComponent } from './views/login/login.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { LoginDialogComponent } from './views/login/dialog-login.component';
+import { UsuariosComponent } from './views/usuarios/usuarios.component';
+import { UsuariosAlteracaoComponent } from './components/usuarios/usuarios-alteracao/usuarios-alteracao.component';
+import { UsuariosAlterarComponent } from './views/usuarios/usuarios-alterar/usuarios-alterar.component';
+import { UsuariosDadosComponent } from './components/usuarios/usuarios-dados/usuarios-dados.component';
 import { MatSortModule } from '@angular/material/sort';
 
 registerLocaleData(localePt)
@@ -79,6 +84,10 @@ registerLocaleData(localePt)
     LoginComponent,
     ReadConsultasComponent,
     LoginDialogComponent,
+    UsuariosComponent,
+    UsuariosAlteracaoComponent,
+    UsuariosAlterarComponent,
+    UsuariosDadosComponent,
   ],
   imports: [
     BrowserModule,

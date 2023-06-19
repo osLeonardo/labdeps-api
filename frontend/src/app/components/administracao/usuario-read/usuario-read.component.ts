@@ -3,6 +3,7 @@ import { AdministracaoService } from './../administracao.service';
 import { Component, OnInit } from '@angular/core';
 import { CreateUsuarios } from '../models/usuarios.Model';
 import { HeaderService } from '../../template/header/header.service';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-usuario-read',
