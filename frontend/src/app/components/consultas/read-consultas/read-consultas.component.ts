@@ -1,3 +1,4 @@
+import { AuthService } from './../../../views/login/login.service';
 import { ConsultasService } from './../consultas.service';
 import { AfterViewInit, Component, Inject, LOCALE_ID, OnInit, ViewChild, inject } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
@@ -27,10 +28,11 @@ export class ReadConsultasComponent implements AfterViewInit, OnInit{
     'intervalo',
     'actions'
   ];
-  constructor(private consultasService: ConsultasService, private router: Router, @Inject(LOCALE_ID) private locale: string){ }
+  constructor(private consultasService: ConsultasService, private authService: AuthService, private router: Router, @Inject(LOCALE_ID) private locale: string){ }
 
   ngOnInit(): void {
-    this.consultasService.GetListHistorico().subscribe(historico => {
+    let idUser: number = this.authService.getUserId();
+    this.consultasService.GetListHistorico(idUser).subscribe(historico => {
       console.log(historico);
       for(let element of historico){
         element.tipoConsulta = element.tipoConsulta.toUpperCase();
