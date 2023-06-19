@@ -37,6 +37,27 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Queries
 
             return query.ToList();
         }
+        public List<HistoricoDto> ListHistoricoByUser(int idUser)
+        {
+            var query = (from hc in _dbContext.HistoricoConsultas
+                         join ul in _dbContext.UserLogins on hc.UserId equals ul.Id
+                         join p in _dbContext.Perfis on ul.IdPerfil equals p.Id
+                         where ul.Id == idUser
+                         orderby hc.DataConsulta descending
+                         select new HistoricoDto
+                         {
+                             Id = hc.Id,
+                             Nome = p.Nome,
+                             DataConsulta = hc.DataConsulta,
+                             TipoConsulta = hc.TipoConsulta,
+                             Codigo = hc.Codigo,
+                             DataReferencia = hc.DataReferencia,
+                             Intervalo = hc.Intervalo,
+                         }).AsNoTracking();
+
+            return query.ToList();
+        }
+
         public HistoricoDto GetHistorico(int id)
         {
             var query = (from hc in _dbContext.HistoricoConsultas

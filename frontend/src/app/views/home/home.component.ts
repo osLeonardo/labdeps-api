@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from "@angular/common/http";
 import { HeaderService } from './../../components/template/header/header.service';
 import { Component, OnInit } from '@angular/core';
-import { PerfilResponse } from 'src/app/components/administracao/models/create-usuarios.Model';
+import { PerfilResponse } from 'src/app/components/administracao/models/usuarios.Model';
 import { AuthService } from '../login/login.service';
 
 @Component({
@@ -16,13 +16,16 @@ export class HomeComponent implements OnInit {
   nome: string;
   perfil: number;
 
-  constructor(private loginService: AuthService, private headerService: HeaderService, private http: HttpClient) {
-
-    headerService.headerData = {
-      title: 'Início',
-      icon: 'home',
-      routeUrl: '',
-    } 
+  constructor(
+    private loginService: AuthService,
+    private http: HttpClient,
+    private headerService: HeaderService,
+    ) {
+      headerService.headerData = {
+        title: 'Início',
+        icon: 'home',
+        routeUrl: '',
+      } 
   }
 
   async ngOnInit(): Promise<void> {

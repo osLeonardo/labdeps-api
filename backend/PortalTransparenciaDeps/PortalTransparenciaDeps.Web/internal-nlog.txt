@@ -268,6 +268,13 @@
 2023-05-29 13:12:29.4449 Info Loading assembly: NLog.Mongo
 2023-05-29 13:12:29.6245 Info Adding target MongoTarget(Name=logfile)
 2023-05-29 13:12:29.6784 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\PortalTransparenciaDeps\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-02 16:28:28.3866 Info Message Template Auto Format enabled
+2023-06-02 16:28:28.3866 Info Loading assembly: NLog.Mongo
+2023-06-02 16:28:28.5084 Info Adding target MongoTarget(Name=logfile)
+2023-06-02 16:28:28.5637 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-02 16:28:28.6057 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
 2023-05-31 17:46:52.3404 Info Message Template Auto Format enabled
 2023-05-31 17:46:52.3404 Info Loading assembly: NLog.Mongo
 2023-05-31 17:46:52.3763 Info Adding target MongoTarget(Name=logfile)
@@ -2915,14 +2922,17 @@
 2023-06-14 14:11:25.9617 Info Loading assembly: NLog.Mongo
 2023-06-14 14:11:26.0736 Info Adding target MongoTarget(Name=logfile)
 2023-06-14 14:11:26.1482 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Documents\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
-2023-06-14 14:11:28.9248 Error Error when writing to MongoDB MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
+2023-06-15 15:29:55.6732 Info Message Template Auto Format enabled
+2023-06-15 15:29:55.6832 Info Loading assembly: NLog.Mongo
+2023-06-15 15:29:55.7887 Info Adding target MongoTarget(Name=logfile)
+2023-06-15 15:29:55.8369 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Documents\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-15 15:29:58.6073 Error Error when writing to MongoDB MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
    at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
    at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
    at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)
    at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
    at NLog.Mongo.MongoTarget.GetCollection(DateTime timestamp)
    at NLog.Mongo.MongoTarget.Write(LogEventInfo logEvent)
-2023-06-14 14:11:28.9270 Error MongoTarget(Name=logfile): Exception in Write Exception: MongoDB.Driver.MongoConfigurationException: The connection string '//localhost:27017/logs' is not valid.
    at MongoDB.Driver.Core.Configuration.ConnectionString.Parse()
    at MongoDB.Driver.Core.Configuration.ConnectionString..ctor(String connectionString, Boolean isInternalRepresentation, IDnsResolver dnsResolver)
    at NLog.Mongo.MongoTarget.<>c__DisplayClass53_0.<GetCollection>b__0(MongoConnectionKey k)

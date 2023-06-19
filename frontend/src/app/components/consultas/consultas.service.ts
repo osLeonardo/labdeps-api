@@ -36,8 +36,8 @@ export class ConsultasService {
     const url = `${this.baseUrl}historico`;
     return this.http.post<Historico>(url,body);
   }
-  GetListHistorico(): Observable<Historico[]>{
-    const url = `${this.baseUrl}historico`;
+  GetListHistorico(idUser: number): Observable<Historico[]>{
+    const url = `${this.baseUrl}historico/user/${idUser}`;
     return this.http.get<Historico[]>(url);
   }
   GetHistoricoById(id: number): Observable<Historico>{

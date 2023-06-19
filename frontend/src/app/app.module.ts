@@ -53,6 +53,7 @@ import { UsuariosComponent } from './views/usuarios/usuarios.component';
 import { UsuariosAlteracaoComponent } from './components/usuarios/usuarios-alteracao/usuarios-alteracao.component';
 import { UsuariosAlterarComponent } from './views/usuarios/usuarios-alterar/usuarios-alterar.component';
 import { UsuariosDadosComponent } from './components/usuarios/usuarios-dados/usuarios-dados.component';
+import { MatSortModule } from '@angular/material/sort';
 
 registerLocaleData(localePt)
 
@@ -111,6 +112,7 @@ registerLocaleData(localePt)
     NgIf,
     MatExpansionModule,
     MatPaginatorModule,
+    MatSortModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false
     }),

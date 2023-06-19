@@ -20,17 +20,22 @@ import { UsuarioReadComponent } from '../../administracao/usuario-read/usuario-r
 export class NavComponent implements OnInit{
 
   id: number;
+  nome: string;
 
   constructor(
     @Inject(DOCUMENT)
     public document: Document,
-    public auth: AuthService,
+    public loginService: AuthService,
     ) {}
   ngOnInit(): void {
     this.id = this.auth.getUserId();
   }
 
   sair(){
-    this.auth.logout();
+    this.loginService.logout();
+  }
+
+  async ngOnInit(): Promise<void> {
+    this.nome = await this.loginService.getNomePerfil();
   }
 }

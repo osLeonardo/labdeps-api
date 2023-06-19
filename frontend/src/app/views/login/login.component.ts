@@ -28,9 +28,7 @@ export class LoginComponent {
           this.authService.setToken(response.token);
           this.authService.setUserId(response.id);
           this.authService.setIdPerfil(response.idPerfil);
-          this.authService.setUserPerfil(response.perfilUsuario);
-          console.log(response.perfilUsuario);
-          
+          this.authService.setUserPerfil(response.perfilUsuario);          
           this.router.navigate(['']);
         }
       }, error => {
