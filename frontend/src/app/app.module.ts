@@ -48,6 +48,7 @@ import { CrudAdministracaoComponent } from './views/crud-administracao/crud-admi
 import { LoginComponent } from './views/login/login.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { LoginDialogComponent } from './views/login/dialog-login.component';
+import { MatSortModule } from '@angular/material/sort';
 
 registerLocaleData(localePt)
 
@@ -102,6 +103,7 @@ registerLocaleData(localePt)
     NgIf,
     MatExpansionModule,
     MatPaginatorModule,
+    MatSortModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false
     }),

@@ -1,11 +1,12 @@
 import { AuthService } from './../../../views/login/login.service';
 import { ConsultasService } from './../consultas.service';
-import { AfterViewInit, Component, Inject, LOCALE_ID, OnInit, ViewChild, inject } from '@angular/core';
+import { AfterViewInit, Component, Inject, LOCALE_ID, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Historico } from '../models/historico.Model';
 import { Router } from '@angular/router';
 import { formatDate } from '@angular/common';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-read-consultas',
@@ -15,6 +16,7 @@ import { formatDate } from '@angular/common';
 export class ReadConsultasComponent implements AfterViewInit, OnInit{
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
   historico = new MatTableDataSource<Historico>();
   consulta: Historico;
@@ -44,7 +46,8 @@ export class ReadConsultasComponent implements AfterViewInit, OnInit{
   }
   
   ngAfterViewInit(): void {
-    this.historico.paginator = this.paginator
+    this.historico.paginator = this.paginator;
+    this.historico.sort = this.sort;
   }
 
   Buscar(id: number): void{
