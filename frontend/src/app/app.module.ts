@@ -54,6 +54,8 @@ import { UsuariosAlteracaoComponent } from './components/usuarios/usuarios-alter
 import { UsuariosAlterarComponent } from './views/usuarios/usuarios-alterar/usuarios-alterar.component';
 import { UsuariosDadosComponent } from './components/usuarios/usuarios-dados/usuarios-dados.component';
 import { MatSortModule } from '@angular/material/sort';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 registerLocaleData(localePt)
 
@@ -110,6 +112,7 @@ registerLocaleData(localePt)
     MatCardModule,
     MatButtonModule,
     NgIf,
+    MatSnackBarModule,
     MatExpansionModule,
     MatPaginatorModule,
     MatSortModule,
