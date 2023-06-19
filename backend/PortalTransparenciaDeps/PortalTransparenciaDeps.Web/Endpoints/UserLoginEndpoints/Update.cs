@@ -38,9 +38,10 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
             }
             return Ok(new UpdateUserResponse
             {
-                Login = request.Login,
-                Password = request.Password,
-                PerfilUsuario = request.PerfilUsuario
+                Id = user.Id,
+                Login = user.Login,
+                Password = user.Password,
+                PerfilUsuario = user.PerfilUsuario
             });
             
         }

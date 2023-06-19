@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { DOCUMENT } from '@angular/common';
 import { AuthService } from 'src/app/views/login/login.service';
@@ -17,13 +17,18 @@ import { UsuarioReadComponent } from '../../administracao/usuario-read/usuario-r
     ]),
   ],
 })
-export class NavComponent {
+export class NavComponent implements OnInit{
+
+  id: number;
 
   constructor(
     @Inject(DOCUMENT)
     public document: Document,
     public auth: AuthService,
     ) {}
+  ngOnInit(): void {
+    this.id = this.auth.getUserId();
+  }
 
   sair(){
     this.auth.logout();

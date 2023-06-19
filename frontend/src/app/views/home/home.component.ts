@@ -27,6 +27,5 @@ export class HomeComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.nome = await this.loginService.getNomePerfil();
-    this.perfil = await this.loginService.getPerfilUsuario();
   }
 }

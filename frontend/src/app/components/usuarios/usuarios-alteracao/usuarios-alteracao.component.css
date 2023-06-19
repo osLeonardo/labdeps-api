@@ -24,6 +24,10 @@ mat-card-header{
     .inputUsuario{
         width: 400px;
     }
+
+    .inputNome{
+        width: 400px;
+    }
     /******/
 /******/
 /*Botão Confirmar*/

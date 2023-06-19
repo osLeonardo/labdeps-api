@@ -52,10 +52,6 @@ const routes: Routes = [
   {
     path: "usuarios/:id/usuariosAlterar",
     component: UsuariosAlterarComponent
-  },
-  {
-    path: "usuarios/:id/usuariosAlteracao",
-    component: UsuariosAlteracaoComponent
   }
 ];
 

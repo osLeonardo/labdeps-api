@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Perfil, Usuario } from '../models/usuarios.model';
+import { Usuario } from '../models/usuarios.model';
 import { UsuariosService } from '../usuarios.service';
 import { ActivatedRoute } from '@angular/router';
 import { MatTableDataSource } from '@angular/material/table';
@@ -18,13 +18,10 @@ export class UsuariosDadosComponent implements OnInit{
   constructor(private usuarioService: UsuariosService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    // const perfil = parseInt(`${this.route.snapshot.paramMap.get('perfil')}`);
-    const perfil = 1;
     this.usuarioService.GetById().subscribe(Usuarios => {
       this.usuario = [Usuarios];
       console.log('Dados do usuário (página dados):', Usuarios)
       this.usuarioDataSource = new MatTableDataSource<Usuario>(this.usuario);
     })
   }
-  
 }
