@@ -33,7 +33,6 @@ export class ReadConsultasComponent implements AfterViewInit, OnInit{
   ngOnInit(): void {
     let idUser: number = this.authService.getUserId();
     this.consultasService.GetListHistorico(idUser).subscribe(historico => {
-      console.log(historico);
       for(let element of historico){
         element.tipoConsulta = element.tipoConsulta.toUpperCase();
         element.intervalo = `${element.intervalo} meses`;
@@ -41,7 +40,6 @@ export class ReadConsultasComponent implements AfterViewInit, OnInit{
         element.dataReferencia = formatDate(new Date(element.dataReferencia),'dd/MM/yyyy', this.locale);
       }
       this.historico.data = historico;
-      console.log(this.historico);
     })
   }
   
