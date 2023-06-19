@@ -23,7 +23,7 @@ export class UsuarioCreateComponent {
 
   perfil: CreatePerfil= {
     nome: '',
-    ordem: 0,
+    ordem: 1,
     id: 0,
     ativo: true
   }
