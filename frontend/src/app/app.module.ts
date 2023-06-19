@@ -49,6 +49,8 @@ import { LoginComponent } from './views/login/login.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { LoginDialogComponent } from './views/login/dialog-login.component';
 import { MatSortModule } from '@angular/material/sort';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 registerLocaleData(localePt)
 
@@ -101,6 +103,7 @@ registerLocaleData(localePt)
     MatCardModule,
     MatButtonModule,
     NgIf,
+    MatSnackBarModule,
     MatExpansionModule,
     MatPaginatorModule,
     MatSortModule,
