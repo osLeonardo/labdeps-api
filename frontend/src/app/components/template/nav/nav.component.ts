@@ -27,9 +27,6 @@ export class NavComponent implements OnInit{
     public document: Document,
     public loginService: AuthService,
     ) {}
-  ngOnInit(): void {
-    this.id = this.auth.getUserId();
-  }
 
   sair(){
     this.loginService.logout();
@@ -37,5 +34,6 @@ export class NavComponent implements OnInit{
 
   async ngOnInit(): Promise<void> {
     this.nome = await this.loginService.getNomePerfil();
+    this.id = this.loginService.getUserId();
   }
 }

@@ -7,24 +7,18 @@
                 <th mat-header-cell *matHeaderCellDef>ID</th>
                 <td mat-cell *matCellDef="let row">{{row.id}}</td>
               </ng-container> 
+              <ng-container matColumnDef="perfil.nome">
+                <th mat-header-cell *matHeaderCellDef>NOME DO PERFIL</th>
+                <td mat-cell *matCellDef="let perfil">{{perfil.nome}}</td>
+              </ng-container>
               <ng-container matColumnDef="login">
-                <th mat-header-cell *matHeaderCellDef>Login</th>
+                <th mat-header-cell *matHeaderCellDef>LOGIN</th>
                 <td mat-cell *matCellDef="let row">{{row.login}}</td>
               </ng-container>                     
               <ng-container matColumnDef="perfilUsuario">
                 <th mat-header-cell *matHeaderCellDef>NIVEL DO USUÁRIO</th>
                 <td mat-cell *matCellDef="let row">{{ getPerfilUsuarioString(row.perfilUsuario) }}</td>
               </ng-container>
-              <ng-container matColumnDef="idPerfil">
-                <th mat-header-cell *matHeaderCellDef>ID DO PERFIL</th>
-                <td mat-cell *matCellDef="let row">{{row.idPerfil}}</td>
-              </ng-container>
-
-              <ng-container matColumnDef="perfil.nome">
-                <th mat-header-cell *matHeaderCellDef>NOME DO PERFIL</th>
-                <td mat-cell *matCellDef="let perfil">{{perfil.nome}}</td>
-              </ng-container>
-
               <ng-container matColumnDef="ativo">
                 <th mat-header-cell *matHeaderCellDef>ATIVO</th>
                 <td mat-cell *matCellDef="let row">{{row.ativo}}</td>
