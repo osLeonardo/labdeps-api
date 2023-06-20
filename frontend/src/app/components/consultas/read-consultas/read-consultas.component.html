@@ -1,7 +1,7 @@
 <mat-card class="mat-elevation-z3">
     <mat-card-header><mat-card-title>Histórico de consultas</mat-card-title></mat-card-header>
     <mat-card-content class="mat-elevation-z8">
-        <table mat-table [dataSource]="historico">
+        <table mat-table [dataSource]="historico" matSort>
         <ng-container matColumnDef="user">
             <th mat-header-cell *matHeaderCellDef>Usuário</th>
             <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
@@ -15,7 +15,7 @@
             <td mat-cell *matCellDef="let element"> {{element.tipoConsulta}} </td>
         </ng-container>
         <ng-container matColumnDef="codigo">
-            <th mat-header-cell *matHeaderCellDef>Codigo</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Codigo</th>
             <td mat-cell *matCellDef="let element"> {{element.codigo}} </td>
         </ng-container>
         <ng-container matColumnDef="dataRef">
@@ -23,7 +23,7 @@
             <td mat-cell *matCellDef="let element"> {{element.dataReferencia}} </td>
         </ng-container>
         <ng-container matColumnDef="intervalo">
-            <th mat-header-cell *matHeaderCellDef>Intervalo</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Intervalo</th>
             <td mat-cell *matCellDef="let element"> {{element.intervalo}} </td>
         </ng-container>
         <ng-container matColumnDef="actions">

@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { Observable } from "rxjs";
-import { PerfilResponse } from "src/app/components/administracao/models/create-usuarios.Model";
+import { PerfilResponse } from "src/app/components/administracao/models/usuarios.Model";
 import { VerifyRequest, verifyLogin } from "./login.model";
 
 @Injectable({
@@ -37,7 +37,7 @@ export class AuthService {
       );
     });
   }
-
+  
   setUserPerfil(userPerfil: number): void {
     this.userPerfil = userPerfil;
     sessionStorage.setItem('userPerfil', JSON.stringify(userPerfil));    

@@ -1,4 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* .snackbar-error {
+    background-color: #9c2f2fd7 !important;
+    color: #fff !important;
+    border: #742323 !important;
+    border-radius: 2px !important;
+}
+
+.snackbar-success {
+    background-color: #2f9c2fd7 !important;
+    color: #fff !important;
+    border: #206d20 !important;
+    border-radius: 2px !important;
+} */

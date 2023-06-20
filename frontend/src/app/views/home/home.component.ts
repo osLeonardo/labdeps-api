@@ -1,8 +1,7 @@
-import { Observable } from 'rxjs';
+
 import { HttpClient } from "@angular/common/http";
 import { HeaderService } from './../../components/template/header/header.service';
 import { Component, OnInit } from '@angular/core';
-import { Perfil, PerfilResponse } from 'src/app/components/administracao/models/create-usuarios.Model';
 import { AuthService } from '../login/login.service';
 
 @Component({
@@ -13,6 +12,7 @@ import { AuthService } from '../login/login.service';
 export class HomeComponent implements OnInit {
   private apiUrl = 'http://localhost:57679/api/v1';
   nome: string;
+  perfil: number;
 
   constructor(
     private loginService: AuthService,

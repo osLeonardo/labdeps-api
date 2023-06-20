@@ -28,15 +28,36 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Queries
                              {
                                  Id = hc.Id,
                                  Nome = p.Nome,
-                                 DataConsulta = hc.DataConsulta,
+                                 DataConsulta = new DateTime(hc.DataConsulta.Year, hc.DataConsulta.Month, hc.DataConsulta.Day),
                                  TipoConsulta = hc.TipoConsulta,
                                  Codigo = hc.Codigo,
-                                 DataReferencia = hc.DataReferencia,
+                                 DataReferencia = new DateTime(hc.DataReferencia.Year, hc.DataReferencia.Month, hc.DataReferencia.Day),
                                  Intervalo = hc.Intervalo,
                              }).AsNoTracking();
 
             return query.ToList();
         }
+        public List<HistoricoDto> ListHistoricoByUser(int idUser)
+        {
+            var query = (from hc in _dbContext.HistoricoConsultas
+                         join ul in _dbContext.UserLogins on hc.UserId equals ul.Id
+                         join p in _dbContext.Perfis on ul.IdPerfil equals p.Id
+                         where ul.Id == idUser
+                         orderby hc.DataConsulta descending
+                         select new HistoricoDto
+                         {
+                             Id = hc.Id,
+                             Nome = p.Nome,
+                             DataConsulta = new DateTime(hc.DataConsulta.Year, hc.DataConsulta.Month, hc.DataConsulta.Day),
+                             TipoConsulta = hc.TipoConsulta,
+                             Codigo = hc.Codigo,
+                             DataReferencia = new DateTime(hc.DataReferencia.Year, hc.DataReferencia.Month, hc.DataReferencia.Day),
+                             Intervalo = hc.Intervalo,
+                         }).AsNoTracking();
+
+            return query.ToList();
+        }
+
         public HistoricoDto GetHistorico(int id)
         {
             var query = (from hc in _dbContext.HistoricoConsultas
@@ -48,10 +69,10 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Queries
                          {
                              Id = hc.Id,
                              Nome = p.Nome,
-                             DataConsulta = hc.DataConsulta,
+                             DataConsulta = new DateTime(hc.DataConsulta.Year, hc.DataConsulta.Month, hc.DataConsulta.Day),
                              TipoConsulta = hc.TipoConsulta,
                              Codigo = hc.Codigo,
-                             DataReferencia = hc.DataReferencia,
+                             DataReferencia = new DateTime(hc.DataReferencia.Year, hc.DataReferencia.Month, hc.DataReferencia.Day),
                              Intervalo = hc.Intervalo,
                          }).First();
 

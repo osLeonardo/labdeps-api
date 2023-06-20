@@ -5,6 +5,7 @@ using MongoDB.Driver;
 using PortalTransparenciaDeps.Core.Interfaces;
 using PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints;
 using Swashbuckle.AspNetCore.Annotations;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -41,10 +42,10 @@ namespace PortalTransparenciaDeps.Web.Endpoints.ConsultasEndpoints
             return Ok(new CreateHistoricoResponse
             {
                 UserId = historico.UserId,
-                DataConsulta = historico.DataConsulta,
+                DataConsulta = new DateTime(historico.DataConsulta.Year, historico.DataConsulta.Month, historico.DataConsulta.Day),
                 TipoConsulta = historico.TipoConsulta,
                 Codigo = historico.Codigo,
-                DataReferencia = historico.DataReferencia,
+                DataReferencia = new DateTime(historico.DataReferencia.Year, historico.DataReferencia.Month, historico.DataReferencia.Day),
                 Intervalo = historico.Intervalo
             });
         }
