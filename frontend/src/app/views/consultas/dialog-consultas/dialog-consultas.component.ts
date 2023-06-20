@@ -105,10 +105,10 @@ export class DialogConsultasComponent {
     }
   }
 
-  @HostListener('document:keydown.enter',['$event'])
-  handleKeyPress(event: KeyboardEvent){
-    this.performSearch();
-  }
+  // @HostListener('document:keydown.enter',['$event'])
+  // handleKeyPress(event: KeyboardEvent){
+  //   this.performSearch();
+  // }
 
   performSearch(){
     const searchTerm = this.codigo;
