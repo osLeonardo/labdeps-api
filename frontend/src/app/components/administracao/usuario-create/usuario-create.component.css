@@ -1,55 +1,51 @@
 mat-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1px;
-    border: none;
-    padding: 2% 0;
-  }
-  mat-form-field {
-    display: flex;
-    flex-direction: column;
-    width: 30vw;
-  }
-  form {
-    margin-top: 1vw;
-  }
-  mat-card-header {
-    margin-top: 1vw;
-  }
-  mat-card-title {
-    font-size: x-large;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1px;
+  border: none;
+  padding: 2% 0;
+}
+mat-form-field {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+form {
+  margin-top: 1vw;
+}
+mat-card-header {
+  margin-top: 1vw;
+}
+mat-card-title {
+  font-size: x-large;
+}
+#cancelar {
+  background-color: #fff;
+  color: #252d56;
+  padding: 15px;
+  font-size: medium;
+  transition: 0.3s;
+}
+#cancelar:hover {
+  background-color: #fff;
+  color: #252d56;
+}
+
+#deps {
+  background-color: #252d56;
+  color: #fff;
+  padding: 15px;
+  font-size: medium;
+  transition: 0.3s;
+}
+#deps:hover {
+  background-color: #171c36;
+  color: #e6e6e6;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
+  transition: 0.3s;
   
-  button {
-    display: flex;
-    flex-direction: column;
-    width: 30vw;
-    margin: 2% 0;
-  }
-  #cancelar {
-    background-color: #fff;
-    color: #252d56;
-    padding: 15px;
-    font-size: medium;
-    transition: 0.3s;
-  }
-  #cancelar:hover {
-    background-color: #fff;
-    color: #252d56;
-  }
-
-  #deps {
-    background-color: #252d56;
-    color: #fff;
-    padding: 15px;
-    font-size: medium;
-    transition: 0.3s;
-  }
-  #deps:hover {
-    background-color: #171c36;
-    color: #e6e6e6;
-  }
-
-
-
+}
