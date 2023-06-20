@@ -1,9 +1,7 @@
-import { Perfil } from './../../components/administracao/models/create-usuarios.Model';
-import { Observable } from 'rxjs';
+
 import { HttpClient } from "@angular/common/http";
 import { HeaderService } from './../../components/template/header/header.service';
 import { Component, OnInit } from '@angular/core';
-import { PerfilResponse } from 'src/app/components/administracao/models/usuarios.Model';
 import { AuthService } from '../login/login.service';
 
 @Component({

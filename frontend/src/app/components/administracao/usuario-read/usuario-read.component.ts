@@ -14,7 +14,7 @@ export class UsuarioReadComponent implements OnInit{
   
 
   usuario: CreateUsuarios[];
-  displayedColumns = ["id", "login", "perfilUsuario", "perfil.nome","idPerfil", "ativo", "opcoes"]
+  displayedColumns = ["id", "perfil.nome", "login", "perfilUsuario", "ativo", "opcoes"]
 
   constructor(private headerService: HeaderService, private AdministracaoService: AdministracaoService) {
     headerService.headerData = {
