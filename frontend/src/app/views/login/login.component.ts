@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './login.service';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { LoginDialogComponent } from './dialog-login.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +15,7 @@ export class LoginComponent {
 
   constructor(
     private authService: AuthService,
-    private dialog: MatDialog,
+    private snackBar: MatSnackBar,
     private router: Router,
   ) {}
 
@@ -30,18 +29,29 @@ export class LoginComponent {
           this.authService.setIdPerfil(response.idPerfil);
           this.authService.setUserPerfil(response.perfilUsuario);          
           this.router.navigate(['']);
+          this.openSuccessSnackBar();
         }
       }, error => {
-        this.errorMessage = 'Usuário ou Senha Inválidos. Tente Novamente!';
-        this.openDialog();
+        this.openFailureSnackBar(); 
       } 
     );
   }
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(LoginDialogComponent, {
-      width: '300px',
-      data: { errorMessage: this.errorMessage }
+  openSuccessSnackBar(): void {
+    this.snackBar.open("Login Realizado com Sucesso!", "Fechar", {
+      panelClass: 'snackbar-success',
+      horizontalPosition: 'right',
+      verticalPosition: 'top',
+      duration: 5000,
+    });
+  }
+
+  openFailureSnackBar(): void {
+    this.snackBar.open("Falha ao Efetuar Login!", "Fechar", {
+      panelClass: 'snackbar-error',
+      horizontalPosition: 'right',
+      verticalPosition: 'top',
+      duration: 5000,
     });
   }
 }

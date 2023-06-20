@@ -37,7 +37,7 @@ export class AuthService {
       );
     });
   }
-
+  
   setUserPerfil(userPerfil: number): void {
     this.userPerfil = userPerfil;
     sessionStorage.setItem('userPerfil', JSON.stringify(userPerfil));    
