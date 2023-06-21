@@ -1,3 +1,10 @@
+mat-card{
+    margin: 1rem;
+}
+div{
+    display: flex;
+    justify-content: flex-end;
+}
 #deps {
     background-color: #252d56;
     color: #fff;

@@ -1,50 +1,46 @@
-<div class="corpo">
-  <mat-card class="cardCreate">
-    <mat-card-title Atualizar Usuario></mat-card-title>
-    <mat-card-content>
-      <form>
-        <mat-form-field appearance="fill">
-          <mat-label>Nome do Usuário</mat-label>
-          <input matInput [(ngModel)]="perfil.nome" name="nome">
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Login</mat-label>
-          <input matInput [(ngModel)]="usuario.login" name="login">
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Senha</mat-label>
-          <input matInput [(ngModel)]="usuario.password" name="password" type="password"> 
-        </mat-form-field>
-        <mat-form-field>
-          <mat-label>Perfil do usuário</mat-label>
-          <mat-select [(ngModel)]="usuario.perfilUsuario" name="perfilUsuario">
-            <mat-option value="0">Automacao</mat-option>
-            <mat-option value="1">Administrador do portal</mat-option>
-            <mat-option value="2">Administrador do parceiro</mat-option>
-            <mat-option value="3">Usuário gestor</mat-option>
-            <mat-option value="4">Usuário</mat-option>
-            <mat-option value="5">Gerente comercial</mat-option>
-            <mat-option value="6">Comercial</mat-option>
-            <mat-option value="7">Suporte e implantação</mat-option>
-            <mat-option value="8">Financeiro</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <mat-form-field>
-          <mat-label>Ativo</mat-label>
-          <mat-select [(ngModel)]="perfil.ativo" name="ativo">
-            <mat-option value="true">true</mat-option>
-            <mat-option value="false">false</mat-option>
-          </mat-select>
-        </mat-form-field> 
-      </form>
-      <div class="buttons">
-        <button mat-raised-button color="primary" id="deps" (click)="AtualizarUsuario()">
-          Salvar
-        </button>
-        <button mat-raised-button id="cancelar" (click)="cancelar()">
-          Cancelar
-        </button>
-      </div>
-    </mat-card-content>
-  </mat-card>
-</div>
+<mat-card>
+  <mat-card-title Atualizar Usuario></mat-card-title>
+  <mat-card-content>
+      <mat-form-field appearance="fill">
+        <mat-label>Nome do Usuário</mat-label>
+        <input matInput [(ngModel)]="perfil.nome" name="nome">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Login</mat-label>
+        <input matInput [(ngModel)]="usuario.login" name="login">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Senha</mat-label>
+        <input matInput [(ngModel)]="usuario.password" name="password" type="password"> 
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Perfil do usuário</mat-label>
+        <mat-select [(ngModel)]="usuario.perfilUsuario" name="perfilUsuario">
+          <mat-option value="0">Automacao</mat-option>
+          <mat-option value="1">Administrador do portal</mat-option>
+          <mat-option value="2">Administrador do parceiro</mat-option>
+          <mat-option value="3">Usuário gestor</mat-option>
+          <mat-option value="4">Usuário</mat-option>
+          <mat-option value="5">Gerente comercial</mat-option>
+          <mat-option value="6">Comercial</mat-option>
+          <mat-option value="7">Suporte e implantação</mat-option>
+          <mat-option value="8">Financeiro</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Ativo</mat-label>
+        <mat-select [(ngModel)]="perfil.ativo" name="ativo">
+          <mat-option value="true">true</mat-option>
+          <mat-option value="false">false</mat-option>
+        </mat-select>
+      </mat-form-field> 
+    <div class="buttons">
+      <button mat-raised-button id="cancelar" (click)="cancelar()">
+        Cancelar
+      </button>
+      <button mat-raised-button color="primary" id="deps" (click)="AtualizarUsuario()" class="buttonAlign">
+        Salvar
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

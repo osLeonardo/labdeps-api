@@ -1,6 +1,11 @@
 main{
     margin: 1rem;
 }
+mat-card-title{
+    font-size: 20px;
+    font-weight: 555;
+    padding-bottom: 15px;
+}
 
 app-bolsa-familia{
     margin:1rem;

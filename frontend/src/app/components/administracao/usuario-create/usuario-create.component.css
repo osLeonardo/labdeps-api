@@ -1,25 +1,15 @@
 mat-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1px;
-  border: none;
-  padding: 2% 0;
+  margin: 1rem;
 }
-mat-form-field {
-  display: flex;
-  flex-direction: column;
-  width: 30vw;
+mat-card-content{
+  margin-top:1rem;
+  width: 50%;
+  margin-left:25%
 }
-form {
-  margin-top: 1vw;
+mat-form-field{
+  width: 100%;
 }
-mat-card-header {
-  margin-top: 1vw;
-}
-mat-card-title {
-  font-size: x-large;
-}
+
 #cancelar {
   background-color: #fff;
   color: #252d56;
@@ -27,6 +17,7 @@ mat-card-title {
   font-size: medium;
   transition: 0.3s;
 }
+
 #cancelar:hover {
   background-color: #fff;
   color: #252d56;
@@ -39,13 +30,20 @@ mat-card-title {
   font-size: medium;
   transition: 0.3s;
 }
+
 #deps:hover {
   background-color: #171c36;
   color: #e6e6e6;
 }
-.buttons{
-  display: flex;
-  flex-direction: row;
+
+div{
+  display:flex;
+  justify-content: flex-end;
+}
+
+.buttonAlign{
+  margin-left:1rem;
+}
+button{
   transition: 0.3s;
-  
 }
