@@ -17,15 +17,15 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}")]
     [AllowAnonymous]
-    public class List : EndpointBaseSync
+    public class List : EndpointBaseAsync
         .WithoutRequest
         .WithActionResult<List<ListUserResponse>>
     {
-        private readonly IUserQueryService _userQuery;
+        private readonly IRepository<UserLogin> _repository;
 
-        public List(IUserQueryService userQuery)
+        public List(IRepository<UserLogin> repository)
         {
-            _userQuery = userQuery;
+            _repository = repository;
         }
 
         [HttpGet("userLogin")]
@@ -34,22 +34,22 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
             Description = "Retorna uma lista com todos os logins de usuário",
             Tags = new[] { "UserLoginEndpoints" })
         ]
-        public override ActionResult<List<ListUserResponse>> Handle()
+        public override async Task<ActionResult<List<ListUserResponse>>> HandleAsync(CancellationToken cancellationToken = default)
         {
-            var users = _userQuery.ListUser();
-            if (users == null) 
-            { 
-                return NoContent(); 
+            var users = await _repository.ListAsync(cancellationToken);
+            if (users == null)
+            {
+                return NotFound();
             }
             return Ok(users.Select(x => new ListUserResponse
             {
-                Id = x.Id,
+                Id= x.Id,
+                Nome = x.Nome,
+                Sobrenome = x.Sobrenome,
                 Login = x.Login,
                 Password = x.Password,
-                PerfilUsuario = x.PerfilUsuario,
-                IdPerfil = x.IdPerfil,
-                Nome = x.Nome,
-                Ativo = x.Ativo,
+                PerfilUsuario= x.PerfilUsuario,
+                Ativo= x.Ativo,
             }).ToList());
         }
     }

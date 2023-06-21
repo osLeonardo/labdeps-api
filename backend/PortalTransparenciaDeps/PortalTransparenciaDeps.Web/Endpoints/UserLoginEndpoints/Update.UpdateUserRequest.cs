@@ -11,12 +11,21 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
         public int Id { get; set; }
 
         [Required]
-        public string Login { get; set;}
+        public string Nome { get; set; }
 
         [Required]
-        public string Password { get; set;}
+        public string Sobrenome { get; set; }
 
         [Required]
-        public PerfilUsuario PerfilUsuario { get; set;}
+        public string Login { get; set; }
+
+        [Required]
+        public string Password { get; set; }
+
+        [Required]
+        public PerfilUsuario PerfilUsuario { get; set; }
+
+        [Required]
+        public bool Ativo { get; set; }
     }
 }
