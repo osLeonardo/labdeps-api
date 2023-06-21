@@ -1,55 +1,49 @@
 mat-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1px;
-    border: none;
-    padding: 2% 0;
-  }
-  mat-form-field {
-    display: flex;
-    flex-direction: column;
-    width: 30vw;
-  }
-  form {
-    margin-top: 1vw;
-  }
-  mat-card-header {
-    margin-top: 1vw;
-  }
-  mat-card-title {
-    font-size: x-large;
-  }
-  
-  button {
-    display: flex;
-    flex-direction: column;
-    width: 30vw;
-    margin: 2% 0;
-  }
-  #cancelar {
-    background-color: #fff;
-    color: #252d56;
-    padding: 15px;
-    font-size: medium;
-    transition: 0.3s;
-  }
-  #cancelar:hover {
-    background-color: #fff;
-    color: #252d56;
-  }
+  margin: 1rem;
+}
+mat-card-content{
+  margin-top:1rem;
+  width: 50%;
+  margin-left:25%
+}
+mat-form-field{
+  width: 100%;
+}
 
-  #deps {
-    background-color: #252d56;
-    color: #fff;
-    padding: 15px;
-    font-size: medium;
-    transition: 0.3s;
-  }
-  #deps:hover {
-    background-color: #171c36;
-    color: #e6e6e6;
-  }
+#cancelar {
+  background-color: #fff;
+  color: #252d56;
+  padding: 15px;
+  font-size: medium;
+  transition: 0.3s;
+}
 
+#cancelar:hover {
+  background-color: #fff;
+  color: #252d56;
+}
 
+#deps {
+  background-color: #252d56;
+  color: #fff;
+  padding: 15px;
+  font-size: medium;
+  transition: 0.3s;
+}
 
+#deps:hover {
+  background-color: #171c36;
+  color: #e6e6e6;
+}
+
+div{
+  display:flex;
+  justify-content: flex-end;
+}
+
+.buttonAlign{
+  margin-left:1rem;
+}
+button{
+  transition: 0.3s;
+}

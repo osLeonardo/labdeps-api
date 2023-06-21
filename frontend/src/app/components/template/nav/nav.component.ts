@@ -33,7 +33,7 @@ export class NavComponent implements OnInit{
   }
 
   async ngOnInit(): Promise<void> {
-    this.nome = await this.loginService.getNomePerfil();
+    this.nome = await this.loginService.getNome();
     this.id = this.loginService.getUserId();
   }
 }

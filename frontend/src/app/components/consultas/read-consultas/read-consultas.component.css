@@ -1,9 +1,5 @@
-mat-card{
-    padding: 1rem;
-}
-
-mat-card-header{
-    margin-bottom: 1.5rem;
+strong{
+    font-size: 15px;
 }
 
 table{

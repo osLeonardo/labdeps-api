@@ -1,3 +1,16 @@
+mat-card{
+    margin: 1rem;;
+}
+
+mat-card-header{
+    font-size: 20px;
+    font-weight: 555;
+    padding-bottom: 15px;
+}
+.alingButton{
+    display:flex;
+    justify-content: flex-end;
+}
 #deps {
     background-color: #252d56;
     color: #fff;

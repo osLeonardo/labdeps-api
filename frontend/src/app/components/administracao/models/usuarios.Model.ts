@@ -14,6 +14,7 @@ export interface CreateUsuarios {
   export interface PerfilResponse {
     id: number
     nome: string
+    sobrenome: string
     ativo: boolean
     ordem: number
   }

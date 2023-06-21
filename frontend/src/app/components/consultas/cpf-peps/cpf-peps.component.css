@@ -1,3 +1,8 @@
+mat-card-header{
+  font-size: 18px;
+  font-weight: 555;
+  padding-bottom: 15px;
+}
 table {
     width: 100%;
 }
