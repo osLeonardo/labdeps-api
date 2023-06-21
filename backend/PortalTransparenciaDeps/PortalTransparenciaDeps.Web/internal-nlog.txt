@@ -3159,4 +3159,471 @@
 2023-06-15 14:26:34.1346 Info Loading assembly: NLog.Mongo
 2023-06-15 14:26:34.2572 Info Adding target MongoTarget(Name=logfile)
 2023-06-15 14:26:34.2855 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
-2023-06-15 14:26:37.9611 Info Connecting to MongoDB collection geral in database logs
+2023-06-15 14:26:37.9611 Info Connecting to MongoDB collection geral in database logs2023-06-21 13:39:42.1356 Info Message Template Auto Format enabled
+2023-06-21 13:39:42.1414 Info Loading assembly: NLog.Mongo
+2023-06-21 13:39:42.1732 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 13:39:42.1979 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 13:39:42.2181 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 13:39:42.5509 Info Shutdown() called. Logger closing...
+2023-06-21 13:39:42.5509 Info Closing old configuration.
+2023-06-21 13:39:42.5659 Info Logger has been closed down.
+2023-06-21 13:39:43.3920 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 13:39:43.3920 Info LogFactory has been closed.
+2023-06-21 13:39:48.7239 Info Message Template Auto Format enabled
+2023-06-21 13:39:48.7239 Info Loading assembly: NLog.Mongo
+2023-06-21 13:39:48.7594 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 13:39:48.7796 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 13:39:48.7796 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 13:39:49.0385 Info Shutdown() called. Logger closing...
+2023-06-21 13:39:49.0385 Info Closing old configuration.
+2023-06-21 13:39:49.0495 Info Logger has been closed down.
+2023-06-21 13:39:50.0304 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 13:39:50.0304 Info LogFactory has been closed.
+2023-06-21 13:40:03.3975 Info Message Template Auto Format enabled
+2023-06-21 13:40:03.4034 Info Loading assembly: NLog.Mongo
+2023-06-21 13:40:03.4340 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 13:40:03.4553 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 13:40:03.4693 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 13:40:03.7229 Info Shutdown() called. Logger closing...
+2023-06-21 13:40:03.7229 Info Closing old configuration.
+2023-06-21 13:40:03.7338 Info Logger has been closed down.
+2023-06-21 13:40:05.0928 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 13:40:05.0928 Info LogFactory has been closed.
+2023-06-21 13:42:00.4743 Info Message Template Auto Format enabled
+2023-06-21 13:42:00.4802 Info Loading assembly: NLog.Mongo
+2023-06-21 13:42:00.5112 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 13:42:00.5338 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 13:42:00.5475 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 13:42:00.8018 Info Shutdown() called. Logger closing...
+2023-06-21 13:42:00.8048 Info Closing old configuration.
+2023-06-21 13:42:00.8048 Info Logger has been closed down.
+2023-06-21 13:42:03.3783 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 13:42:03.3783 Info LogFactory has been closed.
+2023-06-21 14:13:49.9152 Info Message Template Auto Format enabled
+2023-06-21 14:13:49.9208 Info Loading assembly: NLog.Mongo
+2023-06-21 14:13:49.9513 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:13:49.9718 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:13:49.9840 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:13:50.2370 Info Shutdown() called. Logger closing...
+2023-06-21 14:13:50.2370 Info Closing old configuration.
+2023-06-21 14:13:50.2491 Info Logger has been closed down.
+2023-06-21 14:13:50.9444 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:13:50.9444 Info LogFactory has been closed.
+2023-06-21 14:14:24.9872 Info Message Template Auto Format enabled
+2023-06-21 14:14:24.9872 Info Loading assembly: NLog.Mongo
+2023-06-21 14:14:25.0227 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:14:25.0431 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:14:25.0571 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:14:25.3010 Info Shutdown() called. Logger closing...
+2023-06-21 14:14:25.3010 Info Closing old configuration.
+2023-06-21 14:14:25.3127 Info Logger has been closed down.
+2023-06-21 14:14:25.9942 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:14:25.9942 Info LogFactory has been closed.
+2023-06-21 14:19:10.5390 Info Message Template Auto Format enabled
+2023-06-21 14:19:10.5467 Info Loading assembly: NLog.Mongo
+2023-06-21 14:19:10.5774 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:19:10.6014 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:19:10.6136 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:19:10.8591 Info Shutdown() called. Logger closing...
+2023-06-21 14:19:10.8591 Info Closing old configuration.
+2023-06-21 14:19:10.8591 Info Logger has been closed down.
+2023-06-21 14:19:11.5490 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:19:11.5490 Info LogFactory has been closed.
+2023-06-21 14:20:23.0964 Info Message Template Auto Format enabled
+2023-06-21 14:20:23.1019 Info Loading assembly: NLog.Mongo
+2023-06-21 14:20:23.1330 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:20:23.1526 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:20:23.1647 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:20:23.4192 Info Shutdown() called. Logger closing...
+2023-06-21 14:20:23.4192 Info Closing old configuration.
+2023-06-21 14:20:23.4313 Info Logger has been closed down.
+2023-06-21 14:20:24.1064 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:20:24.1064 Info LogFactory has been closed.
+2023-06-21 14:22:28.3704 Info Message Template Auto Format enabled
+2023-06-21 14:22:28.3704 Info Loading assembly: NLog.Mongo
+2023-06-21 14:22:28.4054 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:22:28.4257 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:22:28.4376 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:22:28.6865 Info Shutdown() called. Logger closing...
+2023-06-21 14:22:28.6865 Info Closing old configuration.
+2023-06-21 14:22:28.6988 Info Logger has been closed down.
+2023-06-21 14:22:29.3917 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:22:29.3917 Info LogFactory has been closed.
+2023-06-21 14:32:40.7247 Info Message Template Auto Format enabled
+2023-06-21 14:32:40.7323 Info Loading assembly: NLog.Mongo
+2023-06-21 14:32:40.7644 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:32:40.7871 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:32:40.8138 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:32:41.1791 Info Shutdown() called. Logger closing...
+2023-06-21 14:32:41.1791 Info Closing old configuration.
+2023-06-21 14:32:41.1791 Info Logger has been closed down.
+2023-06-21 14:32:42.0057 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:32:42.0057 Info LogFactory has been closed.
+2023-06-21 14:32:55.8847 Info Message Template Auto Format enabled
+2023-06-21 14:32:55.8847 Info Loading assembly: NLog.Mongo
+2023-06-21 14:32:55.9191 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:32:55.9381 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:32:55.9500 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:32:56.1810 Info Shutdown() called. Logger closing...
+2023-06-21 14:32:56.1810 Info Closing old configuration.
+2023-06-21 14:32:56.1927 Info Logger has been closed down.
+2023-06-21 14:32:56.8657 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:32:56.8657 Info LogFactory has been closed.
+2023-06-21 14:34:41.5643 Info Message Template Auto Format enabled
+2023-06-21 14:34:41.5643 Info Loading assembly: NLog.Mongo
+2023-06-21 14:34:41.5962 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:34:41.6140 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:34:41.6246 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:34:41.8401 Info Shutdown() called. Logger closing...
+2023-06-21 14:34:41.8401 Info Closing old configuration.
+2023-06-21 14:34:41.8501 Info Logger has been closed down.
+2023-06-21 14:34:42.4570 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:34:42.4570 Info LogFactory has been closed.
+2023-06-21 14:41:01.1478 Info Message Template Auto Format enabled
+2023-06-21 14:41:01.1478 Info Loading assembly: NLog.Mongo
+2023-06-21 14:41:01.1841 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:41:01.2047 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:41:01.2174 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:41:01.4577 Info Shutdown() called. Logger closing...
+2023-06-21 14:41:01.4577 Info Closing old configuration.
+2023-06-21 14:41:01.4577 Info Logger has been closed down.
+2023-06-21 14:41:02.1403 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:41:02.1403 Info LogFactory has been closed.
+2023-06-21 14:41:51.6234 Info Message Template Auto Format enabled
+2023-06-21 14:41:51.6234 Info Loading assembly: NLog.Mongo
+2023-06-21 14:41:51.6579 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:41:51.6772 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:41:51.6772 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:41:51.9214 Info Shutdown() called. Logger closing...
+2023-06-21 14:41:51.9214 Info Closing old configuration.
+2023-06-21 14:41:51.9324 Info Logger has been closed down.
+2023-06-21 14:41:52.6936 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:41:52.6936 Info LogFactory has been closed.
+2023-06-21 14:47:23.4801 Info Message Template Auto Format enabled
+2023-06-21 14:47:23.4801 Info Loading assembly: NLog.Mongo
+2023-06-21 14:47:23.5155 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:47:23.5355 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:47:23.5476 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:47:23.7906 Info Shutdown() called. Logger closing...
+2023-06-21 14:47:23.7906 Info Closing old configuration.
+2023-06-21 14:47:23.8016 Info Logger has been closed down.
+2023-06-21 14:47:24.4859 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:47:24.4859 Info LogFactory has been closed.
+2023-06-21 14:47:45.1515 Info Message Template Auto Format enabled
+2023-06-21 14:47:45.1515 Info Loading assembly: NLog.Mongo
+2023-06-21 14:47:45.1865 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:47:45.2066 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:47:45.2180 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:47:45.4588 Info Shutdown() called. Logger closing...
+2023-06-21 14:47:45.4588 Info Closing old configuration.
+2023-06-21 14:47:45.4588 Info Logger has been closed down.
+2023-06-21 14:47:46.1587 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:47:46.1587 Info LogFactory has been closed.
+2023-06-21 14:47:54.7804 Info Message Template Auto Format enabled
+2023-06-21 14:47:54.7804 Info Loading assembly: NLog.Mongo
+2023-06-21 14:47:54.8155 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:47:54.8356 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:47:54.8489 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:47:55.0875 Info Shutdown() called. Logger closing...
+2023-06-21 14:47:55.0875 Info Closing old configuration.
+2023-06-21 14:47:55.0986 Info Logger has been closed down.
+2023-06-21 14:47:55.7919 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:47:55.7919 Info LogFactory has been closed.
+2023-06-21 14:48:07.0654 Info Message Template Auto Format enabled
+2023-06-21 14:48:07.0706 Info Loading assembly: NLog.Mongo
+2023-06-21 14:48:07.1024 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:48:07.1225 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:48:07.1343 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:48:07.3689 Info Shutdown() called. Logger closing...
+2023-06-21 14:48:07.3689 Info Closing old configuration.
+2023-06-21 14:48:07.3811 Info Logger has been closed down.
+2023-06-21 14:48:08.0674 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:48:08.0690 Info LogFactory has been closed.
+2023-06-21 14:48:31.5955 Info Message Template Auto Format enabled
+2023-06-21 14:48:31.6007 Info Loading assembly: NLog.Mongo
+2023-06-21 14:48:31.6298 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:48:31.6496 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:48:31.6615 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:48:31.8987 Info Shutdown() called. Logger closing...
+2023-06-21 14:48:31.8987 Info Closing old configuration.
+2023-06-21 14:48:31.8987 Info Logger has been closed down.
+2023-06-21 14:48:32.6672 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:48:32.6672 Info LogFactory has been closed.
+2023-06-21 14:48:42.9625 Info Message Template Auto Format enabled
+2023-06-21 14:48:42.9625 Info Loading assembly: NLog.Mongo
+2023-06-21 14:48:42.9976 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:48:43.0166 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:48:43.0280 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:48:43.2704 Info Shutdown() called. Logger closing...
+2023-06-21 14:48:43.2704 Info Closing old configuration.
+2023-06-21 14:48:43.2704 Info Logger has been closed down.
+2023-06-21 14:48:43.9783 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:48:43.9783 Info LogFactory has been closed.
+2023-06-21 14:48:50.9676 Info Message Template Auto Format enabled
+2023-06-21 14:48:50.9729 Info Loading assembly: NLog.Mongo
+2023-06-21 14:48:51.0022 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:48:51.0223 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:48:51.0223 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:48:51.2817 Info Shutdown() called. Logger closing...
+2023-06-21 14:48:51.2817 Info Closing old configuration.
+2023-06-21 14:48:51.2932 Info Logger has been closed down.
+2023-06-21 14:48:52.2914 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:48:52.2914 Info LogFactory has been closed.
+2023-06-21 14:49:03.0936 Info Message Template Auto Format enabled
+2023-06-21 14:49:03.0989 Info Loading assembly: NLog.Mongo
+2023-06-21 14:49:03.1281 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:49:03.1470 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:49:03.1470 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:49:03.3954 Info Shutdown() called. Logger closing...
+2023-06-21 14:49:03.3954 Info Closing old configuration.
+2023-06-21 14:49:03.3954 Info Logger has been closed down.
+2023-06-21 14:49:05.9007 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:49:05.9007 Info LogFactory has been closed.
+2023-06-21 14:56:37.8656 Info Message Template Auto Format enabled
+2023-06-21 14:56:37.8656 Info Loading assembly: NLog.Mongo
+2023-06-21 14:56:37.9013 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:56:37.9219 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:56:37.9351 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:56:38.1795 Info Shutdown() called. Logger closing...
+2023-06-21 14:56:38.1795 Info Closing old configuration.
+2023-06-21 14:56:38.1795 Info Logger has been closed down.
+2023-06-21 14:56:39.1988 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:56:39.1988 Info LogFactory has been closed.
+2023-06-21 14:57:23.6955 Info Message Template Auto Format enabled
+2023-06-21 14:57:23.6955 Info Loading assembly: NLog.Mongo
+2023-06-21 14:57:23.7315 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:57:23.7516 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:57:23.7652 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:57:24.0063 Info Shutdown() called. Logger closing...
+2023-06-21 14:57:24.0063 Info Closing old configuration.
+2023-06-21 14:57:24.0063 Info Logger has been closed down.
+2023-06-21 14:57:24.7411 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:57:24.7411 Info LogFactory has been closed.
+2023-06-21 14:58:49.2485 Info Message Template Auto Format enabled
+2023-06-21 14:58:49.2485 Info Loading assembly: NLog.Mongo
+2023-06-21 14:58:49.2843 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:58:49.3039 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:58:49.3178 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:58:49.5633 Info Shutdown() called. Logger closing...
+2023-06-21 14:58:49.5633 Info Closing old configuration.
+2023-06-21 14:58:49.5751 Info Logger has been closed down.
+2023-06-21 14:58:50.5705 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:58:50.5705 Info LogFactory has been closed.
+2023-06-21 14:58:55.3880 Info Message Template Auto Format enabled
+2023-06-21 14:58:55.3880 Info Loading assembly: NLog.Mongo
+2023-06-21 14:58:55.4253 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:58:55.4456 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:58:55.4598 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:58:55.7152 Info Shutdown() called. Logger closing...
+2023-06-21 14:58:55.7152 Info Closing old configuration.
+2023-06-21 14:58:55.7270 Info Logger has been closed down.
+2023-06-21 14:58:56.4841 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:58:56.4841 Info LogFactory has been closed.
+2023-06-21 14:59:17.2012 Info Message Template Auto Format enabled
+2023-06-21 14:59:17.2012 Info Loading assembly: NLog.Mongo
+2023-06-21 14:59:17.2393 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:59:17.2679 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:59:17.2815 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:59:17.5275 Info Shutdown() called. Logger closing...
+2023-06-21 14:59:17.5275 Info Closing old configuration.
+2023-06-21 14:59:17.5382 Info Logger has been closed down.
+2023-06-21 14:59:18.2101 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:59:18.2101 Info LogFactory has been closed.
+2023-06-21 14:59:47.6176 Info Message Template Auto Format enabled
+2023-06-21 14:59:47.6176 Info Loading assembly: NLog.Mongo
+2023-06-21 14:59:47.6530 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 14:59:47.6729 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 14:59:47.6848 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 14:59:47.9264 Info Shutdown() called. Logger closing...
+2023-06-21 14:59:47.9264 Info Closing old configuration.
+2023-06-21 14:59:47.9264 Info Logger has been closed down.
+2023-06-21 14:59:48.8792 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 14:59:48.8805 Info LogFactory has been closed.
+2023-06-21 15:00:09.0678 Info Message Template Auto Format enabled
+2023-06-21 15:00:09.0678 Info Loading assembly: NLog.Mongo
+2023-06-21 15:00:09.1044 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 15:00:09.1249 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 15:00:09.1378 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 15:00:09.3912 Info Shutdown() called. Logger closing...
+2023-06-21 15:00:09.3912 Info Closing old configuration.
+2023-06-21 15:00:09.4030 Info Logger has been closed down.
+2023-06-21 15:00:10.6505 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 15:00:10.6505 Info LogFactory has been closed.
+2023-06-21 16:22:04.8236 Info Message Template Auto Format enabled
+2023-06-21 16:22:04.8236 Info Loading assembly: NLog.Mongo
+2023-06-21 16:22:04.8605 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 16:22:04.8810 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 16:22:04.8933 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 16:22:05.1610 Info Shutdown() called. Logger closing...
+2023-06-21 16:22:05.1610 Info Closing old configuration.
+2023-06-21 16:22:05.1610 Info Logger has been closed down.
+2023-06-21 16:22:06.0351 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 16:22:06.0351 Info LogFactory has been closed.
+2023-06-21 16:22:42.6099 Info Message Template Auto Format enabled
+2023-06-21 16:22:42.6161 Info Loading assembly: NLog.Mongo
+2023-06-21 16:22:42.6465 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 16:22:42.6660 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 16:22:42.6781 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 16:22:42.9206 Info Shutdown() called. Logger closing...
+2023-06-21 16:22:42.9206 Info Closing old configuration.
+2023-06-21 16:22:42.9321 Info Logger has been closed down.
+2023-06-21 16:22:43.9171 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 16:22:43.9171 Info LogFactory has been closed.
+2023-06-21 16:23:46.3452 Info Message Template Auto Format enabled
+2023-06-21 16:23:46.3506 Info Loading assembly: NLog.Mongo
+2023-06-21 16:23:46.3822 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 16:23:46.4021 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 16:23:46.4143 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 16:23:46.6603 Info Shutdown() called. Logger closing...
+2023-06-21 16:23:46.6603 Info Closing old configuration.
+2023-06-21 16:23:46.6603 Info Logger has been closed down.
+2023-06-21 16:23:49.2013 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 16:23:49.2013 Info LogFactory has been closed.
+2023-06-21 16:24:33.8599 Info Message Template Auto Format enabled
+2023-06-21 16:24:33.8599 Info Loading assembly: NLog.Mongo
+2023-06-21 16:24:33.9009 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 16:24:33.9237 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 16:24:33.9378 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 16:24:34.2188 Info Shutdown() called. Logger closing...
+2023-06-21 16:24:34.2188 Info Closing old configuration.
+2023-06-21 16:24:34.2188 Info Logger has been closed down.
+2023-06-21 16:24:35.2838 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 16:24:35.2838 Info LogFactory has been closed.
+2023-06-21 16:25:36.9787 Info Message Template Auto Format enabled
+2023-06-21 16:25:36.9787 Info Loading assembly: NLog.Mongo
+2023-06-21 16:25:37.0381 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 16:25:37.0631 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 16:25:37.0811 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 16:25:37.3592 Info Shutdown() called. Logger closing...
+2023-06-21 16:25:37.3592 Info Closing old configuration.
+2023-06-21 16:25:37.3592 Info Logger has been closed down.
+2023-06-21 16:25:38.4204 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 16:25:38.4204 Info LogFactory has been closed.
+2023-06-21 16:26:23.9350 Info Message Template Auto Format enabled
+2023-06-21 16:26:23.9350 Info Loading assembly: NLog.Mongo
+2023-06-21 16:26:23.9763 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 16:26:23.9990 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 16:26:24.0135 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 16:26:24.3021 Info Shutdown() called. Logger closing...
+2023-06-21 16:26:24.3021 Info Closing old configuration.
+2023-06-21 16:26:24.3021 Info Logger has been closed down.
+2023-06-21 16:26:25.4489 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 16:26:25.4489 Info LogFactory has been closed.
+2023-06-21 16:26:58.9690 Info Message Template Auto Format enabled
+2023-06-21 16:26:58.9774 Info Loading assembly: NLog.Mongo
+2023-06-21 16:26:59.0118 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 16:26:59.0347 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 16:26:59.0486 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 16:26:59.3254 Info Shutdown() called. Logger closing...
+2023-06-21 16:26:59.3254 Info Closing old configuration.
+2023-06-21 16:26:59.3373 Info Logger has been closed down.
+2023-06-21 16:27:02.2942 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 16:27:02.2942 Info LogFactory has been closed.
+2023-06-21 16:53:27.2258 Info Message Template Auto Format enabled
+2023-06-21 16:53:27.2317 Info Loading assembly: NLog.Mongo
+2023-06-21 16:53:27.2623 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 16:53:27.2826 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 16:53:27.2948 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 16:53:27.5496 Info Shutdown() called. Logger closing...
+2023-06-21 16:53:27.5496 Info Closing old configuration.
+2023-06-21 16:53:27.5614 Info Logger has been closed down.
+2023-06-21 16:53:28.7894 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 16:53:28.7909 Info LogFactory has been closed.
+2023-06-21 16:53:59.6288 Info Message Template Auto Format enabled
+2023-06-21 16:53:59.6343 Info Loading assembly: NLog.Mongo
+2023-06-21 16:53:59.6638 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 16:53:59.6836 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 16:53:59.6956 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 16:53:59.9412 Info Shutdown() called. Logger closing...
+2023-06-21 16:53:59.9412 Info Closing old configuration.
+2023-06-21 16:53:59.9412 Info Logger has been closed down.
+2023-06-21 16:54:00.9316 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 16:54:00.9316 Info LogFactory has been closed.
+2023-06-21 16:54:06.5310 Info Message Template Auto Format enabled
+2023-06-21 16:54:06.5310 Info Loading assembly: NLog.Mongo
+2023-06-21 16:54:06.5669 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 16:54:06.5866 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Desktop\projeto Angular\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 16:54:06.5866 Warn MongoTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Can not resolve MongoDB ConnectionString. Please make sure the ConnectionString property is set.
+   at NLog.Mongo.MongoTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2023-06-21 16:54:06.8454 Info Shutdown() called. Logger closing...
+2023-06-21 16:54:06.8454 Info Closing old configuration.
+2023-06-21 16:54:06.8572 Info Logger has been closed down.
+2023-06-21 16:54:08.0586 Info AppDomain Shutting down. LogFactory closing...
+2023-06-21 16:54:08.0586 Info LogFactory has been closed.

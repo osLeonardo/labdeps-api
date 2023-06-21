@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace PortalTransparenciaDeps.Infrastructure.Migrations
 {
-    public partial class update : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -23,6 +23,55 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "dados",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    cnpj = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    cnpj_matriz = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    tipo_unidade = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    razao_social = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    nome_fantasia = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    situacao_cadastral = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    data_situacao_cadastral = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    motivo_situacao_cadastral = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    nome_cidade_exterior = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    nome_pais = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    natureza_juridica = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    data_inicio_atividade = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    data_inicio_atividade_matriz = table.Column<string>(type: "text", nullable: true),
+                    cnae_principal = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    descricao_tipo_logradouro = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    logradouro = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    numero = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    complemento = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    bairro = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    cep = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    uf = table.Column<string>(type: "character varying(2)", maxLength: 2, nullable: false),
+                    municipio = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    municipio_codigo_ibge = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    telefone01 = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    telefone02 = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    fax = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    correio_eletronico = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    qualificacao_responsavel = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    capital_social_empresa = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    porte = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    opcao_pelo_simples = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    data_opcao_pelo_simples = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    data_exclusao_opcao_pelo_simples = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    opcao_mei = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    situacao_especial = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    data_situacao_especial = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    nome_ente_federativo = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("pk_dados", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "perfil",
                 columns: table => new
                 {
@@ -35,6 +84,28 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("pk_perfis", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "socio",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    nome = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    documento = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    qualificacao = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    id_dado = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("pk_socios", x => x.id);
+                    table.ForeignKey(
+                        name: "fk_socios_dados_id_dado",
+                        column: x => x.id_dado,
+                        principalTable: "dados",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -166,6 +237,11 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                 column: "perfil_id");
 
             migrationBuilder.CreateIndex(
+                name: "IX_socio_id_dado",
+                table: "socio",
+                column: "id_dado");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_user_login_id_perfil",
                 table: "user_login",
                 column: "id_perfil");
@@ -180,6 +256,9 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                 name: "parametrizacao_metrica");
 
             migrationBuilder.DropTable(
+                name: "socio");
+
+            migrationBuilder.DropTable(
                 name: "user_login");
 
             migrationBuilder.DropTable(
@@ -187,6 +266,9 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "perfil_metrica");
+
+            migrationBuilder.DropTable(
+                name: "dados");
 
             migrationBuilder.DropTable(
                 name: "perfil");
