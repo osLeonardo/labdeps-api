@@ -53,7 +53,10 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
             }
 
             var user = users.FirstOrDefault(u => u.Login == request.Login && u.Password == request.Password);
-            if (users.Any(users => users.Login == request.Login && users.Password == request.Password))
+            if (users.Any(users =>
+                users.Login == request.Login &&
+                users.Password == request.Password &&
+                users.Ativo == true))
             {
                 string token = GenerateToken();
 
