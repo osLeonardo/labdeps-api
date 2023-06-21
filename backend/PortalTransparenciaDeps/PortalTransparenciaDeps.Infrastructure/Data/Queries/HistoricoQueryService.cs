@@ -22,12 +22,11 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Queries
 
             var query = (from hc in _dbContext.HistoricoConsultas
                              join ul in _dbContext.UserLogins on hc.UserId equals ul.Id
-                             join p in _dbContext.Perfis on ul.IdPerfil equals p.Id
                              orderby hc.DataConsulta descending
                              select new HistoricoDto
                              {
                                  Id = hc.Id,
-                                 Nome = p.Nome,
+                                 Nome = ul.Nome,
                                  DataConsulta = new DateTime(hc.DataConsulta.Year, hc.DataConsulta.Month, hc.DataConsulta.Day),
                                  TipoConsulta = hc.TipoConsulta,
                                  Codigo = hc.Codigo,
@@ -41,13 +40,12 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Queries
         {
             var query = (from hc in _dbContext.HistoricoConsultas
                          join ul in _dbContext.UserLogins on hc.UserId equals ul.Id
-                         join p in _dbContext.Perfis on ul.IdPerfil equals p.Id
                          where ul.Id == idUser
                          orderby hc.DataConsulta descending
                          select new HistoricoDto
                          {
                              Id = hc.Id,
-                             Nome = p.Nome,
+                             Nome = ul.Nome,
                              DataConsulta = new DateTime(hc.DataConsulta.Year, hc.DataConsulta.Month, hc.DataConsulta.Day),
                              TipoConsulta = hc.TipoConsulta,
                              Codigo = hc.Codigo,
@@ -62,13 +60,12 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Queries
         {
             var query = (from hc in _dbContext.HistoricoConsultas
                          join ul in _dbContext.UserLogins on hc.UserId equals ul.Id
-                         join p in _dbContext.Perfis on ul.IdPerfil equals p.Id
                          orderby hc.DataConsulta descending
                          where hc.Id == id
                          select new HistoricoDto
                          {
                              Id = hc.Id,
-                             Nome = p.Nome,
+                             Nome = ul.Nome,
                              DataConsulta = new DateTime(hc.DataConsulta.Year, hc.DataConsulta.Month, hc.DataConsulta.Day),
                              TipoConsulta = hc.TipoConsulta,
                              Codigo = hc.Codigo,
