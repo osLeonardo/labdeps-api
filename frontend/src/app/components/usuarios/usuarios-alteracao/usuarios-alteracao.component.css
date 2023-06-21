@@ -8,25 +8,29 @@ mat-card-header{
     font-weight: 555;
     padding-bottom: 15px;
 }
+mat-card-content{
+    width: 50%;
+    margin-left:25%
+}
     /*Inputs*/
     .inputLogin{
-        width: 400px;
+        width: 100%;
     }
 
     .inputSenha{
-        width: 400px;
+        width: 100%;
     }
 
     .inputID{
-        width: 400px;
+        width: 100%;
     }
 
     .inputUsuario{
-        width: 400px;
+        width: 100%;
     }
 
     .inputNome{
-        width: 400px;
+        width: 100%;
     }
     /******/
 /******/
@@ -41,23 +45,23 @@ mat-card-header{
     background-color: #171c36;
     color: #e6e6e6;
 }
-
-button{
-    margin: 1rem;
-}
-
 .descricaoConfirmar{
     padding: 0.6rem;
 }
-/******/
-
-/*Botão Cancelar*/
+/*Botões gerais*/
+div{
+    display: flex;
+    justify-content: flex-end;
+}
 button{
-    margin: 1rem;
     transition: 0.3s;
 }
-
+/*Botão Cancelar*/
 .descricaoCancelar{
     padding: 0.6rem;
 }
 /******/
+
+.buttonCancelar{
+    margin-right:1rem;
+}
