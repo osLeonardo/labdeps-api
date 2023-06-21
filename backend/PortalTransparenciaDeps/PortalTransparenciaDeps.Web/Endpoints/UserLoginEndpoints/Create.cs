@@ -37,15 +37,17 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
                 return BadRequest();
             }
 
-            var userLogin = await _userLoginService.CreateUser(request.Login, request.Password, request.PerfilUsuario, request.Perfil);
+            var userLogin = await _userLoginService.CreateUser(request.Nome, request.Sobrenome, request.Login, request.Password, request.PerfilUsuario);
             
             return Ok(new CreateUserLoginResponse
             {
                 Id = userLogin.Id,
+                Nome = userLogin.Nome,
+                Sobrenome = userLogin.Sobrenome,
                 Login = userLogin.Login,
                 Password = userLogin.Password,
                 PerfilUsuario = userLogin.PerfilUsuario,
-                PerfilId = userLogin.IdPerfil
+                Ativo = userLogin.Ativo
             });
         }
     }

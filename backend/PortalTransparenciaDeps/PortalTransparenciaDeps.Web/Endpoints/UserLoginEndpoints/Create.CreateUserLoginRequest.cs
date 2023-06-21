@@ -9,6 +9,12 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
         public const string Route = "userLogin";
 
         [Required]
+        public string Nome { get; set; }
+
+        [Required]
+        public string Sobrenome { get; set; }
+
+        [Required]
         public string Login { get; set; }
 
         [Required]
@@ -16,8 +22,5 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
 
         [Required]
         public PerfilUsuario PerfilUsuario { get; set; }
-
-        [Required]
-        public Perfil Perfil { get; set; }
     }
 }
