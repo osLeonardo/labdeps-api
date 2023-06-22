@@ -3179,3 +3179,8 @@
 2023-06-21 17:24:54.0299 Info Adding target MongoTarget(Name=logfile)
 2023-06-21 17:24:54.0598 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Documents\Deps\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
 2023-06-21 17:29:02.9181 Info Connecting to MongoDB collection geral in database logs
+2023-06-22 13:58:18.2232 Info Shutdown() called. Logger closing...
+2023-06-22 13:58:18.2232 Info Closing old configuration.
+2023-06-22 13:58:18.2328 Info Logger has been closed down.
+2023-06-22 13:58:18.2328 Info AppDomain Shutting down. LogFactory closing...
+2023-06-22 13:58:18.2328 Info LogFactory has been closed.

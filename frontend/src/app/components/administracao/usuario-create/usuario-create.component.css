@@ -8,8 +8,6 @@ mat-card {
 mat-card-title{
   padding: 1rem;
   text-align: center;
-  font-size: 18px;
-  font-weight: 555;
 }
 mat-card-content{
   width: 50%;
