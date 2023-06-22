@@ -1,26 +1,26 @@
-<table mat-table [dataSource]="usuario">
+<table mat-table [dataSource]="usuario" matSort matSortActive="id" matSortDirection="asc">
   <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef><strong>ID</strong></th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header><strong>ID</strong></th>
     <td mat-cell *matCellDef="let row">{{row.id}}</td>
   </ng-container> 
   <ng-container matColumnDef="nome">
-    <th mat-header-cell *matHeaderCellDef><strong>NOME</strong></th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header><strong>NOME</strong></th>
     <td mat-cell *matCellDef="let row">{{row.nome}}</td>
   </ng-container>
   <ng-container matColumnDef="sobrenome">
-    <th mat-header-cell *matHeaderCellDef><strong>SOBRENOME</strong></th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header><strong>SOBRENOME</strong></th>
     <td mat-cell *matCellDef="let row">{{row.sobrenome}}</td>
   </ng-container>
   <ng-container matColumnDef="login">
-    <th mat-header-cell *matHeaderCellDef><strong>LOGIN</strong></th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header><strong>LOGIN</strong></th>
     <td mat-cell *matCellDef="let row">{{row.login}}</td>
   </ng-container>                     
   <ng-container matColumnDef="perfilUsuario">
-    <th mat-header-cell *matHeaderCellDef><strong>NIVEL DO USUÁRIO</strong></th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header><strong>NIVEL DO USUÁRIO</strong></th>
     <td mat-cell *matCellDef="let row">{{ getPerfilUsuarioString(row.perfilUsuario) }}</td>
   </ng-container>
   <ng-container matColumnDef="ativo">
-    <th mat-header-cell *matHeaderCellDef><strong>ATIVO</strong></th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header><strong>ATIVO</strong></th>
     <td mat-cell *matCellDef="let row">{{row.ativo}}</td>
   </ng-container>
   <ng-container matColumnDef="opcoes">
@@ -36,3 +36,6 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+<mat-paginator [pageSizeOptions]="[5, 10, 20]"
+            showFirstLastButtons>
+</mat-paginator>
