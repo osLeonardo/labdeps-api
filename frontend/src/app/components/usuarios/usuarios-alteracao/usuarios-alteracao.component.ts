@@ -49,6 +49,7 @@ export class UsuariosAlteracaoComponent implements OnInit {
   Confirmar(): void{
     this.usuarioService.Update(this.usuario).subscribe(Usuario => {
       this.usuario = Usuario;
+      this.router.navigate([`/usuarios/${this.usuario.id}`]);
     })  
   }
 }
