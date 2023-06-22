@@ -12,13 +12,12 @@ import { MatTableDataSource } from '@angular/material/table';
 export class UsuariosDadosComponent implements OnInit{
   usuarioDataSource: MatTableDataSource<Usuario>;
   usuario: Usuario[];
-  displayedColumns = ["id", "login", "password", "perfilUsuario", "idPerfil"]
+  displayedColumns = ["nome", "sobrenome", "login", "password"]
 
   constructor(private usuarioService: UsuariosService, private route: ActivatedRoute) {}
   ngOnInit(): void {
     this.usuarioService.GetById().subscribe(Usuarios => {
       this.usuario = [Usuarios];
-      console.log('Dados do usuário (página dados):', Usuarios)
       this.usuarioDataSource = new MatTableDataSource<Usuario>(this.usuario);
     })
   }

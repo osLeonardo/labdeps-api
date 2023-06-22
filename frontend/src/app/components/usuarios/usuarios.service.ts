@@ -3,10 +3,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Usuario } from './models/usuarios.model';
 import { AuthService } from 'src/app/views/login/login.service';
-import { UsuariosAlteracaoComponent } from './usuarios-alteracao/usuarios-alteracao.component';
-import { UpdateUsuario } from './models/updateUsuario.model';
-import { GetPerfil } from './models/getPerfil.model';
-import { UpdatePerfil } from './models/updatePerfil.model';
 
 @Injectable({ providedIn: 'root' })
 
@@ -20,18 +16,8 @@ export class UsuariosService {
         return this.http.get<Usuario>(urlUserGet);
     }
 
-    Update(usuario: UpdateUsuario): Observable<UpdateUsuario>{
+    Update(usuario: Usuario): Observable<Usuario>{
         const urlUserUpdate = `${this.baseUrl}/userLogin`;
-        return this.http.put<UpdateUsuario>(urlUserUpdate, usuario);
-    }
-
-    GetPerfilById(id: number): Observable<GetPerfil>{
-        const urlGetPerfil = `${this.baseUrl}/perfil/${id}`;
-        return this.http.get<GetPerfil>(urlGetPerfil);
-    }
-
-    UpdatePerfil(perfilAlteracao: UpdatePerfil): Observable<UpdatePerfil>{
-        const urlPerfilUpdate = `${this.baseUrl}/perfil`;
-        return this.http.put<UpdatePerfil>(urlPerfilUpdate, perfilAlteracao);
+        return this.http.put<Usuario>(urlUserUpdate, usuario);
     }
 }

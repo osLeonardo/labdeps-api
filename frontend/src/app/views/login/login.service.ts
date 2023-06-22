@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { Observable } from "rxjs";
-import { PerfilResponse } from "src/app/components/administracao/models/usuarios.Model";
+import { Usuarios } from "src/app/components/administracao/models/usuarios.Model";
 import { VerifyRequest, verifyLogin } from "./login.model";
 
 @Injectable({
@@ -20,7 +20,7 @@ export class AuthService {
     const url = `${this.apiUrl}/userLogin/${this.userId}`;
   
     return new Promise<string>((resolve, reject) => {
-      this.http.get<PerfilResponse>(url).subscribe(
+      this.http.get<Usuarios>(url).subscribe(
         (perfil) => {
           const nome = perfil.nome;
           resolve(nome);
@@ -36,7 +36,7 @@ export class AuthService {
     const url = `${this.apiUrl}/userLogin/${this.userId}`;
   
     return new Promise<string>((resolve, reject) => {
-      this.http.get<PerfilResponse>(url).subscribe(
+      this.http.get<Usuarios>(url).subscribe(
         (perfil) => {
           const sobrenome = perfil.sobrenome;
           resolve(sobrenome);

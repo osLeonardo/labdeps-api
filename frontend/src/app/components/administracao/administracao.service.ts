@@ -2,8 +2,7 @@
 import { Observable } from 'rxjs/internal/Observable';
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
-import { CreateUsuarios } from './models/usuarios.Model';
-import { CreatePerfil} from './models/perfil.Model';
+import { CreateUsuarios, Usuarios } from './models/usuarios.Model';
 
 
 @Injectable({
@@ -16,40 +15,25 @@ export class AdministracaoService {
 
   constructor(private http: HttpClient) { }
 
-  Cadastrar(usuario: CreateUsuarios): Observable<CreateUsuarios>{ 
+  Cadastrar(usuario: CreateUsuarios): Observable<Usuarios>{ 
     const urlCadastar = `${this.baseUrl}userLogin`
-    return this.http.post<CreateUsuarios>(urlCadastar, usuario)
+    return this.http.post<Usuarios>(urlCadastar, usuario)
   }
 
-  cadastrarperfil(perfil: CreatePerfil): Observable<CreatePerfil>{
-    const urlCadastrarUsuario = `${this.baseUrl}perfil`
-    return this.http.post<CreatePerfil>(urlCadastrarUsuario, perfil)
-  }
-
-  read(): Observable<CreateUsuarios[]>{
+  read(): Observable<Usuarios[]>{
     const urlRead = `${this.baseUrl}userLogin`
-    return this.http.get<CreateUsuarios[]>(urlRead)
+    return this.http.get<Usuarios[]>(urlRead)
   }
 
-  readById(id: number): Observable<CreateUsuarios> {
+  readById(id: number): Observable<Usuarios> {
     const url = `${this.baseUrl}userLogin/${id}`
-    return this.http.get<CreateUsuarios>(url)
+    return this.http.get<Usuarios>(url)
   }
 
-  getByIdPerfil(id: number): Observable<CreatePerfil> {
-    const url = `${this.baseUrl}perfil/${id}`
-    return this.http.get<CreatePerfil>(url) 
-  }
-
-  atualizar(usuario: CreateUsuarios): Observable<CreateUsuarios>{
+  atualizar(usuario: Usuarios): Observable<Usuarios>{
     const urlAtualizar = `${this.baseUrl}userLogin`
     console.log(usuario)
-    return this.http.put<CreateUsuarios>(urlAtualizar, usuario)
-  }
-
-  atualizarPerfil(perfil: CreatePerfil): Observable<CreatePerfil>{
-    const urlAtualizarPerfil = `${this.baseUrl}perfil`
-    return this.http.put<CreatePerfil>(urlAtualizarPerfil, perfil)
+    return this.http.put<Usuarios>(urlAtualizar, usuario)
   }
 
 }
