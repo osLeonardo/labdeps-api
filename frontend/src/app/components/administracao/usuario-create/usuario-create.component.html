@@ -1,14 +1,19 @@
 <mat-card>
-    <mat-card-title Novo Usuario></mat-card-title>
+    <mat-card-title>Novo Usuario</mat-card-title>
     <mat-card-content>
           <mat-form-field appearance="fill">
-            <mat-label>Nome do Usuário</mat-label>
-            <input matInput [(ngModel)]="perfil.nome" name="login">
+            <mat-label>Nome</mat-label>
+            <input matInput [(ngModel)]="usuario.nome" name="nome">
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Sobrenome</mat-label>
+            <input matInput [(ngModel)]="usuario.sobrenome" name="sobrenome">
           </mat-form-field>
           <br>
           <mat-form-field appearance="fill">
               <mat-label>Login</mat-label>
-              <input matInput [(ngModel)]="usuario.login" name="Usuário">
+              <input matInput [(ngModel)]="usuario.login" name="login">
           </mat-form-field>
           <br>
           <mat-form-field appearance="fill">
@@ -29,11 +34,6 @@
               <mat-option value="7">Suporte e implantação</mat-option>
               <mat-option value="8">Financeiro</mat-option>
             </mat-select>
-          </mat-form-field>
-          <br>
-          <mat-form-field appearance="fill">
-            <mat-label>Ordem</mat-label>
-            <input matInput [(ngModel)]="perfil.ordem" name="ordem">
           </mat-form-field>
           <div class="buttons">
             <button  mat-raised-button id="cancelar" (click)="cancelar()" >
