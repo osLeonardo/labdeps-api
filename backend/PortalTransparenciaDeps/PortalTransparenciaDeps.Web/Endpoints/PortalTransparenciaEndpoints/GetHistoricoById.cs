@@ -13,12 +13,12 @@ namespace PortalTransparenciaDeps.Web.Endpoints.PortalTransparenciaEndpoints
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}")]
     [AllowAnonymous]
-    public class GetHistorico : EndpointBaseAsync
+    public class GetHistoricoById : EndpointBaseAsync
         .WithRequest<GetHistoricoRequest>
-        .WithActionResult<>
+        .WithActionResult<GetHistoricoResponse>
     {
         private readonly IRepository<HistoricoConsulta> _repository;
-        public GetHistorico(IRepository<HistoricoConsulta> repository)
+        public GetHistoricoById(IRepository<HistoricoConsulta> repository)
         {
             _repository = repository;
         }
@@ -28,11 +28,11 @@ namespace PortalTransparenciaDeps.Web.Endpoints.PortalTransparenciaEndpoints
             Description = "Retorna o histórico de cada consulta já realizada",
             Tags = new[] { "PortalTransparenciaEndpoints" })
         ]
-        public override async Task<ActionResult<>> HandleAsync([FromRoute] request, CancellationToken cancellationToken = default)
+        public override async Task<ActionResult<GetHistoricoResponse>> HandleAsync([FromRoute] request, CancellationToken cancellationToken = default)
         {
             if (request == null) { return BadRequest(); }
 
-            var historico = await _repository.GetHistoricoAsync(request.);
+            var historico = await _repository.GetHistoricoByIdAsync(request.);
 
             if (historico == null) { return NotFound(); }
 

@@ -1,7 +1,6 @@
 ﻿namespace PortalTransparenciaDeps.Web.Endpoints.PortalTransparenciaEndpoints
 {
-    public class GetHistoricoRequest
+    public class GetHistoricoResponse
     {
-        public const string Route = "HistoricoConsulta";
     }
 }
