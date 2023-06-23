@@ -1,9 +1,9 @@
 export interface Usuario {
   id: number
+  nome: string
+  sobrenome: string
   login: string
   password: string
   perfilUsuario: number
-  idPerfil: number
-  nome: string
   ativo: boolean
 }

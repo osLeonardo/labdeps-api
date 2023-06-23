@@ -3174,3 +3174,13 @@
 2023-06-21 13:25:28.6134 Info Adding target MongoTarget(Name=logfile)
 2023-06-21 13:25:28.6636 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\jhuli\OneDrive\Documentos\programação\DEPS\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
 2023-06-21 13:25:35.8181 Info Connecting to MongoDB collection geral in database logs
+2023-06-21 17:24:53.8974 Info Message Template Auto Format enabled
+2023-06-21 17:24:53.9051 Info Loading assembly: NLog.Mongo
+2023-06-21 17:24:54.0299 Info Adding target MongoTarget(Name=logfile)
+2023-06-21 17:24:54.0598 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\labdeps\Documents\Deps\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-06-21 17:29:02.9181 Info Connecting to MongoDB collection geral in database logs
+2023-06-22 13:58:18.2232 Info Shutdown() called. Logger closing...
+2023-06-22 13:58:18.2232 Info Closing old configuration.
+2023-06-22 13:58:18.2328 Info Logger has been closed down.
+2023-06-22 13:58:18.2328 Info AppDomain Shutting down. LogFactory closing...
+2023-06-22 13:58:18.2328 Info LogFactory has been closed.

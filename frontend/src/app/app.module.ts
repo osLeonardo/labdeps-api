@@ -1,5 +1,4 @@
 import { ReadConsultasComponent } from './components/consultas/read-consultas/read-consultas.component';
-import { UsuariosService } from './components/usuarios/usuarios.service';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';

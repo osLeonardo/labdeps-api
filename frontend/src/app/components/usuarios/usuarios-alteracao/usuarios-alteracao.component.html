@@ -1,6 +1,14 @@
 <mat-card>
     <mat-card-header>Alterações</mat-card-header>
     <mat-card-content>
+        <mat-form-field appearance="fill" class="inputNome">
+            <mat-label>Nome</mat-label>
+            <input matInput [(ngModel)]="usuario.nome" placeholder="Nome" name="nome">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="inputSobrenome">
+            <mat-label>Sobrenome</mat-label>
+            <input matInput [(ngModel)]="usuario.sobrenome" placeholder="sobrenome" name="sobrenome">
+        </mat-form-field>
         <mat-form-field appearance="fill" class="inputLogin">
             <mat-label>Login</mat-label>
             <input matInput required [(ngModel)]="usuario.login" placeholder="Login" name="login">

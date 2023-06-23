@@ -2,8 +2,12 @@
   <mat-card-title Atualizar Usuario></mat-card-title>
   <mat-card-content>
       <mat-form-field appearance="fill">
-        <mat-label>Nome do Usuário</mat-label>
-        <input matInput [(ngModel)]="perfil.nome" name="nome">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="usuario.nome" name="nome">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Sobrenome</mat-label>
+        <input matInput [(ngModel)]="usuario.sobrenome" name="sobrenome">
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Login</mat-label>
@@ -29,7 +33,7 @@
       </mat-form-field>
       <mat-form-field>
         <mat-label>Ativo</mat-label>
-        <mat-select [(ngModel)]="perfil.ativo" name="ativo">
+        <mat-select [(ngModel)]="usuario.ativo" name="ativo">
           <mat-option value="true">true</mat-option>
           <mat-option value="false">false</mat-option>
         </mat-select>
