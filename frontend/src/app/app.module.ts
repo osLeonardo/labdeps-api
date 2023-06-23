@@ -9,8 +9,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavComponent } from './components/template/nav/nav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { CnpjCnepComponent } from './components/consultas/cnpj-cnep/cnpj-cnep.component';
-import { CpfCnepComponent } from './components/consultas/cpf-cnep/cpf-cnep.component';
 import { HomeComponent } from './views/home/home.component';
 import { ConsultasComponent } from './views/consultas/consultas.component';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -23,22 +21,15 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import { CnpjConsultaComponent } from './views/cnpj-consulta/cnpj-consulta.component';
 import { CpfConsultaComponent } from './views/cpf-consulta/cpf-consulta.component';
-import { CnpjCepimComponent } from './components/consultas/cnpj-cepim/cnpj-cepim.component';
-import { CnpjLenienciaComponent } from './components/consultas/cnpj-leniencia/cnpj-leniencia.component';
-import { CpfBpcComponent } from './components/consultas/cpf-bpc/cpf-bpc.component';
-import { CpfPepsComponent } from './components/consultas/cpf-peps/cpf-peps.component';
-import { CpfRemuneracaoComponent } from './components/consultas/cpf-remuneracao/cpf-remuneracao.component';
+import { CnpjCepimComponent } from './components/consultas/portal-transparencia/cnpj-cepim/cnpj-cepim.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import { BolsaFamiliaComponent } from './components/consultas/cpf-bolsa-familia/bolsa-familia.component';
-import { PetiComponent } from './components/consultas/cpf-peti/peti.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { NgIf } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { CpfCepimComponent} from './components/consultas/cpf-cepim/cpf-cepim.component';
 import { NgxMaskModule } from 'ngx-mask';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
@@ -55,6 +46,16 @@ import { UsuariosAlterarComponent } from './views/usuarios/usuarios-alterar/usua
 import { UsuariosDadosComponent } from './components/usuarios/usuarios-dados/usuarios-dados.component';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CpfBolsaFamiliaComponent } from './components/consultas/portal-transparencia/cpf-bolsa-familia/cpf-bolsa-familia.component';
+import { CpfPepComponent } from './components/consultas/portal-transparencia/cpf-pep/cpf-pep.component';
+import { CpfPetiComponent } from './components/consultas/portal-transparencia/cpf-peti/cpf-peti.component';
+import { CnpjCnepComponent } from './components/consultas/portal-transparencia/cnpj-cnep/cnpj-cnep.component';
+import { CpfCnepComponent } from './components/consultas/portal-transparencia/cpf-cnep/cpf-cnep.component';
+import { CnpjLenienciaComponent } from './components/consultas/portal-transparencia/cnpj-leniencia/cnpj-leniencia.component';
+import { CpfBpcComponent } from './components/consultas/portal-transparencia/cpf-bpc/cpf-bpc.component';
+import { CpfRemuneracaoComponent } from './components/consultas/portal-transparencia/cpf-remuneracao/cpf-remuneracao.component';
+import { CpfCepimComponent } from './components/consultas/portal-transparencia/cpf-cepim/cpf-cepim.component';
+import { CnpjDadosPublicosComponent } from './components/consultas/dados-publicos/cnpj-dados-publicos/cnpj-dados-publicos.component';
 
 
 registerLocaleData(localePt)
@@ -74,10 +75,10 @@ registerLocaleData(localePt)
     CnpjCepimComponent,
     CnpjLenienciaComponent,
     CpfBpcComponent,
-    CpfPepsComponent,
+    CpfPepComponent,
     CpfRemuneracaoComponent,
-    PetiComponent,
-    BolsaFamiliaComponent,
+    CpfPetiComponent,
+    CpfBolsaFamiliaComponent,
     CpfCepimComponent,
     UsuarioCreateComponent,
     UsuarioReadComponent,
@@ -90,6 +91,10 @@ registerLocaleData(localePt)
     UsuariosAlteracaoComponent,
     UsuariosAlterarComponent,
     UsuariosDadosComponent,
+    CpfBolsaFamiliaComponent,
+    CpfPepComponent,
+    CpfPetiComponent,
+    CnpjDadosPublicosComponent,
   ],
   imports: [
     BrowserModule,
