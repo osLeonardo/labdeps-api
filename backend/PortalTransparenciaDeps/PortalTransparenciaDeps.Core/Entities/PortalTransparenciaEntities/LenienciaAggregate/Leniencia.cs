@@ -1,4 +1,5 @@
 ﻿using Ardalis.GuardClauses;
+using PortalTransparenciaDeps.Core.Entities.ConsultaAggregate;
 using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.CnepAggregate;
 using PortalTransparenciaDeps.SharedKernel;
 using PortalTransparenciaDeps.SharedKernel.Interfaces;
@@ -18,11 +19,13 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Leni
         public int Quantidade { get; private set; }
         public string SituacaoAcordo { get; private set; }
         public int IdSancoes { get; private set; }
+        public int IdHistoricoConsulta { get; private set; }
         public virtual List<Sancoes> Sancoes { get; private set; }
+        public virtual HistoricoConsulta HistoricoConsulta { get; private set; }
         public virtual ICollection<Sancoes> SancoesLista { get; private set; }
 
         protected Leniencia() { }
-        private Leniencia(string dataFimAcordo, string dataInicioAcordo, string orgaoResponsavel, int quantidade, string situacaoAcordo, int idSancoes)
+        private Leniencia(string dataFimAcordo, string dataInicioAcordo, string orgaoResponsavel, int quantidade, string situacaoAcordo, int idSancoes, int idHistoricoConsulta)
         {
             DataFimAcordo = Guard.Against.NullOrEmpty(dataFimAcordo, nameof(dataFimAcordo));
             DataInicioAcordo = Guard.Against.NullOrEmpty(dataInicioAcordo, nameof(dataInicioAcordo));
@@ -30,6 +33,7 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Leni
             Quantidade = Guard.Against.NegativeOrZero(quantidade, nameof(quantidade));
             SituacaoAcordo = Guard.Against.NullOrEmpty(situacaoAcordo, nameof(situacaoAcordo));
             IdSancoes = Guard.Against.NegativeOrZero(idSancoes, nameof(idSancoes));
+            IdHistoricoConsulta = Guard.Against.NegativeOrZero(idHistoricoConsulta, nameof(idHistoricoConsulta));
         }
     }
     public class Sancoes : BaseEntity<int>, IAggregateRoot

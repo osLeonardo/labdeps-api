@@ -1,4 +1,5 @@
 ﻿using Ardalis.GuardClauses;
+using PortalTransparenciaDeps.Core.Entities.ConsultaAggregate;
 using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.PessoaJuridicaAggregate;
 using PortalTransparenciaDeps.Core.Models.PortalTransparenciaAggregate;
 using PortalTransparenciaDeps.SharedKernel;
@@ -15,14 +16,17 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Remu
     {
         public int IdServidor { get; private set; }
         public int IdRemuneracoesDTO { get; private set; }
-        public Servidor Servidor { get; private set; }
+        public int IdHistoricoConsulta { get; private set; }
+        public virtual Servidor Servidor { get; private set; }
+        public virtual HistoricoConsulta HistoricoConsulta { get; private set; }
         public virtual ICollection<RemuneracoesDTO> RemuneracoesDTOs { get; private set; }
 
         protected Remuneracao() { }
-        private Remuneracao(int idServidor, int idRemuneracoesDTO)
+        private Remuneracao(int idServidor, int idRemuneracoesDTO, int idHistoricoConsulta)
         {
             IdServidor = Guard.Against.NegativeOrZero(idServidor, nameof(idServidor));
             IdRemuneracoesDTO = Guard.Against.NegativeOrZero(idRemuneracoesDTO, nameof(idRemuneracoesDTO));
+            IdHistoricoConsulta = Guard.Against.NegativeOrZero(idHistoricoConsulta, nameof(idHistoricoConsulta));
         }
     }
     public class Servidor : BaseEntity<int>, IAggregateRoot

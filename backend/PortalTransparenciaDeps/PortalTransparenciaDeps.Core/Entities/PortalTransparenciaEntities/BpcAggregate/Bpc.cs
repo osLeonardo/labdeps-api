@@ -1,4 +1,5 @@
 ﻿using Ardalis.GuardClauses;
+using PortalTransparenciaDeps.Core.Entities.ConsultaAggregate;
 using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.MunicipioAggregate;
 using PortalTransparenciaDeps.Core.Models.PortalTransparenciaAggregate;
 using PortalTransparenciaDeps.SharedKernel;
@@ -20,11 +21,13 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.BpcA
         public float Valor { get; private set; }
         public int IdMunicipio { get; private set; }
         public int IdBeneficiario { get; private set; }
+        public int IdHistoricoConsulta { get; private set; }
         public virtual Municipio Municipio { get; private set; }
         public virtual BeneficiarioBpc Beneficiario { get; private set; }
+        public virtual HistoricoConsulta HistoricoConsulta { get; private set; }
 
         protected Bpc() { }
-        private Bpc(bool concedidoJudicialmente, string dataMesCompetencia, string dataMesReferencia, bool menor16Anos, float valor, int idMunicipio, int idBeneficiario)
+        private Bpc(bool concedidoJudicialmente, string dataMesCompetencia, string dataMesReferencia, bool menor16Anos, float valor, int idMunicipio, int idBeneficiario, int idHistoricoConsulta)
         {
             ConcedidoJudicialmente = true;
             DataMesCompetencia = Guard.Against.NullOrEmpty(dataMesCompetencia, nameof(dataMesCompetencia));
@@ -33,6 +36,7 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.BpcA
             Valor = Guard.Against.NegativeOrZero(valor, nameof(valor));
             IdMunicipio = Guard.Against.NegativeOrZero(idMunicipio, nameof(idMunicipio));
             IdBeneficiario = Guard.Against.NegativeOrZero(idBeneficiario, nameof(idBeneficiario));
+            IdHistoricoConsulta = Guard.Against.NegativeOrZero(idHistoricoConsulta, nameof(idHistoricoConsulta));
         }
     }
     public class BeneficiarioBpc : BaseEntity<int>, IAggregateRoot

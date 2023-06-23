@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using PortalTransparenciaDeps.Core.Entities.ConsultaAggregate;
 using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.BolsaFamiliaAggregate;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,11 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Config.PortalTransparencia
             builder.HasOne(p => p.Titular)
                 .WithMany(m => m.BolsasFamilia)
                 .HasForeignKey(p => p.IdTitular);
+            builder.Property(p => p.IdHistoricoConsulta) 
+                .IsRequired();
+            builder.HasOne(p => p.HistoricoConsulta)
+                .WithMany(m => m.BolsaFamilias)
+                .HasForeignKey(p => p.IdHistoricoConsulta);
         }
     }
 }

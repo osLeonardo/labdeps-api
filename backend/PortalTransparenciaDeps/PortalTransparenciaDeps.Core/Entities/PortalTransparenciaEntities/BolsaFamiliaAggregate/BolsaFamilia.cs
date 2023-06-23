@@ -1,4 +1,5 @@
 ﻿using Ardalis.GuardClauses;
+using PortalTransparenciaDeps.Core.Entities.ConsultaAggregate;
 using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.MunicipioAggregate;
 using PortalTransparenciaDeps.Core.Models.PortalTransparenciaAggregate;
 using PortalTransparenciaDeps.SharedKernel;
@@ -19,17 +20,20 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Bols
         public float Valor { get; private set; }
         public int IdMunicipio { get; private set; }
         public int IdTitular { get; private set; }
+        public int IdHistoricoConsulta { get; private set; }
         public virtual Municipio Municipio { get; private set; }
         public virtual TitularBolsaFamilia Titular { get; private set; }
+        public virtual HistoricoConsulta HistoricoConsulta { get; private set; }
 
         protected BolsaFamilia () { }
-        private BolsaFamilia(string dataMesCompetencia, string dataMesReferencia, int quantidadeDependentes, float valor, int idMunicipio)
+        private BolsaFamilia(string dataMesCompetencia, string dataMesReferencia, int quantidadeDependentes, float valor, int idMunicipio, int idHistoricoConsulta)
         {
             DataMesCompetencia = Guard.Against.NullOrEmpty(dataMesCompetencia, nameof(dataMesCompetencia));
             DataMesReferencia = Guard.Against.NullOrEmpty(dataMesReferencia, nameof(dataMesReferencia));
             QuantidadeDependentes = Guard.Against.NegativeOrZero(quantidadeDependentes, nameof(quantidadeDependentes));
             Valor = Guard.Against.NegativeOrZero(valor, nameof(valor));
             IdMunicipio = Guard.Against.NegativeOrZero(idMunicipio, nameof(idMunicipio));
+            IdHistoricoConsulta = Guard.Against.NegativeOrZero(idHistoricoConsulta, nameof(idHistoricoConsulta));
         }
     }
 
