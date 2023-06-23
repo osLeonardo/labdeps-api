@@ -20,6 +20,11 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Config.PortalTransparencia
                 .HasForeignKey(p => p.IdServidor);
             builder.Property(p => p.IdRemuneracoesDTO) 
                 .IsRequired();
+            builder.Property(p => p.IdHistoricoConsulta) 
+                .IsRequired();
+            builder.HasOne(p => p.HistoricoConsulta)
+                .WithMany(m => m.Remuneracoes)
+                .HasForeignKey(p => p.IdHistoricoConsulta);
         }
     }
 }

@@ -31,6 +31,11 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Config.PortalTransparencia
             builder.HasOne(p => p.Beneficiario)
                 .WithMany(m => m.Petis)
                 .HasForeignKey(p => p.IdBeneficiario);
+            builder.Property(p => p.IdHistoricoConsulta)
+                .IsRequired();
+            builder.HasOne(p => p.HistoricoConsulta)
+                .WithMany(m => m.Petis)
+                .HasForeignKey(p => p.IdHistoricoConsulta);
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using Ardalis.GuardClauses;
+using PortalTransparenciaDeps.Core.Entities.ConsultaAggregate;
+using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.CnepAggregate;
 using PortalTransparenciaDeps.SharedKernel;
 using PortalTransparenciaDeps.SharedKernel.Interfaces;
 using System;
@@ -21,9 +23,11 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.PepA
         public string Nome { get; private set; }
         public string NomeOrgao { get; private set; }
         public string SiglaFuncao { get; private set; }
+        public int IdHistoricoConsulta { get; private set; }
+        public virtual HistoricoConsulta HistoricoConsulta { get; private set; }
 
         protected Pep() { }
-        private Pep(string codOrgao, string cpf, string descricaoFuncao, string dtFimCarencia, string dtFimExercicio, string dtInicioExercicio, string nivelFuncao, string nome, string nomeOrgao, string siglaFuncao)
+        private Pep(string codOrgao, string cpf, string descricaoFuncao, string dtFimCarencia, string dtFimExercicio, string dtInicioExercicio, string nivelFuncao, string nome, string nomeOrgao, string siglaFuncao, int idHistoricoConsulta)
         {
             CodOrgao = Guard.Against.NullOrEmpty(codOrgao, nameof(codOrgao));
             Cpf = Guard.Against.NullOrEmpty(cpf, nameof(cpf));
@@ -35,6 +39,7 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.PepA
             Nome = Guard.Against.NullOrEmpty(nome, nameof(nome));
             NomeOrgao = Guard.Against.NullOrEmpty(nomeOrgao, nameof(nomeOrgao));
             SiglaFuncao = Guard.Against.NullOrEmpty(siglaFuncao, nameof(siglaFuncao));
+            IdHistoricoConsulta = Guard.Against.NegativeOrZero(idHistoricoConsulta, nameof(idHistoricoConsulta));
         }
     }
 }

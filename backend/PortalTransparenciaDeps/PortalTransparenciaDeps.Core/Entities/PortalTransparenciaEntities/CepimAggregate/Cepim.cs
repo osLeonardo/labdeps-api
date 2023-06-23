@@ -1,4 +1,5 @@
 ﻿using Ardalis.GuardClauses;
+using PortalTransparenciaDeps.Core.Entities.ConsultaAggregate;
 using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.PessoaJuridicaAggregate;
 using PortalTransparenciaDeps.SharedKernel;
 using PortalTransparenciaDeps.SharedKernel.Interfaces;
@@ -17,18 +18,21 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Cepi
         public int IdConvenio { get; private set; }
         public int IdOrgaoSuperior { get; private set; }
         public int IdPessoaJuridica { get; private set; }
+        public int IdHistoricoConsulta { get; private set; }
         public virtual Convenio Convenio { get; private set; }
         public virtual OrgaoSuperior OrgaoSuperior { get; private set; }
         public virtual PessoaJuridica PessoaJuridica { get; private set; }
+        public virtual HistoricoConsulta HistoricoConsulta { get; private set; }
 
         protected Cepim() { }
-        private Cepim(string dataReferencia, string motivo, int idConvenio, int idOrgaoSuperior, int idPessoaJuridica)
+        private Cepim(string dataReferencia, string motivo, int idConvenio, int idOrgaoSuperior, int idPessoaJuridica, int idHistoricoConsulta)
         {
             DataReferencia = Guard.Against.NullOrEmpty(dataReferencia, nameof(dataReferencia));
             Motivo = Guard.Against.NullOrEmpty(motivo, nameof(motivo));
             IdConvenio = Guard.Against.NegativeOrZero(idConvenio, nameof(idConvenio));
             IdOrgaoSuperior = Guard.Against.NegativeOrZero(idOrgaoSuperior, nameof(idOrgaoSuperior));
             IdPessoaJuridica = Guard.Against.NegativeOrZero(idPessoaJuridica, nameof(idPessoaJuridica));
+            IdHistoricoConsulta = Guard.Against.NegativeOrZero(idHistoricoConsulta, nameof(idHistoricoConsulta));
         }
     }
     public class Convenio : BaseEntity<int>, IAggregateRoot

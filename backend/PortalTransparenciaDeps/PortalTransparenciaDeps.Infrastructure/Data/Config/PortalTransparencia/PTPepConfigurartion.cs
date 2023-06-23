@@ -33,6 +33,11 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Config.PortalTransparencia
                 .IsRequired();
             builder.Property(p => p.SiglaFuncao)
                 .IsRequired();
+            builder.Property(p => p.IdHistoricoConsulta) 
+                .IsRequired();
+            builder.HasOne(p => p.HistoricoConsulta)
+                .WithMany(m => m.Peps)
+                .HasForeignKey(p => p.IdHistoricoConsulta);
         }
     }
 }

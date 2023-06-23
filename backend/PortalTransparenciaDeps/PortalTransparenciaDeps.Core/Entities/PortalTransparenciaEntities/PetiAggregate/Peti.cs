@@ -1,4 +1,5 @@
 ﻿using Ardalis.GuardClauses;
+using PortalTransparenciaDeps.Core.Entities.ConsultaAggregate;
 using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.MunicipioAggregate;
 using PortalTransparenciaDeps.SharedKernel;
 using PortalTransparenciaDeps.SharedKernel.Interfaces;
@@ -18,11 +19,13 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Peti
         public float Valor { get; private set; }
         public int IdMunicipio { get; private set; }
         public int IdBeneficiario { get; private set; }
+        public int IdHistoricoConsulta { get; private set; }
         public virtual Municipio Municipio { get; private set; }
         public virtual BeneficiarioPeti Beneficiario { get; private set; }
+        public virtual HistoricoConsulta HistoricoConsulta { get; private set; }
 
         protected Peti() { }
-        private Peti(string dataDisponibilizacaoRecurso, string dataMesReferencia, string situacao, float valor, int idMunicipio, int idBeneficiario)
+        private Peti(string dataDisponibilizacaoRecurso, string dataMesReferencia, string situacao, float valor, int idMunicipio, int idBeneficiario, int idHistoricoConsulta)
         {
             DataDisponibilizacaoRecurso = Guard.Against.NullOrEmpty(dataDisponibilizacaoRecurso, nameof(dataDisponibilizacaoRecurso));
             DataMesReferencia = Guard.Against.NullOrEmpty(dataMesReferencia, nameof(dataMesReferencia));
@@ -30,6 +33,7 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Peti
             Valor = Guard.Against.NegativeOrZero(valor, nameof(valor));
             IdMunicipio = Guard.Against.NegativeOrZero(idMunicipio, nameof(idMunicipio));
             IdBeneficiario = Guard.Against.NegativeOrZero(idBeneficiario, nameof(idBeneficiario));
+            IdHistoricoConsulta = Guard.Against.NegativeOrZero(idHistoricoConsulta, nameof(idHistoricoConsulta));
         }
     }
     public class BeneficiarioPeti : BaseEntity<int>, IAggregateRoot 
