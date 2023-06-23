@@ -37,7 +37,7 @@ export class LoginComponent {
   }
 
   openSuccessSnackBar(): void {
-    this.snackBar.open("Login Realizado com Sucesso!", "Fechar", {
+    this.snackBar.open("Login realizado com sucesso!", "Fechar", {
       panelClass: 'snackbar-success',
       horizontalPosition: 'right',
       verticalPosition: 'top',
@@ -46,7 +46,7 @@ export class LoginComponent {
   }
 
   openFailureSnackBar(): void {
-    this.snackBar.open("Falha ao Efetuar Login!", "Fechar", {
+    this.snackBar.open("Falha ao efetuar o login!", "Fechar", {
       panelClass: 'snackbar-error',
       horizontalPosition: 'right',
       verticalPosition: 'top',

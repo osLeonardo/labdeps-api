@@ -16,6 +16,17 @@
   </PropertyGroup>
   
   <ItemGroup>
+    <Compile Remove="Endpoints\NovaPasta1\NovaPasta\**" />
+    <Compile Remove="Endpoints\NovaPasta\**" />
+    <Content Remove="Endpoints\NovaPasta1\NovaPasta\**" />
+    <Content Remove="Endpoints\NovaPasta\**" />
+    <EmbeddedResource Remove="Endpoints\NovaPasta1\NovaPasta\**" />
+    <EmbeddedResource Remove="Endpoints\NovaPasta\**" />
+    <None Remove="Endpoints\NovaPasta1\NovaPasta\**" />
+    <None Remove="Endpoints\NovaPasta\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
     <PackageReference Include="Ardalis.ApiEndpoints" Version="4.0.1" />
     <PackageReference Include="Ardalis.ListStartupServices" Version="1.1.4" />
     <PackageReference Include="Ardalis.Result" Version="4.1.0" />
