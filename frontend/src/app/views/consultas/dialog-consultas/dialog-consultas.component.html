@@ -33,7 +33,9 @@
     </main>
     <div class="buttons">        
         <button mat-raised-button (click)="Cancelar()">Cancelar</button>
-        <button mat-raised-button [disabled]="button" id="deps" (click)="Buscar()">Buscar</button>
+        <div class="tooltip" [matTooltip]="button ? tooltipText : ''">
+            <button mat-raised-button [disabled]="button" id="deps" (click)="Buscar()">Buscar</button>
+        </div>
     </div>
 </div>
 
