@@ -4,7 +4,7 @@
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
 # User-specific files
-backend/PortalTransparenciaDeps/PortalTransparenciaDeps.Web/internal-nlog.txt
+/backend/PortalTransparenciaDeps/PortalTransparenciaDeps.Web/internal-nlog.txt
 *.rsuser
 *.suo
 *.user
@@ -397,3 +397,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+internal-nlog.txt
+backend/PortalTransparenciaDeps/PortalTransparenciaDeps.Web/internal-nlog.txt

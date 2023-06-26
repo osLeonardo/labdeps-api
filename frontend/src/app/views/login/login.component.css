@@ -40,3 +40,14 @@ mat-card {
     background-color: #c33826;
     color: #e6e6e6;
   }
+  .deps {
+    background-color: transparent;
+    border: none;
+    color: #ff4a33;
+    padding: 25px;
+    font-size: medium;
+    transition: 0.3s;
+  }
+  .deps:hover {
+    color: #c33826;
+  }
