@@ -18,6 +18,7 @@ using PortalTransparenciaDeps.Core.Services;
 using PortalTransparenciaDeps.Infrastructure;
 using PortalTransparenciaDeps.Infrastructure.Data;
 using PortalTransparenciaDeps.Infrastructure.Data.Queries;
+using PortalTransparenciaDeps.Infrastructure.QA_DadosPublicos;
 using PortalTransparenciaDeps.SharedKernel.Configuration;
 using PortalTransparenciaDeps.SharedKernel.Middleware;
 using System;
@@ -123,6 +124,7 @@ try
     builder.Services.AddSingleton<IConsultas, ConsultasService>();
     builder.Services.AddSingleton<IHistoricoQueryService, HistoricoQueryService>();
     builder.Services.AddSingleton<IUserQueryService, UserQueryService>();
+    builder.Services.AddSingleton<IQA_DadosPublicos, QA_DadosPublicosRest>();
 
     builder.Logging.ClearProviders();
     builder.Logging.AddConsole();

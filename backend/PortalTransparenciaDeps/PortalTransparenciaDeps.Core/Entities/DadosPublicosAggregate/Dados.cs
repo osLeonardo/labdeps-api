@@ -13,7 +13,6 @@ namespace PortalTransparenciaDeps.Core.Entities.DadosPublicosAggregate
 {
     public class Dados : BaseEntity<int>, IAggregateRoot
     {
-
         public string Cnpj { get; private set; }
         public string CnpjMatriz { get; private set; }
         public string TipoUnidade { get; private set; }
@@ -104,7 +103,6 @@ namespace PortalTransparenciaDeps.Core.Entities.DadosPublicosAggregate
             SituacaoEspecial = Guard.Against.NullOrEmpty(situacaoEspecial, nameof(situacaoEspecial));
             DataSituacaoEspecial = Guard.Against.NullOrEmpty(dataSituacaoEspecial, nameof(dataSituacaoEspecial));
             NomeEnteFederativo = Guard.Against.NullOrEmpty(nomeEnteFederativo, nameof(nomeEnteFederativo));
-           
         }
 
         private Dados() { }
