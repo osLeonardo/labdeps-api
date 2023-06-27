@@ -7,36 +7,48 @@ using PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints;
 using System.Threading.Tasks;
 using System.Threading;
 using Swashbuckle.AspNetCore.Annotations;
+using System.Net;
+using PortalTransparenciaDeps.Core.Interfaces;
 
 namespace PortalTransparenciaDeps.Web.Endpoints.PortalTransparenciaEndpoints
 {
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}")]
     [AllowAnonymous]
-    public class GetHistoricoById : EndpointBaseAsync
+    public class GetHistoricoById : EndpointBaseSync
         .WithRequest<GetHistoricoRequest>
         .WithActionResult<GetHistoricoResponse>
     {
-        private readonly IRepository<HistoricoConsulta> _repository;
-        public GetHistoricoById(IRepository<HistoricoConsulta> repository)
+        private readonly IApiExternaQueryService _apiExterna;
+        public GetHistoricoById(IApiExternaQueryService apiExterna)
         {
-            _repository = repository;
+            _apiExterna = apiExterna;
         }
         [HttpGet(GetHistoricoRequest.Route)]
         [SwaggerOperation(
-            Summary = "Retorna o histórico de consultas",
-            Description = "Retorna o histórico de cada consulta já realizada",
+            Summary = "Retorna o histórico de consultas por meio do ID",
             Tags = new[] { "PortalTransparenciaEndpoints" })
         ]
-        public override async Task<ActionResult<GetHistoricoResponse>> HandleAsync([FromRoute] request, CancellationToken cancellationToken = default)
+        public async override Task<ActionResult> HandleAsync([FromRoute] GetHistoricoRequest request, CancellationToken cancellationToken = default)
         {
-            if (request == null) { return BadRequest(); }
+            var response = _apiExterna.ListBolsaFamilia(request.Id);
 
-            var historico = await _repository.GetHistoricoByIdAsync(request.);
+            if (response.StatussCode == HttpStatusCode.OK)
+            {
+                return Ok(new GetHistoricoResponse
+                {
+                    id
+                });
+            }
+            else
+            {
+                return StatusCode((int)response.StatusCode, response.ErrorReturn);
+            }
+            //se criar uma interface nova e uma query nova->Infrastructure->Data->Queries->HistóricoQueryService. Usar além de tudo os models.
+            //se basear nos endpoints que não contém response
 
-            if (historico == null) { return NotFound(); }
-
-            //adicionar todos os gets presentes em benefícios e sansões
-            //se basear em getbyid, de userloginendipoints
+            //Interface criada-> IConsultaHistoricoQueryService
+            //Query criada->  ConsultaHistoricoQueryService
         }
     }
+}

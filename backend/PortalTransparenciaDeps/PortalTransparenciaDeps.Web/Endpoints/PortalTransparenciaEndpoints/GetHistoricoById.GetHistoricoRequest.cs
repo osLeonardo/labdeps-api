@@ -2,7 +2,7 @@
 {
     public class GetHistoricoRequest
     {
-        public const string Route = "HistoricoConsulta/{Id:int}";
+        public const string Route = "historicoConsulta/{Id:int}";
         public int Id { get; set; }
     }
 }

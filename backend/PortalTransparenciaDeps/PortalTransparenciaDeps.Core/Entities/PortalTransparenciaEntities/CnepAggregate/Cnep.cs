@@ -32,6 +32,7 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Cnep
         public int IdPessoaJuridica { get; private set; }
         public int IdSancionado { get; private set; }
         public int IdTipoSancao { get; private set; }
+        public int IdOrgaoSansionador { get; private set; }
         public int IdHistoricoConsulta { get; private set; }
         public virtual List<Fundamentacao> Fundamentacao { get; private set; }
         public virtual FonteSancao FonteSancao { get; private set; }
@@ -43,7 +44,7 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Cnep
         public virtual ICollection<Fundamentacao> Fundamentacoes { get; private set; }
 
         protected Cnep() { }
-        private Cnep(string abrangenciaDefinidaDecisaoJudicial, string dataFimSancao, string dataInicioSancao, string dataOrigemInformacao, string dataPublicacaoSancao, string dataReferencia, string dataTransitadoJulgado, string detalhamentoPublicacao, string informacoesAdicionaisDoOrgaoSancionador, string linkPublicacao, string numeroProcesso, string textoPublicacao, string valorMulta, int idFundamentacao, int idFonteSancao, int idPessoaJuridica, int idSancionado, int idTipoSancao, int idHistoricoConsulta)
+        private Cnep(string abrangenciaDefinidaDecisaoJudicial, string dataFimSancao, string dataInicioSancao, string dataOrigemInformacao, string dataPublicacaoSancao, string dataReferencia, string dataTransitadoJulgado, string detalhamentoPublicacao, string informacoesAdicionaisDoOrgaoSancionador, string linkPublicacao, string numeroProcesso, string textoPublicacao, string valorMulta, int idFundamentacao, int idFonteSancao, int idPessoaJuridica, int idSancionado, int idTipoSancao, int idOrgaoSansionador, int idHistoricoConsulta)
         {
             AbrangenciaDefinidaDecisaoJudicial = Guard.Against.NullOrEmpty(abrangenciaDefinidaDecisaoJudicial, nameof(abrangenciaDefinidaDecisaoJudicial));
             DataFimSancao = Guard.Against.NullOrEmpty(dataFimSancao, nameof(dataFimSancao));
@@ -63,6 +64,7 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Cnep
             IdPessoaJuridica = Guard.Against.NegativeOrZero(idPessoaJuridica, nameof(idPessoaJuridica));
             IdSancionado = Guard.Against.NegativeOrZero(idSancionado, nameof(idSancionado));
             IdTipoSancao = Guard.Against.NegativeOrZero(idTipoSancao, nameof(idTipoSancao));
+            IdOrgaoSansionador = Guard.Against.NegativeOrZero(idOrgaoSansionador, nameof(idOrgaoSansionador));
             IdHistoricoConsulta = Guard.Against.NegativeOrZero(idHistoricoConsulta, nameof(idHistoricoConsulta));
         }
     }

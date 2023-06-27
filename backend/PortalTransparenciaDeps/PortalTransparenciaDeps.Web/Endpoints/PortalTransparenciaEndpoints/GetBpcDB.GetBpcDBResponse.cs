@@ -10,4 +10,13 @@
         public virtual Municipio Municipio { get; private set; }
         public virtual BeneficiarioBpc Beneficiario { get; private set; }
     }
+    public class BeneficiarioBpc
+    {
+        public string CpfFormatado { get; private set; }
+        public string CpfRepresentanteLegalFormatado { get; private set; }
+        public string Nis { get; private set; }
+        public string NisRepresentanteLegal { get; private set; }
+        public string Nome { get; private set; }
+        public string NomeRepresntanteLegal { get; private set; }
+    }
 }
