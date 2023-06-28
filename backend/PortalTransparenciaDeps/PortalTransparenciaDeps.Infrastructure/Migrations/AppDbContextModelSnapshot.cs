@@ -102,6 +102,307 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                     b.ToTable("historico_consulta");
                 });
 
+            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.DadosPublicosAggregate.CnaesSecundario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Cnaes_Secundarios")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("cnaes_secundarios");
+
+                    b.Property<int>("IdDado")
+                        .HasColumnType("integer")
+                        .HasColumnName("id_dado");
+
+                    b.HasKey("Id")
+                        .HasName("pk_cnaes_secundarios");
+
+                    b.HasIndex("IdDado");
+
+                    b.ToTable("cnaes_secundario");
+                });
+
+            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.DadosPublicosAggregate.Dados", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Bairro")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("bairro");
+
+                    b.Property<string>("CapitalSocialEmpresa")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("capital_social_empresa");
+
+                    b.Property<string>("Cep")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("cep");
+
+                    b.Property<string>("CnaePrincipal")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("cnae_principal");
+
+                    b.Property<string>("Cnpj")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("cnpj");
+
+                    b.Property<string>("CnpjMatriz")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("cnpj_matriz");
+
+                    b.Property<string>("Complemento")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("complemento");
+
+                    b.Property<string>("CorreioEletronico")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("correio_eletronico");
+
+                    b.Property<string>("DataExclusaoOpcaoPeloSimples")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("data_exclusao_opcao_pelo_simples");
+
+                    b.Property<string>("DataInicioAtividade")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("data_inicio_atividade");
+
+                    b.Property<string>("DataInicioAtividadeMatriz")
+                        .HasColumnType("text")
+                        .HasColumnName("data_inicio_atividade_matriz");
+
+                    b.Property<string>("DataOpcaoPeloSimples")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("data_opcao_pelo_simples");
+
+                    b.Property<string>("DataSituacaoCadastral")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("data_situacao_cadastral");
+
+                    b.Property<string>("DataSituacaoEspecial")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("data_situacao_especial");
+
+                    b.Property<string>("DescricaoTipoLogradouro")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("descricao_tipo_logradouro");
+
+                    b.Property<string>("Fax")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("fax");
+
+                    b.Property<string>("Logradouro")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("logradouro");
+
+                    b.Property<string>("MotivoSituacaoCadastral")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("motivo_situacao_cadastral");
+
+                    b.Property<string>("Municipio")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("municipio");
+
+                    b.Property<string>("MunicipioCodigoIbge")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("municipio_codigo_ibge");
+
+                    b.Property<string>("NaturezaJuridica")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("natureza_juridica");
+
+                    b.Property<string>("NomeCidadeExterior")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("nome_cidade_exterior");
+
+                    b.Property<string>("NomeEnteFederativo")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("nome_ente_federativo");
+
+                    b.Property<string>("NomeFantasia")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("nome_fantasia");
+
+                    b.Property<string>("NomePais")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("nome_pais");
+
+                    b.Property<string>("Numero")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("numero");
+
+                    b.Property<string>("OpcaoMei")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("opcao_mei");
+
+                    b.Property<string>("OpcaoPeloSimples")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("opcao_pelo_simples");
+
+                    b.Property<string>("Porte")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("porte");
+
+                    b.Property<string>("QualificacaoResponsavel")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("qualificacao_responsavel");
+
+                    b.Property<string>("RazaoSocial")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("razao_social");
+
+                    b.Property<string>("SituacaoCadastral")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("situacao_cadastral");
+
+                    b.Property<string>("SituacaoEspecial")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("situacao_especial");
+
+                    b.Property<string>("Telefone01")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("telefone01");
+
+                    b.Property<string>("Telefone02")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("telefone02");
+
+                    b.Property<string>("TipoUnidade")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("tipo_unidade");
+
+                    b.Property<string>("Uf")
+                        .IsRequired()
+                        .HasMaxLength(2)
+                        .HasColumnType("character varying(2)")
+                        .HasColumnName("uf");
+
+                    b.HasKey("Id")
+                        .HasName("pk_dados");
+
+                    b.ToTable("dados");
+                });
+
+            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.DadosPublicosAggregate.Socio", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Documento")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("documento");
+
+                    b.Property<int>("IdDado")
+                        .HasColumnType("integer")
+                        .HasColumnName("id_dado");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("nome");
+
+                    b.Property<string>("Qualificacao")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("qualificacao");
+
+                    b.HasKey("Id")
+                        .HasName("pk_socios");
+
+                    b.HasIndex("IdDado");
+
+                    b.ToTable("socio");
+                });
+
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.LoginAggregate.UserLogin", b =>
                 {
                     b.Property<int>("Id")
@@ -350,6 +651,43 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                 });
 
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.BolsaFamiliaAggregate.TitularBolsaFamilia", b =>
+            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.DadosPublicosAggregate.CnaesSecundario", b =>
+                {
+                    b.HasOne("PortalTransparenciaDeps.Core.Entities.DadosPublicosAggregate.Dados", "Dados")
+                        .WithMany("CnaesSecundarios")
+                        .HasForeignKey("IdDado")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired()
+                        .HasConstraintName("fk_cnaes_secundarios_dados_id_dado");
+
+                    b.Navigation("Dados");
+                });
+
+            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.DadosPublicosAggregate.Socio", b =>
+                {
+                    b.HasOne("PortalTransparenciaDeps.Core.Entities.DadosPublicosAggregate.Dados", "dado")
+                        .WithMany("Socios")
+                        .HasForeignKey("IdDado")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired()
+                        .HasConstraintName("fk_socios_dados_id_dado");
+
+                    b.Navigation("dado");
+                });
+
+            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.LoginAggregate.UserLogin", b =>
+                {
+                    b.HasOne("PortalTransparenciaDeps.Core.Entities.PerfilAggregate.Perfil", "Perfil")
+                        .WithMany("Logins")
+                        .HasForeignKey("IdPerfil")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired()
+                        .HasConstraintName("fk_user_logins_perfis_id_perfil");
+
+                    b.Navigation("Perfil");
+                });
+
+            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.PerfilMetricaAggregate.ParametrizacaoMetrica", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -425,6 +763,14 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                 });
 
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.BpcAggregate.Bpc", b =>
+            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.DadosPublicosAggregate.Dados", b =>
+                {
+                    b.Navigation("CnaesSecundarios");
+
+                    b.Navigation("Socios");
+                });
+
+            modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.LoginAggregate.UserLogin", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

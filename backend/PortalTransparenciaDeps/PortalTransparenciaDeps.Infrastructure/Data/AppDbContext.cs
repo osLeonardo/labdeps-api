@@ -1,7 +1,8 @@
-﻿using Ardalis.EFCore.Extensions;
+using Ardalis.EFCore.Extensions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using PortalTransparenciaDeps.Core.Entities.ConsultaAggregate;
+using PortalTransparenciaDeps.Core.Entities.DadosPublicosAggregate;
 using PortalTransparenciaDeps.Core.Entities.LoginAggregate;
 using PortalTransparenciaDeps.Core.Entities.PerfilAggregate;
 using PortalTransparenciaDeps.Core.Entities.PerfilMetricaAggregate;
@@ -76,6 +77,9 @@ namespace PortalTransparenciaDeps.Infrastructure.Data
         public DbSet<HonorariosAdvocaticio> HonorariosAdvocaticios => Set<HonorariosAdvocaticio>();
         public DbSet<Jetons> Jeton => Set<Jetons>();
         public DbSet<Rubrica> Rubricas => Set<Rubrica>();
+        public DbSet<Socio> Socios => Set<Socio>();
+        public DbSet<Dados> Dados => Set<Dados>();
+        public DbSet<CnaesSecundario> CnaesSecundarios => Set<CnaesSecundario>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -84,6 +88,7 @@ namespace PortalTransparenciaDeps.Infrastructure.Data
             modelBuilder.ApplyAllConfigurationsFromCurrentAssembly();
 
             modelBuilder.ConvertToSnakeCase();
+
         }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())

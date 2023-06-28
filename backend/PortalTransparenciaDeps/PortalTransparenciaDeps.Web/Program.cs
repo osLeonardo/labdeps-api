@@ -1,4 +1,4 @@
-﻿using Ardalis.ListStartupServices;
+using Ardalis.ListStartupServices;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
@@ -19,6 +19,7 @@ using PortalTransparenciaDeps.Core.Services.PortalTransparenciaServices;
 using PortalTransparenciaDeps.Infrastructure;
 using PortalTransparenciaDeps.Infrastructure.Data;
 using PortalTransparenciaDeps.Infrastructure.Data.Queries;
+using PortalTransparenciaDeps.Infrastructure.QA_DadosPublicos;
 using PortalTransparenciaDeps.SharedKernel.Configuration;
 using PortalTransparenciaDeps.SharedKernel.Middleware;
 using System;
@@ -132,6 +133,8 @@ try
     builder.Services.AddSingleton<IPep, PepService>();
     builder.Services.AddSingleton<IRemuneracao, RemuneracaoService>();
     builder.Services.AddSingleton<IApiExternaQueryService, ApiExternaQueryService>();
+    builder.Services.AddSingleton<IQA_DadosPublicos, QA_DadosPublicosRest>();
+    builder.Services.AddSingleton<IDadosPublicosDBService, DadosPublicosDBService>();
 
     builder.Logging.ClearProviders();
     builder.Logging.AddConsole();
