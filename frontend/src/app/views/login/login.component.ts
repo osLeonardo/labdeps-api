@@ -19,6 +19,15 @@ export class LoginComponent {
     private router: Router,
   ) {}
 
+  esqueceu(): void {
+    this.snackBar.open("Favor, Contate o Suporte Para Recuperar a Senha.", "Fechar", {
+      panelClass: 'snackbar-error',
+      horizontalPosition: 'right',
+      verticalPosition: 'top',
+      duration: 5000,
+    })
+  }
+
   login(): void {
     this.authService.verifyLogin(this.username, this.password).subscribe(
       response => {

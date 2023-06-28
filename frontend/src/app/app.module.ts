@@ -1,5 +1,4 @@
 import { ReadConsultasComponent } from './components/consultas/read-consultas/read-consultas.component';
-import { UsuariosService } from './components/usuarios/usuarios.service';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -56,7 +55,7 @@ import { CpfBpcComponent } from './components/consultas/portal-transparencia/cpf
 import { CpfRemuneracaoComponent } from './components/consultas/portal-transparencia/cpf-remuneracao/cpf-remuneracao.component';
 import { CpfCepimComponent } from './components/consultas/portal-transparencia/cpf-cepim/cpf-cepim.component';
 import { CnpjDadosPublicosComponent } from './components/consultas/dados-publicos/cnpj-dados-publicos/cnpj-dados-publicos.component';
-
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 registerLocaleData(localePt)
 
@@ -116,11 +115,12 @@ registerLocaleData(localePt)
     MatIconModule,
     MatCardModule,
     MatButtonModule,
-    NgIf,
+    MatTooltipModule,
     MatSnackBarModule,
     MatExpansionModule,
     MatPaginatorModule,
     MatSortModule,
+    NgIf,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false
     }),
