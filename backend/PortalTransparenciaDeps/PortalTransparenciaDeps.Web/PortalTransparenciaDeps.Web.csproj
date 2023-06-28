@@ -16,41 +16,6 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <Compile Remove="Endpoints\NovaPasta\**" />
-    <Compile Remove="Endpoints\PortalTransparenciaEndpoints\BolsaFamiliaEndpoint\NovaPasta\**" />
-    <Compile Remove="Endpoints\PortalTransparenciaEndpoints\NovaPasta2\**" />
-    <Compile Remove="Endpoints\PortalTransparenciaEndpoints\NovaPasta3\**" />
-    <Compile Remove="Endpoints\PortalTransparenciaEndpoints\NovaPasta\**" />
-    <Content Remove="Endpoints\NovaPasta\**" />
-    <Content Remove="Endpoints\PortalTransparenciaEndpoints\BolsaFamiliaEndpoint\NovaPasta\**" />
-    <Content Remove="Endpoints\PortalTransparenciaEndpoints\NovaPasta2\**" />
-    <Content Remove="Endpoints\PortalTransparenciaEndpoints\NovaPasta3\**" />
-    <Content Remove="Endpoints\PortalTransparenciaEndpoints\NovaPasta\**" />
-    <EmbeddedResource Remove="Endpoints\NovaPasta\**" />
-    <EmbeddedResource Remove="Endpoints\PortalTransparenciaEndpoints\BolsaFamiliaEndpoint\NovaPasta\**" />
-    <EmbeddedResource Remove="Endpoints\PortalTransparenciaEndpoints\NovaPasta2\**" />
-    <EmbeddedResource Remove="Endpoints\PortalTransparenciaEndpoints\NovaPasta3\**" />
-    <EmbeddedResource Remove="Endpoints\PortalTransparenciaEndpoints\NovaPasta\**" />
-    <None Remove="Endpoints\NovaPasta\**" />
-    <None Remove="Endpoints\PortalTransparenciaEndpoints\BolsaFamiliaEndpoint\NovaPasta\**" />
-    <None Remove="Endpoints\PortalTransparenciaEndpoints\NovaPasta2\**" />
-    <None Remove="Endpoints\PortalTransparenciaEndpoints\NovaPasta3\**" />
-    <None Remove="Endpoints\PortalTransparenciaEndpoints\NovaPasta\**" />
-    <Compile Remove="Endpoints\PortalTransparenciaEndpoints\Create.CreateRequest.cs" />
-    <Compile Remove="Endpoints\PortalTransparenciaEndpoints\Create.CreateResponse.cs" />
-    <Compile Remove="Endpoints\PortalTransparenciaEndpoints\Create.cs" />
-    <Compile Remove="Endpoints\PortalTransparenciaEndpoints\PepEndpoint\CreatePepResponse.cs" />
-    <Compile Remove="Endpoints\NovaPasta1\NovaPasta\**" />
-    <Compile Remove="Endpoints\NovaPasta\**" />
-    <Content Remove="Endpoints\NovaPasta1\NovaPasta\**" />
-    <Content Remove="Endpoints\NovaPasta\**" />
-    <EmbeddedResource Remove="Endpoints\NovaPasta1\NovaPasta\**" />
-    <EmbeddedResource Remove="Endpoints\NovaPasta\**" />
-    <None Remove="Endpoints\NovaPasta1\NovaPasta\**" />
-    <None Remove="Endpoints\NovaPasta\**" />
-  </ItemGroup>
-  
-  <ItemGroup>
     <PackageReference Include="Ardalis.ApiEndpoints" Version="4.0.1" />
     <PackageReference Include="Ardalis.ListStartupServices" Version="1.1.4" />
     <PackageReference Include="Ardalis.Result" Version="4.1.0" />
