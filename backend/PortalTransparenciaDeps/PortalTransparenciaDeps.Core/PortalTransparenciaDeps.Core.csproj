@@ -28,6 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Entities\DadosPublicosAggregate\Specifications\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>
 
