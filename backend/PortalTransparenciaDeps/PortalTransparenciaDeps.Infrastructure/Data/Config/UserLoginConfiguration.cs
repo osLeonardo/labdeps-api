@@ -17,6 +17,12 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Config
         {
             builder.Property(p => p.Id)
                 .IsRequired();
+            builder.Property(p => p.Nome) 
+                .HasMaxLength(40)
+                .IsRequired();
+            builder.Property(p => p.Sobrenome)
+                .HasMaxLength(100)
+                .IsRequired();
             builder.Property(p => p.Login)
                 .HasMaxLength(40)
                 .IsRequired();
@@ -26,12 +32,8 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Config
             builder.Property(p => p.PerfilUsuario)
                 .HasDefaultValue(PerfilUsuario.Usuario)
                 .IsRequired();
-            builder.Property(p => p.IdPerfil)
+            builder.Property(p => p.Ativo)
                 .IsRequired();
-            builder.HasOne(p => p.Perfil)
-                .WithMany(m => m.Logins)
-                .HasForeignKey(p => p.IdPerfil)
-                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

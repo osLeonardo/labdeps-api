@@ -14,33 +14,87 @@ namespace PortalTransparenciaDeps.Core.Entities.LoginAggregate
 {
     public class UserLogin : BaseEntity<int>, IAggregateRoot
     {
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public PerfilUsuario PerfilUsuario { get; set; }
-        public int IdPerfil { get; set; }
-        public virtual Perfil Perfil { get; set; }
+        public string Nome { get ; private set; }
+        public string Sobrenome { get; private set; }
+        public string Login { get; private set; }
+        public string Password { get; private set; }
+        public PerfilUsuario PerfilUsuario { get; private set; }
+        public bool Ativo { get; private set; }
 
         public virtual ICollection<HistoricoConsulta> Users { get; private set; }
 
-        private UserLogin(string login, string password, PerfilUsuario perfilUsuario, Perfil perfil) 
+        protected UserLogin() { }
+        private UserLogin(string nome, string sobrenome, string login, string password, PerfilUsuario perfilUsuario) 
         {
+            Nome = Guard.Against.NullOrEmpty(nome, nameof(nome));
+            Sobrenome = Guard.Against.NullOrEmpty(sobrenome, nameof(sobrenome));
             Login = Guard.Against.NullOrEmpty(login, nameof(login));
             Password = Guard.Against.NullOrEmpty(password, nameof(login));
             PerfilUsuario = Guard.Against.Null(perfilUsuario, nameof(perfilUsuario));
-            IdPerfil = Guard.Against.NegativeOrZero(perfil.Id, nameof(perfil.Id));
+            Ativo = true;
         }
 
-        private UserLogin() { }
-
-        public class Factory
+        public static UserLogin NewUser(string nome, string sobrenome, string login, string password, PerfilUsuario perfilUsuario)
         {
-            public static UserLogin NewUser(string login, string password, PerfilUsuario perfilUsuario, Perfil perfil)
+            return new UserLogin(nome, sobrenome, login, password, perfilUsuario);
+        }
+
+        private bool NomeChanged(string nome)
+        {
+            if(Nome != nome) { return true; } 
+            return false;
+        }
+        private bool SobrenomeChanged(string sobrenome)
+        {
+            if (Sobrenome != sobrenome) { return true; }
+            return false;
+        }
+        private bool LoginChanged(string login)
+        {
+            if (Login != login) { return true; }
+            return false;
+        }
+        private bool PasswordChanged(string password)
+        {
+            if (Password != password) { return true; }
+            return false;
+        }
+        private bool PerfilChanged(PerfilUsuario perfilUsuario)
+        {
+            if (PerfilUsuario != perfilUsuario) { return true; }
+            return false;
+        }
+        private bool AtivoChanged(bool ativo)
+        {
+            if (Ativo != ativo) { return true; }
+            return false;
+        }
+        public void UpdateUser(string nome, string sobrenome, string login, string password, PerfilUsuario perfilUsuario, bool ativo)
+        {
+            if (NomeChanged(nome)) 
             {
-                return new UserLogin(login, password, perfilUsuario, perfil);
+                Nome = Guard.Against.NullOrEmpty(nome, nameof(nome));
+            }
+            if(SobrenomeChanged(sobrenome))
+            {
+                Sobrenome = Guard.Against.NullOrEmpty(sobrenome, nameof(sobrenome));
+            }
+            if (LoginChanged(login))
+            {
+                Login = Guard.Against.NullOrEmpty(login, nameof(login));
+            }
+            if (PasswordChanged(password))
+            {
+                Password = Guard.Against.NullOrEmpty(password, nameof(login));
+            }
+            if (PerfilChanged(perfilUsuario))
+            {
+                PerfilUsuario = Guard.Against.Null(perfilUsuario, nameof(perfilUsuario));
+            }
+            if (AtivoChanged(ativo))
+            {
+                Ativo = Guard.Against.Null(ativo, nameof(ativo));
             }
         }
-
-        
     }
-
 }

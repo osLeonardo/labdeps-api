@@ -1,23 +1,26 @@
-<div class="corpo">  
-<mat-card class="cardCreate">
-    <mat-card-title Novo Usuario></mat-card-title>
-    <form>
-
+<mat-card>
+    <mat-card-title>Novo Usuario</mat-card-title>
+    <mat-card-content>
           <mat-form-field appearance="fill">
-            <mat-label>Nome do Usuário</mat-label>
-            <input matInput [(ngModel)]="perfil.nome" name="login">
+            <mat-label>Nome</mat-label>
+            <input matInput [(ngModel)]="usuario.nome" name="nome">
           </mat-form-field>
-
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Sobrenome</mat-label>
+            <input matInput [(ngModel)]="usuario.sobrenome" name="sobrenome">
+          </mat-form-field>
+          <br>
           <mat-form-field appearance="fill">
               <mat-label>Login</mat-label>
-              <input matInput [(ngModel)]="usuario.login" name="Usuário">
+              <input matInput [(ngModel)]="usuario.login" name="login">
           </mat-form-field>
-
+          <br>
           <mat-form-field appearance="fill">
             <mat-label>Senha</mat-label>
             <input matInput [(ngModel)]="usuario.password" name="senha" type="password">
           </mat-form-field>
-
+          <br>
           <mat-form-field>
             <mat-label>Perfil do usuário</mat-label>
             <mat-select [(ngModel)]="usuario.perfilUsuario" name="perfilUsuario">
@@ -32,22 +35,13 @@
               <mat-option value="8">Financeiro</mat-option>
             </mat-select>
           </mat-form-field>
-
-
-          <mat-form-field appearance="fill">
-            <mat-label>Ordem</mat-label>
-            <input matInput [(ngModel)]="perfil.ordem" name="ordem">
-          </mat-form-field>
-
-    </form>
-    <div class="buttons">
-      <button  mat-raised-button color="primary" id="deps" (click)="CadastrarUsuario()" >
-        Salvar
-     </button>
-     
-      <button  mat-raised-button id="cancelar" (click)="cancelar()" >
-         Cancelar
-      </button> 
-    </div>
+          <div class="buttons">
+            <button  mat-raised-button id="cancelar" (click)="cancelar()" >
+               Cancelar
+            </button> 
+            <button  mat-raised-button color="primary" id="deps" (click)="CadastrarUsuario()" class="buttonAlign">
+              Salvar
+           </button>
+          </div>
+    </mat-card-content>
 </mat-card>
-</div>

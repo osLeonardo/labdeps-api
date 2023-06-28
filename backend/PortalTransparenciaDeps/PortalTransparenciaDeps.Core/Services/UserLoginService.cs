@@ -20,32 +20,33 @@ namespace PortalTransparenciaDeps.Core.Services
             _repository = repository;
         }
 
-        public async Task<UserLogin> CreateUser(string login, string password, PerfilUsuario perfilUsuario, Perfil perfil)
+        public async Task<UserLogin> CreateUser(string nome, string sobrenome, string login, string password, PerfilUsuario perfilUsuario)
         {
+            Guard.Against.NullOrEmpty(nome, nameof(nome));
+            Guard.Against.NullOrEmpty(sobrenome, nameof(sobrenome));
             Guard.Against.NullOrEmpty(login, nameof(login));
             Guard.Against.NullOrEmpty(password, nameof(password));
             Guard.Against.Null(perfilUsuario, nameof(perfilUsuario));
-            Guard.Against.NegativeOrZero(perfil.Id, nameof(perfil.Id));
 
-            UserLogin userLogin = UserLogin.Factory.NewUser(login, password, perfilUsuario, perfil);
+            UserLogin user = UserLogin.NewUser(nome, sobrenome, login, password, perfilUsuario);
 
+            await _repository.AddAsync(user);
 
-            await _repository.AddAsync(userLogin);
-
-            return userLogin;            
+            return user;
         }
 
-        public async Task<UserLogin> UpdateUser(int id, string login, string password, PerfilUsuario perfilUsuario)
+        public async Task<UserLogin> UpdateUser(int id, string nome, string sobrenome, string login, string password, PerfilUsuario perfilUsuario, bool ativo)
         {
+            Guard.Against.NullOrEmpty(nome, nameof(nome));
+            Guard.Against.NullOrEmpty(sobrenome, nameof(sobrenome));
             Guard.Against.NullOrEmpty(login, nameof(login));
             Guard.Against.NullOrEmpty(password, nameof(password));
             Guard.Against.Null(perfilUsuario, nameof(perfilUsuario));
+            Guard.Against.Null(ativo, nameof(ativo));
 
             UserLogin user = await _repository.GetByIdAsync(id);
 
-            user.Login = login;
-            user.Password = password;
-            user.PerfilUsuario = perfilUsuario;
+            user.UpdateUser(nome, sobrenome, login, password, perfilUsuario, ativo);
 
             await _repository.UpdateAsync(user);
 

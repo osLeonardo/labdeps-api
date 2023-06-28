@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { CreateUsuarios } from '../models/usuarios.Model';
+import { CreateUsuarios, Usuarios } from '../models/usuarios.Model';
 import { AdministracaoService } from '../administracao.service';
 import { Router } from '@angular/router';
-import { CreatePerfil } from '../models/perfil.Model';
 
 @Component({
   selector: 'app-usuario-create',
@@ -12,37 +11,24 @@ import { CreatePerfil } from '../models/perfil.Model';
 export class UsuarioCreateComponent {
 
   usuario: CreateUsuarios = {
-    id: 0,
+    nome: '',
+    sobrenome: '',
     login: '',
     password: '',
-    perfilUsuario: 0,
-    perfil: {
-      id: 0,
-    }
+    perfilUsuario: 0
   }
-
-  perfil: CreatePerfil= {
-    nome: '',
-    ordem: 1,
-    id: 0,
-    ativo: true
-  }
+  user: Usuarios;
 
   constructor(private AdministracaoService: AdministracaoService, private router: Router,) {}
 
   CadastrarUsuario(): void {
 
-    this.AdministracaoService.cadastrarperfil(this.perfil).subscribe((perfil) => {
-      this.usuario.perfil.id = perfil.id
-      this.AdministracaoService.Cadastrar(this.usuario).subscribe(() => {
-
-        this.router.navigate(['/administracao'])
-       }) 
-    })
-
-
+    this.AdministracaoService.Cadastrar(this.usuario).subscribe(user => {
+      this.user = user;
+      this.router.navigate(['/administracao']);
+     })
   }
   cancelar(): void {
-    this.router.navigate(['/administracao'])
+    this.router.navigate(['/administracao']);
   }
 }

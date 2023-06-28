@@ -22,11 +22,10 @@ export class LoginComponent {
   login(): void {
     this.authService.verifyLogin(this.username, this.password).subscribe(
       response => {
-        if (response.idPerfil) {
+        if (response.token) {
           this.authService.setAuthenticated;
           this.authService.setToken(response.token);
           this.authService.setUserId(response.id);
-          this.authService.setIdPerfil(response.idPerfil);
           this.authService.setUserPerfil(response.perfilUsuario);          
           this.router.navigate(['']);
           this.openSuccessSnackBar();

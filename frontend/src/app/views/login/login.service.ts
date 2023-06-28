@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { Observable } from "rxjs";
-import { PerfilResponse } from "src/app/components/administracao/models/usuarios.Model";
+import { Usuarios } from "src/app/components/administracao/models/usuarios.Model";
 import { VerifyRequest, verifyLogin } from "./login.model";
 
 @Injectable({
@@ -12,24 +12,34 @@ export class AuthService {
   private apiUrl = 'http://localhost:57679/api/v1';
   private token: string;
   private userId: number;
-  private IdPerfil: number;
   private userPerfil: number;
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  setIdPerfil(IdPerfil: number): void {
-    this.IdPerfil = IdPerfil;
-    sessionStorage.setItem('idPerfil', JSON.stringify(IdPerfil));
-  }
-
-  getNomePerfil(): Promise<string> {
-    const url = `${this.apiUrl}/perfil/${this.IdPerfil}`;
+  getNome(): Promise<string> {
+    const url = `${this.apiUrl}/userLogin/${this.userId}`;
   
     return new Promise<string>((resolve, reject) => {
-      this.http.get<PerfilResponse>(url).subscribe(
+      this.http.get<Usuarios>(url).subscribe(
         (perfil) => {
           const nome = perfil.nome;
           resolve(nome);
+        },
+        (error) => {
+          reject(error);
+        }
+      );
+    });
+  }
+
+  getSobrenome(): Promise<string> {
+    const url = `${this.apiUrl}/userLogin/${this.userId}`;
+  
+    return new Promise<string>((resolve, reject) => {
+      this.http.get<Usuarios>(url).subscribe(
+        (perfil) => {
+          const sobrenome = perfil.sobrenome;
+          resolve(sobrenome);
         },
         (error) => {
           reject(error);

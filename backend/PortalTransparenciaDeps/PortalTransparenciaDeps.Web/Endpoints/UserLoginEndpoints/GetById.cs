@@ -14,15 +14,15 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}")]
     [AllowAnonymous]
-    public class GetById : EndpointBaseSync
+    public class GetById : EndpointBaseAsync
         .WithRequest<GetUserRequest>
         .WithActionResult<GetUserResponse>
     {
-        private readonly IUserQueryService _userQuery;
+        private readonly IRepository<UserLogin> _repository;
 
-        public GetById(IUserQueryService userQuery)
+        public GetById(IRepository<UserLogin> repository)
         {
-            _userQuery = userQuery;            
+            _repository = repository;
         }
 
         [HttpGet(GetUserRequest.Route)]
@@ -31,23 +31,23 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
             Description = "Retorna um login de usuário pesquisado por Id",
             Tags = new[] { "UserLoginEndpoints" })
         ]
-        public override ActionResult<GetUserResponse> Handle([FromRoute]GetUserRequest request)
+        public override async Task<ActionResult<GetUserResponse>> HandleAsync([FromRoute]GetUserRequest request, CancellationToken cancellationToken = default)
         {
-            if (request.Id == null) { return BadRequest(); }
+            if (request == null) { return BadRequest(); }
 
-            var user = _userQuery.GetUser(request.Id);
-            
-            if (user == null) { return NoContent(); }
+            var user = await _repository.GetByIdAsync(request.Id);
+
+            if (user == null) { return NotFound(); }
 
             return Ok(new GetUserResponse
             {
                 Id = user.Id,
+                Nome = user.Nome,
+                Sobrenome = user.Sobrenome,
                 Login = user.Login,
                 Password = user.Password,
                 PerfilUsuario = user.PerfilUsuario,
-                IdPerfil = user.IdPerfil,
-                Nome = user.Nome,
-                Ativo = user.Ativo,
+                Ativo = user.Ativo
             });
         }
     }

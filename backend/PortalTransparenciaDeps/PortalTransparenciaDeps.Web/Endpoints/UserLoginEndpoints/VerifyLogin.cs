@@ -53,14 +53,16 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
             }
 
             var user = users.FirstOrDefault(u => u.Login == request.Login && u.Password == request.Password);
-            if (users.Any(users => users.Login == request.Login && users.Password == request.Password))
+
+            if (users.Any(users =>
+                users.Login == request.Login &&
+                users.Password == request.Password &&
+                users.Ativo))
             {
                 string token = GenerateToken();
-
                 return Ok(new VerificationResponse
                 {
                     Id = user.Id,
-                    IdPerfil = user.IdPerfil,
                     Token = token,
                     PerfilUsuario = user.PerfilUsuario,
                 });
@@ -70,7 +72,6 @@ namespace PortalTransparenciaDeps.Web.Endpoints.UserLoginEndpoints
                 return BadRequest(new VerificationResponse
                 {
                     Id = -1,
-                    IdPerfil = -1,
                     Token = null,
                     PerfilUsuario = default,
                 });

@@ -1,20 +1,19 @@
 
 export interface CreateUsuarios {
-    id: number
+    nome: string
+    sobrenome: string
     login: string
     password: string
     perfilUsuario: number
-    perfil: idPerfil
   }
 
-  export interface idPerfil {
-    id: number
-  }
-
-  export interface PerfilResponse {
+  export interface Usuarios {
     id: number
     nome: string
+    sobrenome: string
+    login: string
+    password: string
+    perfilUsuario: number
     ativo: boolean
-    ordem: number
   }
 

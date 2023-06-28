@@ -2,8 +2,6 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { DOCUMENT } from '@angular/common';
 import { AuthService } from 'src/app/views/login/login.service';
-import { UsuarioCreateComponent } from '../../administracao/usuario-create/usuario-create.component';
-import { UsuarioReadComponent } from '../../administracao/usuario-read/usuario-read.component';
 
 @Component({
   selector: 'app-nav',
@@ -33,7 +31,7 @@ export class NavComponent implements OnInit{
   }
 
   async ngOnInit(): Promise<void> {
-    this.nome = await this.loginService.getNomePerfil();
+    this.nome = await this.loginService.getNome();
     this.id = this.loginService.getUserId();
   }
 }

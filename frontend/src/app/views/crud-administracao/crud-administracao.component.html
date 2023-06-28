@@ -1,11 +1,10 @@
-
-<button mat-raised-button id="deps" routerLink="/administracao/cadastrar" (click)="navegarParaCadastrarUsuario()">
-    <i class="material-icons"> 
-        add
-    </i>
-    <span class="descricao">Adicionar Usuário</span>
-</button>
-
-<app-usuario-read>
-
-</app-usuario-read>
+<mat-card>
+    <mat-card-content>
+        <app-usuario-read></app-usuario-read>
+        <div>
+            <button mat-raised-button id="deps" routerLink="/administracao/cadastrar" (click)="navegarParaCadastrarUsuario()">
+                <span class="descricao">Adicionar Usuário</span>
+            </button>
+        </div>  
+    </mat-card-content>
+</mat-card>

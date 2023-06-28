@@ -376,15 +376,21 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("IdPerfil")
-                        .HasColumnType("integer")
-                        .HasColumnName("id_perfil");
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("boolean")
+                        .HasColumnName("ativo");
 
                     b.Property<string>("Login")
                         .IsRequired()
                         .HasMaxLength(40)
                         .HasColumnType("character varying(40)")
                         .HasColumnName("login");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("character varying(40)")
+                        .HasColumnName("nome");
 
                     b.Property<string>("Password")
                         .IsRequired()
@@ -398,10 +404,14 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                         .HasDefaultValue(4)
                         .HasColumnName("perfil_usuario");
 
+                    b.Property<string>("Sobrenome")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("sobrenome");
+
                     b.HasKey("Id")
                         .HasName("pk_user_logins");
-
-                    b.HasIndex("IdPerfil");
 
                     b.ToTable("user_login");
                 });
@@ -648,8 +658,6 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
 
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.PerfilAggregate.Perfil", b =>
                 {
-                    b.Navigation("Logins");
-
                     b.Navigation("PerfilMetricas");
                 });
 

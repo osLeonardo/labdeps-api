@@ -1,34 +1,32 @@
 <mat-card>
     <mat-card-header>Alterações</mat-card-header>
     <mat-card-content>
+        <mat-form-field appearance="fill" class="inputNome">
+            <mat-label>Nome</mat-label>
+            <input matInput [(ngModel)]="usuario.nome" placeholder="Nome" name="nome">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="inputSobrenome">
+            <mat-label>Sobrenome</mat-label>
+            <input matInput [(ngModel)]="usuario.sobrenome" placeholder="sobrenome" name="sobrenome">
+        </mat-form-field>
         <mat-form-field appearance="fill" class="inputLogin">
             <mat-label>Login</mat-label>
             <input matInput required [(ngModel)]="usuario.login" placeholder="Login" name="login">
         </mat-form-field>
-        <br>
         <mat-form-field appearance="fill" class="inputSenha">
             <mat-label>Senha</mat-label>
             <input matInput required [(ngModel)]="usuario.password" placeholder="Senha" name="password">
         </mat-form-field>
-        <br>
-        <mat-form-field appearance="fill" class="inputNome">
-            <mat-label>Nome</mat-label>
-            <input matInput [(ngModel)]="usuario.nome" placeholder="Nome" name="nome">
-        </mat-form-field>       
+        
+        <div class="buttons">
+            <button mat-raised-button id="cancelar" (click)="Cancelar()" class="buttonCancelar">
+                <span class="descricaoCancelar">Cancelar</span>
+            </button>
+            <button mat-raised-button id="confirmarAlteracoes" (click)="Confirmar()">
+                <span class="descricaoConfirmar">Salvar</span>
+            </button> 
+        </div>    
     </mat-card-content>
 </mat-card>
-
-<button mat-raised-button id="cancelar" (click)="Cancelar()">
-    <i class="material-icons">
-        highlight_off 
-    </i>
-    <span class="descricaoCancelar">Cancelar</span>
-</button>
-<button mat-raised-button id="confirmarAlteracoes" (click)="Confirmar()">
-    <i class="material-icons">
-        check_circle_outline
-    </i>
-    <span class="descricaoConfirmar">Confirmar Alterações</span>
-</button>
 
 

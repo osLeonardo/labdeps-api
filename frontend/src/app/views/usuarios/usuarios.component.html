@@ -1,7 +1,13 @@
-<app-usuarios-dados></app-usuarios-dados>
-<button mat-raised-button id="alterarUsuario" (click)="Alterar()">
-    <i class="material-icons">
-        edit
-    </i>
-    <span class="descricao">Alterar Dados</span>
-</button>
+<mat-card>
+    <mat-card-header>Dados do Usuário</mat-card-header>
+    <mat-card-content>
+        <div>
+            <app-usuarios-dados></app-usuarios-dados>
+        </div>
+        <div class="buttonAling">
+            <button mat-raised-button id="alterarUsuario" (click)="Alterar()">
+                <span class="descricao">Alterar Dados</span>
+            </button>
+        </div>
+    </mat-card-content>
+</mat-card>
