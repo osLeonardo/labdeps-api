@@ -19,7 +19,7 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Config.PortalTransparencia
                 .IsRequired();
             builder.Property(p => p.Nome) 
                 .IsRequired();
-            builder.Property(p => p.NomeRepresntanteLegal) 
+            builder.Property(p => p.NomeRepresentanteLegal) 
                 .IsRequired();
             builder.Property(p => p.CpfFormatado) 
                 .IsRequired();

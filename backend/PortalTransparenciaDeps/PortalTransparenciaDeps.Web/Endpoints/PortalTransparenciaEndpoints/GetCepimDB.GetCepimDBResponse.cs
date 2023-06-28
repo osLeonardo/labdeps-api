@@ -3,41 +3,41 @@ namespace PortalTransparenciaDeps.Web.Endpoints.PortalTransparenciaEndpoints
 {
     public class GetCepimDBResponse
     {
-        public string DataReferencia { get; private set; }
-        public string Motivo { get; private set; }
-        public virtual Convenio Convenio { get; private set; }
-        public virtual OrgaoSuperior OrgaoSuperior { get; private set; }
-        public virtual PessoaJuridica PessoaJuridica { get; private set; }
+        public string DataReferencia { get; set; }
+        public string Motivo { get; set; }
+        public virtual Convenio Convenio { get; set; }
+        public virtual OrgaoSuperior OrgaoSuperior { get; set; }
+        public virtual PessoaJuridica PessoaJuridica { get; set; }
     }
     public class Convenio
     {
-        public string Codigo { get; private set; }
-        public string Numero { get; private set; }
-        public string Objeto { get; private set; }
+        public string Codigo { get; set; }
+        public string Numero { get; set; }
+        public string Objeto { get; set; }
     }
     public class OrgaoSuperior
     {
-        public string Cnpj { get; private set; }
-        public string CodigoSIAFI { get; private set; }
-        public string DescricaoPoder { get; private set; }
-        public string Nome { get; private set; }
-        public string Sigla { get; private set; }
-        public virtual OrgaoMaximo OrgaoMaximo { get; private set; }
+        public string Cnpj { get; set; }
+        public string CodigoSIAFI { get; set; }
+        public string DescricaoPoder { get; set; }
+        public string Nome { get; set; }
+        public string Sigla { get; set; }
+        public virtual OrgaoMaximo OrgaoMaximo { get; set; }
     }
     public class PessoaJuridica
     {
-        public string CnpjFormatado { get; private set; }
-        public string CpfFormatado { get; private set; }
-        public string Nome { get; private set; }
-        public string NomeFantasiaReceita { get; private set; }
-        public string NumeroInscricaoSocial { get; private set; }
-        public string RazaoSocial { get; private set; }
-        public string Tipo { get; private set; }
+        public string CnpjFormatado { get; set; }
+        public string CpfFormatado { get; set; }
+        public string Nome { get; set; }
+        public string NomeFantasiaReceita { get; set; }
+        public string NumeroInscricaoSocial { get; set; }
+        public string RazaoSocial { get; set; }
+        public string Tipo { get; set; }
     }
     public class OrgaoMaximo
     {
-        public string Codigo { get; private set; }
-        public string Nome { get; private set; }
-        public string Sigla { get; private set; }
+        public string Codigo { get; set; }
+        public string Nome { get; set; }
+        public string Sigla { get; set; }
     }
 }

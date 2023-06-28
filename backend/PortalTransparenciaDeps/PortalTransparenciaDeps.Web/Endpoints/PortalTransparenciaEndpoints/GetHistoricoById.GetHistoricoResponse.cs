@@ -1,4 +1,4 @@
-﻿namespace PortalTransparenciaDeps.Web.Endpoints.PortalTransparenciaEndpoints
+﻿/*namespace PortalTransparenciaDeps.Web.Endpoints.PortalTransparenciaEndpoints
 {
     public class GetHistoricoResponse
     {
@@ -11,4 +11,4 @@
         public virtual GetPetiDBResponse PetiDB { get; set; }
         public virtual GetRemuneracaoDBResponse RemuneracaoDB { get; set; }
     }
-}
+}*/

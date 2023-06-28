@@ -57,7 +57,7 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.BpcA
             Nis = Guard.Against.NullOrEmpty(nis, nameof(nis));
             NisRepresentanteLegal = Guard.Against.NullOrEmpty(nisRepresentanteLegal, nameof(nisRepresentanteLegal));
             Nome = Guard.Against.NullOrEmpty(nome, nameof(nome));
-            NomeRepresntanteLegal = Guard.Against.NullOrEmpty(nomeRepresntanteLegal, nameof(nomeRepresntanteLegal));
+            NomeRepresentanteLegal = Guard.Against.NullOrEmpty(nomeRepresntanteLegal, nameof(nomeRepresntanteLegal));
         }
     }
 }

@@ -20,6 +20,6 @@ namespace PortalTransparenciaDeps.Core.Interfaces
         List<PetiModel> ListPeti(int id);
         List<RemuneracaoModel> ListRemuneracao(int id);
         List<UfModel> ListUf(int id);
-    },
+    }
 
 }

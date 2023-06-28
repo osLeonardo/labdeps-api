@@ -1,4 +1,4 @@
-﻿using Ardalis.ApiEndpoints;
+﻿/*using Ardalis.ApiEndpoints;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PortalTransparenciaDeps.Core.Entities.ConsultaAggregate;
@@ -51,4 +51,4 @@ namespace PortalTransparenciaDeps.Web.Endpoints.PortalTransparenciaEndpoints
             //Query criada->  ConsultaHistoricoQueryService
         }
     }
-}
+}*/

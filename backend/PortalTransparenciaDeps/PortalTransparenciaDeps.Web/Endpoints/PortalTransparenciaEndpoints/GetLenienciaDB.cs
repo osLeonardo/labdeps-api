@@ -1,6 +1,7 @@
-﻿namespace PortalTransparenciaDeps.Web.Endpoints.PortalTransparenciaEndpoints
+﻿/*namespace PortalTransparenciaDeps.Web.Endpoints.PortalTransparenciaEndpoints
 {
     public class GetLenienciaDB
     {
     }
 }
+*/

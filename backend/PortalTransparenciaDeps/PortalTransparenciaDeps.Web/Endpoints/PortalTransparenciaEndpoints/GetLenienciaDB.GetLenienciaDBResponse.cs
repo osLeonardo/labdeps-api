@@ -19,7 +19,6 @@ namespace PortalTransparenciaDeps.Web.Endpoints.PortalTransparenciaEndpoints
         public string NomeFantasia { get; private set; }
         public string NomeInformadoOrgaoResponsavel { get; private set; }
         public string RazaoSocial { get; private set; }
-        public virtual Leniencia Leniencia { get; private set; } mesma dúvida do cnep. 
-        //public virtual ICollection<Leniencia> Leniencias { get; private set; } Tirar a dúvida sobre isso também.
+        public virtual Leniencia Leniencia { get; private set; }
     }
 }

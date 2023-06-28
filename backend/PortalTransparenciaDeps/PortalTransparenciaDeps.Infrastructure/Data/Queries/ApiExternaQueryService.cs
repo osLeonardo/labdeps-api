@@ -212,43 +212,39 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Queries
             return query.ToList();
         }
 
-        /*public List<LenienciaModel> ListLeniencia(int id)
+        public List<LenienciaModel> ListLeniencia(int id)
         {
-            var query = (from l in _dbContext.Leniencias
-                         join s in _dbContext.Sancao on l.IdSancoes equals s.Id
-                         orderby 
-                         where l.IdHistoricoConsulta == id
-                        );
+            throw new NotImplementedException();
         }
 
         public List<MunicipioModel> ListMunicipio(int id)
         {
-            var query = ();
+            throw new NotImplementedException();
         }
 
         public List<PepModel> ListPep(int id)
         {
-            var query = ();
+            throw new NotImplementedException();
         }
 
         public List<PessoaJuridicaModel> ListPessoaJuridica(int id)
         {
-            var query = ();
+            throw new NotImplementedException();
         }
 
         public List<PetiModel> ListPeti(int id)
         {
-            var query = ();
+            throw new NotImplementedException();
         }
 
         public List<RemuneracaoModel> ListRemuneracao(int id)
         {
-            var query = ();
+            throw new NotImplementedException();
         }
 
         public List<UfModel> ListUf(int id)
         {
-            var query = ();
-        }*/
+            throw new NotImplementedException();
+        }
     }
 }

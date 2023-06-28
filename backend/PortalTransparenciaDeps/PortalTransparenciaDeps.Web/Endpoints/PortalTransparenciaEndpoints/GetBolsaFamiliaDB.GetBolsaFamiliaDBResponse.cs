@@ -1,8 +1,7 @@
 ﻿namespace PortalTransparenciaDeps.Web.Endpoints.PortalTransparenciaEndpoints
 {
-    //passar todo o código para uma nova pasta em DTO, porém mudando os nomes das classes. EX: GetBolsaFamiliaDBDTO
     public class GetBolsaFamiliaDBResponse
-    {//DTO ->ID (procurar em core->Entities->PortalTransparenciaEntities->BolsaFamiliaAggregate->BolsaFamilia
+    {
         public string DataMesCompetencia { get; set; }
         public string DataMesReferencia { get; set; }
         public int QuantidadeDependentes { get; set; }
@@ -11,7 +10,7 @@
         public virtual TitularBolsaFamilia Titular { get; set; }
     }
     public class Municipio
-    {//DTO ->ID
+    {
         public string CodigoIBGE { get; set; }
         public string CodigoRegiao { get; set; }
         public string NomeIBGE { get; set; }

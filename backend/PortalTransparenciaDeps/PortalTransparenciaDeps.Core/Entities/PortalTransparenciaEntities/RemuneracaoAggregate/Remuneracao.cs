@@ -28,6 +28,11 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Remu
             IdRemuneracoesDTO = Guard.Against.NegativeOrZero(idRemuneracoesDTO, nameof(idRemuneracoesDTO));
             IdHistoricoConsulta = Guard.Against.NegativeOrZero(idHistoricoConsulta, nameof(idHistoricoConsulta));
         }
+
+        public static Remuneracao NewHistoricoRemuneracao(int idServidor, int idRemuneracoesDTO, int idHistoricoConsulta)
+        {
+            return new Remuneracao(idServidor, idRemuneracoesDTO, idHistoricoConsulta);
+        }
     }
     public class Servidor : BaseEntity<int>, IAggregateRoot
     {
@@ -210,7 +215,7 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Remu
         public List<HonorariosAdvocaticio> HonorariosAdvocaticios { get; private set; }
         public List<Jetons> Jetons { get; private set; }
         public List<Rubrica> Rubricas { get; private set; }
-        public virtual ICollection<HonorariosAdvocaticio> HonorariosAdvocaticiosLista { get; private set; } 
+        public virtual ICollection<HonorariosAdvocaticio> HonorariosAdvocaticiosLista { get; private set; }
         public virtual ICollection<Jetons> JetonsLista { get; private set; }
         public virtual ICollection<Rubrica> RubricaLista { get; private set; }
 
@@ -271,6 +276,7 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Remu
         public int Valor { get; private set; }
         public string ValorFormatado { get; private set; }
         public int IdRemuneracoesDTO { get; private set; }
+        public virtual RemuneracoesDTO RemuneracoesDTO { get; private set; }
 
         protected HonorariosAdvocaticio() { }
         private HonorariosAdvocaticio(string mensagemMesReferencia, string mesReferencia, int valor, string valorFormatado, int idRemuneracoesDTO)
@@ -288,8 +294,9 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Remu
         public string MesReferencia { get; private set; }
         public int Valor { get; private set; }
         public int IdRemuneracoesDTO { get; private set; }
+        public virtual RemuneracoesDTO RemuneracoesDTO { get; private set; }
 
-        protected Jetons() { }  
+        protected Jetons() { }
         private Jetons(string descricao, string mesReferencia, int valor, int idRemuneracoesDTO)
         {
             Descricao = Guard.Against.NullOrEmpty(descricao, nameof(descricao));
@@ -306,6 +313,7 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Remu
         public int Valor { get; private set; }
         public int ValorDolar { get; private set; }
         public int IdRemuneracoesDTO { get; private set; }
+        public virtual RemuneracoesDTO RemuneracoesDTO { get; private set; }
 
         public Rubrica(string codigo, string descricao, string skMesReferencia, int valor, int valorDolar, int idRemuneracoesDTO)
         {
