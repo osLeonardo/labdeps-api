@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PortalTransparenciaDeps.Infrastructure.Data;
@@ -11,9 +12,10 @@ using PortalTransparenciaDeps.Infrastructure.Data;
 namespace PortalTransparenciaDeps.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230621195400_CnaesSecundario")]
+    partial class CnaesSecundario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -376,21 +378,15 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<bool>("Ativo")
-                        .HasColumnType("boolean")
-                        .HasColumnName("ativo");
+                    b.Property<int>("IdPerfil")
+                        .HasColumnType("integer")
+                        .HasColumnName("id_perfil");
 
                     b.Property<string>("Login")
                         .IsRequired()
                         .HasMaxLength(40)
                         .HasColumnType("character varying(40)")
                         .HasColumnName("login");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasMaxLength(40)
-                        .HasColumnType("character varying(40)")
-                        .HasColumnName("nome");
 
                     b.Property<string>("Password")
                         .IsRequired()
@@ -404,14 +400,10 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
                         .HasDefaultValue(4)
                         .HasColumnName("perfil_usuario");
 
-                    b.Property<string>("Sobrenome")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("character varying(100)")
-                        .HasColumnName("sobrenome");
-
                     b.HasKey("Id")
                         .HasName("pk_user_logins");
+
+                    b.HasIndex("IdPerfil");
 
                     b.ToTable("user_login");
                 });
@@ -658,6 +650,8 @@ namespace PortalTransparenciaDeps.Infrastructure.Migrations
 
             modelBuilder.Entity("PortalTransparenciaDeps.Core.Entities.PerfilAggregate.Perfil", b =>
                 {
+                    b.Navigation("Logins");
+
                     b.Navigation("PerfilMetricas");
                 });
 
