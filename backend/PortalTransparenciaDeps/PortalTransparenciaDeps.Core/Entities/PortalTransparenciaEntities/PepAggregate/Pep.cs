@@ -41,5 +41,10 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.PepA
             SiglaFuncao = Guard.Against.NullOrEmpty(siglaFuncao, nameof(siglaFuncao));
             IdHistoricoConsulta = Guard.Against.NegativeOrZero(idHistoricoConsulta, nameof(idHistoricoConsulta));
         }
+
+        public static Pep NewHistoricoPep(string codOrgao, string cpf, string descricaoFuncao, string dtFimCarencia, string dtFimExercicio, string dtInicioExercicio, string nivelFuncao, string nome, string nomeOrgao, string siglaFuncao, int idHistoricoConsulta)
+        {
+            return new Pep(codOrgao, cpf, descricaoFuncao, dtFimCarencia, dtFimExercicio, dtInicioExercicio, nivelFuncao, nome, nomeOrgao, siglaFuncao, idHistoricoConsulta);
+        }
     }
 }

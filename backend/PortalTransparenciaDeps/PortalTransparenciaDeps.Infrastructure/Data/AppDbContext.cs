@@ -5,6 +5,9 @@ using PortalTransparenciaDeps.Core.Entities.ConsultaAggregate;
 using PortalTransparenciaDeps.Core.Entities.LoginAggregate;
 using PortalTransparenciaDeps.Core.Entities.PerfilAggregate;
 using PortalTransparenciaDeps.Core.Entities.PerfilMetricaAggregate;
+using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.BolsaFamiliaAggregate;
+using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.MunicipioAggregate;
+using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.UfAggregate;
 using PortalTransparenciaDeps.SharedKernel;
 using System;
 using System.Collections.Generic;
@@ -32,6 +35,10 @@ namespace PortalTransparenciaDeps.Infrastructure.Data
         public DbSet<PerfilMetrica> PerfisMetricas => Set<PerfilMetrica>();
         public DbSet<UserLogin> UserLogins => Set<UserLogin>();
         public DbSet<HistoricoConsulta> HistoricoConsultas => Set<HistoricoConsulta>();
+        public DbSet<BolsaFamilia> BolsaFamilias => Set<BolsaFamilia>();
+        public DbSet<Municipio> Municipios => Set<Municipio>();
+        public DbSet<Uf> Ufs => Set<Uf>();
+        public DbSet<TitularBolsaFamilia> TitularBolsaFamilias => Set<TitularBolsaFamilia>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

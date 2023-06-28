@@ -35,6 +35,11 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Peti
             IdBeneficiario = Guard.Against.NegativeOrZero(idBeneficiario, nameof(idBeneficiario));
             IdHistoricoConsulta = Guard.Against.NegativeOrZero(idHistoricoConsulta, nameof(idHistoricoConsulta));
         }
+
+        public static Peti NewHistoricoPeti(string dataDisponibilizacaoRecurso, string dataMesReferencia, string situacao, float valor, int idMunicipio, int idBeneficiario, int idHistoricoConsulta)
+        {
+            return new Peti(dataDisponibilizacaoRecurso, dataMesReferencia, situacao, valor, idMunicipio, idBeneficiario, idHistoricoConsulta);
+        }
     }
     public class BeneficiarioPeti : BaseEntity<int>, IAggregateRoot 
     {
