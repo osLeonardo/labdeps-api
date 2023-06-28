@@ -38,6 +38,11 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.BpcA
             IdBeneficiario = Guard.Against.NegativeOrZero(idBeneficiario, nameof(idBeneficiario));
             IdHistoricoConsulta = Guard.Against.NegativeOrZero(idHistoricoConsulta, nameof(idHistoricoConsulta));
         }
+        
+        public static Bpc NewHistoricoBpc(bool concedidoJudicialmente, string dataMesCompetencia, string dataMesReferencia, bool menor16Anos, float valor, int idMunicipio, int idBeneficiario, int idHistoricoConsulta)
+        {
+            return new Bpc(concedidoJudicialmente, dataMesCompetencia, dataMesReferencia, menor16Anos, valor, idMunicipio, idBeneficiario, idHistoricoConsulta);
+        }
     }
     public class BeneficiarioBpc : BaseEntity<int>, IAggregateRoot
     {

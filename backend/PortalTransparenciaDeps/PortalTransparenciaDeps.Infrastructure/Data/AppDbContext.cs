@@ -44,8 +44,7 @@ namespace PortalTransparenciaDeps.Infrastructure.Data
         public DbSet<UserLogin> UserLogins => Set<UserLogin>();
         public DbSet<HistoricoConsulta> HistoricoConsultas => Set<HistoricoConsulta>();
         public DbSet<BolsaFamilia> BolsaFamilias => Set<BolsaFamilia>();
-        public DbSet<TitularBolsaFamilia> TitularBolsaFamilias
-            => Set<TitularBolsaFamilia>();
+        public DbSet<TitularBolsaFamilia> TitularBolsaFamilias => Set<TitularBolsaFamilia>();
         public DbSet<Municipio> Municipios => Set<Municipio>();
         public DbSet<Uf> Ufs => Set<Uf>();
         public DbSet<Bpc> Bpcs => Set<Bpc>();
@@ -77,7 +76,6 @@ namespace PortalTransparenciaDeps.Infrastructure.Data
         public DbSet<HonorariosAdvocaticio> HonorariosAdvocaticios => Set<HonorariosAdvocaticio>();
         public DbSet<Jetons> Jeton => Set<Jetons>();
         public DbSet<Rubrica> Rubricas => Set<Rubrica>();
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

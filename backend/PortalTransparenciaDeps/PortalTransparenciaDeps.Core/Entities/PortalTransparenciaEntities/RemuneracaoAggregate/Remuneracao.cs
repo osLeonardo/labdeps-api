@@ -28,6 +28,11 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Remu
             IdRemuneracoesDTO = Guard.Against.NegativeOrZero(idRemuneracoesDTO, nameof(idRemuneracoesDTO));
             IdHistoricoConsulta = Guard.Against.NegativeOrZero(idHistoricoConsulta, nameof(idHistoricoConsulta));
         }
+
+        public static Remuneracao NewHistoricoRemuneracao(int idServidor, int idRemuneracoesDTO, int idHistoricoConsulta)
+        {
+            return new Remuneracao(idServidor, idRemuneracoesDTO, idHistoricoConsulta);
+        }
     }
     public class Servidor : BaseEntity<int>, IAggregateRoot
     {

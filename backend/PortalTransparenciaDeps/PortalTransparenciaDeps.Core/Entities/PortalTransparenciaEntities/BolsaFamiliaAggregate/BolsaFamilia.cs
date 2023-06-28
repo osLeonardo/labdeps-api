@@ -26,14 +26,20 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Bols
         public virtual HistoricoConsulta HistoricoConsulta { get; private set; }
 
         protected BolsaFamilia () { }
-        private BolsaFamilia(string dataMesCompetencia, string dataMesReferencia, int quantidadeDependentes, float valor, int idMunicipio, int idHistoricoConsulta)
+        private BolsaFamilia(string dataMesCompetencia, string dataMesReferencia, int quantidadeDependentes, float valor, int idMunicipio, int idTitular, int idHistoricoConsulta)
         {
             DataMesCompetencia = Guard.Against.NullOrEmpty(dataMesCompetencia, nameof(dataMesCompetencia));
             DataMesReferencia = Guard.Against.NullOrEmpty(dataMesReferencia, nameof(dataMesReferencia));
             QuantidadeDependentes = Guard.Against.NegativeOrZero(quantidadeDependentes, nameof(quantidadeDependentes));
             Valor = Guard.Against.NegativeOrZero(valor, nameof(valor));
             IdMunicipio = Guard.Against.NegativeOrZero(idMunicipio, nameof(idMunicipio));
+            IdTitular = Guard.Against.NegativeOrZero(idTitular, nameof(idTitular));
             IdHistoricoConsulta = Guard.Against.NegativeOrZero(idHistoricoConsulta, nameof(idHistoricoConsulta));
+        }
+
+        public static BolsaFamilia NewHistoricoBolsaFamilia(string dataMesCompetencia, string dataMesReferencia, int quantidadeDependentes, float valor, int idMunicipio, int idTitular, int idHistoricoConsulta)
+        {
+            return new BolsaFamilia(dataMesCompetencia, dataMesReferencia, quantidadeDependentes, valor, idMunicipio, idTitular, idHistoricoConsulta);
         }
     }
 

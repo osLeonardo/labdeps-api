@@ -34,6 +34,11 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Leni
             IdSancoes = Guard.Against.NegativeOrZero(idSancoes, nameof(idSancoes));
             IdHistoricoConsulta = Guard.Against.NegativeOrZero(idHistoricoConsulta, nameof(idHistoricoConsulta));
         }
+
+        public static Leniencia NewHistoricoLeninecia(string dataFimAcordo, string dataInicioAcordo, string orgaoResponsavel, int quantidade, string situacaoAcordo, int idSancoes, int idHistoricoConsulta)
+        {
+            return new Leniencia(dataFimAcordo, dataInicioAcordo, orgaoResponsavel, quantidade, situacaoAcordo, idSancoes, idHistoricoConsulta);
+        }
     }
     public class Sancoes : BaseEntity<int>, IAggregateRoot
     {

@@ -15,6 +15,7 @@ using NLog.Web;
 using PortalTransparenciaDeps.Core;
 using PortalTransparenciaDeps.Core.Interfaces;
 using PortalTransparenciaDeps.Core.Services;
+using PortalTransparenciaDeps.Core.Services.PortalTransparenciaServices;
 using PortalTransparenciaDeps.Infrastructure;
 using PortalTransparenciaDeps.Infrastructure.Data;
 using PortalTransparenciaDeps.Infrastructure.Data.Queries;
@@ -122,6 +123,14 @@ try
     builder.Services.AddSingleton<IUserLoginService, UserLoginService>();
     builder.Services.AddSingleton<IConsultas, ConsultasService>();
     builder.Services.AddSingleton<IHistoricoQueryService, HistoricoQueryService>();
+    builder.Services.AddSingleton<IBolsaFamilia, BolsaFamiliaService>();
+    builder.Services.AddSingleton<IBpc, BpcService>();
+    builder.Services.AddSingleton<IPeti, PetiService>();
+    builder.Services.AddSingleton<ICepim, CepimService>();
+    builder.Services.AddSingleton<ICnep, CnepService>(); 
+    builder.Services.AddSingleton<ILeniencia, LenienciaService>();
+    builder.Services.AddSingleton<IPep, PepService>();
+    builder.Services.AddSingleton<IRemuneracao, RemuneracaoService>();
     builder.Services.AddSingleton<IApiExternaQueryService, ApiExternaQueryService>();
 
     builder.Logging.ClearProviders();

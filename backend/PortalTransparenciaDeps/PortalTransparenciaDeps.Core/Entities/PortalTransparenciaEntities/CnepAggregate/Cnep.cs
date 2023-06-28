@@ -67,6 +67,11 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Cnep
             IdOrgaoSansionador = Guard.Against.NegativeOrZero(idOrgaoSansionador, nameof(idOrgaoSansionador));
             IdHistoricoConsulta = Guard.Against.NegativeOrZero(idHistoricoConsulta, nameof(idHistoricoConsulta));
         }
+
+        public static Cnep NewHistoricoCnep(string abrangenciaDefinidaDecisaoJudicial, string dataFimSancao, string dataInicioSancao, string dataOrigemInformacao, string dataPublicacaoSancao, string dataReferencia, string dataTransitadoJulgado, string detalhamentoPublicacao, string informacoesAdicionaisDoOrgaoSancionador, string linkPublicacao, string numeroProcesso, string textoPublicacao, string valorMulta, int idFundamentacao, int idFonteSancao, int idPessoaJuridica, int idSancionado, int idTipoSancao, int idHistoricoConsulta)
+        {
+            return new Cnep(abrangenciaDefinidaDecisaoJudicial, dataFimSancao, dataInicioSancao, dataOrigemInformacao, dataPublicacaoSancao, dataReferencia, dataTransitadoJulgado, detalhamentoPublicacao, informacoesAdicionaisDoOrgaoSancionador, linkPublicacao, numeroProcesso, textoPublicacao, valorMulta, idFundamentacao, idFonteSancao, idPessoaJuridica, idSancionado, idTipoSancao, idHistoricoConsulta);
+        }
     }
     public class TipoSancao : BaseEntity<int>, IAggregateRoot
     { 

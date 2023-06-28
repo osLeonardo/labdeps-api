@@ -34,6 +34,11 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Cepi
             IdPessoaJuridica = Guard.Against.NegativeOrZero(idPessoaJuridica, nameof(idPessoaJuridica));
             IdHistoricoConsulta = Guard.Against.NegativeOrZero(idHistoricoConsulta, nameof(idHistoricoConsulta));
         }
+
+        public static Cepim NewHistoricoCepim(string dataReferencia, string motivo, int idConvenio, int idOrgaoSuperior, int idPessoaJuridica, int idHistoricoConsulta)
+        {
+            return new Cepim(dataReferencia, motivo, idConvenio, idOrgaoSuperior, idPessoaJuridica, idHistoricoConsulta);
+        }
     }
     public class Convenio : BaseEntity<int>, IAggregateRoot
     {
