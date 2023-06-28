@@ -20,7 +20,6 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Leni
         public string SituacaoAcordo { get; private set; }
         public int IdSancoes { get; private set; }
         public int IdHistoricoConsulta { get; private set; }
-        public virtual List<Sancoes> Sancoes { get; private set; }
         public virtual HistoricoConsulta HistoricoConsulta { get; private set; }
         public virtual ICollection<Sancoes> SancoesLista { get; private set; }
 
@@ -43,14 +42,13 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Leni
     }
     public class Sancoes : BaseEntity<int>, IAggregateRoot
     {
+        public virtual Leniencia Leniencia { get; private set; }
         public string Cnpj { get; private set; }
         public string CnpjFormatado { get; private set; }
         public string NomeFantasia { get; private set; }
         public string NomeInformadoOrgaoResponsavel { get; private set; }
         public string RazaoSocial { get; private set; }
         public int IdLeniencia { get; private set; }
-        public virtual Leniencia Leniencia { get; private set; }
-        public virtual ICollection<Leniencia> Leniencias { get; private set; }
 
         protected Sancoes() { }
         private Sancoes(string cnpj, string cnpjFormatado, string nomeFantasia, string nomeInformadoOrgaoResponsavel, string razaoSocial, int idLeniencia)

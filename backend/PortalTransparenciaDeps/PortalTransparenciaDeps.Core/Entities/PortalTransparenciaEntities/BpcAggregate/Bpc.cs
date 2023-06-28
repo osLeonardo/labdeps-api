@@ -51,7 +51,7 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.BpcA
         public string Nis { get; private set; }
         public string NisRepresentanteLegal { get; private set; }
         public string Nome { get; private set; }
-        public string NomeRepresntanteLegal { get; private set; }
+        public string NomeRepresentanteLegal { get; private set; }
         public virtual ICollection<Bpc> Bpcs { get; private set; }
 
         protected BeneficiarioBpc() { }

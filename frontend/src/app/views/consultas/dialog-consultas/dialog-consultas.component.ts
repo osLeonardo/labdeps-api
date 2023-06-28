@@ -3,6 +3,7 @@ import { Component, HostListener } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-dialog-consultas',
@@ -17,6 +18,7 @@ export class DialogConsultasComponent {
   dataReferencia = new Date();
   codigo: string;
   button = true;
+  tooltipText: string = this.button ? 'Informe um CPF Válido' : '';
 
   constructor(public dialogRef: MatDialogRef<DialogConsultasComponent>, private router: Router, private consultasService: ConsultasService) {}  
 
@@ -45,6 +47,7 @@ export class DialogConsultasComponent {
       return true;
     }
     else{
+      this.tooltipText = this.button ? 'Informe um CPF Válido' : '';
       return false;
     }
 }
@@ -92,6 +95,7 @@ export class DialogConsultasComponent {
       return true;
     }
     else{
+      this.tooltipText = this.button ? 'Informe um CNPJ Válido' : '';
       return false;
     }
   }
@@ -116,8 +120,6 @@ export class DialogConsultasComponent {
     if(!this.button){
       this.Buscar();
     }
-
-    console.log("Realizando a pesquisa: ", searchTerm);
   }
 
     Buscar(): void{

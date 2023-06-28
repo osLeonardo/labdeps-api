@@ -1,0 +1,17 @@
+/*Botão*/
+#alterarUsuario {
+    background-color: #252d56;
+    color: #fff;
+    transition: 0.3s;
+}
+#alterarUsuario:hover {
+    background-color: #171c36;
+    color: #e6e6e6;
+}
+button{
+    margin-left: 65rem;
+}
+.descricao{
+    padding: 0.6rem;
+}
+/******/

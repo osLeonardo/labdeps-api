@@ -36,13 +36,18 @@
     <None Remove="Endpoints\PortalTransparenciaEndpoints\NovaPasta2\**" />
     <None Remove="Endpoints\PortalTransparenciaEndpoints\NovaPasta3\**" />
     <None Remove="Endpoints\PortalTransparenciaEndpoints\NovaPasta\**" />
-  </ItemGroup>
-  
-  <ItemGroup>
     <Compile Remove="Endpoints\PortalTransparenciaEndpoints\Create.CreateRequest.cs" />
     <Compile Remove="Endpoints\PortalTransparenciaEndpoints\Create.CreateResponse.cs" />
     <Compile Remove="Endpoints\PortalTransparenciaEndpoints\Create.cs" />
     <Compile Remove="Endpoints\PortalTransparenciaEndpoints\PepEndpoint\CreatePepResponse.cs" />
+    <Compile Remove="Endpoints\NovaPasta1\NovaPasta\**" />
+    <Compile Remove="Endpoints\NovaPasta\**" />
+    <Content Remove="Endpoints\NovaPasta1\NovaPasta\**" />
+    <Content Remove="Endpoints\NovaPasta\**" />
+    <EmbeddedResource Remove="Endpoints\NovaPasta1\NovaPasta\**" />
+    <EmbeddedResource Remove="Endpoints\NovaPasta\**" />
+    <None Remove="Endpoints\NovaPasta1\NovaPasta\**" />
+    <None Remove="Endpoints\NovaPasta\**" />
   </ItemGroup>
   
   <ItemGroup>

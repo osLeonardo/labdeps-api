@@ -276,7 +276,6 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Remu
         public int Valor { get; private set; }
         public string ValorFormatado { get; private set; }
         public int IdRemuneracoesDTO { get; private set; }
-        public virtual RemuneracoesDTO RemuneracoesDTO { get; private set; }
 
         protected HonorariosAdvocaticio() { }
         private HonorariosAdvocaticio(string mensagemMesReferencia, string mesReferencia, int valor, string valorFormatado, int idRemuneracoesDTO)
@@ -294,7 +293,6 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Remu
         public string MesReferencia { get; private set; }
         public int Valor { get; private set; }
         public int IdRemuneracoesDTO { get; private set; }
-        public virtual RemuneracoesDTO RemuneracoesDTO { get; private set; }
 
         protected Jetons() { }  
         private Jetons(string descricao, string mesReferencia, int valor, int idRemuneracoesDTO)
@@ -313,7 +311,6 @@ namespace PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.Remu
         public int Valor { get; private set; }
         public int ValorDolar { get; private set; }
         public int IdRemuneracoesDTO { get; private set; }
-        public virtual RemuneracoesDTO RemuneracoesDTO { get; private set; }
 
         public Rubrica(string codigo, string descricao, string skMesReferencia, int valor, int valorDolar, int idRemuneracoesDTO)
         {

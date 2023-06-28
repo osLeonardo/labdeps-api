@@ -131,6 +131,7 @@ try
     builder.Services.AddSingleton<ILeniencia, LenienciaService>();
     builder.Services.AddSingleton<IPep, PepService>();
     builder.Services.AddSingleton<IRemuneracao, RemuneracaoService>();
+    builder.Services.AddSingleton<IApiExternaQueryService, ApiExternaQueryService>();
 
     builder.Logging.ClearProviders();
     builder.Logging.AddConsole();

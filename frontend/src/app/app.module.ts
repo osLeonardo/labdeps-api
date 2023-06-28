@@ -54,6 +54,7 @@ import { UsuariosAlterarComponent } from './views/usuarios/usuarios-alterar/usua
 import { UsuariosDadosComponent } from './components/usuarios/usuarios-dados/usuarios-dados.component';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 registerLocaleData(localePt)
@@ -110,11 +111,12 @@ registerLocaleData(localePt)
     MatIconModule,
     MatCardModule,
     MatButtonModule,
-    NgIf,
+    MatTooltipModule,
     MatSnackBarModule,
     MatExpansionModule,
     MatPaginatorModule,
     MatSortModule,
+    NgIf,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false
     }),

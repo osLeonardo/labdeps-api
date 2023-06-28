@@ -19,6 +19,15 @@ export class LoginComponent {
     private router: Router,
   ) {}
 
+  esqueceu(): void {
+    this.snackBar.open("Favor, Contate o Suporte Para Recuperar a Senha.", "Fechar", {
+      panelClass: 'snackbar-error',
+      horizontalPosition: 'right',
+      verticalPosition: 'top',
+      duration: 5000,
+    })
+  }
+
   login(): void {
     this.authService.verifyLogin(this.username, this.password).subscribe(
       response => {
@@ -37,7 +46,7 @@ export class LoginComponent {
   }
 
   openSuccessSnackBar(): void {
-    this.snackBar.open("Login Realizado com Sucesso!", "Fechar", {
+    this.snackBar.open("Login realizado com sucesso!", "Fechar", {
       panelClass: 'snackbar-success',
       horizontalPosition: 'right',
       verticalPosition: 'top',
@@ -46,7 +55,7 @@ export class LoginComponent {
   }
 
   openFailureSnackBar(): void {
-    this.snackBar.open("Falha ao Efetuar Login!", "Fechar", {
+    this.snackBar.open("Falha ao efetuar o login!", "Fechar", {
       panelClass: 'snackbar-error',
       horizontalPosition: 'right',
       verticalPosition: 'top',
