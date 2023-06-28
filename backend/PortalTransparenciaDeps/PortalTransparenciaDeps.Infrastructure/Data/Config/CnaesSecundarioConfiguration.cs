@@ -13,7 +13,7 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Config
     {
         public void Configure(EntityTypeBuilder<CnaesSecundario> builder)
         {
-            builder.Property(p => p.Cnaes_Secundarios)
+            builder.Property(p => p.CnaesSecundarios)
                 .HasMaxLength(100)
                 .IsRequired();
             builder.HasOne(p => p.Dados)

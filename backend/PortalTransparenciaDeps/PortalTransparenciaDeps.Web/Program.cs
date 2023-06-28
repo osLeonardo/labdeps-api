@@ -125,6 +125,7 @@ try
     builder.Services.AddSingleton<IHistoricoQueryService, HistoricoQueryService>();
     builder.Services.AddSingleton<IUserQueryService, UserQueryService>();
     builder.Services.AddSingleton<IQA_DadosPublicos, QA_DadosPublicosRest>();
+    builder.Services.AddSingleton<IDadosPublicosDBService, DadosPublicosDBService>();
 
     builder.Logging.ClearProviders();
     builder.Logging.AddConsole();

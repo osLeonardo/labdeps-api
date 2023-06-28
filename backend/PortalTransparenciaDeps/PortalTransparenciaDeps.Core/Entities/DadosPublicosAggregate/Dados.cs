@@ -50,7 +50,7 @@ namespace PortalTransparenciaDeps.Core.Entities.DadosPublicosAggregate
         public string SituacaoEspecial { get; private set; }
         public string DataSituacaoEspecial { get; private set; }
         public string NomeEnteFederativo { get; private set; }
-        public virtual ICollection<Socio> Socios { get; private set; }
+        public virtual ICollection<Socio> Socios { get; set; }
         public virtual ICollection<CnaesSecundario> CnaesSecundarios { get; private set; }
 
         private Dados
@@ -103,6 +103,7 @@ namespace PortalTransparenciaDeps.Core.Entities.DadosPublicosAggregate
             SituacaoEspecial = Guard.Against.NullOrEmpty(situacaoEspecial, nameof(situacaoEspecial));
             DataSituacaoEspecial = Guard.Against.NullOrEmpty(dataSituacaoEspecial, nameof(dataSituacaoEspecial));
             NomeEnteFederativo = Guard.Against.NullOrEmpty(nomeEnteFederativo, nameof(nomeEnteFederativo));
+            
         }
 
         private Dados() { }

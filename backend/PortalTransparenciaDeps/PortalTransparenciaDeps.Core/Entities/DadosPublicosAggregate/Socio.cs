@@ -15,20 +15,20 @@ namespace PortalTransparenciaDeps.Core.Entities.DadosPublicosAggregate
         public string Documento { get; private set; }
         public string Qualificacao { get; private set; }
         public int IdDado { get; private set; }
-        public virtual Dados dado { get; private set; }
-
-        private Socio(string nome, string documento, string qualificacao, Dados dado)
+        public virtual Dados Dado { get; private set; }
+       
+        private Socio(string nome, string documento, string qualificacao, int idDados)
         {
             Nome = Guard.Against.NullOrEmpty(nome, nameof(nome));
             Documento = Guard.Against.NullOrEmpty(documento, nameof(documento));
             Qualificacao = Guard.Against.NullOrEmpty(qualificacao, nameof(qualificacao));
-            IdDado = Guard.Against.NegativeOrZero(dado.Id, nameof(dado.Id));
+            IdDado = Guard.Against.NegativeOrZero(idDados, nameof(idDados));
         }
         private Socio() { }
 
-        public static Socio NewSocio(string nome, string documento, string qualificacao, Dados dado)
+        public static Socio NewSocio(string nome, string documento, string qualificacao, int idDados)
         {
-            return new Socio(nome, documento, qualificacao, dado);
+            return new Socio(nome, documento, qualificacao, idDados);
         }
 
     }

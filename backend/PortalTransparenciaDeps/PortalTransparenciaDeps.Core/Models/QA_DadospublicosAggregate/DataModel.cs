@@ -10,7 +10,7 @@ namespace PortalTransparenciaDeps.Core.Models.QA_DadospublicosAggregate
     public class DadosModel
     {
         [JsonPropertyName("data")]
-        public Data Data { get; set; }
+        public DataModel Data { get; set; }
 
         [JsonPropertyName("success")]
         public bool Success { get; set; }
@@ -21,7 +21,7 @@ namespace PortalTransparenciaDeps.Core.Models.QA_DadospublicosAggregate
         public string Message { get; set; }
     }
 
-    public class Data
+    public class DataModel
     {
         [JsonPropertyName("cnpj")]
         public string Cnpj { get; set; }
@@ -135,13 +135,13 @@ namespace PortalTransparenciaDeps.Core.Models.QA_DadospublicosAggregate
         public string NomeEnteFederativo { get; set; }
 
         [JsonPropertyName("socios")]
-        public List<Socio> Socios { get; set; }
+        public List<SocioModel> Socios { get; set; }
 
         [JsonPropertyName("cnaesSecundarios")]
-        public List<string> CnaesSecundarios { get; set; }
+        public List<CnaesSecundarioModel> CnaesSecundarios { get; set; }
     }
 
-    public class Socio
+    public class SocioModel
     {
         [JsonPropertyName("nome")]
         public string Nome { get; set; }
@@ -153,9 +153,9 @@ namespace PortalTransparenciaDeps.Core.Models.QA_DadospublicosAggregate
         public string Qualificacao { get; set; }
     }
 
-    public class CnaesSecundarios
+    public class CnaesSecundarioModel
     {
         [JsonPropertyName("cnaesSecundarios")]
-        public string Cnaes_Secundarios { get; set; }
+        public List<string> CnaesSecundarios { get; set; }
     }
 }

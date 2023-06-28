@@ -22,7 +22,7 @@ namespace PortalTransparenciaDeps.Infrastructure.Data.Config
             builder.Property(p => p.Qualificacao)
                 .HasMaxLength(100)
                 .IsRequired();
-            builder.HasOne(p => p.dado)
+            builder.HasOne(p => p.Dado)
                 .WithMany(m => m.Socios)
                 .HasForeignKey(p => p.IdDado)
                 .OnDelete(DeleteBehavior.Restrict);

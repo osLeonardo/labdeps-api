@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Routing;
 using MongoDB.Driver;
 using NPOI.SS.Formula.Functions;
 using NPOI.Util;
+using PortalTransparenciaDeps.Core.Entities.DadosPublicosAggregate;
 using PortalTransparenciaDeps.Core.Interfaces;
 using PortalTransparenciaDeps.Core.Models.QA_DadospublicosAggregate;
 using Swashbuckle.AspNetCore.Annotations;
@@ -23,9 +24,9 @@ namespace PortalTransparenciaDeps.Web.Endpoints.QA_DadosPublicosEndpoints
         .WithRequest<CreateDadosPublicosRequest>
         .WithActionResult<CreateDadosPublicosResponse>
     {
-        private readonly IQA_DadosPublicos _dadosPublicos;
+        private readonly IDadosPublicosDBService _dadosPublicos;
 
-        public Create(IQA_DadosPublicos dadosPublicos)
+        public Create(IDadosPublicosDBService dadosPublicos)
         {
             _dadosPublicos = dadosPublicos;
         }
@@ -37,7 +38,7 @@ namespace PortalTransparenciaDeps.Web.Endpoints.QA_DadosPublicosEndpoints
             OperationId = "DadosPublicos.Create",
             Tags = new[] { "DadosPublicosEndpoints" })
         ]
-        public override async Task<ActionResult<CreateDadosPublicosResponse>> HandleAsync([FromForm]CreateDadosPublicosRequest request, CancellationToken cancellationToken = default)
+        public override async Task<ActionResult<CreateDadosPublicosResponse>> HandleAsync(CreateDadosPublicosRequest request, CancellationToken cancellationToken = default)
         {
             var dadosPublicos = await _dadosPublicos.CreateDados
                  (
@@ -51,6 +52,36 @@ namespace PortalTransparenciaDeps.Web.Endpoints.QA_DadosPublicosEndpoints
                      request.DataOpcaoPeloSimples, request.DataExclusaoOpcaoPeloSimples, request.OpcaoMei, request.SituacaoEspecial,
                      request.DataSituacaoEspecial, request.NomeEnteFederativo
                  );
+
+
+            List<SocioResponse> socioResponseList = new List<SocioResponse>();
+            foreach (var item in request.Socios)
+            {
+                var socios = await _dadosPublicos.CreateSocio(item, dadosPublicos.Id);
+                var socioResponse = new SocioResponse 
+                {
+                    Id = socios.Id,
+                    Nome = socios.Nome,
+                    Documento = socios.Documento,
+                    Qualificacao = socios.Qualificacao,
+                    IdDado = socios.IdDado,
+                };
+                socioResponseList.Add( socioResponse );
+            }
+
+            List<CnaesSecundarioResponse> cnaesSecudarioList = new List<CnaesSecundarioResponse>();
+            foreach (var item in request.CnaesSecundarios)
+            {
+                var cnaesSecundarios = await _dadosPublicos.CreateCnaesSecundario(item, dadosPublicos.Id);
+                var cnaesSecundarioResponse = new CnaesSecundarioResponse
+                {
+                    Id = cnaesSecundarios.Id,
+                    CnaesSecundarios = cnaesSecundarios.CnaesSecundarios,
+                    IdDado = cnaesSecundarios.IdDado,
+                };
+                cnaesSecudarioList.Add( cnaesSecundarioResponse );
+            }
+
             return Ok(new CreateDadosPublicosResponse
             {
                 Id = dadosPublicos.Id,
@@ -91,6 +122,8 @@ namespace PortalTransparenciaDeps.Web.Endpoints.QA_DadosPublicosEndpoints
                 SituacaoEspecial = dadosPublicos.SituacaoEspecial,
                 DataSituacaoEspecial = dadosPublicos.DataSituacaoEspecial,
                 NomeEnteFederativo = dadosPublicos.NomeEnteFederativo,
+                Socios = socioResponseList,
+                CnaesSecundarios = cnaesSecudarioList
             });
 
         }
@@ -104,7 +137,7 @@ namespace PortalTransparenciaDeps.Web.Endpoints.QA_DadosPublicosEndpoints
 
         [Required]
         public string CnpjMatriz { get; set; }
-
+         
         [Required]
         public string TipoUnidade { get; set; }
 
@@ -209,6 +242,14 @@ namespace PortalTransparenciaDeps.Web.Endpoints.QA_DadosPublicosEndpoints
 
         [Required]
         public string NomeEnteFederativo { get; set; }
+
+        [Required]
+        public List<SocioModel> Socios { get; set; }
+
+        [Required]
+        public List<CnaesSecundarioModel> CnaesSecundarios { get; set; }
+
+
     }
 
     public class CreateDadosPublicosResponse
@@ -287,5 +328,26 @@ namespace PortalTransparenciaDeps.Web.Endpoints.QA_DadosPublicosEndpoints
         public string DataSituacaoEspecial { get; set; }
         
         public string NomeEnteFederativo { get; set; }
+
+        public List<SocioResponse> Socios { get; set; }
+
+        public List<CnaesSecundarioResponse> CnaesSecundarios { get; set; }
+
+    }
+
+    public class SocioResponse
+    {
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Documento { get; set; }
+        public string Qualificacao { get; set; }
+        public int IdDado { get; set; }
+    }
+
+    public class CnaesSecundarioResponse
+    {
+        public int Id { get; set; }
+        public List<string> CnaesSecundarios { get; set; }
+        public int IdDado { get; set; }
     }
 }

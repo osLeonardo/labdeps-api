@@ -11,21 +11,21 @@ namespace PortalTransparenciaDeps.Core.Entities.DadosPublicosAggregate
 {
     public class CnaesSecundario : BaseEntity<int>, IAggregateRoot
     {
-        public string Cnaes_Secundarios { get; private set; }
+        public List<string> CnaesSecundarios { get; private set; }
         public int IdDado { get; private set; }
         public virtual Dados Dados { get; private set; }
 
-        private CnaesSecundario(string cnaes_SecundariosDados, Dados dados)
+        private CnaesSecundario(List<string> cnaes_SecundariosDados, int idDados)
         {
-            Cnaes_Secundarios = Guard.Against.NullOrEmpty(cnaes_SecundariosDados, nameof(cnaes_SecundariosDados));
-            IdDado = Guard.Against.NegativeOrZero(dados.Id, nameof(dados.Id));      
+            CnaesSecundarios = Guard.Against.Null(cnaes_SecundariosDados, nameof(cnaes_SecundariosDados));
+            IdDado = Guard.Against.NegativeOrZero(idDados, nameof(idDados));      
         }
 
         private CnaesSecundario() { }
 
-        public static CnaesSecundario NewCnaesSecundarios(string cnaes_SecundariosDados, Dados dados)
+        public static CnaesSecundario NewCnaesSecundarios(List<string> cnaes_SecundariosDados, int idDados)
         {
-            return new CnaesSecundario(cnaes_SecundariosDados, dados);
+            return new CnaesSecundario(cnaes_SecundariosDados, idDados);
         }
 
 
