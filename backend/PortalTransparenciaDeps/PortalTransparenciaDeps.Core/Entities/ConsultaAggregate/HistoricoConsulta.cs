@@ -7,14 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using PortalTransparenciaDeps.Core.Entities.LoginAggregate;
 using Ardalis.GuardClauses;
-using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.BolsaFamiliaAggregate;
-using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.BpcAggregate;
-using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.PetiAggregate;
-using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.CepimAggregate;
-using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.CnepAggregate;
-using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.LenienciaAggregate;
-using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.PepAggregate;
-using PortalTransparenciaDeps.Core.Entities.PortalTransparenciaEntities.RemuneracaoAggregate;
 
 namespace PortalTransparenciaDeps.Core.Entities.ConsultaAggregate
 {
@@ -26,16 +18,7 @@ namespace PortalTransparenciaDeps.Core.Entities.ConsultaAggregate
         public string Codigo { get; set; } //valor do cpf ou cnpj
         public DateOnly DataReferencia { get; set; } //dataRef informada na dialog box
         public string Intervalo { get; set; } //3, 6 ou 12 meses
-
         public virtual UserLogin User { get; set; } //usuário que realizou a consulta
-        public virtual ICollection<BolsaFamilia> BolsaFamilias { get; set; } 
-        public virtual ICollection<Bpc> Bpcs { get; set; }
-        public virtual ICollection<Peti> Petis { get; set; }
-        public virtual ICollection<Cepim> Cepims { get; set; }
-        public virtual ICollection<Cnep> Cneps { get; set; }
-        public virtual ICollection<Leniencia> Leniencias { get; set; }
-        public virtual ICollection<Pep> Peps { get; set; }
-        public virtual ICollection<Remuneracao> Remuneracoes { get; set; }
 
         private HistoricoConsulta(UserLogin user, DateOnly dataConsulta, string tipoConsulta, string codigo, DateOnly dataReferencia, string intervalo)
         {
