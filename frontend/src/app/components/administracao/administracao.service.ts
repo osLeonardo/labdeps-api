@@ -19,7 +19,6 @@ export class AdministracaoService {
     const urlCadastar = `${this.baseUrl}userLogin`
     return this.http.post<Usuarios>(urlCadastar, usuario)
   }
-  
 
   read(): Observable<Usuarios[]>{
     const urlRead = `${this.baseUrl}userLogin`
