@@ -3225,3 +3225,23 @@
 2023-06-28 14:53:10.7927 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\jhuli\OneDrive\Documentos\programação\DEPS\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
 2023-06-28 15:21:38.4204 Info AppDomain Shutting down. LogFactory closing...
 2023-06-28 15:21:38.4378 Info LogFactory has been closed.
+2023-07-11 13:47:30.7809 Info Message Template Auto Format enabled
+2023-07-11 13:47:30.7905 Info Loading assembly: NLog.Mongo
+2023-07-11 13:47:30.9555 Info Adding target MongoTarget(Name=logfile)
+2023-07-11 13:47:30.9924 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\jhuli\Downloads\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-07-11 13:47:34.6177 Info Connecting to MongoDB collection geral in database logs
+2023-07-11 13:51:18.5826 Info Message Template Auto Format enabled
+2023-07-11 13:51:18.5926 Info Loading assembly: NLog.Mongo
+2023-07-11 13:51:18.7030 Info Adding target MongoTarget(Name=logfile)
+2023-07-11 13:51:18.7385 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\jhuli\Downloads\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-07-11 13:51:21.3010 Info Connecting to MongoDB collection geral in database logs
+2023-07-11 14:07:18.8133 Info Message Template Auto Format enabled
+2023-07-11 14:07:18.8238 Info Loading assembly: NLog.Mongo
+2023-07-11 14:07:19.0486 Info Adding target MongoTarget(Name=logfile)
+2023-07-11 14:07:19.1204 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\jhuli\Downloads\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-07-11 14:07:22.2255 Info Connecting to MongoDB collection geral in database logs
+2023-07-11 14:15:26.9431 Info Message Template Auto Format enabled
+2023-07-11 14:15:26.9431 Info Loading assembly: NLog.Mongo
+2023-07-11 14:15:27.0453 Info Adding target MongoTarget(Name=logfile)
+2023-07-11 14:15:27.0789 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=C:\Users\jhuli\Downloads\labdeps-api\backend\PortalTransparenciaDeps\PortalTransparenciaDeps.Web\bin\Debug\net6.0\NLog.config
+2023-07-11 14:15:30.2518 Info Connecting to MongoDB collection geral in database logs

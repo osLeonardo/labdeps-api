@@ -122,7 +122,6 @@ try
     builder.Services.AddSingleton<IUserLoginService, UserLoginService>();
     builder.Services.AddSingleton<IConsultas, ConsultasService>();
     builder.Services.AddSingleton<IHistoricoQueryService, HistoricoQueryService>();
-    builder.Services.AddSingleton<IApiExternaQueryService, ApiExternaQueryService>();
 
     builder.Logging.ClearProviders();
     builder.Logging.AddConsole();
