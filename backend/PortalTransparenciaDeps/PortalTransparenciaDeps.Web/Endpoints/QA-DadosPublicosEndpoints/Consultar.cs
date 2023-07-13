@@ -30,7 +30,7 @@ namespace PortalTransparenciaDeps.Web.Endpoints.QA_DadosPublicosEndpoints
         [SwaggerOperation(
           Summary = "Obtém os dados a partir do CNPJ",
           Tags = new[] { "DadosPublicosEndpoints" })]
-        public async override Task<ActionResult> HandleAsync([FromQuery]GetDadosByDocuments request, CancellationToken cancellationToken = default)
+        public async override Task<ActionResult> HandleAsync([FromQuery] GetDadosByDocuments request, CancellationToken cancellationToken = default)
         {
 
             var response = await _dadosPublicos.GetDados(request.data);

@@ -19,6 +19,7 @@ using PortalTransparenciaDeps.Infrastructure;
 using PortalTransparenciaDeps.Infrastructure.Data;
 using PortalTransparenciaDeps.Infrastructure.Data.Queries;
 using PortalTransparenciaDeps.Infrastructure.QA_DadosPublicos;
+using PortalTransparenciaDeps.Infrastructure.Serpro;
 using PortalTransparenciaDeps.SharedKernel.Configuration;
 using PortalTransparenciaDeps.SharedKernel.Middleware;
 using System;
@@ -120,6 +121,7 @@ try
     });
 
     builder.Services.AddSingleton<IPortalTransparencia, PortalTransparenciaRest>();
+    builder.Services.AddSingleton<ISerproCnpj, SerproRest>();
     builder.Services.AddSingleton<IUserLoginService, UserLoginService>();
     builder.Services.AddSingleton<IConsultas, ConsultasService>();
     builder.Services.AddSingleton<IHistoricoQueryService, HistoricoQueryService>();

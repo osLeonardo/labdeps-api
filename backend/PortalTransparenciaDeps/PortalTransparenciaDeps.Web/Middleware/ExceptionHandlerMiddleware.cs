@@ -11,6 +11,14 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
+using PortalTransparenciaDeps.Core.DTO;
+using PortalTransparenciaDeps.Core.Interfaces;
+using PortalTransparenciaDeps.Core.Models.PortalTransparenciaAggregate;
+
+using System.Net.Http;
+using System.Text.Json;
+
+
 namespace PortalTransparenciaDeps.SharedKernel.Middleware
 {
     public class ExceptionHandlerMiddleware

@@ -153,9 +153,4 @@ namespace PortalTransparenciaDeps.Core.Models.QA_DadospublicosAggregate
         public string Qualificacao { get; set; }
     }
 
-    public class CnaesSecundarioModel
-    {
-        [JsonPropertyName("cnaesSecundarios")]
-        public List<string> CnaesSecundarios { get; set; }
-    }
 }
